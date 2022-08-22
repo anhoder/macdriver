@@ -12,14 +12,18 @@ func NSSound_InitWithData(data core.NSDataRef) NSSound {
 	return NSSound_alloc().InitWithData__asNSSound(data)
 }
 
+func NSSound_InitWithURL(url core.NSURLRef) NSSound {
+	return NSSound_alloc().InitWithContentsOfURL_byReference__asNSSound(url, true)
+}
+
 func (sound NSSound) Play() {
-	sound.Play()
+	sound.gen_NSSound.Play()
 }
 
 func (sound NSSound) Pause() {
-	sound.Pause()
+	sound.gen_NSSound.Pause()
 }
 
 func (sound NSSound) Resume() {
-	sound.Resume()
+	sound.gen_NSSound.Resume()
 }
