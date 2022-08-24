@@ -12,8 +12,8 @@ func NSSound_InitWithData(data core.NSDataRef) NSSound {
 	return NSSound_alloc().InitWithData__asNSSound(data)
 }
 
-func NSSound_InitWithURL(url core.NSURLRef) NSSound {
-	return NSSound_alloc().InitWithContentsOfURL_byReference__asNSSound(url, true)
+func NSSound_InitWithURL(url core.NSURLRef, byRef bool) NSSound {
+	return NSSound_alloc().InitWithContentsOfURL_byReference__asNSSound(url, byRef)
 }
 
 func (sound NSSound) Play() {

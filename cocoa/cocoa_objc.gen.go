@@ -7,7 +7,7 @@ import (
 )
 
 /*
-#cgo CFLAGS: -x objective-c
+#cgo CFLAGS: -x objective-c -Wno-everything
 #cgo LDFLAGS: -lobjc -framework Foundation -framework AppKit
 #define __OBJC2__ 1
 #include <objc/message.h>

@@ -43,8 +43,8 @@ func TestAsync(t *testing.T) {
 
 		delegate := objc.Get("SoundDelegate").Alloc().Init()
 
-		url := core.NSURL_fileURLWithPath_isDirectory_(core.NSString_FromString("/Users/anhoder/Desktop/1.mp3"), false)
-		s := cocoa.NSSound_InitWithURL(url)
+		url := core.NSURL_Init("http://m801.music.126.net/20220824095437/23513e1cce4d77bde03514ca85b63f55/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/10537970622/3bba/afbc/8dc6/eeb7a61c7cbcb86a614da9a650adb209.mp3")
+		s := cocoa.NSSound_InitWithURL(url, false)
 		s.Set("delegate:", delegate)
 		//d := core.NSData_WithBytes(data, uint64(len(data)))
 		//s := cocoa.NSSound_InitWithData(d)
