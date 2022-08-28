@@ -1,0 +1,20 @@
+{
+  "TypeAlias": {
+    "Name": "NSSoundName",
+    "Declaration": "typedef NSString *NSSoundName;",
+    "Frameworks": [
+      "AppKit"
+    ],
+    "Platforms": [
+      "macOS 10.13+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nssoundname?language=objc",
+    "Type": {
+      "Name": "NSString",
+      "IsPtr": true
+    }
+  },
+  "Kind": "typealias",
+  "PullDate": "2022-08-28T14:57:50.70044+08:00",
+  "Version": 2
+}

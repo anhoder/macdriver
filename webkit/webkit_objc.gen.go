@@ -196,6 +196,11 @@ BOOL WKWebView_inst_isLoading(void *id) {
 		isLoading];
 }
 
+double WKWebView_inst_estimatedProgress(void *id) {
+	return [(WKWebView*)id
+		estimatedProgress];
+}
+
 void* WKWebView_inst_title(void *id) {
 	return [(WKWebView*)id
 		title];
@@ -899,6 +904,16 @@ func (x gen_WKWebView) IsLoading() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_WKWebView) EstimatedProgress() (
+	r0 float64,
+) {
+	ret := C.WKWebView_inst_estimatedProgress(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
 	return
 }
 

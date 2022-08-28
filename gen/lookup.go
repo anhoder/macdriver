@@ -2,6 +2,7 @@ package gen
 
 import (
 	"github.com/progrium/macschema/schema"
+	"strings"
 )
 
 func isInstanceType(dt schema.DataType) bool {
@@ -53,6 +54,11 @@ func (cb *classBuilder) mapClass(name string) *typeMapping {
 }
 
 func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
+	alias, isAlias := typeAliases[dt.Name]
+	if isAlias {
+		dt = alias.Type
+	}
+
 	if dt.IsPtr {
 		if classType := cb.mapClass(dt.Name); classType != nil {
 			return *classType
@@ -79,6 +85,32 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 	if !found {
 		panic("could not locate the `core` package to resolve primitive types")
 	}
+
+	// alias type
+	if isAlias {
+		var goType string
+		if strings.HasPrefix(dt.Name, "NS") {
+			goType = corePkg + dt.Name
+		} else {
+			goType = dt.Name
+			baseTypeMapping := map[string]string{
+				"float":  "float32",
+				"double": "float64",
+				"int":    "int32",
+			}
+			if t, ok := baseTypeMapping[dt.Name]; ok {
+				goType = t
+			}
+		}
+
+		return typeMapping{
+			GoType:     goType,
+			CType:      alias.Name,
+			FromCGoFmt: goType + "(%s)",
+			ToCGoFmt:   "C." + alias.Name + "(%s)",
+		}
+	}
+
 	switch dt.Name {
 	// FIXME split enums into their own types
 	case "NSUInteger", "NSWindowStyleMask", "NSBackingStoreType", "NSWindowOrderingMode", "NSWindowCollectionBehavior":
@@ -129,6 +161,20 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 			CType:      "int",
 			FromCGoFmt: "int32(%s)",
 			ToCGoFmt:   "C.int(%s)",
+		}
+	case "float":
+		return typeMapping{
+			GoType:     "float32",
+			CType:      "float",
+			FromCGoFmt: "float32(%s)",
+			ToCGoFmt:   "C.float(%s)",
+		}
+	case "double":
+		return typeMapping{
+			GoType:     "float64",
+			CType:      "double",
+			FromCGoFmt: "float64(%s)",
+			ToCGoFmt:   "C.double(%s)",
 		}
 	case "SEL":
 		return typeMapping{

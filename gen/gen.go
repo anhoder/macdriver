@@ -231,44 +231,26 @@ func Convert(desc PackageDescription, imports []PackageContents, schemas ...*sch
 		{Path: "github.com/progrium/macdriver/objc"}: true,
 	}
 	for _, s := range schemas {
-		cb := classBuilder{
-			Class:           *s.Class,
-			Imports:         imports,
-			consumedImports: consumedImports,
-		}
-		classDef := ClassDef{
-			Name: cb.Class.Name,
-			Base: "objc.Object",
-		}
-		if decl := parseClassDeclaration(cb.Class.Declaration); decl.Base != "NSObject" {
-			// TODO require resolving every base class but for now just fall back on
-			// objc.Object if we don't have the base type in the schema
-			if cls := cb.mapClass(decl.Base); cls != nil {
-				classDef.Base = cls.GoType
+		switch s.Kind {
+		case "class":
+			cb := classBuilder{
+				Class:           *s.Class,
+				Imports:         imports,
+				consumedImports: consumedImports,
 			}
-		}
-		cb.EachTypeMethod(func(m schema.Method) {
-			defer ignoreIfUnimplemented(fmt.Sprintf("%s.%s", s.Class.Name, m.Name))
-
-			msg := cb.msgSend(m, true)
-			wrapper := MethodDef{
-				Name:        fmt.Sprintf("%s_%s", cb.Class.Name, selectorNameToGoIdent(m.Name)),
-				WrappedFunc: cb.cgoWrapperFunc(m, true),
+			classDef := ClassDef{
+				Name: cb.Class.Name,
+				Base: "objc.Object",
 			}
-
-			pkg.ClassMsgSendWrappers = append(pkg.ClassMsgSendWrappers, msg)
-			pkg.CGoWrapperFuncs = append(pkg.CGoWrapperFuncs, wrapper)
-		})
-		cb.EachInstanceMethod(func(m schema.Method) {
-			defer ignoreIfUnimplemented(fmt.Sprintf("%s.%s", s.Class.Name, m.Name))
-
-			method := cb.instanceMethod(m)
-			msg := cb.msgSend(m, false)
-
-			classDef.InstanceMethods = append(classDef.InstanceMethods, method)
-			pkg.MsgSendWrappers = append(pkg.MsgSendWrappers, msg)
-		})
-		pkg.Classes = append(pkg.Classes, classDef)
+			buildClass(&pkg, s, &cb, &classDef)
+			pkg.Classes = append(pkg.Classes, classDef)
+		case "typealias":
+			typeAlias := TypeAliasDef{
+				Name: s.TypeAlias.Name,
+				Type: s.TypeAlias.Type,
+			}
+			typeAliases[typeAlias.Name] = typeAlias
+		}
 	}
 	for imp := range consumedImports {
 		pkg.Imports = append(pkg.Imports, imp)
@@ -291,4 +273,35 @@ func parseClassDeclaration(decl string) declaration {
 		Name: strings.TrimSpace(parts[0]),
 		Base: strings.TrimSpace(parts[1]),
 	}
+}
+
+func buildClass(pkg *GoPackage, s *schema.Schema, cb *classBuilder, classDef *ClassDef) {
+	if decl := parseClassDeclaration(cb.Class.Declaration); decl.Base != "NSObject" {
+		// TODO require resolving every base class but for now just fall back on
+		// objc.Object if we don't have the base type in the schema
+		if cls := cb.mapClass(decl.Base); cls != nil {
+			classDef.Base = cls.GoType
+		}
+	}
+	cb.EachTypeMethod(func(m schema.Method) {
+		defer ignoreIfUnimplemented(fmt.Sprintf("%s.%s", s.Class.Name, m.Name))
+
+		msg := cb.msgSend(m, true)
+		wrapper := MethodDef{
+			Name:        fmt.Sprintf("%s_%s", cb.Class.Name, selectorNameToGoIdent(m.Name)),
+			WrappedFunc: cb.cgoWrapperFunc(m, true),
+		}
+
+		pkg.ClassMsgSendWrappers = append(pkg.ClassMsgSendWrappers, msg)
+		pkg.CGoWrapperFuncs = append(pkg.CGoWrapperFuncs, wrapper)
+	})
+	cb.EachInstanceMethod(func(m schema.Method) {
+		defer ignoreIfUnimplemented(fmt.Sprintf("%s.%s", s.Class.Name, m.Name))
+
+		method := cb.instanceMethod(m)
+		msg := cb.msgSend(m, false)
+
+		classDef.InstanceMethods = append(classDef.InstanceMethods, method)
+		pkg.MsgSendWrappers = append(pkg.MsgSendWrappers, msg)
+	})
 }

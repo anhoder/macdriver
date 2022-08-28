@@ -24,6 +24,7 @@ func main() {
 			loadFile("api/foundation/nsnumber.objc.json"),
 			loadFile("api/foundation/nsrunloop.objc.json"),
 			loadFile("api/foundation/nsstring.objc.json"),
+			loadFile("api/foundation/nstimeinterval.objc.json"),
 			loadFile("api/foundation/nsthread.objc.json"),
 			loadFile("api/foundation/nsurl.objc.json"),
 			loadFile("api/foundation/nsurlrequest.objc.json"),
@@ -31,6 +32,8 @@ func main() {
 
 		{"cocoa", []schemaLoader{
 			loadFile("api/foundation/nsbundle.objc.json"),
+			loadFile("api/appkit/nssoundname.objc.json"),
+			loadFile("api/appkit/nssoundplaybackdeviceidentifier.objc.json"),
 			loadFile("api/appkit/nssound.objc.json"),
 
 			loadFile("api/appkit/nsapplication.objc.json"),

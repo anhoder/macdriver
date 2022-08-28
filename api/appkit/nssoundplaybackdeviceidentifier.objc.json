@@ -1,0 +1,17 @@
+{
+  "TypeAlias": {
+    "Name": "NSSoundPlaybackDeviceIdentifier",
+    "Declaration": "typedef NSString *NSSoundPlaybackDeviceIdentifier;",
+    "Platforms": [
+      "macOS 10.13+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nssoundplaybackdeviceidentifier?language=objc",
+    "Type": {
+      "Name": "NSString",
+      "IsPtr": true
+    }
+  },
+  "Kind": "typealias",
+  "PullDate": "2022-08-28T15:00:05.979453+08:00",
+  "Version": 2
+}

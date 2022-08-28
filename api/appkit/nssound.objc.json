@@ -3,6 +3,13 @@
     "Name": "NSSound",
     "Description": "A simple interface for loading and playing audio files.",
     "Declaration": "@interface NSSound : NSObject",
+    "Frameworks": [
+      "AppKit"
+    ],
+    "Platforms": [
+      "macOS 10.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nssound?language=objc",
     "InstanceMethods": [
       {
         "Name": "initWithContentsOfFile:byReference:",
@@ -379,16 +386,9 @@
         },
         "TopicURL": "https://developer.apple.com/documentation/appkit/nssound/1477290-soundunfilteredtypes?language=objc"
       }
-    ],
-    "Frameworks": [
-      "AppKit"
-    ],
-    "Platforms": [
-      "macOS 10.0+"
-    ],
-    "TopicURL": "https://developer.apple.com/documentation/appkit/nssound?language=objc"
+    ]
   },
   "Kind": "class",
-  "PullDate": "2021-12-01T00:18:45.904521+05:30",
+  "PullDate": "2022-08-28T14:22:09.214531+08:00",
   "Version": 2
 }

@@ -2,6 +2,7 @@ package gen
 
 import (
 	"embed"
+	"github.com/progrium/macschema/schema"
 	"io"
 	"text/template"
 )
@@ -93,6 +94,13 @@ type ClassDef struct {
 	ClassMethods    []MethodDef
 	InstanceMethods []MethodDef
 }
+
+type TypeAliasDef struct {
+	Name string
+	Type schema.DataType
+}
+
+var typeAliases = map[string]TypeAliasDef{}
 
 type PackageDescription struct {
 	Name           string

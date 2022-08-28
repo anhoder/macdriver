@@ -6,7 +6,7 @@ import (
 )
 
 /*
-#cgo CFLAGS: -x objective-c -Wno-everything
+#cgo CFLAGS: -x objective-c
 #cgo LDFLAGS: -lobjc -framework AppKit -framework QuartzCore -framework Foundation
 #define __OBJC2__ 1
 #include <objc/message.h>
@@ -131,6 +131,14 @@ void* NSNumber_type_numberWithBool_(BOOL value) {
 	return [NSNumber
 		numberWithBool: value];
 }
+void* NSNumber_type_numberWithDouble_(double value) {
+	return [NSNumber
+		numberWithDouble: value];
+}
+void* NSNumber_type_numberWithFloat_(float value) {
+	return [NSNumber
+		numberWithFloat: value];
+}
 void* NSNumber_type_numberWithInt_(int value) {
 	return [NSNumber
 		numberWithInt: value];
@@ -198,6 +206,10 @@ void NSThread_type_detachNewThreadSelector_toTarget_withObject_(void* selector, 
 		toTarget: target
 		withObject: argument];
 }
+void NSThread_type_sleepForTimeInterval_(NSTimeInterval ti) {
+	[NSThread
+		sleepForTimeInterval: ti];
+}
 void NSThread_type_exit() {
 	[NSThread
 		exit];
@@ -205,6 +217,14 @@ void NSThread_type_exit() {
 BOOL NSThread_type_isMultiThreaded() {
 	return [NSThread
 		isMultiThreaded];
+}
+double NSThread_type_threadPriority() {
+	return [NSThread
+		threadPriority];
+}
+BOOL NSThread_type_setThreadPriority_(double p) {
+	return [NSThread
+		setThreadPriority: p];
 }
 BOOL NSThread_type_isMainThread() {
 	return [NSThread
@@ -493,6 +513,16 @@ void CALayer_inst_setContentsCenter_(void *id, NSRect value) {
 		setContentsCenter: value];
 }
 
+float CALayer_inst_opacity(void *id) {
+	return [(CALayer*)id
+		opacity];
+}
+
+void CALayer_inst_setOpacity_(void *id, float value) {
+	[(CALayer*)id
+		setOpacity: value];
+}
+
 BOOL CALayer_inst_isHidden(void *id) {
 	return [(CALayer*)id
 		isHidden];
@@ -551,6 +581,16 @@ double CALayer_inst_borderWidth(void *id) {
 void CALayer_inst_setBorderWidth_(void *id, double value) {
 	[(CALayer*)id
 		setBorderWidth: value];
+}
+
+float CALayer_inst_shadowOpacity(void *id) {
+	return [(CALayer*)id
+		shadowOpacity];
+}
+
+void CALayer_inst_setShadowOpacity_(void *id, float value) {
+	[(CALayer*)id
+		setShadowOpacity: value];
 }
 
 double CALayer_inst_shadowRadius(void *id) {
@@ -631,6 +671,16 @@ void* CALayer_inst_backgroundFilters(void *id) {
 void CALayer_inst_setBackgroundFilters_(void *id, void* value) {
 	[(CALayer*)id
 		setBackgroundFilters: value];
+}
+
+float CALayer_inst_minificationFilterBias(void *id) {
+	return [(CALayer*)id
+		minificationFilterBias];
+}
+
+void CALayer_inst_setMinificationFilterBias_(void *id, float value) {
+	[(CALayer*)id
+		setMinificationFilterBias: value];
 }
 
 BOOL CALayer_inst_isOpaque(void *id) {
@@ -1202,6 +1252,16 @@ void* NSNumber_inst_initWithBool_(void *id, BOOL value) {
 		initWithBool: value];
 }
 
+void* NSNumber_inst_initWithDouble_(void *id, double value) {
+	return [(NSNumber*)id
+		initWithDouble: value];
+}
+
+void* NSNumber_inst_initWithFloat_(void *id, float value) {
+	return [(NSNumber*)id
+		initWithFloat: value];
+}
+
 void* NSNumber_inst_initWithInt_(void *id, int value) {
 	return [(NSNumber*)id
 		initWithInt: value];
@@ -1240,6 +1300,16 @@ void* NSNumber_inst_init(void *id) {
 BOOL NSNumber_inst_boolValue(void *id) {
 	return [(NSNumber*)id
 		boolValue];
+}
+
+double NSNumber_inst_doubleValue(void *id) {
+	return [(NSNumber*)id
+		doubleValue];
+}
+
+float NSNumber_inst_floatValue(void *id) {
+	return [(NSNumber*)id
+		floatValue];
 }
 
 int NSNumber_inst_intValue(void *id) {
@@ -1532,6 +1602,16 @@ void* NSString_inst_precomposedStringWithCompatibilityMapping(void *id) {
 		precomposedStringWithCompatibilityMapping];
 }
 
+double NSString_inst_doubleValue(void *id) {
+	return [(NSString*)id
+		doubleValue];
+}
+
+float NSString_inst_floatValue(void *id) {
+	return [(NSString*)id
+		floatValue];
+}
+
 int NSString_inst_intValue(void *id) {
 	return [(NSString*)id
 		intValue];
@@ -1682,6 +1762,16 @@ unsigned long NSThread_inst_stackSize(void *id) {
 void NSThread_inst_setStackSize_(void *id, unsigned long value) {
 	[(NSThread*)id
 		setStackSize: value];
+}
+
+double NSThread_inst_threadPriority(void *id) {
+	return [(NSThread*)id
+		threadPriority];
+}
+
+void NSThread_inst_setThreadPriority_(void *id, double value) {
+	[(NSThread*)id
+		setThreadPriority: value];
 }
 
 void* NSURL_inst_initWithString_(void *id, void* URLString) {
@@ -1945,6 +2035,11 @@ void* NSURLRequest_inst_mainDocumentURL(void *id) {
 void* NSURLRequest_inst_allHTTPHeaderFields(void *id) {
 	return [(NSURLRequest*)id
 		allHTTPHeaderFields];
+}
+
+NSTimeInterval NSURLRequest_inst_timeoutInterval(void *id) {
+	return [(NSURLRequest*)id
+		timeoutInterval];
 }
 
 BOOL NSURLRequest_inst_HTTPShouldHandleCookies(void *id) {
@@ -2272,6 +2367,30 @@ func NSNumber_numberWithBool_(
 	return
 }
 
+func NSNumber_numberWithDouble_(
+	value float64,
+) (
+	r0 NSNumber,
+) {
+	ret := C.NSNumber_type_numberWithDouble_(
+		C.double(value),
+	)
+	r0 = NSNumber_fromPointer(ret)
+	return
+}
+
+func NSNumber_numberWithFloat_(
+	value float32,
+) (
+	r0 NSNumber,
+) {
+	ret := C.NSNumber_type_numberWithFloat_(
+		C.float(value),
+	)
+	r0 = NSNumber_fromPointer(ret)
+	return
+}
+
 func NSNumber_numberWithInt_(
 	value int32,
 ) (
@@ -2439,6 +2558,15 @@ func NSThread_detachNewThreadSelector_toTarget_withObject_(
 	return
 }
 
+func NSThread_sleepForTimeInterval_(
+	ti float64,
+) {
+	C.NSThread_type_sleepForTimeInterval_(
+		C.NSTimeInterval(ti),
+	)
+	return
+}
+
 func NSThread_exit() {
 	C.NSThread_type_exit()
 	return
@@ -2448,6 +2576,26 @@ func NSThread_isMultiThreaded() (
 	r0 bool,
 ) {
 	ret := C.NSThread_type_isMultiThreaded()
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func NSThread_threadPriority() (
+	r0 float64,
+) {
+	ret := C.NSThread_type_threadPriority()
+	r0 = float64(ret)
+	return
+}
+
+func NSThread_setThreadPriority_(
+	p float64,
+) (
+	r0 bool,
+) {
+	ret := C.NSThread_type_setThreadPriority_(
+		C.double(p),
+	)
 	r0 = convertObjCBoolToGo(ret)
 	return
 }
@@ -3076,6 +3224,26 @@ func (x gen_CALayer) SetContentsCenter_(
 	return
 }
 
+func (x gen_CALayer) Opacity() (
+	r0 float32,
+) {
+	ret := C.CALayer_inst_opacity(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+func (x gen_CALayer) SetOpacity_(
+	value float32,
+) {
+	C.CALayer_inst_setOpacity_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(value),
+	)
+	return
+}
+
 func (x gen_CALayer) IsHidden() (
 	r0 bool,
 ) {
@@ -3192,6 +3360,26 @@ func (x gen_CALayer) SetBorderWidth_(
 	C.CALayer_inst_setBorderWidth_(
 		unsafe.Pointer(x.Pointer()),
 		C.double(value),
+	)
+	return
+}
+
+func (x gen_CALayer) ShadowOpacity() (
+	r0 float32,
+) {
+	ret := C.CALayer_inst_shadowOpacity(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+func (x gen_CALayer) SetShadowOpacity_(
+	value float32,
+) {
+	C.CALayer_inst_setShadowOpacity_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(value),
 	)
 	return
 }
@@ -3352,6 +3540,26 @@ func (x gen_CALayer) SetBackgroundFilters_(
 	C.CALayer_inst_setBackgroundFilters_(
 		unsafe.Pointer(x.Pointer()),
 		objc.RefPointer(value),
+	)
+	return
+}
+
+func (x gen_CALayer) MinificationFilterBias() (
+	r0 float32,
+) {
+	ret := C.CALayer_inst_minificationFilterBias(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+func (x gen_CALayer) SetMinificationFilterBias_(
+	value float32,
+) {
+	C.CALayer_inst_setMinificationFilterBias_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(value),
 	)
 	return
 }
@@ -4706,6 +4914,32 @@ func (x gen_NSNumber) InitWithBool_(
 	return
 }
 
+func (x gen_NSNumber) InitWithDouble_(
+	value float64,
+) (
+	r0 NSNumber,
+) {
+	ret := C.NSNumber_inst_initWithDouble_(
+		unsafe.Pointer(x.Pointer()),
+		C.double(value),
+	)
+	r0 = NSNumber_fromPointer(ret)
+	return
+}
+
+func (x gen_NSNumber) InitWithFloat_(
+	value float32,
+) (
+	r0 NSNumber,
+) {
+	ret := C.NSNumber_inst_initWithFloat_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(value),
+	)
+	r0 = NSNumber_fromPointer(ret)
+	return
+}
+
 func (x gen_NSNumber) InitWithInt_(
 	value int32,
 ) (
@@ -4801,6 +5035,26 @@ func (x gen_NSNumber) BoolValue() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSNumber) DoubleValue() (
+	r0 float64,
+) {
+	ret := C.NSNumber_inst_doubleValue(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSNumber) FloatValue() (
+	r0 float32,
+) {
+	ret := C.NSNumber_inst_floatValue(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
 	return
 }
 
@@ -5503,6 +5757,26 @@ func (x gen_NSString) PrecomposedStringWithCompatibilityMapping() (
 	return
 }
 
+func (x gen_NSString) DoubleValue() (
+	r0 float64,
+) {
+	ret := C.NSString_inst_doubleValue(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSString) FloatValue() (
+	r0 float32,
+) {
+	ret := C.NSString_inst_floatValue(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
 func (x gen_NSString) IntValue() (
 	r0 int32,
 ) {
@@ -5816,6 +6090,26 @@ func (x gen_NSThread) SetStackSize_(
 	C.NSThread_inst_setStackSize_(
 		unsafe.Pointer(x.Pointer()),
 		C.ulong(value),
+	)
+	return
+}
+
+func (x gen_NSThread) ThreadPriority() (
+	r0 float64,
+) {
+	ret := C.NSThread_inst_threadPriority(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSThread) SetThreadPriority_(
+	value float64,
+) {
+	C.NSThread_inst_setThreadPriority_(
+		unsafe.Pointer(x.Pointer()),
+		C.double(value),
 	)
 	return
 }
@@ -6414,6 +6708,16 @@ func (x gen_NSURLRequest) AllHTTPHeaderFields() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
+func (x gen_NSURLRequest) TimeoutInterval() (
+	r0 float64,
+) {
+	ret := C.NSURLRequest_inst_timeoutInterval(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
 	return
 }
 

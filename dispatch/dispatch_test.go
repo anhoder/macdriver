@@ -3,13 +3,13 @@ package dispatch
 import (
 	"errors"
 	"fmt"
+	"github.com/progrium/macdriver/cocoa"
 	"github.com/progrium/macdriver/core"
 	"github.com/progrium/macdriver/objc"
 	"os"
 	"runtime"
 	"testing"
-
-	"github.com/progrium/macdriver/cocoa"
+	"time"
 )
 
 func init() {
@@ -43,9 +43,27 @@ func TestAsync(t *testing.T) {
 
 		delegate := objc.Get("SoundDelegate").Alloc().Init()
 
-		url := core.NSURL_Init("http://m801.music.126.net/20220824095437/23513e1cce4d77bde03514ca85b63f55/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/10537970622/3bba/afbc/8dc6/eeb7a61c7cbcb86a614da9a650adb209.mp3")
+		url := core.NSURL_fileURLWithPath_isDirectory_(core.String("/Users/anhoder/Desktop/1.mp3"), false)
 		s := cocoa.NSSound_InitWithURL(url, false)
 		s.Set("delegate:", delegate)
+		s.SetVolume_(0.8)
+		fmt.Println(s.Volume())
+
+		s.SetName_(core.String("test 111"))
+
+		go func() {
+			<-time.After(time.Second * 30)
+			s.SetVolume_(1)
+			fmt.Println(s.Volume())
+		}()
+		go func() {
+			for {
+				ticker := time.Tick(time.Second)
+				<-ticker
+				fmt.Println(s.Name(), s.CurrentTime(), s.Duration())
+			}
+		}()
+
 		//d := core.NSData_WithBytes(data, uint64(len(data)))
 		//s := cocoa.NSSound_InitWithData(d)
 		s.Play()

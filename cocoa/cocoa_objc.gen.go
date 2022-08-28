@@ -7,7 +7,7 @@ import (
 )
 
 /*
-#cgo CFLAGS: -x objective-c -Wno-everything
+#cgo CFLAGS: -x objective-c
 #cgo LDFLAGS: -lobjc -framework Foundation -framework AppKit
 #define __OBJC2__ 1
 #include <objc/message.h>
@@ -91,6 +91,10 @@ BOOL NSSound_type_canInitWithPasteboard_(void* pasteboard) {
 	return [NSSound
 		canInitWithPasteboard: pasteboard];
 }
+void* NSSound_type_soundNamed_(void* name) {
+	return [NSSound
+		soundNamed: name];
+}
 void* NSSound_type_soundUnfilteredTypes() {
 	return [NSSound
 		soundUnfilteredTypes];
@@ -156,6 +160,11 @@ void* NSEvent_type_eventWithEventRef_(void* eventRef) {
 	return [NSEvent
 		eventWithEventRef: eventRef];
 }
+void NSEvent_type_startPeriodicEventsAfterDelay_withPeriod_(NSTimeInterval delay, NSTimeInterval period) {
+	[NSEvent
+		startPeriodicEventsAfterDelay: delay
+		withPeriod: period];
+}
 void NSEvent_type_stopPeriodicEvents() {
 	[NSEvent
 		stopPeriodicEvents];
@@ -164,9 +173,21 @@ void NSEvent_type_removeMonitor_(void* eventMonitor) {
 	[NSEvent
 		removeMonitor: eventMonitor];
 }
+NSTimeInterval NSEvent_type_keyRepeatDelay() {
+	return [NSEvent
+		keyRepeatDelay];
+}
+NSTimeInterval NSEvent_type_keyRepeatInterval() {
+	return [NSEvent
+		keyRepeatInterval];
+}
 unsigned long NSEvent_type_pressedMouseButtons() {
 	return [NSEvent
 		pressedMouseButtons];
+}
+NSTimeInterval NSEvent_type_doubleClickInterval() {
+	return [NSEvent
+		doubleClickInterval];
 }
 NSPoint NSEvent_type_mouseLocation() {
 	return [NSEvent
@@ -631,6 +652,11 @@ void* NSBundle_inst_objectForInfoDictionaryKey_(void *id, void* key) {
 		objectForInfoDictionaryKey: key];
 }
 
+double NSBundle_inst_preservationPriorityForTag_(void *id, void* tag) {
+	return [(NSBundle*)id
+		preservationPriorityForTag: tag];
+}
+
 BOOL NSBundle_inst_load(void *id) {
 	return [(NSBundle*)id
 		load];
@@ -790,6 +816,11 @@ void* NSSound_inst_initWithPasteboard_(void *id, void* pasteboard) {
 		initWithPasteboard: pasteboard];
 }
 
+BOOL NSSound_inst_setName_(void *id, void* string) {
+	return [(NSSound*)id
+		setName: string];
+}
+
 BOOL NSSound_inst_pause(void *id) {
 	return [(NSSound*)id
 		pause];
@@ -830,6 +861,31 @@ void NSSound_inst_setDelegate_(void *id, void* value) {
 		setDelegate: value];
 }
 
+void* NSSound_inst_name(void *id) {
+	return [(NSSound*)id
+		name];
+}
+
+float NSSound_inst_volume(void *id) {
+	return [(NSSound*)id
+		volume];
+}
+
+void NSSound_inst_setVolume_(void *id, float value) {
+	[(NSSound*)id
+		setVolume: value];
+}
+
+NSTimeInterval NSSound_inst_currentTime(void *id) {
+	return [(NSSound*)id
+		currentTime];
+}
+
+void NSSound_inst_setCurrentTime_(void *id, NSTimeInterval value) {
+	[(NSSound*)id
+		setCurrentTime: value];
+}
+
 BOOL NSSound_inst_loops(void *id) {
 	return [(NSSound*)id
 		loops];
@@ -838,6 +894,21 @@ BOOL NSSound_inst_loops(void *id) {
 void NSSound_inst_setLoops_(void *id, BOOL value) {
 	[(NSSound*)id
 		setLoops: value];
+}
+
+void* NSSound_inst_playbackDeviceIdentifier(void *id) {
+	return [(NSSound*)id
+		playbackDeviceIdentifier];
+}
+
+void NSSound_inst_setPlaybackDeviceIdentifier_(void *id, void* value) {
+	[(NSSound*)id
+		setPlaybackDeviceIdentifier: value];
+}
+
+NSTimeInterval NSSound_inst_duration(void *id) {
+	return [(NSSound*)id
+		duration];
 }
 
 BOOL NSSound_inst_isPlaying(void *id) {
@@ -1200,6 +1271,26 @@ void NSControl_inst_setEnabled_(void *id, BOOL value) {
 		setEnabled: value];
 }
 
+double NSControl_inst_doubleValue(void *id) {
+	return [(NSControl*)id
+		doubleValue];
+}
+
+void NSControl_inst_setDoubleValue_(void *id, double value) {
+	[(NSControl*)id
+		setDoubleValue: value];
+}
+
+float NSControl_inst_floatValue(void *id) {
+	return [(NSControl*)id
+		floatValue];
+}
+
+void NSControl_inst_setFloatValue_(void *id, float value) {
+	[(NSControl*)id
+		setFloatValue: value];
+}
+
 int NSControl_inst_intValue(void *id) {
 	return [(NSControl*)id
 		intValue];
@@ -1348,6 +1439,12 @@ BOOL NSControl_inst_ignoresMultiClick(void *id) {
 void NSControl_inst_setIgnoresMultiClick_(void *id, BOOL value) {
 	[(NSControl*)id
 		setIgnoresMultiClick: value];
+}
+
+void NSButton_inst_setPeriodicDelay_interval_(void *id, float delay, float interval) {
+	[(NSButton*)id
+		setPeriodicDelay: delay
+		interval: interval];
 }
 
 void NSButton_inst_compressWithPrioritizedCompressionOptions_(void *id, void* prioritizedOptions) {
@@ -1580,6 +1677,11 @@ NSPoint NSEvent_inst_locationInWindow(void *id) {
 		locationInWindow];
 }
 
+NSTimeInterval NSEvent_inst_timestamp(void *id) {
+	return [(NSEvent*)id
+		timestamp];
+}
+
 void* NSEvent_inst_window(void *id) {
 	return [(NSEvent*)id
 		window];
@@ -1660,6 +1762,11 @@ double NSEvent_inst_deltaZ(void *id) {
 		deltaZ];
 }
 
+float NSEvent_inst_pressure(void *id) {
+	return [(NSEvent*)id
+		pressure];
+}
+
 long NSEvent_inst_stage(void *id) {
 	return [(NSEvent*)id
 		stage];
@@ -1728,6 +1835,16 @@ long NSEvent_inst_absoluteY(void *id) {
 long NSEvent_inst_absoluteZ(void *id) {
 	return [(NSEvent*)id
 		absoluteZ];
+}
+
+float NSEvent_inst_rotation(void *id) {
+	return [(NSEvent*)id
+		rotation];
+}
+
+float NSEvent_inst_tangentialPressure(void *id) {
+	return [(NSEvent*)id
+		tangentialPressure];
 }
 
 NSPoint NSEvent_inst_tilt(void *id) {
@@ -3054,6 +3171,16 @@ double NSScreen_inst_maximumReferenceExtendedDynamicRangeColorComponentValue(voi
 		maximumReferenceExtendedDynamicRangeColorComponentValue];
 }
 
+NSTimeInterval NSScreen_inst_displayUpdateGranularity(void *id) {
+	return [(NSScreen*)id
+		displayUpdateGranularity];
+}
+
+NSTimeInterval NSScreen_inst_lastDisplayUpdateTimestamp(void *id) {
+	return [(NSScreen*)id
+		lastDisplayUpdateTimestamp];
+}
+
 void* NSScreen_inst_localizedName(void *id) {
 	return [(NSScreen*)id
 		localizedName];
@@ -3062,6 +3189,16 @@ void* NSScreen_inst_localizedName(void *id) {
 long NSScreen_inst_maximumFramesPerSecond(void *id) {
 	return [(NSScreen*)id
 		maximumFramesPerSecond];
+}
+
+NSTimeInterval NSScreen_inst_maximumRefreshInterval(void *id) {
+	return [(NSScreen*)id
+		maximumRefreshInterval];
+}
+
+NSTimeInterval NSScreen_inst_minimumRefreshInterval(void *id) {
+	return [(NSScreen*)id
+		minimumRefreshInterval];
 }
 
 void* NSStatusBar_inst_statusItemWithLength_(void *id, double length) {
@@ -3863,6 +4000,11 @@ void NSWindow_inst_setFrame_display_animate_(void *id, NSRect frameRect, BOOL di
 		setFrame: frameRect
 		display: displayFlag
 		animate: animateFlag];
+}
+
+NSTimeInterval NSWindow_inst_animationResizeTime_(void *id, NSRect newFrame) {
+	return [(NSWindow*)id
+		animationResizeTime: newFrame];
 }
 
 void NSWindow_inst_performZoom_(void *id, void* sender) {
@@ -7210,6 +7352,18 @@ func NSSound_canInitWithPasteboard_(
 	return
 }
 
+func NSSound_soundNamed_(
+	name core.NSStringRef,
+) (
+	r0 NSSound,
+) {
+	ret := C.NSSound_type_soundNamed_(
+		objc.RefPointer(name),
+	)
+	r0 = NSSound_fromPointer(ret)
+	return
+}
+
 func NSSound_soundUnfilteredTypes() (
 	r0 core.NSArray,
 ) {
@@ -7365,6 +7519,17 @@ func NSEvent_eventWithEventRef_(
 	return
 }
 
+func NSEvent_startPeriodicEventsAfterDelay_withPeriod_(
+	delay float64,
+	period float64,
+) {
+	C.NSEvent_type_startPeriodicEventsAfterDelay_withPeriod_(
+		C.NSTimeInterval(delay),
+		C.NSTimeInterval(period),
+	)
+	return
+}
+
 func NSEvent_stopPeriodicEvents() {
 	C.NSEvent_type_stopPeriodicEvents()
 	return
@@ -7379,11 +7544,35 @@ func NSEvent_removeMonitor_(
 	return
 }
 
+func NSEvent_keyRepeatDelay() (
+	r0 float64,
+) {
+	ret := C.NSEvent_type_keyRepeatDelay()
+	r0 = float64(ret)
+	return
+}
+
+func NSEvent_keyRepeatInterval() (
+	r0 float64,
+) {
+	ret := C.NSEvent_type_keyRepeatInterval()
+	r0 = float64(ret)
+	return
+}
+
 func NSEvent_pressedMouseButtons() (
 	r0 core.NSUInteger,
 ) {
 	ret := C.NSEvent_type_pressedMouseButtons()
 	r0 = core.NSUInteger(ret)
+	return
+}
+
+func NSEvent_doubleClickInterval() (
+	r0 float64,
+) {
+	ret := C.NSEvent_type_doubleClickInterval()
+	r0 = float64(ret)
 	return
 }
 
@@ -8485,6 +8674,19 @@ func (x gen_NSBundle) ObjectForInfoDictionaryKey_(
 	return
 }
 
+func (x gen_NSBundle) PreservationPriorityForTag_(
+	tag core.NSStringRef,
+) (
+	r0 float64,
+) {
+	ret := C.NSBundle_inst_preservationPriorityForTag_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(tag),
+	)
+	r0 = float64(ret)
+	return
+}
+
 func (x gen_NSBundle) Load() (
 	r0 bool,
 ) {
@@ -8837,6 +9039,19 @@ func (x gen_NSSound) InitWithPasteboard__asNSSound(
 	return
 }
 
+func (x gen_NSSound) SetName_(
+	string core.NSStringRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSSound_inst_setName_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(string),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func (x gen_NSSound) Pause() (
 	r0 bool,
 ) {
@@ -8917,6 +9132,56 @@ func (x gen_NSSound) SetDelegate_(
 	return
 }
 
+func (x gen_NSSound) Name() (
+	r0 core.NSString,
+) {
+	ret := C.NSSound_inst_name(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSSound) Volume() (
+	r0 float32,
+) {
+	ret := C.NSSound_inst_volume(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+func (x gen_NSSound) SetVolume_(
+	value float32,
+) {
+	C.NSSound_inst_setVolume_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(value),
+	)
+	return
+}
+
+func (x gen_NSSound) CurrentTime() (
+	r0 float64,
+) {
+	ret := C.NSSound_inst_currentTime(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSSound) SetCurrentTime_(
+	value float64,
+) {
+	C.NSSound_inst_setCurrentTime_(
+		unsafe.Pointer(x.Pointer()),
+		C.NSTimeInterval(value),
+	)
+	return
+}
+
 func (x gen_NSSound) Loops() (
 	r0 bool,
 ) {
@@ -8934,6 +9199,36 @@ func (x gen_NSSound) SetLoops_(
 		unsafe.Pointer(x.Pointer()),
 		convertToObjCBool(value),
 	)
+	return
+}
+
+func (x gen_NSSound) PlaybackDeviceIdentifier() (
+	r0 core.NSString,
+) {
+	ret := C.NSSound_inst_playbackDeviceIdentifier(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSSound) SetPlaybackDeviceIdentifier_(
+	value core.NSStringRef,
+) {
+	C.NSSound_inst_setPlaybackDeviceIdentifier_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(value),
+	)
+	return
+}
+
+func (x gen_NSSound) Duration() (
+	r0 float64,
+) {
+	ret := C.NSSound_inst_duration(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
 	return
 }
 
@@ -9695,6 +9990,46 @@ func (x gen_NSControl) SetEnabled_(
 	return
 }
 
+func (x gen_NSControl) DoubleValue() (
+	r0 float64,
+) {
+	ret := C.NSControl_inst_doubleValue(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSControl) SetDoubleValue_(
+	value float64,
+) {
+	C.NSControl_inst_setDoubleValue_(
+		unsafe.Pointer(x.Pointer()),
+		C.double(value),
+	)
+	return
+}
+
+func (x gen_NSControl) FloatValue() (
+	r0 float32,
+) {
+	ret := C.NSControl_inst_floatValue(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+func (x gen_NSControl) SetFloatValue_(
+	value float32,
+) {
+	C.NSControl_inst_setFloatValue_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(value),
+	)
+	return
+}
+
 func (x gen_NSControl) IntValue() (
 	r0 int32,
 ) {
@@ -10012,6 +10347,18 @@ func NSButton_fromPointer(ptr unsafe.Pointer) NSButton {
 
 func NSButton_fromRef(ref objc.Ref) NSButton {
 	return NSButton_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_NSButton) SetPeriodicDelay_interval_(
+	delay float32,
+	interval float32,
+) {
+	C.NSButton_inst_setPeriodicDelay_interval_(
+		unsafe.Pointer(x.Pointer()),
+		C.float(delay),
+		C.float(interval),
+	)
+	return
 }
 
 func (x gen_NSButton) CompressWithPrioritizedCompressionOptions_(
@@ -10496,6 +10843,16 @@ func (x gen_NSEvent) LocationInWindow() (
 	return
 }
 
+func (x gen_NSEvent) Timestamp() (
+	r0 float64,
+) {
+	ret := C.NSEvent_inst_timestamp(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
 func (x gen_NSEvent) Window() (
 	r0 NSWindow,
 ) {
@@ -10656,6 +11013,16 @@ func (x gen_NSEvent) DeltaZ() (
 	return
 }
 
+func (x gen_NSEvent) Pressure() (
+	r0 float32,
+) {
+	ret := C.NSEvent_inst_pressure(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
 func (x gen_NSEvent) Stage() (
 	r0 core.NSInteger,
 ) {
@@ -10793,6 +11160,26 @@ func (x gen_NSEvent) AbsoluteZ() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = core.NSInteger(ret)
+	return
+}
+
+func (x gen_NSEvent) Rotation() (
+	r0 float32,
+) {
+	ret := C.NSEvent_inst_rotation(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+func (x gen_NSEvent) TangentialPressure() (
+	r0 float32,
+) {
+	ret := C.NSEvent_inst_tangentialPressure(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
 	return
 }
 
@@ -13742,6 +14129,26 @@ func (x gen_NSScreen) MaximumReferenceExtendedDynamicRangeColorComponentValue() 
 	return
 }
 
+func (x gen_NSScreen) DisplayUpdateGranularity() (
+	r0 float64,
+) {
+	ret := C.NSScreen_inst_displayUpdateGranularity(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSScreen) LastDisplayUpdateTimestamp() (
+	r0 float64,
+) {
+	ret := C.NSScreen_inst_lastDisplayUpdateTimestamp(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
 func (x gen_NSScreen) LocalizedName() (
 	r0 core.NSString,
 ) {
@@ -13759,6 +14166,26 @@ func (x gen_NSScreen) MaximumFramesPerSecond() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = core.NSInteger(ret)
+	return
+}
+
+func (x gen_NSScreen) MaximumRefreshInterval() (
+	r0 float64,
+) {
+	ret := C.NSScreen_inst_maximumRefreshInterval(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSScreen) MinimumRefreshInterval() (
+	r0 float64,
+) {
+	ret := C.NSScreen_inst_minimumRefreshInterval(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
 	return
 }
 
@@ -15504,6 +15931,19 @@ func (x gen_NSWindow) SetFrame_display_animate_(
 		convertToObjCBool(displayFlag),
 		convertToObjCBool(animateFlag),
 	)
+	return
+}
+
+func (x gen_NSWindow) AnimationResizeTime_(
+	newFrame core.NSRect,
+) (
+	r0 float64,
+) {
+	ret := C.NSWindow_inst_animationResizeTime_(
+		unsafe.Pointer(x.Pointer()),
+		*(*C.NSRect)(unsafe.Pointer(&newFrame)),
+	)
+	r0 = float64(ret)
 	return
 }
 
