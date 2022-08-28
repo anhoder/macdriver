@@ -1,14 +1,13 @@
 package webkit
 
 import (
-	cocoa "github.com/progrium/macdriver/cocoa"
 	core "github.com/progrium/macdriver/core"
 	"github.com/progrium/macdriver/objc"
 	"unsafe"
 )
 
 /*
-#cgo CFLAGS: -x objective-c
+#cgo CFLAGS: -x objective-c -Wno-everything
 #cgo LDFLAGS: -lobjc -framework WebKit
 #define __OBJC2__ 1
 #include <objc/message.h>
@@ -79,10 +78,24 @@ void* WKWebView_inst_loadRequest_(void *id, void* request) {
 		loadRequest: request];
 }
 
+void* WKWebView_inst_loadData_MIMEType_characterEncodingName_baseURL_(void *id, void* data, void* MIMEType, void* characterEncodingName, void* baseURL) {
+	return [(WKWebView*)id
+		loadData: data
+		MIMEType: MIMEType
+		characterEncodingName: characterEncodingName
+		baseURL: baseURL];
+}
+
 void* WKWebView_inst_loadHTMLString_baseURL_(void *id, void* string, void* baseURL) {
 	return [(WKWebView*)id
 		loadHTMLString: string
 		baseURL: baseURL];
+}
+
+void* WKWebView_inst_loadFileRequest_allowingReadAccessToURL_(void *id, void* request, void* readAccessURL) {
+	return [(WKWebView*)id
+		loadFileRequest: request
+		allowingReadAccessToURL: readAccessURL];
 }
 
 void* WKWebView_inst_loadFileURL_allowingReadAccessToURL_(void *id, void* URL, void* readAccessURL) {
@@ -91,12 +104,10 @@ void* WKWebView_inst_loadFileURL_allowingReadAccessToURL_(void *id, void* URL, v
 		allowingReadAccessToURL: readAccessURL];
 }
 
-void* WKWebView_inst_loadData_MIMEType_characterEncodingName_baseURL_(void *id, void* data, void* MIMEType, void* characterEncodingName, void* baseURL) {
+void* WKWebView_inst_loadSimulatedRequest_responseHTMLString_(void *id, void* request, void* string) {
 	return [(WKWebView*)id
-		loadData: data
-		MIMEType: MIMEType
-		characterEncodingName: characterEncodingName
-		baseURL: baseURL];
+		loadSimulatedRequest: request
+		responseHTMLString: string];
 }
 
 void* WKWebView_inst_reload(void *id) {
@@ -147,18 +158,6 @@ void WKWebView_inst_goForward_(void *id, void* sender) {
 void* WKWebView_inst_goForward(void *id) {
 	return [(WKWebView*)id
 		goForward];
-}
-
-void* WKWebView_inst_loadFileRequest_allowingReadAccessToURL_(void *id, void* request, void* readAccessURL) {
-	return [(WKWebView*)id
-		loadFileRequest: request
-		allowingReadAccessToURL: readAccessURL];
-}
-
-void* WKWebView_inst_loadSimulatedRequest_responseHTMLString_(void *id, void* request, void* string) {
-	return [(WKWebView*)id
-		loadSimulatedRequest: request
-		responseHTMLString: string];
 }
 
 void* WKWebView_inst_init(void *id) {
@@ -342,16 +341,6 @@ void WKWebViewConfiguration_inst_setPreferences_(void *id, void* value) {
 		setPreferences: value];
 }
 
-BOOL WKWebViewConfiguration_inst_ignoresViewportScaleLimits(void *id) {
-	return [(WKWebViewConfiguration*)id
-		ignoresViewportScaleLimits];
-}
-
-void WKWebViewConfiguration_inst_setIgnoresViewportScaleLimits_(void *id, BOOL value) {
-	[(WKWebViewConfiguration*)id
-		setIgnoresViewportScaleLimits: value];
-}
-
 BOOL WKWebViewConfiguration_inst_suppressesIncrementalRendering(void *id) {
 	return [(WKWebViewConfiguration*)id
 		suppressesIncrementalRendering];
@@ -362,16 +351,6 @@ void WKWebViewConfiguration_inst_setSuppressesIncrementalRendering_(void *id, BO
 		setSuppressesIncrementalRendering: value];
 }
 
-BOOL WKWebViewConfiguration_inst_allowsInlineMediaPlayback(void *id) {
-	return [(WKWebViewConfiguration*)id
-		allowsInlineMediaPlayback];
-}
-
-void WKWebViewConfiguration_inst_setAllowsInlineMediaPlayback_(void *id, BOOL value) {
-	[(WKWebViewConfiguration*)id
-		setAllowsInlineMediaPlayback: value];
-}
-
 BOOL WKWebViewConfiguration_inst_allowsAirPlayForMediaPlayback(void *id) {
 	return [(WKWebViewConfiguration*)id
 		allowsAirPlayForMediaPlayback];
@@ -380,16 +359,6 @@ BOOL WKWebViewConfiguration_inst_allowsAirPlayForMediaPlayback(void *id) {
 void WKWebViewConfiguration_inst_setAllowsAirPlayForMediaPlayback_(void *id, BOOL value) {
 	[(WKWebViewConfiguration*)id
 		setAllowsAirPlayForMediaPlayback: value];
-}
-
-BOOL WKWebViewConfiguration_inst_allowsPictureInPictureMediaPlayback(void *id) {
-	return [(WKWebViewConfiguration*)id
-		allowsPictureInPictureMediaPlayback];
-}
-
-void WKWebViewConfiguration_inst_setAllowsPictureInPictureMediaPlayback_(void *id, BOOL value) {
-	[(WKWebViewConfiguration*)id
-		setAllowsPictureInPictureMediaPlayback: value];
 }
 
 BOOL WKWebViewConfiguration_inst_upgradeKnownHostsToHTTPS(void *id) {
@@ -451,6 +420,26 @@ BOOL WKPreferences_inst_isFraudulentWebsiteWarningEnabled(void *id) {
 void WKPreferences_inst_setFraudulentWebsiteWarningEnabled_(void *id, BOOL value) {
 	[(WKPreferences*)id
 		setFraudulentWebsiteWarningEnabled: value];
+}
+
+BOOL WKPreferences_inst_isElementFullscreenEnabled(void *id) {
+	return [(WKPreferences*)id
+		isElementFullscreenEnabled];
+}
+
+void WKPreferences_inst_setElementFullscreenEnabled_(void *id, BOOL value) {
+	[(WKPreferences*)id
+		setElementFullscreenEnabled: value];
+}
+
+BOOL WKPreferences_inst_isSiteSpecificQuirksModeEnabled(void *id) {
+	return [(WKPreferences*)id
+		isSiteSpecificQuirksModeEnabled];
+}
+
+void WKPreferences_inst_setSiteSpecificQuirksModeEnabled_(void *id, BOOL value) {
+	[(WKPreferences*)id
+		setSiteSpecificQuirksModeEnabled: value];
 }
 
 BOOL WKPreferences_inst_isTextInteractionEnabled(void *id) {
@@ -620,12 +609,12 @@ type WKWebViewRef interface {
 }
 
 type gen_WKWebView struct {
-	cocoa.NSView
+	objc.Object
 }
 
 func WKWebView_fromPointer(ptr unsafe.Pointer) WKWebView {
 	return WKWebView{gen_WKWebView{
-		cocoa.NSView_fromPointer(ptr),
+		objc.Object_fromPointer(ptr),
 	}}
 }
 
@@ -661,6 +650,25 @@ func (x gen_WKWebView) LoadRequest_(
 	return
 }
 
+func (x gen_WKWebView) LoadData_MIMEType_characterEncodingName_baseURL_(
+	data core.NSDataRef,
+	MIMEType core.NSStringRef,
+	characterEncodingName core.NSStringRef,
+	baseURL core.NSURLRef,
+) (
+	r0 WKNavigation,
+) {
+	ret := C.WKWebView_inst_loadData_MIMEType_characterEncodingName_baseURL_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(data),
+		objc.RefPointer(MIMEType),
+		objc.RefPointer(characterEncodingName),
+		objc.RefPointer(baseURL),
+	)
+	r0 = WKNavigation_fromPointer(ret)
+	return
+}
+
 func (x gen_WKWebView) LoadHTMLString_baseURL_(
 	string core.NSStringRef,
 	baseURL core.NSURLRef,
@@ -671,6 +679,21 @@ func (x gen_WKWebView) LoadHTMLString_baseURL_(
 		unsafe.Pointer(x.Pointer()),
 		objc.RefPointer(string),
 		objc.RefPointer(baseURL),
+	)
+	r0 = WKNavigation_fromPointer(ret)
+	return
+}
+
+func (x gen_WKWebView) LoadFileRequest_allowingReadAccessToURL_(
+	request core.NSURLRequestRef,
+	readAccessURL core.NSURLRef,
+) (
+	r0 WKNavigation,
+) {
+	ret := C.WKWebView_inst_loadFileRequest_allowingReadAccessToURL_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(request),
+		objc.RefPointer(readAccessURL),
 	)
 	r0 = WKNavigation_fromPointer(ret)
 	return
@@ -691,20 +714,16 @@ func (x gen_WKWebView) LoadFileURL_allowingReadAccessToURL_(
 	return
 }
 
-func (x gen_WKWebView) LoadData_MIMEType_characterEncodingName_baseURL_(
-	data core.NSDataRef,
-	MIMEType core.NSStringRef,
-	characterEncodingName core.NSStringRef,
-	baseURL core.NSURLRef,
+func (x gen_WKWebView) LoadSimulatedRequest_responseHTMLString_(
+	request core.NSURLRequestRef,
+	string core.NSStringRef,
 ) (
 	r0 WKNavigation,
 ) {
-	ret := C.WKWebView_inst_loadData_MIMEType_characterEncodingName_baseURL_(
+	ret := C.WKWebView_inst_loadSimulatedRequest_responseHTMLString_(
 		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(data),
-		objc.RefPointer(MIMEType),
-		objc.RefPointer(characterEncodingName),
-		objc.RefPointer(baseURL),
+		objc.RefPointer(request),
+		objc.RefPointer(string),
 	)
 	r0 = WKNavigation_fromPointer(ret)
 	return
@@ -802,36 +821,6 @@ func (x gen_WKWebView) GoForward() (
 ) {
 	ret := C.WKWebView_inst_goForward(
 		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = WKNavigation_fromPointer(ret)
-	return
-}
-
-func (x gen_WKWebView) LoadFileRequest_allowingReadAccessToURL_(
-	request core.NSURLRequestRef,
-	readAccessURL core.NSURLRef,
-) (
-	r0 WKNavigation,
-) {
-	ret := C.WKWebView_inst_loadFileRequest_allowingReadAccessToURL_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(request),
-		objc.RefPointer(readAccessURL),
-	)
-	r0 = WKNavigation_fromPointer(ret)
-	return
-}
-
-func (x gen_WKWebView) LoadSimulatedRequest_responseHTMLString_(
-	request core.NSURLRequestRef,
-	string core.NSStringRef,
-) (
-	r0 WKNavigation,
-) {
-	ret := C.WKWebView_inst_loadSimulatedRequest_responseHTMLString_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(request),
-		objc.RefPointer(string),
 	)
 	r0 = WKNavigation_fromPointer(ret)
 	return
@@ -1221,26 +1210,6 @@ func (x gen_WKWebViewConfiguration) SetPreferences_(
 	return
 }
 
-func (x gen_WKWebViewConfiguration) IgnoresViewportScaleLimits() (
-	r0 bool,
-) {
-	ret := C.WKWebViewConfiguration_inst_ignoresViewportScaleLimits(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_WKWebViewConfiguration) SetIgnoresViewportScaleLimits_(
-	value bool,
-) {
-	C.WKWebViewConfiguration_inst_setIgnoresViewportScaleLimits_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
 func (x gen_WKWebViewConfiguration) SuppressesIncrementalRendering() (
 	r0 bool,
 ) {
@@ -1261,26 +1230,6 @@ func (x gen_WKWebViewConfiguration) SetSuppressesIncrementalRendering_(
 	return
 }
 
-func (x gen_WKWebViewConfiguration) AllowsInlineMediaPlayback() (
-	r0 bool,
-) {
-	ret := C.WKWebViewConfiguration_inst_allowsInlineMediaPlayback(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_WKWebViewConfiguration) SetAllowsInlineMediaPlayback_(
-	value bool,
-) {
-	C.WKWebViewConfiguration_inst_setAllowsInlineMediaPlayback_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
 func (x gen_WKWebViewConfiguration) AllowsAirPlayForMediaPlayback() (
 	r0 bool,
 ) {
@@ -1295,26 +1244,6 @@ func (x gen_WKWebViewConfiguration) SetAllowsAirPlayForMediaPlayback_(
 	value bool,
 ) {
 	C.WKWebViewConfiguration_inst_setAllowsAirPlayForMediaPlayback_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
-func (x gen_WKWebViewConfiguration) AllowsPictureInPictureMediaPlayback() (
-	r0 bool,
-) {
-	ret := C.WKWebViewConfiguration_inst_allowsPictureInPictureMediaPlayback(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_WKWebViewConfiguration) SetAllowsPictureInPictureMediaPlayback_(
-	value bool,
-) {
-	C.WKWebViewConfiguration_inst_setAllowsPictureInPictureMediaPlayback_(
 		unsafe.Pointer(x.Pointer()),
 		convertToObjCBool(value),
 	)
@@ -1456,6 +1385,46 @@ func (x gen_WKPreferences) SetFraudulentWebsiteWarningEnabled_(
 	value bool,
 ) {
 	C.WKPreferences_inst_setFraudulentWebsiteWarningEnabled_(
+		unsafe.Pointer(x.Pointer()),
+		convertToObjCBool(value),
+	)
+	return
+}
+
+func (x gen_WKPreferences) IsElementFullscreenEnabled() (
+	r0 bool,
+) {
+	ret := C.WKPreferences_inst_isElementFullscreenEnabled(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_WKPreferences) SetElementFullscreenEnabled_(
+	value bool,
+) {
+	C.WKPreferences_inst_setElementFullscreenEnabled_(
+		unsafe.Pointer(x.Pointer()),
+		convertToObjCBool(value),
+	)
+	return
+}
+
+func (x gen_WKPreferences) IsSiteSpecificQuirksModeEnabled() (
+	r0 bool,
+) {
+	ret := C.WKPreferences_inst_isSiteSpecificQuirksModeEnabled(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_WKPreferences) SetSiteSpecificQuirksModeEnabled_(
+	value bool,
+) {
+	C.WKPreferences_inst_setSiteSpecificQuirksModeEnabled_(
 		unsafe.Pointer(x.Pointer()),
 		convertToObjCBool(value),
 	)

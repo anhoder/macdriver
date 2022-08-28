@@ -8,6 +8,7 @@
     ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -19,6 +20,18 @@
         "Name": "initWithBool:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as a BOOL.",
         "Declaration": "- (NSNumber *)initWithBool:(BOOL)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1415728-initwithbool?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -30,13 +43,24 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1415728-initwithbool?language=objc"
+        ]
       },
       {
         "Name": "initWithChar:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as a signed char.",
         "Declaration": "- (NSNumber *)initWithChar:(char)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409777-initwithchar?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -48,13 +72,21 @@
               "Name": "char"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409777-initwithchar?language=objc"
+        ]
       },
       {
         "Name": "initWithDouble:",
         "Description": "Returns an NSNumber object initialized to contain value, treated as a double.",
         "Declaration": "- (NSNumber *)initWithDouble:(double)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407545-initwithdouble?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -66,13 +98,21 @@
               "Name": "double"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407545-initwithdouble?language=objc"
+        ]
       },
       {
         "Name": "initWithFloat:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as a float.",
         "Declaration": "- (NSNumber *)initWithFloat:(float)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412999-initwithfloat?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -84,13 +124,21 @@
               "Name": "float"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412999-initwithfloat?language=objc"
+        ]
       },
       {
         "Name": "initWithInt:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as a signed int.",
         "Declaration": "- (NSNumber *)initWithInt:(int)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407580-initwithint?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -102,13 +150,24 @@
               "Name": "int"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407580-initwithint?language=objc"
+        ]
       },
       {
         "Name": "initWithInteger:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an NSInteger.",
         "Declaration": "- (NSNumber *)initWithInteger:(NSInteger)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409397-initwithinteger?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -120,13 +179,21 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409397-initwithinteger?language=objc"
+        ]
       },
       {
         "Name": "initWithLong:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as a signed long.",
         "Declaration": "- (NSNumber *)initWithLong:(long)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410739-initwithlong?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -138,13 +205,20 @@
               "Name": "long"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410739-initwithlong?language=objc"
+        ]
       },
       {
         "Name": "initWithLongLong:",
         "Description": "Returns an NSNumber object initialized to contain value, treated as a signed long long.",
         "Declaration": "- (NSNumber *)initWithLongLong:(long long)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -163,6 +237,15 @@
         "Name": "initWithShort:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as a signed short.",
         "Declaration": "- (NSNumber *)initWithShort:(short)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1411886-initwithshort?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -174,13 +257,21 @@
               "Name": "short"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1411886-initwithshort?language=objc"
+        ]
       },
       {
         "Name": "initWithUnsignedChar:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an unsigned char.",
         "Declaration": "- (NSNumber *)initWithUnsignedChar:(unsigned char)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1416533-initwithunsignedchar?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -195,13 +286,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1416533-initwithunsignedchar?language=objc"
+        ]
       },
       {
         "Name": "initWithUnsignedInt:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an unsigned int.",
         "Declaration": "- (NSNumber *)initWithUnsignedInt:(unsigned int)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1414598-initwithunsignedint?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -216,13 +318,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1414598-initwithunsignedint?language=objc"
+        ]
       },
       {
         "Name": "initWithUnsignedInteger:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an NSUInteger.",
         "Declaration": "- (NSNumber *)initWithUnsignedInteger:(NSUInteger)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412531-initwithunsignedinteger?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -234,13 +347,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412531-initwithunsignedinteger?language=objc"
+        ]
       },
       {
         "Name": "initWithUnsignedLong:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an unsigned long.",
         "Declaration": "- (NSNumber *)initWithUnsignedLong:(unsigned long)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410728-initwithunsignedlong?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -255,13 +376,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410728-initwithunsignedlong?language=objc"
+        ]
       },
       {
         "Name": "initWithUnsignedLongLong:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an unsigned long long.",
         "Declaration": "- (NSNumber *)initWithUnsignedLongLong:(unsigned long long)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1416550-initwithunsignedlonglong?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -276,13 +405,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1416550-initwithunsignedlonglong?language=objc"
+        ]
       },
       {
         "Name": "initWithUnsignedShort:",
         "Description": "Returns an NSNumber object initialized to contain a given value, treated as an unsigned short.",
         "Declaration": "- (NSNumber *)initWithUnsignedShort:(unsigned short)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407718-initwithunsignedshort?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -297,13 +434,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407718-initwithunsignedshort?language=objc"
+        ]
       },
       {
         "Name": "descriptionWithLocale:",
         "Description": "Returns a string that represents the contents of the number object for a given locale.",
         "Declaration": "- (NSString *)descriptionWithLocale:(id)locale;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409984-descriptionwithlocale?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
@@ -315,13 +460,24 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409984-descriptionwithlocale?language=objc"
+        ]
       },
       {
         "Name": "compare:",
         "Description": "Returns an NSComparisonResult value that indicates whether the number object’s value is greater than, equal to, or less than a given number.",
         "Declaration": "- (NSComparisonResult)compare:(NSNumber *)otherNumber;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1413562-compare?language=objc",
         "Return": {
           "Name": "NSComparisonResult"
         },
@@ -333,13 +489,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1413562-compare?language=objc"
+        ]
       },
       {
         "Name": "isEqualToNumber:",
         "Description": "Returns a Boolean value that indicates whether the number object’s value and a given number are equal.",
         "Declaration": "- (BOOL)isEqualToNumber:(NSNumber *)number;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1411315-isequaltonumber?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -351,13 +518,13 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1411315-isequaltonumber?language=objc"
+        ]
       },
       {
         "Name": "objCType",
         "Description": "Returns a C string containing the Objective-C type of the data contained in the number object.",
         "Declaration": "- (const char *)objCType",
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1807278-objctype?language=objc",
         "Return": {
           "Name": "char",
           "IsPtr": true,
@@ -365,13 +532,23 @@
             "const"
           ]
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1807278-objctype?language=objc"
+        "Args": null
       },
       {
         "Name": "initWithCoder:",
-        "Description": "",
         "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1411476-initwithcoder?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -383,8 +560,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1411476-initwithcoder?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -392,126 +568,233 @@
         "Name": "boolValue",
         "Description": "The number object's value expressed as a Boolean value.",
         "Declaration": "@property(readonly) BOOL boolValue;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410865-boolvalue?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410865-boolvalue?language=objc"
+        }
       },
       {
         "Name": "charValue",
         "Description": "The number object's value expressed as a char.",
         "Declaration": "@property(readonly) char charValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407838-charvalue?language=objc",
         "Type": {
           "Name": "char"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407838-charvalue?language=objc"
+        }
       },
       {
         "Name": "decimalValue",
         "Description": "The number object's value expressed as an NSDecimal structure.",
         "Declaration": "@property(readonly) NSDecimal decimalValue;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407409-decimalvalue?language=objc",
         "Type": {
           "Name": "NSDecimal"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407409-decimalvalue?language=objc"
+        }
       },
       {
         "Name": "doubleValue",
         "Description": "The number object's value expressed as a double, converted as necessary.",
         "Declaration": "@property(readonly) double doubleValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1414104-doublevalue?language=objc",
         "Type": {
           "Name": "double"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1414104-doublevalue?language=objc"
+        }
       },
       {
         "Name": "floatValue",
         "Description": "The number object's value expressed as a float, converted as necessary.",
         "Declaration": "@property(readonly) float floatValue;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1418317-floatvalue?language=objc",
         "Type": {
           "Name": "float"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1418317-floatvalue?language=objc"
+        }
       },
       {
         "Name": "intValue",
         "Description": "The number object's value expressed as an int, converted as necessary.",
         "Declaration": "@property(readonly) int intValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407153-intvalue?language=objc",
         "Type": {
           "Name": "int"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407153-intvalue?language=objc"
+        }
       },
       {
         "Name": "integerValue",
         "Description": "The number object's value expressed as an NSInteger object, converted as necessary.",
         "Declaration": "@property(readonly) NSInteger integerValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412554-integervalue?language=objc",
         "Type": {
           "Name": "NSInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412554-integervalue?language=objc"
+        }
       },
       {
         "Name": "longLongValue",
         "Description": "The number object’s value expressed as a long long, converted as necessary.",
         "Declaration": "@property(readonly) long long longLongValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1416870-longlongvalue?language=objc",
         "Type": {
           "Name": "long long"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1416870-longlongvalue?language=objc"
+        }
       },
       {
         "Name": "longValue",
         "Description": "The number object's value expressed as a long, converted as necessary.",
         "Declaration": "@property(readonly) long longValue;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412566-longvalue?language=objc",
         "Type": {
           "Name": "long"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1412566-longvalue?language=objc"
+        }
       },
       {
         "Name": "shortValue",
         "Description": "The number object's value expressed as a short, converted as necessary.",
         "Declaration": "@property(readonly) short shortValue;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407601-shortvalue?language=objc",
         "Type": {
           "Name": "short"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1407601-shortvalue?language=objc"
+        }
       },
       {
         "Name": "unsignedCharValue",
         "Description": "The number object's value expressed as an unsigned char, converted as necessary.",
         "Declaration": "@property(readonly) unsigned char unsignedCharValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409016-unsignedcharvalue?language=objc",
         "Type": {
           "Name": "char",
           "Annotations": [
@@ -520,25 +803,44 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1409016-unsignedcharvalue?language=objc"
+        }
       },
       {
         "Name": "unsignedIntegerValue",
         "Description": "The number object's value expressed as an NSUInteger object, converted as necessary.",
         "Declaration": "@property(readonly) NSUInteger unsignedIntegerValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1413324-unsignedintegervalue?language=objc",
         "Type": {
           "Name": "NSUInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1413324-unsignedintegervalue?language=objc"
+        }
       },
       {
         "Name": "unsignedIntValue",
         "Description": "The number object's value expressed as an unsigned int, converted as necessary.",
         "Declaration": "@property(readonly) unsigned int unsignedIntValue;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1417875-unsignedintvalue?language=objc",
         "Type": {
           "Name": "int",
           "Annotations": [
@@ -547,13 +849,24 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1417875-unsignedintvalue?language=objc"
+        }
       },
       {
         "Name": "unsignedLongLongValue",
         "Description": "The number object’s value expressed as an unsigned long long, converted as necessary.",
         "Declaration": "@property(readonly) unsigned long long unsignedLongLongValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1414524-unsignedlonglongvalue?language=objc",
         "Type": {
           "Name": "long long",
           "Annotations": [
@@ -562,13 +875,24 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1414524-unsignedlonglongvalue?language=objc"
+        }
       },
       {
         "Name": "unsignedLongValue",
         "Description": "The number object's value expressed as an unsigned long, converted as necessary.",
         "Declaration": "@property(readonly) unsigned long unsignedLongValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1415252-unsignedlongvalue?language=objc",
         "Type": {
           "Name": "long",
           "Annotations": [
@@ -577,13 +901,24 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1415252-unsignedlongvalue?language=objc"
+        }
       },
       {
         "Name": "unsignedShortValue",
         "Description": "The number object's value expressed as an unsigned short, converted as necessary.",
         "Declaration": "@property(readonly) unsigned short unsignedShortValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410604-unsignedshortvalue?language=objc",
         "Type": {
           "Name": "short",
           "Annotations": [
@@ -592,13 +927,24 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1410604-unsignedshortvalue?language=objc"
+        }
       },
       {
         "Name": "stringValue",
         "Description": "The number object's value expressed as a human-readable string.",
         "Declaration": "@property(readonly, copy) NSString *stringValue;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1415802-stringvalue?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -606,8 +952,7 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1415802-stringvalue?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -615,6 +960,18 @@
         "Name": "numberWithBool:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a BOOL.",
         "Declaration": "+ (NSNumber *)numberWithBool:(BOOL)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551475-numberwithbool?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -626,13 +983,24 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551475-numberwithbool?language=objc"
+        ]
       },
       {
         "Name": "numberWithChar:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a signed char.",
         "Declaration": "+ (NSNumber *)numberWithChar:(char)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551464-numberwithchar?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -644,13 +1012,24 @@
               "Name": "char"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551464-numberwithchar?language=objc"
+        ]
       },
       {
         "Name": "numberWithDouble:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a double.",
         "Declaration": "+ (NSNumber *)numberWithDouble:(double)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551463-numberwithdouble?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -662,13 +1041,24 @@
               "Name": "double"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551463-numberwithdouble?language=objc"
+        ]
       },
       {
         "Name": "numberWithFloat:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a float.",
         "Declaration": "+ (NSNumber *)numberWithFloat:(float)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551471-numberwithfloat?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -680,13 +1070,24 @@
               "Name": "float"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551471-numberwithfloat?language=objc"
+        ]
       },
       {
         "Name": "numberWithInt:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a signed int.",
         "Declaration": "+ (NSNumber *)numberWithInt:(int)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551470-numberwithint?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -698,13 +1099,24 @@
               "Name": "int"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551470-numberwithint?language=objc"
+        ]
       },
       {
         "Name": "numberWithInteger:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an NSInteger.",
         "Declaration": "+ (NSNumber *)numberWithInteger:(NSInteger)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551473-numberwithinteger?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -716,13 +1128,24 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551473-numberwithinteger?language=objc"
+        ]
       },
       {
         "Name": "numberWithLong:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a signed long.",
         "Declaration": "+ (NSNumber *)numberWithLong:(long)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551474-numberwithlong?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -734,13 +1157,20 @@
               "Name": "long"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551474-numberwithlong?language=objc"
+        ]
       },
       {
         "Name": "numberWithLongLong:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as a signed long long.",
         "Declaration": "+ (NSNumber *)numberWithLongLong:(long long)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -759,6 +1189,15 @@
         "Name": "numberWithShort:",
         "Description": "Creates and returns an NSNumber object containing value, treating it as a signed short.",
         "Declaration": "+ (NSNumber *)numberWithShort:(short)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551476-numberwithshort?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -770,13 +1209,24 @@
               "Name": "short"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551476-numberwithshort?language=objc"
+        ]
       },
       {
         "Name": "numberWithUnsignedChar:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an unsigned char.",
         "Declaration": "+ (NSNumber *)numberWithUnsignedChar:(unsigned char)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551468-numberwithunsignedchar?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -791,13 +1241,20 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551468-numberwithunsignedchar?language=objc"
+        ]
       },
       {
         "Name": "numberWithUnsignedInt:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an unsigned int.",
         "Declaration": "+ (NSNumber *)numberWithUnsignedInt:(unsigned int)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -819,6 +1276,15 @@
         "Name": "numberWithUnsignedInteger:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an NSUInteger.",
         "Declaration": "+ (NSNumber *)numberWithUnsignedInteger:(NSUInteger)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551469-numberwithunsignedinteger?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -830,13 +1296,24 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551469-numberwithunsignedinteger?language=objc"
+        ]
       },
       {
         "Name": "numberWithUnsignedLong:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an unsigned long.",
         "Declaration": "+ (NSNumber *)numberWithUnsignedLong:(unsigned long)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551477-numberwithunsignedlong?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -851,13 +1328,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551477-numberwithunsignedlong?language=objc"
+        ]
       },
       {
         "Name": "numberWithUnsignedLongLong:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an unsigned long long.",
         "Declaration": "+ (NSNumber *)numberWithUnsignedLongLong:(unsigned long long)value;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551465-numberwithunsignedlonglong?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -872,13 +1360,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551465-numberwithunsignedlonglong?language=objc"
+        ]
       },
       {
         "Name": "numberWithUnsignedShort:",
         "Description": "Creates and returns an NSNumber object containing a given value, treating it as an unsigned short.",
         "Declaration": "+ (NSNumber *)numberWithUnsignedShort:(unsigned short)value;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551467-numberwithunsignedshort?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
@@ -893,12 +1389,11 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnumber/1551467-numberwithunsignedshort?language=objc"
+        ]
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-30T14:57:09.956239-07:00",
+  "PullDate": "2022-08-28T20:32:14.311525+08:00",
   "Version": 2
 }

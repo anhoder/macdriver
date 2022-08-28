@@ -8,6 +8,7 @@
     ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -19,16 +20,32 @@
         "Name": "init",
         "Description": "Initializes a newly allocated dictionary.",
         "Declaration": "- (instancetype)init;",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1418147-init?language=objc",
         "Return": {
           "Name": "instancetype"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1418147-init?language=objc"
+        "Args": null
       },
       {
         "Name": "initWithObjects:forKeys:",
         "Description": "Initializes a newly allocated dictionary with key-value pairs constructed from the provided arrays of keys and objects.",
         "Declaration": "- (instancetype)initWithObjects:(NSArray\u003cObjectType\u003e *)objects \n                        forKeys:(NSArray\u003cid\u003cNSCopying\u003e\u003e *)keys;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "instancetype"
         },
@@ -69,6 +86,15 @@
         "Name": "initWithObjects:forKeys:count:",
         "Description": "Initializes a newly allocated dictionary with the specified number of key-value pairs constructed from the provided C arrays of keys and objects.",
         "Declaration": "- (instancetype)initWithObjects:(ObjectType  _Nonnull const *)objects \n                        forKeys:(id\u003cNSCopying\u003e  _Nonnull const *)keys \n                          count:(NSUInteger)cnt;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412631-initwithobjects?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -106,13 +132,24 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412631-initwithobjects?language=objc"
+        ]
       },
       {
         "Name": "initWithObjectsAndKeys:",
         "Description": "Initializes a newly allocated dictionary with entries constructed from the specified set of values and keys.",
         "Declaration": "- (instancetype)initWithObjectsAndKeys:(id)firstObject, ...;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574190-initwithobjectsandkeys?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -127,13 +164,21 @@
             "Name": "...",
             "Type": {}
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574190-initwithobjectsandkeys?language=objc"
+        ]
       },
       {
         "Name": "initWithDictionary:",
         "Description": "Initializes a newly allocated dictionary by placing in it the keys and values contained in another given dictionary.",
         "Declaration": "- (instancetype)initWithDictionary:(NSDictionary\u003cKeyType, ObjectType\u003e *)otherDictionary;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1418434-initwithdictionary?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -153,13 +198,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1418434-initwithdictionary?language=objc"
+        ]
       },
       {
         "Name": "initWithDictionary:copyItems:",
         "Description": "Initializes a newly allocated dictionary using the objects contained in another given dictionary.",
         "Declaration": "- (instancetype)initWithDictionary:(NSDictionary\u003cKeyType, ObjectType\u003e *)otherDictionary \n                         copyItems:(BOOL)flag;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1410124-initwithdictionary?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -185,13 +238,24 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1410124-initwithdictionary?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfURL:error:",
         "Description": "Initializes a newly allocated dictionary using the keys and values found at a given URL.",
         "Declaration": "- (NSDictionary\u003cNSString *,ObjectType\u003e *)initWithContentsOfURL:(NSURL *)url \n                                                         error:(NSError * _Nullable *)error;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+",
+          "watchOS 4.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2879140-initwithcontentsofurl?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -224,13 +288,22 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2879140-initwithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfURL:",
         "Description": "Initializes a newly allocated dictionary using the keys and values found at a given URL.",
         "Declaration": "- (NSDictionary\u003cKeyType, ObjectType\u003e *)initWithContentsOfURL:(NSURL *)url;",
+        "Platforms": [
+          "iOS 2.0–11.0",
+          "iPadOS 2.0–11.0",
+          "macOS 10.0–10.13",
+          "Mac Catalyst 13.1–13.0",
+          "tvOS 9.0–11.0",
+          "watchOS 2.0–4.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416069-initwithcontentsofurl?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -251,14 +324,22 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416069-initwithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfFile:",
         "Description": "Initializes a newly allocated dictionary using the keys and values found in a file at a given path.",
         "Declaration": "- (NSDictionary\u003cKeyType, ObjectType\u003e *)initWithContentsOfFile:(NSString *)path;",
+        "Platforms": [
+          "iOS 2.0–11.0",
+          "iPadOS 2.0–11.0",
+          "macOS 10.0–10.13",
+          "Mac Catalyst 13.1–13.0",
+          "tvOS 9.0–11.0",
+          "watchOS 2.0–4.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1414949-initwithcontentsoffile?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -279,14 +360,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1414949-initwithcontentsoffile?language=objc"
+        ]
       },
       {
         "Name": "initWithCoder:",
         "Description": "Creates a dictionary initialized from data in the provided unarchiver.",
         "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417987-initwithcoder?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -298,13 +386,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417987-initwithcoder?language=objc"
+        ]
       },
       {
         "Name": "isEqualToDictionary:",
         "Description": "Returns a Boolean value that indicates whether the contents of the receiving dictionary are equal to the contents of another given dictionary.",
         "Declaration": "- (BOOL)isEqualToDictionary:(NSDictionary\u003cKeyType, ObjectType\u003e *)otherDictionary;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415445-isequaltodictionary?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -324,13 +423,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415445-isequaltodictionary?language=objc"
+        ]
       },
       {
         "Name": "allKeysForObject:",
         "Description": "Returns a new array containing the keys corresponding to all occurrences of a given object in the dictionary.",
         "Declaration": "- (NSArray\u003cKeyType\u003e *)allKeysForObject:(ObjectType)anObject;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417147-allkeysforobject?language=objc",
         "Return": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -347,13 +454,21 @@
               "Name": "ObjectType"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417147-allkeysforobject?language=objc"
+        ]
       },
       {
         "Name": "valueForKey:",
         "Description": "Returns the value associated with a given key.",
         "Declaration": "- (ObjectType)valueForKey:(NSString *)key;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.3+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1410210-valueforkey?language=objc",
         "Return": {
           "Name": "ObjectType"
         },
@@ -365,13 +480,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1410210-valueforkey?language=objc"
+        ]
       },
       {
         "Name": "getObjects:andKeys:count:",
         "Description": "Returns by reference C arrays of the keys and values in the dictionary.",
         "Declaration": "- (void)getObjects:(ObjectType  _Nonnull *)objects \n           andKeys:(KeyType  _Nonnull *)keys \n             count:(NSUInteger)count;\n",
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409973-getobjects?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -402,13 +525,25 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409973-getobjects?language=objc"
+        ]
       },
       {
         "Name": "getObjects:andKeys:",
         "Description": "Returns by reference C arrays of the keys and values in the dictionary.",
         "Declaration": "- (void)getObjects:(ObjectType  _Nonnull *)objects \n           andKeys:(KeyType  _Nonnull *)keys;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0–11.0",
+          "iPadOS 2.0–11.0",
+          "macOS 10.0–10.13",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–11.0",
+          "watchOS 2.0–4.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409428-getobjects?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -433,14 +568,24 @@
               ]
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409428-getobjects?language=objc"
+        ]
       },
       {
         "Name": "objectsForKeys:notFoundMarker:",
         "Description": "Returns as a static array the set of objects from the dictionary that corresponds to the specified keys.",
         "Declaration": "- (NSArray\u003cObjectType\u003e *)objectsForKeys:(NSArray\u003cKeyType\u003e *)keys \n                         notFoundMarker:(ObjectType)marker;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408769-objectsforkeys?language=objc",
         "Return": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -469,13 +614,21 @@
               "Name": "ObjectType"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408769-objectsforkeys?language=objc"
+        ]
       },
       {
         "Name": "objectForKey:",
         "Description": "Returns the value associated with a given key.",
         "Declaration": "- (ObjectType)objectForKey:(KeyType)aKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1414347-objectforkey?language=objc",
         "Return": {
           "Name": "ObjectType"
         },
@@ -486,13 +639,21 @@
               "Name": "KeyType"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1414347-objectforkey?language=objc"
+        ]
       },
       {
         "Name": "objectForKeyedSubscript:",
         "Description": "Returns the value associated with a given key.",
         "Declaration": "- (ObjectType)objectForKeyedSubscript:(KeyType)key;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415430-objectforkeyedsubscript?language=objc",
         "Return": {
           "Name": "ObjectType"
         },
@@ -503,13 +664,21 @@
               "Name": "KeyType"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415430-objectforkeyedsubscript?language=objc"
+        ]
       },
       {
         "Name": "keyEnumerator",
         "Description": "Provides an enumerator to access the keys in the dictionary.",
         "Declaration": "- (NSEnumerator\u003cKeyType\u003e *)keyEnumerator;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1411011-keyenumerator?language=objc",
         "Return": {
           "Name": "NSEnumerator",
           "IsPtr": true,
@@ -519,13 +688,21 @@
             }
           ]
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1411011-keyenumerator?language=objc"
+        "Args": null
       },
       {
         "Name": "objectEnumerator",
         "Description": "Returns an enumerator object that lets you access each value in the dictionary.",
         "Declaration": "- (NSEnumerator\u003cObjectType\u003e *)objectEnumerator;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409600-objectenumerator?language=objc",
         "Return": {
           "Name": "NSEnumerator",
           "IsPtr": true,
@@ -535,13 +712,21 @@
             }
           ]
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409600-objectenumerator?language=objc"
+        "Args": null
       },
       {
         "Name": "enumerateKeysAndObjectsUsingBlock:",
         "Description": "Applies a given block object to the entries of the dictionary.",
         "Declaration": "- (void)enumerateKeysAndObjectsUsingBlock:(void (^)(KeyType key, ObjectType obj, BOOL *stop))block;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1414570-enumeratekeysandobjectsusingbloc?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -577,13 +762,21 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1414570-enumeratekeysandobjectsusingbloc?language=objc"
+        ]
       },
       {
         "Name": "enumerateKeysAndObjectsWithOptions:usingBlock:",
         "Description": "Applies a given block object to the entries of the dictionary, with options specifying how the enumeration is performed.",
         "Declaration": "- (void)enumerateKeysAndObjectsWithOptions:(NSEnumerationOptions)opts \n                                usingBlock:(void (^)(KeyType key, ObjectType obj, BOOL *stop))block;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409739-enumeratekeysandobjectswithoptio?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -625,13 +818,21 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409739-enumeratekeysandobjectswithoptio?language=objc"
+        ]
       },
       {
         "Name": "countByEnumeratingWithState:objects:count:",
         "Description": "Returns by reference a C array of objects over which the sender should iterate.",
         "Declaration": "- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state \n                                  objects:(K  _Nullable *)buffer \n                                    count:(NSUInteger)len;\n",
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.0+",
+          "tvOS 11.0+",
+          "watchOS 4.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2865769-countbyenumeratingwithstate?language=objc",
         "Return": {
           "Name": "NSUInteger"
         },
@@ -659,13 +860,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2865769-countbyenumeratingwithstate?language=objc"
+        ]
       },
       {
         "Name": "keysSortedByValueUsingSelector:",
         "Description": "Returns an array of the dictionary’s keys, in the order they would be in if the dictionary were sorted by its values.",
         "Declaration": "- (NSArray\u003cKeyType\u003e *)keysSortedByValueUsingSelector:(SEL)comparator;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412484-keyssortedbyvalueusingselector?language=objc",
         "Return": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -682,13 +891,24 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412484-keyssortedbyvalueusingselector?language=objc"
+        ]
       },
       {
         "Name": "keysSortedByValueUsingComparator:",
         "Description": "Returns an array of the dictionary’s keys, in the order they would be in if the dictionary were sorted by its values using a given comparator block.",
         "Declaration": "- (NSArray\u003cKeyType\u003e *)keysSortedByValueUsingComparator:(NSComparator)cmptr;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1411105-keyssortedbyvalueusingcomparator?language=objc",
         "Return": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -705,13 +925,21 @@
               "Name": "NSComparator"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1411105-keyssortedbyvalueusingcomparator?language=objc"
+        ]
       },
       {
         "Name": "keysSortedByValueWithOptions:usingComparator:",
         "Description": "Returns an array of the dictionary’s keys, in the order they would be in if the dictionary were sorted by its values using a given comparator block and a specified set of options.",
         "Declaration": "- (NSArray\u003cKeyType\u003e *)keysSortedByValueWithOptions:(NSSortOptions)opts \n                                   usingComparator:(NSComparator)cmptr;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415717-keyssortedbyvaluewithoptions?language=objc",
         "Return": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -734,13 +962,21 @@
               "Name": "NSComparator"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415717-keyssortedbyvaluewithoptions?language=objc"
+        ]
       },
       {
         "Name": "keysOfEntriesPassingTest:",
         "Description": "Returns the set of keys whose corresponding value satisfies a constraint described by a block object.",
         "Declaration": "- (NSSet\u003cKeyType\u003e *)keysOfEntriesPassingTest:(BOOL (^)(KeyType key, ObjectType obj, BOOL *stop))predicate;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1407186-keysofentriespassingtest?language=objc",
         "Return": {
           "Name": "NSSet",
           "IsPtr": true,
@@ -782,13 +1018,21 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1407186-keysofentriespassingtest?language=objc"
+        ]
       },
       {
         "Name": "keysOfEntriesWithOptions:passingTest:",
         "Description": "Returns the set of keys whose corresponding value satisfies a constraint described by a block object.",
         "Declaration": "- (NSSet\u003cKeyType\u003e *)keysOfEntriesWithOptions:(NSEnumerationOptions)opts \n                                 passingTest:(BOOL (^)(KeyType key, ObjectType obj, BOOL *stop))predicate;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416706-keysofentrieswithoptions?language=objc",
         "Return": {
           "Name": "NSSet",
           "IsPtr": true,
@@ -836,13 +1080,21 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416706-keysofentrieswithoptions?language=objc"
+        ]
       },
       {
         "Name": "writeToURL:error:",
         "Description": "Writes a property list representation of the contents of the dictionary to a given URL.",
         "Declaration": "- (BOOL)writeToURL:(NSURL *)url \n             error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+",
+          "watchOS 4.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2879139-writetourl?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -865,13 +1117,22 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2879139-writetourl?language=objc"
+        ]
       },
       {
         "Name": "writeToURL:atomically:",
         "Description": "Writes a property list representation of the contents of the dictionary to a given URL.",
         "Declaration": "- (BOOL)writeToURL:(NSURL *)url \n        atomically:(BOOL)atomically;\n",
+        "Platforms": [
+          "iOS 2.0–11.0",
+          "iPadOS 2.0–11.0",
+          "macOS 10.0–10.13",
+          "Mac Catalyst 13.1–13.0",
+          "tvOS 9.0–11.0",
+          "watchOS 2.0–4.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409634-writetourl?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -889,14 +1150,23 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409634-writetourl?language=objc"
+        ]
       },
       {
         "Name": "writeToFile:atomically:",
         "Description": "Writes a property list representation of the contents of the dictionary to a given path.",
         "Declaration": "- (BOOL)writeToFile:(NSString *)path \n         atomically:(BOOL)useAuxiliaryFile;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "BOOL"
         },
@@ -922,176 +1192,334 @@
         "Name": "fileSize",
         "Description": "Returns the file’s size, in bytes.",
         "Declaration": "- (unsigned long long)fileSize;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413465-filesize?language=objc",
         "Return": {
           "Name": "long long",
           "Annotations": [
             "unsigned"
           ]
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413465-filesize?language=objc"
+        "Args": null
       },
       {
         "Name": "fileType",
         "Description": "Returns the file type.",
         "Declaration": "- (NSString *)fileType;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416809-filetype?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416809-filetype?language=objc"
+        "Args": null
       },
       {
         "Name": "fileCreationDate",
         "Description": "Returns the file’s creation date.",
         "Declaration": "- (NSDate *)fileCreationDate;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417071-filecreationdate?language=objc",
         "Return": {
           "Name": "NSDate",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417071-filecreationdate?language=objc"
+        "Args": null
       },
       {
         "Name": "fileModificationDate",
         "Description": "Returns file’s modification date.",
         "Declaration": "- (NSDate *)fileModificationDate;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408811-filemodificationdate?language=objc",
         "Return": {
           "Name": "NSDate",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408811-filemodificationdate?language=objc"
+        "Args": null
       },
       {
         "Name": "filePosixPermissions",
         "Description": "Returns the file’s POSIX permissions.",
         "Declaration": "- (NSUInteger)filePosixPermissions;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409446-fileposixpermissions?language=objc",
         "Return": {
           "Name": "NSUInteger"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409446-fileposixpermissions?language=objc"
+        "Args": null
       },
       {
         "Name": "fileOwnerAccountID",
         "Description": "Returns the file’s owner account ID.",
         "Declaration": "- (NSNumber *)fileOwnerAccountID;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412281-fileowneraccountid?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412281-fileowneraccountid?language=objc"
+        "Args": null
       },
       {
         "Name": "fileOwnerAccountName",
         "Description": "Returns the file’s owner account name.",
         "Declaration": "- (NSString *)fileOwnerAccountName;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417533-fileowneraccountname?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417533-fileowneraccountname?language=objc"
+        "Args": null
       },
       {
         "Name": "fileGroupOwnerAccountID",
         "Description": "Returns file’s group owner account ID.",
         "Declaration": "- (NSNumber *)fileGroupOwnerAccountID;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413626-filegroupowneraccountid?language=objc",
         "Return": {
           "Name": "NSNumber",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413626-filegroupowneraccountid?language=objc"
+        "Args": null
       },
       {
         "Name": "fileGroupOwnerAccountName",
         "Description": "Returns the file’s group owner account name.",
         "Declaration": "- (NSString *)fileGroupOwnerAccountName;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416788-filegroupowneraccountname?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416788-filegroupowneraccountname?language=objc"
+        "Args": null
       },
       {
         "Name": "fileExtensionHidden",
         "Description": "Returns a Boolean value indicating whether the file hides its extension.",
         "Declaration": "- (BOOL)fileExtensionHidden;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413177-fileextensionhidden?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413177-fileextensionhidden?language=objc"
+        "Args": null
       },
       {
         "Name": "fileIsImmutable",
         "Description": "Returns a Boolean value indicating whether the file is immutable.",
         "Declaration": "- (BOOL)fileIsImmutable;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416500-fileisimmutable?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416500-fileisimmutable?language=objc"
+        "Args": null
       },
       {
         "Name": "fileIsAppendOnly",
         "Description": "Returns a Boolean value indicating whether the file is append only.",
         "Declaration": "- (BOOL)fileIsAppendOnly;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416083-fileisappendonly?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1416083-fileisappendonly?language=objc"
+        "Args": null
       },
       {
         "Name": "fileSystemFileNumber",
         "Description": "Returns the filesystem file number.",
         "Declaration": "- (NSUInteger)fileSystemFileNumber;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408396-filesystemfilenumber?language=objc",
         "Return": {
           "Name": "NSUInteger"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408396-filesystemfilenumber?language=objc"
+        "Args": null
       },
       {
         "Name": "fileSystemNumber",
         "Description": "Returns the filesystem number.",
         "Declaration": "- (NSInteger)fileSystemNumber;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415329-filesystemnumber?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415329-filesystemnumber?language=objc"
+        "Args": null
       },
       {
         "Name": "fileHFSTypeCode",
         "Description": "Returns file’s HFS type code.",
         "Declaration": "- (OSType)fileHFSTypeCode;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417215-filehfstypecode?language=objc",
         "Return": {
           "Name": "OSType"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417215-filehfstypecode?language=objc"
+        "Args": null
       },
       {
         "Name": "fileHFSCreatorCode",
         "Description": "Returns the file’s HFS creator code.",
         "Declaration": "- (OSType)fileHFSCreatorCode;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415065-filehfscreatorcode?language=objc",
         "Return": {
           "Name": "OSType"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1415065-filehfscreatorcode?language=objc"
+        "Args": null
       },
       {
         "Name": "descriptionWithLocale:",
         "Description": "Returns a string object that represents the contents of the dictionary, formatted as a property list.",
         "Declaration": "- (NSString *)descriptionWithLocale:(id)locale;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417665-descriptionwithlocale?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
@@ -1103,13 +1531,24 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1417665-descriptionwithlocale?language=objc"
+        ]
       },
       {
         "Name": "descriptionWithLocale:indent:",
         "Description": "Returns a string object that represents the contents of the dictionary, formatted as a property list.",
         "Declaration": "- (NSString *)descriptionWithLocale:(id)locale \n                             indent:(NSUInteger)level;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412690-descriptionwithlocale?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
@@ -1127,8 +1566,7 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1412690-descriptionwithlocale?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -1136,18 +1574,38 @@
         "Name": "count",
         "Description": "The number of entries in the dictionary.",
         "Declaration": "@property(readonly) NSUInteger count;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409628-count?language=objc",
         "Type": {
           "Name": "NSUInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409628-count?language=objc"
+        }
       },
       {
         "Name": "allKeys",
         "Description": "A new array containing the dictionary’s keys, or an empty array if the dictionary has no entries.",
         "Declaration": "@property(readonly, copy) NSArray\u003cKeyType\u003e *allKeys;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409150-allkeys?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -1160,13 +1618,24 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1409150-allkeys?language=objc"
+        }
       },
       {
         "Name": "allValues",
         "Description": "A new array containing the dictionary’s values, or an empty array if the dictionary has no entries.",
         "Declaration": "@property(readonly, copy) NSArray\u003cObjectType\u003e *allValues;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408915-allvalues?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -1179,13 +1648,24 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408915-allvalues?language=objc"
+        }
       },
       {
         "Name": "description",
         "Description": "A string that represents the contents of the dictionary, formatted as a property list.",
         "Declaration": "@property(readonly, copy) NSString *description;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1410799-description?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -1193,13 +1673,21 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1410799-description?language=objc"
+        }
       },
       {
         "Name": "descriptionInStringsFileFormat",
         "Description": "A string that represents the contents of the dictionary, formatted in .strings file format.",
         "Declaration": "@property(readonly, copy) NSString *descriptionInStringsFileFormat;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413282-descriptioninstringsfileformat?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -1207,8 +1695,7 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1413282-descriptioninstringsfileformat?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -1216,16 +1703,32 @@
         "Name": "dictionary",
         "Description": "Creates an empty dictionary.",
         "Declaration": "+ (instancetype)dictionary;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574180-dictionary?language=objc",
         "Return": {
           "Name": "instancetype"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574180-dictionary?language=objc"
+        "Args": null
       },
       {
         "Name": "dictionaryWithObjects:forKeys:",
         "Description": "Creates a dictionary containing entries constructed from the contents of an array of keys and an array of values.",
         "Declaration": "+ (instancetype)dictionaryWithObjects:(NSArray\u003cObjectType\u003e *)objects \n                              forKeys:(NSArray\u003cid\u003cNSCopying\u003e\u003e *)keys;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "instancetype"
         },
@@ -1266,6 +1769,15 @@
         "Name": "dictionaryWithObjects:forKeys:count:",
         "Description": "Creates a dictionary containing a specified number of objects from a C array.",
         "Declaration": "+ (instancetype)dictionaryWithObjects:(ObjectType  _Nonnull const *)objects \n                              forKeys:(id\u003cNSCopying\u003e  _Nonnull const *)keys \n                                count:(NSUInteger)cnt;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574184-dictionarywithobjects?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -1303,13 +1815,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574184-dictionarywithobjects?language=objc"
+        ]
       },
       {
         "Name": "dictionaryWithObjectsAndKeys:",
         "Description": "Creates a dictionary containing entries constructed from the specified set of values and keys.",
         "Declaration": "+ (instancetype)dictionaryWithObjectsAndKeys:(id)firstObject, ...;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574181-dictionarywithobjectsandkeys?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -1324,13 +1844,20 @@
             "Name": "...",
             "Type": {}
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574181-dictionarywithobjectsandkeys?language=objc"
+        ]
       },
       {
         "Name": "dictionaryWithObject:forKey:",
         "Description": "Creates a dictionary containing a given key and value.",
         "Declaration": "+ (instancetype)dictionaryWithObject:(ObjectType)object \n                              forKey:(id\u003cNSCopying\u003e)key;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
         "Return": {
           "Name": "instancetype"
         },
@@ -1359,6 +1886,15 @@
         "Name": "dictionaryWithDictionary:",
         "Description": "Creates a dictionary containing the keys and values from another given dictionary.",
         "Declaration": "+ (instancetype)dictionaryWithDictionary:(NSDictionary\u003cKeyType, ObjectType\u003e *)dict;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574191-dictionarywithdictionary?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -1378,13 +1914,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574191-dictionarywithdictionary?language=objc"
+        ]
       },
       {
         "Name": "dictionaryWithContentsOfURL:error:",
         "Description": "Creates a dictionary using the keys and values found in a resource specified by a given URL.",
         "Declaration": "+ (NSDictionary\u003cNSString *,ObjectType\u003e *)dictionaryWithContentsOfURL:(NSURL *)url \n                                                               error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+",
+          "watchOS 4.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2879163-dictionarywithcontentsofurl?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -1417,13 +1961,22 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/2879163-dictionarywithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "dictionaryWithContentsOfURL:",
         "Description": "Creates a dictionary using the keys and values found in a resource specified by a given URL.",
         "Declaration": "+ (NSDictionary\u003cKeyType, ObjectType\u003e *)dictionaryWithContentsOfURL:(NSURL *)url;",
+        "Platforms": [
+          "iOS 2.0–11.0",
+          "iPadOS 2.0–11.0",
+          "macOS 10.0–10.13",
+          "Mac Catalyst 13.1–13.0",
+          "tvOS 9.0–11.0",
+          "watchOS 2.0–4.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574185-dictionarywithcontentsofurl?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -1444,14 +1997,22 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574185-dictionarywithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "dictionaryWithContentsOfFile:",
         "Description": "Creates a dictionary using the keys and values found in a file specified by a given path.",
         "Declaration": "+ (NSDictionary\u003cKeyType, ObjectType\u003e *)dictionaryWithContentsOfFile:(NSString *)path;",
+        "Platforms": [
+          "iOS 2.0–11.0",
+          "iPadOS 2.0–11.0",
+          "macOS 10.0–10.13",
+          "Mac Catalyst 13.1–13.0",
+          "tvOS 9.0–11.0",
+          "watchOS 2.0–4.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574189-dictionarywithcontentsoffile?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -1472,14 +2033,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1574189-dictionarywithcontentsoffile?language=objc"
+        ]
       },
       {
         "Name": "sharedKeySetForKeys:",
         "Description": "Creates a shared key set object for the specified keys.",
         "Declaration": "+ (id)sharedKeySetForKeys:(NSArray\u003cid\u003cNSCopying\u003e\u003e *)keys;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408190-sharedkeysetforkeys?language=objc",
         "Return": {
           "Name": "id"
         },
@@ -1501,12 +2069,11 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdictionary/1408190-sharedkeysetforkeys?language=objc"
+        ]
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-06-15T14:37:24.782252-07:00",
+  "PullDate": "2022-08-28T20:29:48.435363+08:00",
   "Version": 2
 }

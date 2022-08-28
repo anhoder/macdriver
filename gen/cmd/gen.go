@@ -61,7 +61,9 @@ func main() {
 
 			loadFile("api/appkit/nscolor.objc.json").Then(func(s *schema.Schema) error {
 				s.Class.TypeMethods = append(s.Class.TypeMethods, schema.Method{
-					Name:   "colorWithRed:green:blue:alpha:",
+					Identifier: schema.Identifier{
+						Name: "colorWithRed:green:blue:alpha:",
+					},
 					Return: schema.DataType{Name: "NSColor", IsPtr: true},
 					Args: []schema.Arg{
 						{Name: "red", Type: schema.DataType{Name: "CGFloat"}},
@@ -76,9 +78,13 @@ func main() {
 				// Though this one exists in the docs, but just nested under another
 				// level where macschema doesn't detect it
 				s.Class.TypeProperties = append(s.Class.TypeProperties, schema.Property{
-					Name:        "clearColor",
-					Description: "Returns a color object whose grayscale and alpha values are both 0.0.",
-					Declaration: "@property(class, strong, readonly) NSColor *clearColor;",
+					Identifier: schema.Identifier{
+						Name:        "clearColor",
+						Description: "Returns a color object whose grayscale and alpha values are both 0.0.",
+						Declaration: "@property(class, strong, readonly) NSColor *clearColor;",
+						Deprecated:  false,
+						TopicURL:    "https://developer.apple.com/documentation/appkit/nscolor/1527217-clearcolor?language=objc",
+					},
 					Type: schema.DataType{
 						Name:  "NSColor",
 						IsPtr: true,
@@ -88,14 +94,14 @@ func main() {
 						"readonly": true,
 						"strong":   true,
 					},
-					Deprecated: false,
-					TopicURL:   "https://developer.apple.com/documentation/appkit/nscolor/1527217-clearcolor?language=objc",
 				})
 				return nil
 			}),
 			loadFile("api/appkit/nstextview.objc.json").Then(func(s *schema.Schema) error {
 				s.Class.InstanceProperties = append(s.Class.InstanceProperties, schema.Property{
-					Name: "font",
+					Identifier: schema.Identifier{
+						Name: "font",
+					},
 					Type: schema.DataType{Name: "NSFont", IsPtr: true},
 				})
 				return nil
@@ -105,7 +111,9 @@ func main() {
 				return p.Name != "safeAreaRect"
 			})).Then(func(s *schema.Schema) error {
 				s.Class.InstanceProperties = append(s.Class.InstanceProperties, schema.Property{
-					Name: "backgroundColor",
+					Identifier: schema.Identifier{
+						Name: "backgroundColor",
+					},
 					Type: schema.DataType{Name: "NSColor", IsPtr: true},
 				})
 				return nil
@@ -121,7 +129,9 @@ func main() {
 			loadFile("api/webkit/wkwebviewconfiguration.objc.json"),
 			loadFile("api/webkit/wkpreferences.objc.json").Then(func(s *schema.Schema) error {
 				s.Class.InstanceMethods = append(s.Class.InstanceMethods, schema.Method{
-					Name:   "setValue:forKey:",
+					Identifier: schema.Identifier{
+						Name: "setValue:forKey:",
+					},
 					Return: schema.DataType{Name: "void"},
 					Args: []schema.Arg{
 						{Name: "value", Type: schema.DataType{Name: "id"}},

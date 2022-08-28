@@ -2,12 +2,32 @@
   "Class": {
     "Name": "WKWebView",
     "Description": "An object that displays interactive web content, such as for an in-app browser.",
-    "Declaration": "@interface WKWebView : NSView",
+    "Declaration": "@interface WKWebView : UIView",
+    "Frameworks": [
+      "WebKit"
+    ],
+    "Platforms": [
+      "iOS 8.0+",
+      "iPadOS 8.0+",
+      "macOS 10.10+",
+      "Mac Catalyst 13.1+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview?language=objc",
     "InstanceMethods": [
       {
         "Name": "initWithFrame:configuration:",
         "Description": "Creates a web view and initializes it with the specified frame and configuration data.",
         "Declaration": "- (instancetype)initWithFrame:(CGRect)frame \n                configuration:(WKWebViewConfiguration *)configuration;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414998-initwithframe?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -25,13 +45,22 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414998-initwithframe?language=objc"
+        ]
       },
       {
         "Name": "initWithCoder:",
         "Description": "Returns an object initialized from data in the specified coder object.",
         "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1641916-initwithcoder?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -43,13 +72,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1641916-initwithcoder?language=objc"
+        ]
       },
       {
         "Name": "loadRequest:",
-        "Description": "Loads the web content referenced by the specified URL request object and navigates to it.",
+        "Description": "Loads the web content that the specified URL request object references and navigates to that content.",
         "Declaration": "- (WKNavigation *)loadRequest:(NSURLRequest *)request;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414954-loadrequest?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
@@ -62,65 +97,22 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414954-loadrequest?language=objc"
-      },
-      {
-        "Name": "loadHTMLString:baseURL:",
-        "Description": "Loads the contents of the specified HTML string and navigates to it.",
-        "Declaration": "- (WKNavigation *)loadHTMLString:(NSString *)string \n                         baseURL:(NSURL *)baseURL;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "string",
-            "Type": {
-              "Name": "NSString",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "baseURL",
-            "Type": {
-              "Name": "NSURL",
-              "IsPtr": true
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415004-loadhtmlstring?language=objc"
-      },
-      {
-        "Name": "loadFileURL:allowingReadAccessToURL:",
-        "Description": "Loads the web content from the specified file and navigates to it.",
-        "Declaration": "- (WKNavigation *)loadFileURL:(NSURL *)URL \n      allowingReadAccessToURL:(NSURL *)readAccessURL;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "URL",
-            "Type": {
-              "Name": "NSURL",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "readAccessURL",
-            "Type": {
-              "Name": "NSURL",
-              "IsPtr": true
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414973-loadfileurl?language=objc"
+        ]
       },
       {
         "Name": "loadData:MIMEType:characterEncodingName:baseURL:",
         "Description": "Loads the content of the specified data object and navigates to it.",
         "Declaration": "- (WKNavigation *)loadData:(NSData *)data \n                  MIMEType:(NSString *)MIMEType \n     characterEncodingName:(NSString *)characterEncodingName \n                   baseURL:(NSURL *)baseURL;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415011-loaddata?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
@@ -154,24 +146,218 @@
               "IsPtr": true
             }
           }
+        ]
+      },
+      {
+        "Name": "loadHTMLString:baseURL:",
+        "Description": "Loads the contents of the specified HTML string and navigates to it.",
+        "Declaration": "- (WKNavigation *)loadHTMLString:(NSString *)string \n                         baseURL:(NSURL *)baseURL;\n",
+        "Frameworks": [
+          "WebKit"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415011-loaddata?language=objc"
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415004-loadhtmlstring?language=objc",
+        "Return": {
+          "Name": "WKNavigation",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "string",
+            "Type": {
+              "Name": "NSString",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "baseURL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadFileRequest:allowingReadAccessToURL:",
+        "Description": "Loads the web content from the file the URL request object specifies and navigates to that content.",
+        "Declaration": "- (WKNavigation *)loadFileRequest:(NSURLRequest *)request \n          allowingReadAccessToURL:(NSURL *)readAccessURL;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752237-loadfilerequest?language=objc",
+        "Return": {
+          "Name": "WKNavigation",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "request",
+            "Type": {
+              "Name": "NSURLRequest",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "readAccessURL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadFileURL:allowingReadAccessToURL:",
+        "Description": "Loads the web content from the specified file and navigates to it.",
+        "Declaration": "- (WKNavigation *)loadFileURL:(NSURL *)URL \n      allowingReadAccessToURL:(NSURL *)readAccessURL;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414973-loadfileurl?language=objc",
+        "Return": {
+          "Name": "WKNavigation",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "URL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "readAccessURL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadSimulatedRequest:response:responseData:",
+        "Description": "Loads the web content from the data you provide as if the data were the response to the request.",
+        "Declaration": "- (WKNavigation *)loadSimulatedRequest:(NSURLRequest *)request \n                              response:(NSURLResponse *)response \n                          responseData:(NSData *)data;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763094-loadsimulatedrequest?language=objc",
+        "Return": {
+          "Name": "WKNavigation",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "request",
+            "Type": {
+              "Name": "NSURLRequest",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "response",
+            "Type": {
+              "Name": "NSURLResponse",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "data",
+            "Type": {
+              "Name": "NSData",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadSimulatedRequest:responseHTMLString:",
+        "Description": "Loads the web content from the HTML you provide as if the HTML were the response to the request.",
+        "Declaration": "- (WKNavigation *)loadSimulatedRequest:(NSURLRequest *)request \n                    responseHTMLString:(NSString *)string;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763095-loadsimulatedrequest?language=objc",
+        "Return": {
+          "Name": "WKNavigation",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "request",
+            "Type": {
+              "Name": "NSURLRequest",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "string",
+            "Type": {
+              "Name": "NSString",
+              "IsPtr": true
+            }
+          }
+        ]
       },
       {
         "Name": "reload",
         "Description": "Reloads the current webpage.",
         "Declaration": "- (WKNavigation *)reload;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414969-reload?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414969-reload?language=objc"
+        "Args": null
       },
       {
         "Name": "reload:",
         "Description": "Reloads the current webpage.",
         "Declaration": "- (IBAction)reload:(id)sender;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414987-reload?language=objc",
         "Return": {
           "Name": "IBAction"
         },
@@ -182,24 +368,39 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414987-reload?language=objc"
+        ]
       },
       {
         "Name": "reloadFromOrigin",
         "Description": "Reloads the current webpage, and performs end-to-end revalidation of the content using cache-validating conditionals, if possible.",
         "Declaration": "- (WKNavigation *)reloadFromOrigin;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414956-reloadfromorigin?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414956-reloadfromorigin?language=objc"
+        "Args": null
       },
       {
         "Name": "reloadFromOrigin:",
         "Description": "Reloads the current webpage, and performs end-to-end revalidation of the content using cache-validating conditionals, if possible.",
         "Declaration": "- (IBAction)reloadFromOrigin:(id)sender;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414989-reloadfromorigin?language=objc",
         "Return": {
           "Name": "IBAction"
         },
@@ -210,23 +411,38 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414989-reloadfromorigin?language=objc"
+        ]
       },
       {
         "Name": "stopLoading",
         "Description": "Stops loading all resources on the current page.",
         "Declaration": "- (void)stopLoading;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414981-stoploading?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414981-stoploading?language=objc"
+        "Args": null
       },
       {
         "Name": "stopLoading:",
         "Description": "Stops loading all resources on the current page.",
         "Declaration": "- (IBAction)stopLoading:(id)sender;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415013-stoploading?language=objc",
         "Return": {
           "Name": "IBAction"
         },
@@ -237,13 +453,109 @@
               "Name": "id"
             }
           }
+        ]
+      },
+      {
+        "Name": "startDownloadUsingRequest:completionHandler:",
+        "Description": "Starts to download the resource at the URL in the request.",
+        "Declaration": "- (void)startDownloadUsingRequest:(NSURLRequest *)request \n                completionHandler:(void (^)(WKDownload *))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415013-stoploading?language=objc"
+        "Platforms": [
+          "iOS 14.5+",
+          "iPadOS 14.5+",
+          "macOS 11.3+",
+          "Mac Catalyst 14.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727368-startdownloadusingrequest?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "request",
+            "Type": {
+              "Name": "NSURLRequest",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "WKDownload",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "resumeDownloadFromResumeData:completionHandler:",
+        "Description": "Resumes a failed or canceled download.",
+        "Declaration": "- (void)resumeDownloadFromResumeData:(NSData *)resumeData \n                   completionHandler:(void (^)(WKDownload *))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.5+",
+          "iPadOS 14.5+",
+          "macOS 11.3+",
+          "Mac Catalyst 14.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727367-resumedownloadfromresumedata?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "resumeData",
+            "Type": {
+              "Name": "NSData",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "WKDownload",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         "Name": "setMagnification:centeredAtPoint:",
         "Description": "Scales the page content and centers the result on the specified point.",
         "Declaration": "- (void)setMagnification:(CGFloat)magnification \n         centeredAtPoint:(CGPoint)point;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414996-setmagnification?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -260,13 +572,414 @@
               "Name": "CGPoint"
             }
           }
+        ]
+      },
+      {
+        "Name": "pauseAllMediaPlaybackWithCompletionHandler:",
+        "Description": "Pauses playback of all media in the web view.",
+        "Declaration": "- (void)pauseAllMediaPlaybackWithCompletionHandler:(void (^)(void))completionHandler;",
+        "Frameworks": [
+          "WebKit"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414996-setmagnification?language=objc"
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752240-pauseallmediaplaybackwithcomplet?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "pauseAllMediaPlayback:",
+        "Description": "Pauses playback of all media in the web view.",
+        "Declaration": "- (void)pauseAllMediaPlayback:(void (^)(void))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.5–15.0",
+          "iPadOS 14.5–15.0",
+          "macOS 11.3–12.0",
+          "Mac Catalyst 14.5–15.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727364-pauseallmediaplayback?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "requestMediaPlaybackStateWithCompletionHandler:",
+        "Description": "Requests the playback status of media in the web view.",
+        "Declaration": "- (void)requestMediaPlaybackStateWithCompletionHandler:(void (^)(WKMediaPlaybackState))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752241-requestmediaplaybackstatewithcom?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "WKMediaPlaybackState"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "requestMediaPlaybackState:",
+        "Description": "Requests the playback status of media in the web view.",
+        "Declaration": "- (void)requestMediaPlaybackState:(void (^)(WKMediaPlaybackState))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.5–15.0",
+          "iPadOS 14.5–15.0",
+          "macOS 11.3–12.0",
+          "Mac Catalyst 14.5–15.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727365-requestmediaplaybackstate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "WKMediaPlaybackState"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "setAllMediaPlaybackSuspended:completionHandler:",
+        "Description": "Changes whether the webpage is suspending playback of all media in the page.",
+        "Declaration": "- (void)setAllMediaPlaybackSuspended:(BOOL)suspended \n                   completionHandler:(void (^)(void))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752242-setallmediaplaybacksuspended?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "suspended",
+            "Type": {
+              "Name": "BOOL"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "suspendAllMediaPlayback:",
+        "Description": "Changes whether the webpage is suspending playback of all media in the page.",
+        "Declaration": "- (void)suspendAllMediaPlayback:(void (^)(void))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.5–15.0",
+          "iPadOS 14.5–15.0",
+          "macOS 11.3–12.0",
+          "Mac Catalyst 14.5–15.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727369-suspendallmediaplayback?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "resumeAllMediaPlayback:",
+        "Description": "Resumes playback of all media in a web view.",
+        "Declaration": "- (void)resumeAllMediaPlayback:(void (^)(void))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.5–15.0",
+          "iPadOS 14.5–15.0",
+          "macOS 11.3–12.0",
+          "Mac Catalyst 14.5–15.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727366-resumeallmediaplayback?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "closeAllMediaPresentationsWithCompletionHandler:",
+        "Description": "Closes all media the web view is presenting, including picture-in-picture video and fullscreen video.",
+        "Declaration": "- (void)closeAllMediaPresentationsWithCompletionHandler:(void (^)(void))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752235-closeallmediapresentationswithco?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "setCameraCaptureState:completionHandler:",
+        "Description": "Changes whether the webpage is using the camera to capture images or video.",
+        "Declaration": "- (void)setCameraCaptureState:(WKMediaCaptureState)state \n            completionHandler:(void (^)(void))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763097-setcameracapturestate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "state",
+            "Type": {
+              "Name": "WKMediaCaptureState"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "setMicrophoneCaptureState:completionHandler:",
+        "Description": "Changes whether the webpage is using the microphone to capture audio.",
+        "Declaration": "- (void)setMicrophoneCaptureState:(WKMediaCaptureState)state \n                completionHandler:(void (^)(void))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763098-setmicrophonecapturestate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "state",
+            "Type": {
+              "Name": "WKMediaCaptureState"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         "Name": "findString:withConfiguration:completionHandler:",
         "Description": "Searches for the specified string in the web view’s content.",
         "Declaration": "- (void)findString:(NSString *)string \n withConfiguration:(WKFindConfiguration *)configuration \n completionHandler:(void (^)(WKFindResult *result))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516409-findstring?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -304,13 +1017,19 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516409-findstring?language=objc"
+        ]
       },
       {
         "Name": "goBack:",
         "Description": "Navigates to the back item in the back-forward list.",
         "Declaration": "- (IBAction)goBack:(id)sender;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414975-goback?language=objc",
         "Return": {
           "Name": "IBAction"
         },
@@ -321,24 +1040,39 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414975-goback?language=objc"
+        ]
       },
       {
         "Name": "goBack",
         "Description": "Navigates to the back item in the back-forward list.",
         "Declaration": "- (WKNavigation *)goBack;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414952-goback?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414952-goback?language=objc"
+        "Args": null
       },
       {
         "Name": "goForward:",
         "Description": "Navigates to the forward item in the back-forward list.",
         "Declaration": "- (IBAction)goForward:(id)sender;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414960-goforward?language=objc",
         "Return": {
           "Name": "IBAction"
         },
@@ -349,24 +1083,42 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414960-goforward?language=objc"
+        ]
       },
       {
         "Name": "goForward",
         "Description": "Navigates to the forward item in the back-forward list.",
         "Declaration": "- (WKNavigation *)goForward;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414993-goforward?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414993-goforward?language=objc"
+        "Args": null
       },
       {
         "Name": "goToBackForwardListItem:",
         "Description": "Navigates to an item from the back-forward list and sets it as the current item.",
         "Declaration": "- (WKNavigation *)goToBackForwardListItem:(WKBackForwardListItem *)item;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414991-gotobackforwardlistitem?language=objc",
         "Return": {
           "Name": "WKNavigation",
           "IsPtr": true
@@ -379,13 +1131,22 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414991-gotobackforwardlistitem?language=objc"
+        ]
       },
       {
         "Name": "evaluateJavaScript:completionHandler:",
         "Description": "Evaluates the specified JavaScript string.",
         "Declaration": "- (void)evaluateJavaScript:(NSString *)javaScriptString \n         completionHandler:(void (^)(id, NSError *error))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415017-evaluatejavascript?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -421,13 +1182,22 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415017-evaluatejavascript?language=objc"
+        ]
       },
       {
         "Name": "evaluateJavaScript:inFrame:inContentWorld:completionHandler:",
         "Description": "Evaluates the specified JavaScript string in the specified frame and content world.",
         "Declaration": "- (void)evaluateJavaScript:(NSString *)javaScriptString \n                   inFrame:(WKFrameInfo *)frame \n            inContentWorld:(WKContentWorld *)contentWorld \n         completionHandler:(void (^)(id, NSError *error))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3656356-evaluatejavascript?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -477,13 +1247,22 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3656356-evaluatejavascript?language=objc"
+        ]
       },
       {
         "Name": "callAsyncJavaScript:arguments:inFrame:inContentWorld:completionHandler:",
         "Description": "Executes the specified string as an asynchronous JavaScript function.",
         "Declaration": "- (void)callAsyncJavaScript:(NSString *)functionBody \n                  arguments:(NSDictionary\u003cNSString *,id\u003e *)arguments \n                    inFrame:(WKFrameInfo *)frame \n             inContentWorld:(WKContentWorld *)contentWorld \n          completionHandler:(void (^)(id, NSError *error))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3656355-callasyncjavascript?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -549,13 +1328,22 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3656355-callasyncjavascript?language=objc"
+        ]
       },
       {
         "Name": "takeSnapshotWithConfiguration:completionHandler:",
         "Description": "Generates a platform-native image from the web view’s contents asynchronously.",
         "Declaration": "- (void)takeSnapshotWithConfiguration:(WKSnapshotConfiguration *)snapshotConfiguration \n                    completionHandler:(void (^)(UIImage *snapshotImage, NSError *error))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/2873260-takesnapshotwithconfiguration?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -593,13 +1381,22 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/2873260-takesnapshotwithconfiguration?language=objc"
+        ]
       },
       {
         "Name": "createPDFWithConfiguration:completionHandler:",
         "Description": "Generates PDF data from the web view’s contents asynchronously.",
         "Declaration": "- (void)createPDFWithConfiguration:(WKPDFConfiguration *)pdfConfiguration \n                 completionHandler:(void (^)(NSData *pdfDocumentData, NSError *error))completionHandler;\n",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516407-createpdfwithconfiguration?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -637,13 +1434,22 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516407-createpdfwithconfiguration?language=objc"
+        ]
       },
       {
         "Name": "createWebArchiveDataWithCompletionHandler:",
         "Description": "Creates a web archive of the web view’s contents asynchronously.",
         "Declaration": "- (void)createWebArchiveDataWithCompletionHandler:(void (^)(NSData *, NSError *))completionHandler;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516408-createwebarchivedatawithcompleti?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -672,13 +1478,19 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516408-createwebarchivedatawithcompleti?language=objc"
+        ]
       },
       {
         "Name": "printOperationWithPrintInfo:",
         "Description": "Returns the print operation object to use when printing the contents of the web view.",
         "Declaration": "- (NSPrintOperation *)printOperationWithPrintInfo:(NSPrintInfo *)printInfo;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 11.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516861-printoperationwithprintinfo?language=objc",
         "Return": {
           "Name": "NSPrintOperation",
           "IsPtr": true
@@ -691,539 +1503,39 @@
               "IsPtr": true
             }
           }
+        ]
+      },
+      {
+        "Name": "setMinimumViewportInset:maximumViewportInset:",
+        "Declaration": "- (void)setMinimumViewportInset:(UIEdgeInsets)minimumViewportInset \n           maximumViewportInset:(UIEdgeInsets)maximumViewportInset;\n",
+        "Frameworks": [
+          "WebKit"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516861-printoperationwithprintinfo?language=objc"
-      },
-      {
-        "Name": "closeAllMediaPresentations",
-        "Description": "",
-        "Declaration": "- (void)closeAllMediaPresentations;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727363-closeallmediapresentations?language=objc"
-      },
-      {
-        "Name": "closeAllMediaPresentationsWithCompletionHandler:",
-        "Description": "",
-        "Declaration": "- (void)closeAllMediaPresentationsWithCompletionHandler:(void (^)(void))completionHandler;",
+        "Platforms": [
+          "iOS 15.5+",
+          "iPadOS 15.5+",
+          "macOS 13.0+",
+          "Beta",
+          "Mac Catalyst 15.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3974127-setminimumviewportinset?language=objc",
         "Return": {
           "Name": "void"
         },
         "Args": [
           {
-            "Name": "completionHandler",
+            "Name": "minimumViewportInset",
             "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752235-closeallmediapresentationswithco?language=objc"
-      },
-      {
-        "Name": "loadFileRequest:allowingReadAccessToURL:",
-        "Description": "",
-        "Declaration": "- (WKNavigation *)loadFileRequest:(NSURLRequest *)request \n          allowingReadAccessToURL:(NSURL *)readAccessURL;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "request",
-            "Type": {
-              "Name": "NSURLRequest",
-              "IsPtr": true
+              "Name": "UIEdgeInsets"
             }
           },
           {
-            "Name": "readAccessURL",
+            "Name": "maximumViewportInset",
             "Type": {
-              "Name": "NSURL",
-              "IsPtr": true
+              "Name": "UIEdgeInsets"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752237-loadfilerequest?language=objc"
-      },
-      {
-        "Name": "loadSimulatedRequest:response:responseData:",
-        "Description": "",
-        "Declaration": "- (WKNavigation *)loadSimulatedRequest:(NSURLRequest *)request \n                              response:(NSURLResponse *)response \n                          responseData:(NSData *)data;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "request",
-            "Type": {
-              "Name": "NSURLRequest",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "response",
-            "Type": {
-              "Name": "NSURLResponse",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "data",
-            "Type": {
-              "Name": "NSData",
-              "IsPtr": true
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763094-loadsimulatedrequest?language=objc"
-      },
-      {
-        "Name": "loadSimulatedRequest:responseHTMLString:",
-        "Description": "",
-        "Declaration": "- (WKNavigation *)loadSimulatedRequest:(NSURLRequest *)request \n                    responseHTMLString:(NSString *)string;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "request",
-            "Type": {
-              "Name": "NSURLRequest",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "string",
-            "Type": {
-              "Name": "NSString",
-              "IsPtr": true
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763095-loadsimulatedrequest?language=objc"
-      },
-      {
-        "Name": "loadSimulatedRequest:withResponse:responseData:",
-        "Description": "",
-        "Declaration": "- (WKNavigation *)loadSimulatedRequest:(NSURLRequest *)request \n                          withResponse:(NSURLResponse *)response \n                          responseData:(NSData *)data;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "request",
-            "Type": {
-              "Name": "NSURLRequest",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "response",
-            "Type": {
-              "Name": "NSURLResponse",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "data",
-            "Type": {
-              "Name": "NSData",
-              "IsPtr": true
-            }
-          }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752238-loadsimulatedrequest?language=objc"
-      },
-      {
-        "Name": "loadSimulatedRequest:withResponseHTMLString:",
-        "Description": "",
-        "Declaration": "- (WKNavigation *)loadSimulatedRequest:(NSURLRequest *)request \n                withResponseHTMLString:(NSString *)string;\n",
-        "Return": {
-          "Name": "WKNavigation",
-          "IsPtr": true
-        },
-        "Args": [
-          {
-            "Name": "request",
-            "Type": {
-              "Name": "NSURLRequest",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "string",
-            "Type": {
-              "Name": "NSString",
-              "IsPtr": true
-            }
-          }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752239-loadsimulatedrequest?language=objc"
-      },
-      {
-        "Name": "pauseAllMediaPlaybackWithCompletionHandler:",
-        "Description": "",
-        "Declaration": "- (void)pauseAllMediaPlaybackWithCompletionHandler:(void (^)(void))completionHandler;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752240-pauseallmediaplaybackwithcomplet?language=objc"
-      },
-      {
-        "Name": "requestMediaPlaybackStateWithCompletionHandler:",
-        "Description": "",
-        "Declaration": "- (void)requestMediaPlaybackStateWithCompletionHandler:(void (^)(WKMediaPlaybackState))completionHandler;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "WKMediaPlaybackState"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752241-requestmediaplaybackstatewithcom?language=objc"
-      },
-      {
-        "Name": "resumeDownloadFromResumeData:completionHandler:",
-        "Description": "",
-        "Declaration": "- (void)resumeDownloadFromResumeData:(NSData *)resumeData \n                   completionHandler:(void (^)(WKDownload *))completionHandler;\n",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "resumeData",
-            "Type": {
-              "Name": "NSData",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "WKDownload",
-                      "IsPtr": true
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727367-resumedownloadfromresumedata?language=objc"
-      },
-      {
-        "Name": "setAllMediaPlaybackSuspended:completionHandler:",
-        "Description": "",
-        "Declaration": "- (void)setAllMediaPlaybackSuspended:(BOOL)suspended \n                   completionHandler:(void (^)(void))completionHandler;\n",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "suspended",
-            "Type": {
-              "Name": "BOOL"
-            }
-          },
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752242-setallmediaplaybacksuspended?language=objc"
-      },
-      {
-        "Name": "setCameraCaptureState:completionHandler:",
-        "Description": "",
-        "Declaration": "- (void)setCameraCaptureState:(WKMediaCaptureState)state \n            completionHandler:(void (^)(void))completionHandler;\n",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "state",
-            "Type": {
-              "Name": "WKMediaCaptureState"
-            }
-          },
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763097-setcameracapturestate?language=objc"
-      },
-      {
-        "Name": "setMicrophoneCaptureState:completionHandler:",
-        "Description": "",
-        "Declaration": "- (void)setMicrophoneCaptureState:(WKMediaCaptureState)state \n                completionHandler:(void (^)(void))completionHandler;\n",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "state",
-            "Type": {
-              "Name": "WKMediaCaptureState"
-            }
-          },
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763098-setmicrophonecapturestate?language=objc"
-      },
-      {
-        "Name": "startDownloadUsingRequest:completionHandler:",
-        "Description": "",
-        "Declaration": "- (void)startDownloadUsingRequest:(NSURLRequest *)request \n                completionHandler:(void (^)(WKDownload *))completionHandler;\n",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "request",
-            "Type": {
-              "Name": "NSURLRequest",
-              "IsPtr": true
-            }
-          },
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "WKDownload",
-                      "IsPtr": true
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727368-startdownloadusingrequest?language=objc"
-      },
-      {
-        "Name": "pauseAllMediaPlayback:",
-        "Description": "",
-        "Declaration": "- (void)pauseAllMediaPlayback:(void (^)(void))completionHandler;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727364-pauseallmediaplayback?language=objc"
-      },
-      {
-        "Name": "requestMediaPlaybackState:",
-        "Description": "",
-        "Declaration": "- (void)requestMediaPlaybackState:(void (^)(WKMediaPlaybackState))completionHandler;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "WKMediaPlaybackState"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727365-requestmediaplaybackstate?language=objc"
-      },
-      {
-        "Name": "resumeAllMediaPlayback:",
-        "Description": "",
-        "Declaration": "- (void)resumeAllMediaPlayback:(void (^)(void))completionHandler;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727366-resumeallmediaplayback?language=objc"
-      },
-      {
-        "Name": "suspendAllMediaPlayback:",
-        "Description": "",
-        "Declaration": "- (void)suspendAllMediaPlayback:(void (^)(void))completionHandler;",
-        "Return": {
-          "Name": "void"
-        },
-        "Args": [
-          {
-            "Name": "completionHandler",
-            "Type": {
-              "Block": {
-                "Return": {
-                  "Name": "void"
-                },
-                "Args": [
-                  {
-                    "Type": {
-                      "Name": "void"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3727369-suspendallmediaplayback?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -1231,6 +1543,16 @@
         "Name": "configuration",
         "Description": "The object that contains the configuration details for the web view.",
         "Declaration": "@property(nonatomic, readonly, copy) WKWebViewConfiguration *configuration;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414979-configuration?language=objc",
         "Type": {
           "Name": "WKWebViewConfiguration",
           "IsPtr": true
@@ -1239,13 +1561,22 @@
           "copy": true,
           "nonatomic": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414979-configuration?language=objc"
+        }
       },
       {
         "Name": "UIDelegate",
         "Description": "The object you use to integrate custom user interface elements, such as contextual menus or panels, into web view interactions.",
         "Declaration": "@property(nullable, nonatomic, weak) id\u003cWKUIDelegate\u003e UIDelegate;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415009-uidelegate?language=objc",
         "Type": {
           "Name": "id",
           "Params": [
@@ -1258,13 +1589,19 @@
           "nonatomic": true,
           "nullable": true,
           "weak": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415009-uidelegate?language=objc"
+        }
       },
       {
         "Name": "navigationDelegate",
         "Description": "The object you use to manage navigation behavior for the web view.",
         "Declaration": "@property(nullable, nonatomic, weak) id\u003cWKNavigationDelegate\u003e navigationDelegate;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414971-navigationdelegate?language=objc",
         "Type": {
           "Name": "id",
           "Params": [
@@ -1277,13 +1614,22 @@
           "nonatomic": true,
           "nullable": true,
           "weak": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414971-navigationdelegate?language=objc"
+        }
       },
       {
         "Name": "loading",
         "Description": "A Boolean value that indicates whether the view is currently loading content.",
         "Declaration": "@property(nonatomic, readonly, getter=isLoading) BOOL loading;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414964-loading?language=objc",
         "Type": {
           "Name": "BOOL"
         },
@@ -1291,26 +1637,43 @@
           "getter": "isLoading",
           "nonatomic": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414964-loading?language=objc"
+        }
       },
       {
         "Name": "estimatedProgress",
         "Description": "An estimate of what fraction of the current navigation has been loaded.",
         "Declaration": "@property(nonatomic, readonly) double estimatedProgress;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415007-estimatedprogress?language=objc",
         "Type": {
           "Name": "double"
         },
         "Attrs": {
           "nonatomic": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415007-estimatedprogress?language=objc"
+        }
       },
       {
         "Name": "scrollView",
         "Description": "The scroll view associated with the web view.",
         "Declaration": "@property(nonatomic, readonly, strong) UIScrollView *scrollView;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1614784-scrollview?language=objc",
         "Type": {
           "Name": "UIScrollView",
           "IsPtr": true
@@ -1319,13 +1682,19 @@
           "nonatomic": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1614784-scrollview?language=objc"
+        }
       },
       {
         "Name": "title",
         "Description": "The page title.",
         "Declaration": "@property(nullable, nonatomic, readonly, copy) NSString *title;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415015-title?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -1335,13 +1704,19 @@
           "nonatomic": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415015-title?language=objc"
+        }
       },
       {
         "Name": "URL",
         "Description": "The URL for the current webpage.",
         "Declaration": "@property(nullable, nonatomic, readonly, copy) NSURL *URL;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415005-url?language=objc",
         "Type": {
           "Name": "NSURL",
           "IsPtr": true
@@ -1351,13 +1726,22 @@
           "nonatomic": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415005-url?language=objc"
+        }
       },
       {
         "Name": "mediaType",
         "Description": "The media type for the contents of the web view.",
         "Declaration": "@property(nonatomic, nullable, copy) NSString *mediaType;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516410-mediatype?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -1366,13 +1750,22 @@
           "copy": true,
           "nonatomic": true,
           "nullable": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516410-mediatype?language=objc"
+        }
       },
       {
         "Name": "customUserAgent",
         "Description": "The custom user agent string.",
         "Declaration": "@property(nullable, nonatomic, copy) NSString *customUserAgent;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414950-customuseragent?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -1381,13 +1774,22 @@
           "copy": true,
           "nonatomic": true,
           "nullable": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414950-customuseragent?language=objc"
+        }
       },
       {
         "Name": "serverTrust",
         "Description": "The trust management object you use to evaluate trust for the current webpage.",
         "Declaration": "@property(nonatomic, readonly, nullable) SecTrustRef serverTrust;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1791920-servertrust?language=objc",
         "Type": {
           "Name": "SecTrustRef"
         },
@@ -1395,74 +1797,204 @@
           "nonatomic": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1791920-servertrust?language=objc"
+        }
       },
       {
         "Name": "hasOnlySecureContent",
         "Description": "A Boolean value that indicates whether the web view loaded all resources on the page through securely encrypted connections.",
         "Declaration": "@property(nonatomic, readonly) BOOL hasOnlySecureContent;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415002-hasonlysecurecontent?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true,
           "readonly": true
+        }
+      },
+      {
+        "Name": "themeColor",
+        "Description": "The theme color that the system gets from the first valid meta tag in the webpage.",
+        "Declaration": "@property(nonatomic, readonly, nullable) UIColor *themeColor;",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3794258-themecolor?language=objc",
+        "Type": {
+          "Name": "UIColor",
+          "IsPtr": true
         },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415002-hasonlysecurecontent?language=objc"
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "underPageBackgroundColor",
+        "Description": "The color the web view displays behind the active page, visible when the user scrolls beyond the bounds of the page.",
+        "Declaration": "@property(nonatomic, copy) UIColor *underPageBackgroundColor;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3850574-underpagebackgroundcolor?language=objc",
+        "Type": {
+          "Name": "UIColor",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true
+        }
       },
       {
         "Name": "pageZoom",
         "Description": "The scale factor by which the web view scales content relative to its bounds.",
         "Declaration": "@property(nonatomic) CGFloat pageZoom;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516411-pagezoom?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3516411-pagezoom?language=objc"
+        }
       },
       {
         "Name": "allowsMagnification",
         "Description": "A Boolean value that indicates whether magnify gestures change the web view’s magnification.",
         "Declaration": "@property(nonatomic) BOOL allowsMagnification;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414983-allowsmagnification?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414983-allowsmagnification?language=objc"
+        }
       },
       {
         "Name": "magnification",
         "Description": "The factor by which the page content is currently scaled.",
         "Declaration": "@property(nonatomic) CGFloat magnification;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414985-magnification?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "nonatomic": true
+        }
+      },
+      {
+        "Name": "cameraCaptureState",
+        "Description": "An enumeration case that indicates whether the webpage is using the camera to capture images or video.",
+        "Declaration": "@property(nonatomic, readonly) WKMediaCaptureState cameraCaptureState;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763093-cameracapturestate?language=objc",
+        "Type": {
+          "Name": "WKMediaCaptureState"
         },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414985-magnification?language=objc"
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "microphoneCaptureState",
+        "Description": "An enumeration case that indicates whether the webpage is using the microphone to capture audio.",
+        "Declaration": "@property(nonatomic, readonly) WKMediaCaptureState microphoneCaptureState;",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763096-microphonecapturestate?language=objc",
+        "Type": {
+          "Name": "WKMediaCaptureState"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
       },
       {
         "Name": "allowsBackForwardNavigationGestures",
         "Description": "A Boolean value that indicates whether horizontal swipe gestures trigger backward and forward page navigation.",
         "Declaration": "@property(nonatomic) BOOL allowsBackForwardNavigationGestures;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414995-allowsbackforwardnavigationgestu?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414995-allowsbackforwardnavigationgestu?language=objc"
+        }
       },
       {
         "Name": "backForwardList",
         "Description": "The web view's back-forward list.",
         "Declaration": "@property(nonatomic, readonly, strong) WKBackForwardList *backForwardList;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414977-backforwardlist?language=objc",
         "Type": {
           "Name": "WKBackForwardList",
           "IsPtr": true
@@ -1471,80 +2003,81 @@
           "nonatomic": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414977-backforwardlist?language=objc"
+        }
       },
       {
         "Name": "canGoBack",
         "Description": "A Boolean value that indicates whether there is a valid back item in the back-forward list.",
         "Declaration": "@property(nonatomic, readonly) BOOL canGoBack;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414966-cangoback?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414966-cangoback?language=objc"
+        }
       },
       {
         "Name": "canGoForward",
         "Description": "A Boolean value that indicates whether there is a valid forward item in the back-forward list.",
         "Declaration": "@property(nonatomic, readonly) BOOL canGoForward;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414962-cangoforward?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414962-cangoforward?language=objc"
+        }
       },
       {
         "Name": "allowsLinkPreview",
         "Description": "A Boolean value that determines whether pressing a link displays a preview of the destination for the link.",
         "Declaration": "@property(nonatomic) BOOL allowsLinkPreview;",
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415000-allowslinkpreview?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1415000-allowslinkpreview?language=objc"
-      },
-      {
-        "Name": "certificateChain",
-        "Description": "An array of objects forming the certificate chain for the currently committed navigation.",
-        "Declaration": "@property(nonatomic, readonly, copy) NSArray *certificateChain;",
-        "Type": {
-          "Name": "NSArray",
-          "IsPtr": true
-        },
-        "Attrs": {
-          "copy": true,
-          "nonatomic": true,
-          "readonly": true
-        },
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/1414958-certificatechain?language=objc"
-      },
-      {
-        "Name": "cameraCaptureState",
-        "Description": "",
-        "Declaration": "@property(nonatomic, readonly) WKMediaCaptureState cameraCaptureState;",
-        "Type": {
-          "Name": "WKMediaCaptureState"
-        },
-        "Attrs": {
-          "nonatomic": true,
-          "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763093-cameracapturestate?language=objc"
+        }
       },
       {
         "Name": "interactionState",
-        "Description": "",
+        "Description": "An object you use to capture the current state of interaction in a web view so that you can restore that state later to another web view.",
         "Declaration": "@property(nonatomic, nullable, copy) id interactionState;",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752236-interactionstate?language=objc",
         "Type": {
           "Name": "id"
         },
@@ -1552,50 +2085,125 @@
           "copy": true,
           "nonatomic": true,
           "nullable": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3752236-interactionstate?language=objc"
+        }
       },
       {
-        "Name": "microphoneCaptureState",
-        "Description": "",
-        "Declaration": "@property(nonatomic, readonly) WKMediaCaptureState microphoneCaptureState;",
+        "Name": "findInteraction",
+        "Declaration": "@property(nonatomic, nullable, readonly) UIFindInteraction *findInteraction;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 16.0+",
+          "Beta",
+          "iPadOS 16.0+",
+          "Beta",
+          "Mac Catalyst 16.0+",
+          "Beta"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/4002043-findinteraction?language=objc",
         "Type": {
-          "Name": "WKMediaCaptureState"
-        },
-        "Attrs": {
-          "nonatomic": true,
-          "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3763096-microphonecapturestate?language=objc"
-      },
-      {
-        "Name": "themeColor",
-        "Description": "",
-        "Declaration": "@property(nonatomic, readonly, nullable) UIColor *themeColor;",
-        "Type": {
-          "Name": "UIColor",
+          "Name": "UIFindInteraction",
           "IsPtr": true
         },
         "Attrs": {
           "nonatomic": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3794258-themecolor?language=objc"
+        }
       },
       {
-        "Name": "underPageBackgroundColor",
-        "Description": "",
-        "Declaration": "@property(nonatomic, copy) UIColor *underPageBackgroundColor;",
+        "Name": "fullscreenState",
+        "Declaration": "@property(nonatomic, readonly) WKFullscreenState fullscreenState;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 16.0+",
+          "Beta",
+          "iPadOS 16.0+",
+          "Beta",
+          "macOS 13.0+",
+          "Beta",
+          "Mac Catalyst 16.0+",
+          "Beta"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3917775-fullscreenstate?language=objc",
         "Type": {
-          "Name": "UIColor",
-          "IsPtr": true
+          "Name": "WKFullscreenState"
         },
         "Attrs": {
-          "copy": true,
-          "nonatomic": true
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "findInteractionEnabled",
+        "Declaration": "@property(nonatomic, readwrite, getter=isFindInteractionEnabled) BOOL findInteractionEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 16.0+",
+          "Beta",
+          "iPadOS 16.0+",
+          "Beta",
+          "Mac Catalyst 16.0+",
+          "Beta"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/4002044-findinteractionenabled?language=objc",
+        "Type": {
+          "Name": "BOOL"
         },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3850574-underpagebackgroundcolor?language=objc"
+        "Attrs": {
+          "getter": "isFindInteractionEnabled",
+          "nonatomic": true,
+          "readwrite": true
+        }
+      },
+      {
+        "Name": "maximumViewportInset",
+        "Declaration": "@property(nonatomic, readonly) UIEdgeInsets maximumViewportInset;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.5+",
+          "iPadOS 15.5+",
+          "macOS 13.0+",
+          "Beta",
+          "Mac Catalyst 15.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3974125-maximumviewportinset?language=objc",
+        "Type": {
+          "Name": "UIEdgeInsets"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "minimumViewportInset",
+        "Declaration": "@property(nonatomic, readonly) UIEdgeInsets minimumViewportInset;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.5+",
+          "iPadOS 15.5+",
+          "macOS 13.0+",
+          "Beta",
+          "Mac Catalyst 15.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/3974126-minimumviewportinset?language=objc",
+        "Type": {
+          "Name": "UIEdgeInsets"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
       }
     ],
     "TypeMethods": [
@@ -1603,6 +2211,16 @@
         "Name": "handlesURLScheme:",
         "Description": "Returns a Boolean value that indicates whether WebKit natively supports resources with the specified URL scheme.",
         "Declaration": "+ (BOOL)handlesURLScheme:(NSString *)urlScheme;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/2875370-handlesurlscheme?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -1614,21 +2232,11 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview/2875370-handlesurlscheme?language=objc"
+        ]
       }
-    ],
-    "Frameworks": [
-      "WebKit"
-    ],
-    "Platforms": [
-      "iOS 8.0+",
-      "macOS 10.10+",
-      "Mac Catalyst 13.0+"
-    ],
-    "TopicURL": "https://developer.apple.com/documentation/webkit/wkwebview?language=objc"
+    ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-20T16:10:37.512456-07:00",
+  "PullDate": "2022-08-28T20:45:21.033296+08:00",
   "Version": 2
 }

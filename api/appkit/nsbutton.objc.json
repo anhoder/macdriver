@@ -3,11 +3,22 @@
     "Name": "NSButton",
     "Description": "A control that defines an area on the screen that a user clicks to trigger an action.",
     "Declaration": "@interface NSButton : NSControl",
+    "Platforms": [
+      "macOS 10.0+"
+    ],
+    "Frameworks": [
+      "AppKit"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton?language=objc",
     "InstanceMethods": [
       {
         "Name": "setButtonType:",
         "Description": "Sets the button’s type, which affects its user interface and behavior when clicked.",
         "Declaration": "- (void)setButtonType:(NSButtonType)type;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524983-setbuttontype?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -18,13 +29,16 @@
               "Name": "NSButtonType"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524983-setbuttontype?language=objc"
+        ]
       },
       {
         "Name": "getPeriodicDelay:interval:",
         "Description": "Returns by reference the delay and interval periods for a continuous button.",
         "Declaration": "- (void)getPeriodicDelay:(float *)delay \n                interval:(float *)interval;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524817-getperiodicdelay?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -43,13 +57,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524817-getperiodicdelay?language=objc"
+        ]
       },
       {
         "Name": "setPeriodicDelay:interval:",
         "Description": "Sets the message delay and interval periods for a continuous button.",
         "Declaration": "- (void)setPeriodicDelay:(float)delay \n                interval:(float)interval;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1526612-setperiodicdelay?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -66,13 +86,17 @@
               "Name": "float"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1526612-setperiodicdelay?language=objc"
+        ]
       },
       {
         "Name": "setTitleWithMnemonic:",
         "Description": "Sets the title of a button with a character denoting an access key.",
         "Declaration": "- (void)setTitleWithMnemonic:(NSString *)stringWithAmpersand;",
+        "Platforms": [
+          "macOS 10.0–10.8"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1579931-settitlewithmnemonic?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -84,14 +108,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1579931-settitlewithmnemonic?language=objc"
+        ]
       },
       {
         "Name": "compressWithPrioritizedCompressionOptions:",
         "Description": "Sets the priority compression options for this button.",
         "Declaration": "- (void)compressWithPrioritizedCompressionOptions:(NSArray\u003cNSUserInterfaceCompressionOptions *\u003e *)prioritizedOptions;",
+        "Platforms": [
+          "macOS 10.13+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2952060-compresswithprioritizedcompressi?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -109,13 +135,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2952060-compresswithprioritizedcompressi?language=objc"
+        ]
       },
       {
         "Name": "minimumSizeWithPrioritizedCompressionOptions:",
         "Description": "Returns the minimum size of the button by using the compression options.",
         "Declaration": "- (NSSize)minimumSizeWithPrioritizedCompressionOptions:(NSArray\u003cNSUserInterfaceCompressionOptions *\u003e *)prioritizedOptions;",
+        "Platforms": [
+          "macOS 10.13+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2952059-minimumsizewithprioritizedcompre?language=objc",
         "Return": {
           "Name": "NSSize"
         },
@@ -133,23 +162,32 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2952059-minimumsizewithprioritizedcompre?language=objc"
+        ]
       },
       {
         "Name": "setNextState",
         "Description": "Sets the button to its next state.",
         "Declaration": "- (void)setNextState;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1530594-setnextstate?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1530594-setnextstate?language=objc"
+        "Args": null
       },
       {
         "Name": "highlight:",
         "Description": "Highlights (or unhighlights) the button.",
         "Declaration": "- (void)highlight:(BOOL)flag;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1534156-highlight?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -160,13 +198,19 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1534156-highlight?language=objc"
+        ]
       },
       {
         "Name": "performKeyEquivalent:",
         "Description": "Checks the button's key equivalent against the specified event and, if they match, simulates the button being clicked.",
         "Declaration": "- (BOOL)performKeyEquivalent:(NSEvent *)key;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524423-performkeyequivalent?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -178,8 +222,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524423-performkeyequivalent?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -187,242 +230,330 @@
         "Name": "contentTintColor",
         "Description": "A tint color to use for the template image and text content.",
         "Declaration": "@property(copy) NSColor *contentTintColor;",
+        "Platforms": [
+          "macOS 10.14+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/3000781-contenttintcolor?language=objc",
         "Type": {
           "Name": "NSColor",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/3000781-contenttintcolor?language=objc"
+        }
       },
       {
         "Name": "hasDestructiveAction",
         "Description": "A Boolean value that defines whether a button’s action has a destructive effect.",
         "Declaration": "@property BOOL hasDestructiveAction;",
+        "Platforms": [
+          "macOS 11.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/3622469-hasdestructiveaction?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/3622469-hasdestructiveaction?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "alternateTitle",
         "Description": "The title that the button displays when the button is in an on state.",
         "Declaration": "@property(copy) NSString *alternateTitle;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1529588-alternatetitle?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1529588-alternatetitle?language=objc"
+        }
       },
       {
         "Name": "attributedTitle",
         "Description": "The title that the button displays in an off state, as an attributed string.",
         "Declaration": "@property(copy) NSAttributedString *attributedTitle;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524640-attributedtitle?language=objc",
         "Type": {
           "Name": "NSAttributedString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524640-attributedtitle?language=objc"
+        }
       },
       {
         "Name": "attributedAlternateTitle",
         "Description": "The title that the button displays as an attributed string when the button is in an on state.",
         "Declaration": "@property(copy) NSAttributedString *attributedAlternateTitle;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1526723-attributedalternatetitle?language=objc",
         "Type": {
           "Name": "NSAttributedString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1526723-attributedalternatetitle?language=objc"
+        }
       },
       {
         "Name": "title",
         "Description": "The title displayed on the button when it’s in an off state.",
         "Declaration": "@property(copy) NSString *title;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524430-title?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1524430-title?language=objc"
+        }
       },
       {
         "Name": "symbolConfiguration",
         "Description": "The combination of point size, weight, and scale to use when sizing and displaying symbol images.",
         "Declaration": "@property(copy) NSImageSymbolConfiguration *symbolConfiguration;",
+        "Platforms": [
+          "macOS 11.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/3667453-symbolconfiguration?language=objc",
         "Type": {
           "Name": "NSImageSymbolConfiguration",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/3667453-symbolconfiguration?language=objc"
+        }
       },
       {
         "Name": "sound",
         "Description": "The sound that plays when the user clicks the button.",
         "Declaration": "@property(strong) NSSound *sound;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1530910-sound?language=objc",
         "Type": {
           "Name": "NSSound",
           "IsPtr": true
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1530910-sound?language=objc"
+        }
       },
       {
         "Name": "springLoaded",
         "Description": "A Boolean value that indicates whether spring loading is enabled for the button.",
         "Declaration": "@property(getter=isSpringLoaded) BOOL springLoaded;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1532300-springloaded?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isSpringLoaded"
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1532300-springloaded?language=objc"
+        }
       },
       {
         "Name": "maxAcceleratorLevel",
         "Description": "An integer value indicating the maximum pressure level for a button of type NSMultiLevelAcceleratorButton.",
         "Declaration": "@property NSInteger maxAcceleratorLevel;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1534413-maxacceleratorlevel?language=objc",
         "Type": {
           "Name": "NSInteger"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1534413-maxacceleratorlevel?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "image",
         "Description": "The image that appears on the button when it’s in an off state, or nil if there is no such image.",
         "Declaration": "@property(strong) NSImage *image;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1534221-image?language=objc",
         "Type": {
           "Name": "NSImage",
           "IsPtr": true
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1534221-image?language=objc"
+        }
       },
       {
         "Name": "alternateImage",
         "Description": "An alternate image that appears on the button when the button is in an on state.",
         "Declaration": "@property(strong) NSImage *alternateImage;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1533935-alternateimage?language=objc",
         "Type": {
           "Name": "NSImage",
           "IsPtr": true
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1533935-alternateimage?language=objc"
+        }
       },
       {
         "Name": "imagePosition",
         "Description": "The position of the button’s image relative to its title.",
         "Declaration": "@property NSCellImagePosition imagePosition;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1526778-imageposition?language=objc",
         "Type": {
           "Name": "NSCellImagePosition"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1526778-imageposition?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "bordered",
         "Description": "A Boolean value that determines whether the button has a border.",
         "Declaration": "@property(getter=isBordered) BOOL bordered;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1525565-bordered?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isBordered"
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1525565-bordered?language=objc"
+        }
       },
       {
         "Name": "transparent",
         "Description": "A Boolean value that indicates whether the button is transparent.",
         "Declaration": "@property(getter=isTransparent) BOOL transparent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1529659-transparent?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isTransparent"
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1529659-transparent?language=objc"
+        }
       },
       {
         "Name": "bezelStyle",
         "Description": "The appearance of the button’s border.",
         "Declaration": "@property NSBezelStyle bezelStyle;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1527022-bezelstyle?language=objc",
         "Type": {
           "Name": "NSBezelStyle"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1527022-bezelstyle?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "bezelColor",
         "Description": "The color of the button's bezel, in appearances that support it.",
         "Declaration": "@property(copy) NSColor *bezelColor;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.12.2+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2561000-bezelcolor?language=objc",
         "Type": {
           "Name": "NSColor",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2561000-bezelcolor?language=objc"
+        }
       },
       {
         "Name": "showsBorderOnlyWhileMouseInside",
         "Description": "A Boolean value that determines whether the button displays its border only when the pointer is over it.",
         "Declaration": "@property BOOL showsBorderOnlyWhileMouseInside;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1532248-showsborderonlywhilemouseinside?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1532248-showsborderonlywhilemouseinside?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "imageHugsTitle",
         "Description": "A Boolean value that determines how the button’s image and title are positioned together within the button bezel.",
         "Declaration": "@property BOOL imageHugsTitle;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2092414-imagehugstitle?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2092414-imagehugstitle?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "imageScaling",
         "Description": "The scaling mode applied to make the cell’s image fit the frame of the image view.",
         "Declaration": "@property NSImageScaling imageScaling;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2202284-imagescaling?language=objc",
         "Type": {
           "Name": "NSImageScaling"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2202284-imagescaling?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "activeCompressionOptions",
         "Description": "The compression options active for this button.",
         "Declaration": "@property(readonly, copy) NSUserInterfaceCompressionOptions *activeCompressionOptions;",
+        "Platforms": [
+          "macOS 10.13+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2952061-activecompressionoptions?language=objc",
         "Type": {
           "Name": "NSUserInterfaceCompressionOptions",
           "IsPtr": true
@@ -430,51 +561,62 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/2952061-activecompressionoptions?language=objc"
+        }
       },
       {
         "Name": "allowsMixedState",
         "Description": "A Boolean value that indicates whether the button allows a mixed state.",
         "Declaration": "@property BOOL allowsMixedState;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1528670-allowsmixedstate?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1528670-allowsmixedstate?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "state",
         "Description": "The button’s state.",
         "Declaration": "@property NSControlStateValue state;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1528907-state?language=objc",
         "Type": {
           "Name": "NSControlStateValue"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1528907-state?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "keyEquivalent",
         "Description": "The key-equivalent character of the button.",
         "Declaration": "@property(copy) NSString *keyEquivalent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1525368-keyequivalent?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1525368-keyequivalent?language=objc"
+        }
       },
       {
         "Name": "keyEquivalentModifierMask",
         "Description": "The mask specifying the modifier keys for the button’s key equivalent.",
         "Declaration": "@property NSEventModifierFlags keyEquivalentModifierMask;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1532670-keyequivalentmodifiermask?language=objc",
         "Type": {
           "Name": "NSEventModifierFlags"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1532670-keyequivalentmodifiermask?language=objc"
+        "Attrs": {}
       }
     ],
     "TypeMethods": [
@@ -482,6 +624,13 @@
         "Name": "checkboxWithTitle:target:action:",
         "Description": "Creates a standard checkbox with the title you specify.",
         "Declaration": "+ (instancetype)checkboxWithTitle:(NSString *)title \n                           target:(id)target \n                           action:(SEL)action;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644525-checkboxwithtitle?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -505,13 +654,16 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644525-checkboxwithtitle?language=objc"
+        ]
       },
       {
         "Name": "buttonWithImage:target:action:",
         "Description": "Creates a standard push button with the image you specify.",
         "Declaration": "+ (instancetype)buttonWithImage:(NSImage *)image \n                         target:(id)target \n                         action:(SEL)action;\n",
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644659-buttonwithimage?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -535,13 +687,16 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644659-buttonwithimage?language=objc"
+        ]
       },
       {
         "Name": "radioButtonWithTitle:target:action:",
         "Description": "Creates a standard radio button with the title you specify.",
         "Declaration": "+ (instancetype)radioButtonWithTitle:(NSString *)title \n                              target:(id)target \n                              action:(SEL)action;\n",
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644340-radiobuttonwithtitle?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -565,13 +720,16 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644340-radiobuttonwithtitle?language=objc"
+        ]
       },
       {
         "Name": "buttonWithTitle:image:target:action:",
         "Description": "Creates a standard push button with a title and image.",
         "Declaration": "+ (instancetype)buttonWithTitle:(NSString *)title \n                          image:(NSImage *)image \n                         target:(id)target \n                         action:(SEL)action;\n",
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644719-buttonwithtitle?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -602,13 +760,16 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644719-buttonwithtitle?language=objc"
+        ]
       },
       {
         "Name": "buttonWithTitle:target:action:",
         "Description": "Creates a standard push button with the title you specify.",
         "Declaration": "+ (instancetype)buttonWithTitle:(NSString *)title \n                         target:(id)target \n                         action:(SEL)action;\n",
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644256-buttonwithtitle?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -632,19 +793,11 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton/1644256-buttonwithtitle?language=objc"
+        ]
       }
-    ],
-    "Frameworks": [
-      "AppKit"
-    ],
-    "Platforms": [
-      "macOS 10.0+"
-    ],
-    "TopicURL": "https://developer.apple.com/documentation/appkit/nsbutton?language=objc"
+    ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-16T13:29:38.559254-07:00",
+  "PullDate": "2022-08-28T17:44:04.699436+08:00",
   "Version": 2
 }

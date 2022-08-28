@@ -15,6 +15,13 @@
         "Name": "colorWithSystemEffect:",
         "Description": "Returns a new color object that represents the current color modified to include the specified visual effect.",
         "Declaration": "- (NSColor *)colorWithSystemEffect:(NSColorSystemEffect)systemEffect;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.14+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/2998826-colorwithsystemeffect?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -26,13 +33,16 @@
               "Name": "NSColorSystemEffect"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/2998826-colorwithsystemeffect?language=objc"
+        ]
       },
       {
         "Name": "colorUsingColorSpace:",
         "Description": "Creates a new color object representing the color of the current color object in the specified color space.",
         "Declaration": "- (NSColor *)colorUsingColorSpace:(NSColorSpace *)space;",
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527379-colorusingcolorspace?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -45,13 +55,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527379-colorusingcolorspace?language=objc"
+        ]
       },
       {
         "Name": "blendedColorWithFraction:ofColor:",
         "Description": "Creates a new color object whose component values are a weighted sum of the current color object and the specified color object's.",
         "Declaration": "- (NSColor *)blendedColorWithFraction:(CGFloat)fraction \n                              ofColor:(NSColor *)color;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1524689-blendedcolorwithfraction?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -70,13 +86,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1524689-blendedcolorwithfraction?language=objc"
+        ]
       },
       {
         "Name": "colorWithAlphaComponent:",
         "Description": "Creates a new color object that has the same color space and component values as the current color object, but the specified alpha component.",
         "Declaration": "- (NSColor *)colorWithAlphaComponent:(CGFloat)alpha;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526906-colorwithalphacomponent?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -88,13 +110,16 @@
               "Name": "CGFloat"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526906-colorwithalphacomponent?language=objc"
+        ]
       },
       {
         "Name": "highlightWithLevel:",
         "Description": "Creates a new color object that represents a blend between the current color and the highlight color.",
         "Declaration": "- (NSColor *)highlightWithLevel:(CGFloat)val;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1533061-highlightwithlevel?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -106,13 +131,19 @@
               "Name": "CGFloat"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1533061-highlightwithlevel?language=objc"
+        ]
       },
       {
         "Name": "shadowWithLevel:",
         "Description": "Creates a new color object that represents a blend between the current color and the shadow color.",
         "Declaration": "- (NSColor *)shadowWithLevel:(CGFloat)val;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1528523-shadowwithlevel?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -124,13 +155,20 @@
               "Name": "CGFloat"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1528523-shadowwithlevel?language=objc"
+        ]
       },
       {
         "Name": "colorUsingColorSpaceName:",
         "Description": "Creates a new color object whose color is the same as the receiver’s, except that the new color object is in the specified color space.",
         "Declaration": "- (NSColor *)colorUsingColorSpaceName:(NSColorSpaceName)name;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.14"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534332-colorusingcolorspacename?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -142,14 +180,17 @@
               "Name": "NSColorSpaceName"
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534332-colorusingcolorspacename?language=objc"
+        ]
       },
       {
         "Name": "colorUsingColorSpaceName:device:",
         "Description": "Creates a new color object for the same color, but in the specified color space and specific to the provided device.",
         "Declaration": "- (NSColor *)colorUsingColorSpaceName:(NSColorSpaceName)name \n                               device:(NSDictionary\u003cNSDeviceDescriptionKey, id\u003e *)deviceDescription;\n",
+        "Platforms": [
+          "macOS 10.0–10.14"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1529417-colorusingcolorspacename?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -176,14 +217,19 @@
               ]
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1529417-colorusingcolorspacename?language=objc"
+        ]
       },
       {
         "Name": "writeToPasteboard:",
         "Description": "Writes the color object’s data to the specified pasteboard.",
         "Declaration": "- (void)writeToPasteboard:(NSPasteboard *)pasteBoard;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1532199-writetopasteboard?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -195,13 +241,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1532199-writetopasteboard?language=objc"
+        ]
       },
       {
         "Name": "getCyan:magenta:yellow:black:alpha:",
         "Description": "Returns the color object’s CMYK and opacity values.",
         "Declaration": "- (void)getCyan:(CGFloat *)cyan \n        magenta:(CGFloat *)magenta \n         yellow:(CGFloat *)yellow \n          black:(CGFloat *)black \n          alpha:(CGFloat *)alpha;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531348-getcyan?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -241,13 +290,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531348-getcyan?language=objc"
+        ]
       },
       {
         "Name": "getHue:saturation:brightness:alpha:",
         "Description": "Returns the color object’s HSB component and opacity values in the respective arguments.",
         "Declaration": "- (void)getHue:(CGFloat *)hue \n    saturation:(CGFloat *)saturation \n    brightness:(CGFloat *)brightness \n         alpha:(CGFloat *)alpha;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534060-gethue?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -280,13 +332,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534060-gethue?language=objc"
+        ]
       },
       {
         "Name": "getRed:green:blue:alpha:",
         "Description": "Returns the color object’s RGB component and opacity values in the respective arguments.",
         "Declaration": "- (void)getRed:(CGFloat *)red \n         green:(CGFloat *)green \n          blue:(CGFloat *)blue \n         alpha:(CGFloat *)alpha;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527848-getred?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -319,13 +374,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527848-getred?language=objc"
+        ]
       },
       {
         "Name": "getWhite:alpha:",
         "Description": "Returns the grayscale and alpha values of the color.",
         "Declaration": "- (void)getWhite:(CGFloat *)white \n           alpha:(CGFloat *)alpha;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1532613-getwhite?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -344,13 +405,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1532613-getwhite?language=objc"
+        ]
       },
       {
         "Name": "getComponents:",
         "Description": "Returns the components of the color as an array.",
         "Declaration": "- (void)getComponents:(CGFloat *)components;",
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1524600-getcomponents?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -362,13 +426,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1524600-getcomponents?language=objc"
+        ]
       },
       {
         "Name": "colorUsingType:",
         "Description": "Returns a version of the color object that is compatible with the specified color type.",
         "Declaration": "- (NSColor *)colorUsingType:(NSColorType)type;",
+        "Platforms": [
+          "macOS 10.13+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/2880320-colorusingtype?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -380,13 +447,19 @@
               "Name": "NSColorType"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/2880320-colorusingtype?language=objc"
+        ]
       },
       {
         "Name": "drawSwatchInRect:",
         "Description": "Draws the current color in the specified rectangle.",
         "Declaration": "- (void)drawSwatchInRect:(NSRect)rect;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531770-drawswatchinrect?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -397,38 +470,52 @@
               "Name": "NSRect"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531770-drawswatchinrect?language=objc"
+        ]
       },
       {
         "Name": "set",
         "Description": "Sets the color of subsequent drawing to the color that the color object represents.",
         "Declaration": "- (void)set;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527089-set?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527089-set?language=objc"
+        "Args": null
       },
       {
         "Name": "setFill",
         "Description": "Sets the fill color of subsequent drawing to the color object’s color.",
         "Declaration": "- (void)setFill;",
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1524755-setfill?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1524755-setfill?language=objc"
+        "Args": null
       },
       {
         "Name": "setStroke",
         "Description": "Sets the stroke color of subsequent drawing to the color object’s color.",
         "Declaration": "- (void)setStroke;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531019-setstroke?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531019-setstroke?language=objc"
+        "Args": null
       }
     ],
     "InstanceProperties": [
@@ -436,175 +523,242 @@
         "Name": "numberOfComponents",
         "Description": "The number of components in the color.",
         "Declaration": "@property(readonly) NSInteger numberOfComponents;",
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531308-numberofcomponents?language=objc",
         "Type": {
           "Name": "NSInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531308-numberofcomponents?language=objc"
+        }
       },
       {
         "Name": "alphaComponent",
         "Description": "The alpha (opacity) component value of the color.",
         "Declaration": "@property(readonly) CGFloat alphaComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1532504-alphacomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1532504-alphacomponent?language=objc"
+        }
       },
       {
         "Name": "whiteComponent",
         "Description": "The white component value of the color.",
         "Declaration": "@property(readonly) CGFloat whiteComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534051-whitecomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534051-whitecomponent?language=objc"
+        }
       },
       {
         "Name": "redComponent",
         "Description": "The red component value of the color.",
         "Declaration": "@property(readonly) CGFloat redComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1530483-redcomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1530483-redcomponent?language=objc"
+        }
       },
       {
         "Name": "greenComponent",
         "Description": "The green component value of the color.",
         "Declaration": "@property(readonly) CGFloat greenComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1525935-greencomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1525935-greencomponent?language=objc"
+        }
       },
       {
         "Name": "blueComponent",
         "Description": "The blue component value of the color.",
         "Declaration": "@property(readonly) CGFloat blueComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534229-bluecomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1534229-bluecomponent?language=objc"
+        }
       },
       {
         "Name": "cyanComponent",
         "Description": "The cyan component value of the color.",
         "Declaration": "@property(readonly) CGFloat cyanComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1528234-cyancomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1528234-cyancomponent?language=objc"
+        }
       },
       {
         "Name": "magentaComponent",
         "Description": "The magenta component value of the color.",
         "Declaration": "@property(readonly) CGFloat magentaComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535560-magentacomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535560-magentacomponent?language=objc"
+        }
       },
       {
         "Name": "yellowComponent",
         "Description": "The yellow component value of the color.",
         "Declaration": "@property(readonly) CGFloat yellowComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531965-yellowcomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531965-yellowcomponent?language=objc"
+        }
       },
       {
         "Name": "blackComponent",
         "Description": "The black component value of the color.",
         "Declaration": "@property(readonly) CGFloat blackComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526883-blackcomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526883-blackcomponent?language=objc"
+        }
       },
       {
         "Name": "hueComponent",
         "Description": "The hue component value of the color.",
         "Declaration": "@property(readonly) CGFloat hueComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531780-huecomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1531780-huecomponent?language=objc"
+        }
       },
       {
         "Name": "saturationComponent",
         "Description": "The saturation component value of the color.",
         "Declaration": "@property(readonly) CGFloat saturationComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526326-saturationcomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526326-saturationcomponent?language=objc"
+        }
       },
       {
         "Name": "brightnessComponent",
         "Description": "The brightness component value of the color.",
         "Declaration": "@property(readonly) CGFloat brightnessComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1529355-brightnesscomponent?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1529355-brightnesscomponent?language=objc"
+        }
       },
       {
         "Name": "catalogNameComponent",
         "Description": "The catalog containing the color’s name.",
         "Declaration": "@property(readonly, copy) NSColorListName catalogNameComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535443-catalognamecomponent?language=objc",
         "Type": {
           "Name": "NSColorListName"
         },
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535443-catalognamecomponent?language=objc"
+        }
       },
       {
         "Name": "localizedCatalogNameComponent",
         "Description": "The localized version of the catalog name containing the color.",
         "Declaration": "@property(readonly, copy) NSString *localizedCatalogNameComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535351-localizedcatalognamecomponent?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -612,26 +766,35 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535351-localizedcatalognamecomponent?language=objc"
+        }
       },
       {
         "Name": "colorNameComponent",
         "Description": "The name of the color.",
         "Declaration": "@property(readonly, copy) NSColorName colorNameComponent;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1528278-colornamecomponent?language=objc",
         "Type": {
           "Name": "NSColorName"
         },
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1528278-colornamecomponent?language=objc"
+        }
       },
       {
         "Name": "localizedColorNameComponent",
         "Description": "The localized version of the color name.",
         "Declaration": "@property(readonly, copy) NSString *localizedColorNameComponent;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527286-localizedcolornamecomponent?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -639,25 +802,37 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527286-localizedcolornamecomponent?language=objc"
+        }
       },
       {
         "Name": "type",
         "Description": "The type of the color object.",
         "Declaration": "@property(readonly) NSColorType type;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.13+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/2880315-type?language=objc",
         "Type": {
           "Name": "NSColorType"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/2880315-type?language=objc"
+        }
       },
       {
         "Name": "colorSpace",
         "Description": "The color space associated with the color.",
         "Declaration": "@property(readonly, strong) NSColorSpace *colorSpace;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526733-colorspace?language=objc",
         "Type": {
           "Name": "NSColorSpace",
           "IsPtr": true
@@ -665,34 +840,42 @@
         "Attrs": {
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1526733-colorspace?language=objc"
+        }
       },
       {
         "Name": "colorSpaceName",
         "Description": "The name of the color space associated with the color.",
         "Declaration": "@property(readonly, copy) NSColorSpaceName colorSpaceName;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.14"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535228-colorspacename?language=objc",
         "Type": {
           "Name": "NSColorSpaceName"
         },
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535228-colorspacename?language=objc"
+        }
       },
       {
         "Name": "CGColor",
         "Description": "The Core Graphics color object corresponding to the color.",
         "Declaration": "@property(readonly) CGColorRef CGColor;",
+        "Platforms": [
+          "macOS 10.8+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527738-cgcolor?language=objc",
         "Type": {
           "Name": "CGColorRef"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1527738-cgcolor?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -700,6 +883,10 @@
         "Name": "colorFromPasteboard:",
         "Description": "Creates a color object from color data currently on the pasteboard.",
         "Declaration": "+ (NSColor *)colorFromPasteboard:(NSPasteboard *)pasteBoard;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535057-colorfrompasteboard?language=objc",
         "Return": {
           "Name": "NSColor",
           "IsPtr": true
@@ -712,8 +899,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1535057-colorfrompasteboard?language=objc"
+        ]
       }
     ],
     "TypeProperties": [
@@ -721,18 +907,27 @@
         "Name": "ignoresAlpha",
         "Description": "A Boolean value that indicates whether the app supports alpha.",
         "Declaration": "@property(class) BOOL ignoresAlpha;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1533565-ignoresalpha?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "class": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/1533565-ignoresalpha?language=objc"
+        }
       },
       {
         "Name": "systemCyanColor",
-        "Description": "",
         "Declaration": "@property(class, strong, readonly) NSColor *systemCyanColor;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 12.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/3816005-systemcyancolor?language=objc",
         "Type": {
           "Name": "NSColor",
           "IsPtr": true
@@ -741,13 +936,15 @@
           "class": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/3816005-systemcyancolor?language=objc"
+        }
       },
       {
         "Name": "systemMintColor",
-        "Description": "",
         "Declaration": "@property(class, strong, readonly) NSColor *systemMintColor;",
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/3816006-systemmintcolor?language=objc",
         "Type": {
           "Name": "NSColor",
           "IsPtr": true
@@ -756,12 +953,11 @@
           "class": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscolor/3816006-systemmintcolor?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-30T13:56:54.126097-07:00",
+  "PullDate": "2022-08-28T17:44:47.673051+08:00",
   "Version": 2
 }

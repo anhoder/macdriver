@@ -3,11 +3,22 @@
     "Name": "NSMenu",
     "Description": "An object that manages an app’s menus.",
     "Declaration": "@interface NSMenu : NSObject",
+    "Frameworks": [
+      "AppKit"
+    ],
+    "Platforms": [
+      "macOS 10.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu?language=objc",
     "InstanceMethods": [
       {
         "Name": "initWithTitle:",
         "Description": "Initializes and returns a menu having the specified title and with autoenabling of menu items turned on.",
         "Declaration": "- (instancetype)initWithTitle:(NSString *)title;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518144-initwithtitle?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -19,13 +30,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518144-initwithtitle?language=objc"
+        ]
       },
       {
         "Name": "insertItem:atIndex:",
         "Description": "Inserts a menu item into the menu at a specific location.",
         "Declaration": "- (void)insertItem:(NSMenuItem *)newItem \n           atIndex:(NSInteger)index;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518201-insertitem?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -43,13 +57,19 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518201-insertitem?language=objc"
+        ]
       },
       {
         "Name": "insertItemWithTitle:action:keyEquivalent:atIndex:",
         "Description": "Creates and adds a menu item at a specified location in the menu.",
         "Declaration": "- (NSMenuItem *)insertItemWithTitle:(NSString *)string \n                             action:(SEL)selector \n                      keyEquivalent:(NSString *)charCode \n                            atIndex:(NSInteger)index;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518146-insertitemwithtitle?language=objc",
         "Return": {
           "Name": "NSMenuItem",
           "IsPtr": true
@@ -81,13 +101,16 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518146-insertitemwithtitle?language=objc"
+        ]
       },
       {
         "Name": "addItem:",
         "Description": "Adds a menu item to the end of the menu.",
         "Declaration": "- (void)addItem:(NSMenuItem *)newItem;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518176-additem?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -99,13 +122,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518176-additem?language=objc"
+        ]
       },
       {
         "Name": "addItemWithTitle:action:keyEquivalent:",
         "Description": "Creates a new menu item and adds it to the end of the menu.",
         "Declaration": "- (NSMenuItem *)addItemWithTitle:(NSString *)string \n                          action:(SEL)selector \n                   keyEquivalent:(NSString *)charCode;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518181-additemwithtitle?language=objc",
         "Return": {
           "Name": "NSMenuItem",
           "IsPtr": true
@@ -131,13 +160,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518181-additemwithtitle?language=objc"
+        ]
       },
       {
         "Name": "removeItem:",
         "Description": "Removes a menu item from the menu.",
         "Declaration": "- (void)removeItem:(NSMenuItem *)item;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518257-removeitem?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -149,13 +184,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518257-removeitem?language=objc"
+        ]
       },
       {
         "Name": "removeItemAtIndex:",
         "Description": "Removes the menu item at a specified location in the menu.",
         "Declaration": "- (void)removeItemAtIndex:(NSInteger)index;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518207-removeitematindex?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -166,13 +207,16 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518207-removeitematindex?language=objc"
+        ]
       },
       {
         "Name": "itemChanged:",
         "Description": "Invoked when a menu item is modified visually (for example, its title changes).",
         "Declaration": "- (void)itemChanged:(NSMenuItem *)item;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518154-itemchanged?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -184,23 +228,29 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518154-itemchanged?language=objc"
+        ]
       },
       {
         "Name": "removeAllItems",
         "Description": "Removes all the menu items in the menu.",
         "Declaration": "- (void)removeAllItems;",
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518234-removeallitems?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518234-removeallitems?language=objc"
+        "Args": null
       },
       {
         "Name": "itemWithTag:",
         "Description": "Returns the first menu item in the menu with the specified tag.",
         "Declaration": "- (NSMenuItem *)itemWithTag:(NSInteger)tag;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518223-itemwithtag?language=objc",
         "Return": {
           "Name": "NSMenuItem",
           "IsPtr": true
@@ -212,13 +262,19 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518223-itemwithtag?language=objc"
+        ]
       },
       {
         "Name": "itemWithTitle:",
         "Description": "Returns the first menu item in the menu with a specified title.",
         "Declaration": "- (NSMenuItem *)itemWithTitle:(NSString *)title;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518248-itemwithtitle?language=objc",
         "Return": {
           "Name": "NSMenuItem",
           "IsPtr": true
@@ -231,13 +287,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518248-itemwithtitle?language=objc"
+        ]
       },
       {
         "Name": "itemAtIndex:",
         "Description": "Returns the menu item at a specific location of the menu.",
         "Declaration": "- (NSMenuItem *)itemAtIndex:(NSInteger)index;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518218-itematindex?language=objc",
         "Return": {
           "Name": "NSMenuItem",
           "IsPtr": true
@@ -249,13 +311,16 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518218-itematindex?language=objc"
+        ]
       },
       {
         "Name": "indexOfItem:",
         "Description": "Returns the index identifying the location of a specified menu item in the menu.",
         "Declaration": "- (NSInteger)indexOfItem:(NSMenuItem *)item;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518178-indexofitem?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -267,13 +332,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518178-indexofitem?language=objc"
+        ]
       },
       {
         "Name": "indexOfItemWithTitle:",
         "Description": "Returns the index of the first menu item in the menu that has a specified title.",
         "Declaration": "- (NSInteger)indexOfItemWithTitle:(NSString *)title;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518237-indexofitemwithtitle?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -285,13 +356,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518237-indexofitemwithtitle?language=objc"
+        ]
       },
       {
         "Name": "indexOfItemWithTag:",
         "Description": "Returns the index of the first menu item in the menu identified by a tag.",
         "Declaration": "- (NSInteger)indexOfItemWithTag:(NSInteger)tag;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518164-indexofitemwithtag?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -302,13 +376,16 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518164-indexofitemwithtag?language=objc"
+        ]
       },
       {
         "Name": "indexOfItemWithTarget:andAction:",
         "Description": "Returns the index of the first menu item in the menu that has a specified action and target.",
         "Declaration": "- (NSInteger)indexOfItemWithTarget:(id)target \n                         andAction:(SEL)actionSelector;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518153-indexofitemwithtarget?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -325,13 +402,16 @@
               "Name": "SEL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518153-indexofitemwithtarget?language=objc"
+        ]
       },
       {
         "Name": "indexOfItemWithRepresentedObject:",
         "Description": "Returns the index of the first menu item in the menu that has a given represented object.",
         "Declaration": "- (NSInteger)indexOfItemWithRepresentedObject:(id)object;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518175-indexofitemwithrepresentedobject?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -342,13 +422,19 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518175-indexofitemwithrepresentedobject?language=objc"
+        ]
       },
       {
         "Name": "indexOfItemWithSubmenu:",
         "Description": "Returns the index of the menu item in the menu with the given submenu.",
         "Declaration": "- (NSInteger)indexOfItemWithSubmenu:(NSMenu *)submenu;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518216-indexofitemwithsubmenu?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -360,13 +446,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518216-indexofitemwithsubmenu?language=objc"
+        ]
       },
       {
         "Name": "setSubmenu:forItem:",
         "Description": "Assigns a menu to be a submenu of the menu controlled by a given menu item.",
         "Declaration": "- (void)setSubmenu:(NSMenu *)menu \n           forItem:(NSMenuItem *)item;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518194-setsubmenu?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -385,13 +474,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518194-setsubmenu?language=objc"
+        ]
       },
       {
         "Name": "submenuAction:",
         "Description": "The action method assigned to menu items that open submenus.",
         "Declaration": "- (void)submenuAction:(id)sender;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518179-submenuaction?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -402,36 +497,52 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518179-submenuaction?language=objc"
+        ]
       },
       {
         "Name": "attachedMenu",
         "Description": "Returns the menu currently attached to the menu.",
         "Declaration": "- (NSMenu *)attachedMenu;",
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518233-attachedmenu?language=objc",
         "Return": {
           "Name": "NSMenu",
           "IsPtr": true
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518233-attachedmenu?language=objc"
+        "Args": null
       },
       {
         "Name": "isAttached",
         "Description": "Returns a Boolean value that indicates whether the menu is currently attached to another menu.",
         "Declaration": "- (BOOL)isAttached;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518151-isattached?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518151-isattached?language=objc"
+        "Args": null
       },
       {
         "Name": "locationForSubmenu:",
         "Description": "Returns the location in screen coordinates where the given submenu is displayed when opened as a submenu of the menu.",
         "Declaration": "- (NSPoint)locationForSubmenu:(NSMenu *)submenu;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518158-locationforsubmenu?language=objc",
         "Return": {
           "Name": "NSPoint"
         },
@@ -443,24 +554,29 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518158-locationforsubmenu?language=objc"
+        ]
       },
       {
         "Name": "update",
         "Description": "Enables or disables the menu items of the menu based on the NSMenuValidation informal protocol and sizes the menu to fit its current menu items if necessary.",
         "Declaration": "- (void)update;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518249-update?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518249-update?language=objc"
+        "Args": null
       },
       {
         "Name": "performKeyEquivalent:",
         "Description": "Performs the action for the menu item that corresponds to the given key equivalent.",
         "Declaration": "- (BOOL)performKeyEquivalent:(NSEvent *)event;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518198-performkeyequivalent?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -472,13 +588,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518198-performkeyequivalent?language=objc"
+        ]
       },
       {
         "Name": "performActionForItemAtIndex:",
         "Description": "Causes the application to send the action message of a specified menu item to its target.",
         "Declaration": "- (void)performActionForItemAtIndex:(NSInteger)index;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518210-performactionforitematindex?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -489,24 +608,34 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518210-performactionforitematindex?language=objc"
+        ]
       },
       {
         "Name": "sizeToFit",
         "Description": "Resizes the menu to exactly fit its items.",
         "Declaration": "- (void)sizeToFit;",
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518240-sizetofit?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518240-sizetofit?language=objc"
+        "Args": null
       },
       {
         "Name": "helpRequested:",
         "Description": "Overridden by subclasses to implement specialized context-sensitive help behavior.",
         "Declaration": "- (void)helpRequested:(NSEvent *)eventPtr;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.11"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518188-helprequested?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -518,14 +647,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518188-helprequested?language=objc"
+        ]
       },
       {
         "Name": "popUpMenuPositioningItem:atLocation:inView:",
         "Description": "Pops up the menu at the specified location.",
         "Declaration": "- (BOOL)popUpMenuPositioningItem:(NSMenuItem *)item \n                      atLocation:(NSPoint)location \n                          inView:(NSView *)view;\n",
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518212-popupmenupositioningitem?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -550,44 +681,66 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518212-popupmenupositioningitem?language=objc"
+        ]
       },
       {
         "Name": "cancelTracking",
         "Description": "Dismisses the menu and ends all menu tracking.",
         "Declaration": "- (void)cancelTracking;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518150-canceltracking?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518150-canceltracking?language=objc"
+        "Args": null
       },
       {
         "Name": "cancelTrackingWithoutAnimation",
         "Description": "Dismisses the menu and ends all menu tracking without displaying the associated animation.",
         "Declaration": "- (void)cancelTrackingWithoutAnimation;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518244-canceltrackingwithoutanimation?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518244-canceltrackingwithoutanimation?language=objc"
+        "Args": null
       },
       {
         "Name": "contextMenuRepresentation",
         "Description": "Deprecated.",
         "Declaration": "- (id)contextMenuRepresentation;",
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518173-contextmenurepresentation?language=objc",
         "Return": {
           "Name": "id"
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518173-contextmenurepresentation?language=objc"
+        "Args": null
       },
       {
         "Name": "setContextMenuRepresentation:",
         "Description": "Deprecated.",
         "Declaration": "- (void)setContextMenuRepresentation:(id)menuRep;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518139-setcontextmenurepresentation?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -598,25 +751,31 @@
               "Name": "id"
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518139-setcontextmenurepresentation?language=objc"
+        ]
       },
       {
         "Name": "tearOffMenuRepresentation",
         "Description": "Deprecated.",
         "Declaration": "- (id)tearOffMenuRepresentation;",
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518262-tearoffmenurepresentation?language=objc",
         "Return": {
           "Name": "id"
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518262-tearoffmenurepresentation?language=objc"
+        "Args": null
       },
       {
         "Name": "setTearOffMenuRepresentation:",
         "Description": "Deprecated.",
         "Declaration": "- (void)setTearOffMenuRepresentation:(id)menuRep;",
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518214-settearoffmenurepresentation?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -627,14 +786,20 @@
               "Name": "id"
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518214-settearoffmenurepresentation?language=objc"
+        ]
       },
       {
         "Name": "setMenuRepresentation:",
         "Description": "Deprecated.",
         "Declaration": "- (void)setMenuRepresentation:(id)menuRep;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518137-setmenurepresentation?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -645,25 +810,35 @@
               "Name": "id"
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518137-setmenurepresentation?language=objc"
+        ]
       },
       {
         "Name": "menuRepresentation",
         "Description": "Deprecated.",
         "Declaration": "- (id)menuRepresentation;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518252-menurepresentation?language=objc",
         "Return": {
           "Name": "id"
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518252-menurepresentation?language=objc"
+        "Args": null
       },
       {
         "Name": "initWithCoder:",
-        "Description": "",
         "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.12+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1644714-initwithcoder?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -675,8 +850,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1644714-initwithcoder?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -684,30 +858,46 @@
         "Name": "menuBarHeight",
         "Description": "The menu bar height for the main menu in pixels.",
         "Declaration": "@property(readonly) CGFloat menuBarHeight;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518141-menubarheight?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518141-menubarheight?language=objc"
+        }
       },
       {
         "Name": "numberOfItems",
         "Description": "The number of menu items in the menu, including separator items.",
         "Declaration": "@property(readonly) NSInteger numberOfItems;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518202-numberofitems?language=objc",
         "Type": {
           "Name": "NSInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518202-numberofitems?language=objc"
+        }
       },
       {
         "Name": "itemArray",
         "Description": "An array containing the menu items in the menu.",
         "Declaration": "@property(copy) NSArray\u003cNSMenuItem *\u003e *itemArray;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518186-itemarray?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -720,141 +910,192 @@
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518186-itemarray?language=objc"
+        }
       },
       {
         "Name": "supermenu",
         "Description": "The parent menu that contains the menu as a submenu.",
         "Declaration": "@property(assign) NSMenu *supermenu;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518204-supermenu?language=objc",
         "Type": {
           "Name": "NSMenu",
           "IsPtr": true
         },
         "Attrs": {
           "assign": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518204-supermenu?language=objc"
+        }
       },
       {
         "Name": "tornOff",
         "Description": "Indicates whether the menu is offscreen or attached to another menu (or if it’s the main menu).",
         "Declaration": "@property(getter=isTornOff, readonly) BOOL tornOff;",
+        "Platforms": [
+          "macOS 10.0–10.11"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518190-tornoff?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isTornOff",
           "readonly": true
-        },
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518190-tornoff?language=objc"
+        }
       },
       {
         "Name": "autoenablesItems",
         "Description": "Indicates whether the menu automatically enables and disables its menu items.",
         "Declaration": "@property BOOL autoenablesItems;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518227-autoenablesitems?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518227-autoenablesitems?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "font",
         "Description": "The font of the menu and its submenus.",
         "Declaration": "@property(strong) NSFont *font;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518230-font?language=objc",
         "Type": {
           "Name": "NSFont",
           "IsPtr": true
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518230-font?language=objc"
+        }
       },
       {
         "Name": "title",
         "Description": "The title of the menu.",
         "Declaration": "@property(copy) NSString *title;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518192-title?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518192-title?language=objc"
+        }
       },
       {
         "Name": "minimumWidth",
         "Description": "The minimum width of the menu in screen coordinates.",
         "Declaration": "@property CGFloat minimumWidth;",
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518221-minimumwidth?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518221-minimumwidth?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "size",
         "Description": "The size of the menu in screen coordinates",
         "Declaration": "@property(readonly) NSSize size;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518185-size?language=objc",
         "Type": {
           "Name": "NSSize"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518185-size?language=objc"
+        }
       },
       {
         "Name": "propertiesToUpdate",
         "Description": "The available properties for the menu.",
         "Declaration": "@property(readonly) NSMenuProperties propertiesToUpdate;",
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518245-propertiestoupdate?language=objc",
         "Type": {
           "Name": "NSMenuProperties"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518245-propertiestoupdate?language=objc"
+        }
       },
       {
         "Name": "menuChangedMessagesEnabled",
         "Description": "Indicates whether messages are sent to the application’s windows each time the menu changes.",
         "Declaration": "@property BOOL menuChangedMessagesEnabled;",
+        "Platforms": [
+          "macOS 10.0–10.11"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518148-menuchangedmessagesenabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518148-menuchangedmessagesenabled?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "allowsContextMenuPlugIns",
         "Description": "Indicates whether the pop-up menu allows appending of contextual menu plug-in items.",
         "Declaration": "@property BOOL allowsContextMenuPlugIns;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.6+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518220-allowscontextmenuplugins?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518220-allowscontextmenuplugins?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "showsStateColumn",
         "Description": "Indicates whether the menu displays the state column.",
         "Declaration": "@property BOOL showsStateColumn;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518253-showsstatecolumn?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518253-showsstatecolumn?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "highlightedItem",
         "Description": "Indicates the currently highlighted item in the menu.",
         "Declaration": "@property(nullable, readonly, strong) NSMenuItem *highlightedItem;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518222-highlighteditem?language=objc",
         "Type": {
           "Name": "NSMenuItem",
           "IsPtr": true
@@ -863,23 +1104,35 @@
           "nullable": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518222-highlighteditem?language=objc"
+        }
       },
       {
         "Name": "userInterfaceLayoutDirection",
         "Description": "Configures the layout direction of menu items in the menu.",
         "Declaration": "@property NSUserInterfaceLayoutDirection userInterfaceLayoutDirection;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.11+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518254-userinterfacelayoutdirection?language=objc",
         "Type": {
           "Name": "NSUserInterfaceLayoutDirection"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518254-userinterfacelayoutdirection?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "delegate",
         "Description": "The delegate of the menu.",
         "Declaration": "@property(weak) id\u003cNSMenuDelegate\u003e delegate;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518169-delegate?language=objc",
         "Type": {
           "Name": "id",
           "Params": [
@@ -890,8 +1143,7 @@
         },
         "Attrs": {
           "weak": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518169-delegate?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -899,16 +1151,26 @@
         "Name": "menuBarVisible",
         "Description": "Returns a Boolean value that indicates whether the menu bar is visible.",
         "Declaration": "+ (BOOL)menuBarVisible;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.2+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518236-menubarvisible?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518236-menubarvisible?language=objc"
+        "Args": null
       },
       {
         "Name": "setMenuBarVisible:",
         "Description": "Sets whether the menu bar is visible and selectable by the user.",
         "Declaration": "+ (void)setMenuBarVisible:(BOOL)visible;",
+        "Platforms": [
+          "macOS 10.2+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518200-setmenubarvisible?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -919,13 +1181,19 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518200-setmenubarvisible?language=objc"
+        ]
       },
       {
         "Name": "popUpContextMenu:withEvent:forView:",
         "Description": "Displays a contextual menu over a view for an event.",
         "Declaration": "+ (void)popUpContextMenu:(NSMenu *)menu \n               withEvent:(NSEvent *)event \n                 forView:(NSView *)view;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518170-popupcontextmenu?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -951,13 +1219,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518170-popupcontextmenu?language=objc"
+        ]
       },
       {
         "Name": "popUpContextMenu:withEvent:forView:withFont:",
         "Description": "Displays a contextual menu over a view for an event using a specified font.",
         "Declaration": "+ (void)popUpContextMenu:(NSMenu *)menu \n               withEvent:(NSEvent *)event \n                 forView:(NSView *)view \n                withFont:(NSFont *)font;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518165-popupcontextmenu?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -990,25 +1264,35 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518165-popupcontextmenu?language=objc"
+        ]
       },
       {
         "Name": "menuZone",
         "Description": "Returns the zone from which NSMenu objects should be allocated.",
         "Declaration": "+ (NSZone *)menuZone;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0–10.11"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518143-menuzone?language=objc",
         "Return": {
           "Name": "NSZone",
           "IsPtr": true
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518143-menuzone?language=objc"
+        "Args": null
       },
       {
         "Name": "setMenuZone:",
         "Description": "Sets the zone from which NSMenu objects should be allocated",
         "Declaration": "+ (void)setMenuZone:(NSZone *)zone;",
+        "Platforms": [
+          "macOS 10.0–10.2"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518263-setmenuzone?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -1020,20 +1304,11 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu/1518263-setmenuzone?language=objc"
+        ]
       }
-    ],
-    "Frameworks": [
-      "AppKit"
-    ],
-    "Platforms": [
-      "macOS 10.0+"
-    ],
-    "TopicURL": "https://developer.apple.com/documentation/appkit/nsmenu?language=objc"
+    ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-13T14:07:03.623953-07:00",
+  "PullDate": "2022-08-28T17:59:03.297576+08:00",
   "Version": 2
 }

@@ -3,11 +3,22 @@
     "Name": "NSControl",
     "Description": "A specialized view, such as a button or text field, that notifies your app of relevant events using the target-action design pattern.",
     "Declaration": "@interface NSControl : NSView",
+    "Frameworks": [
+      "AppKit"
+    ],
+    "Platforms": [
+      "macOS 10.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol?language=objc",
     "InstanceMethods": [
       {
         "Name": "initWithFrame:",
         "Description": "Initializes a control with the specified frame rectangle.",
         "Declaration": "- (instancetype)initWithFrame:(NSRect)frameRect;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428900-initwithframe?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -18,13 +29,16 @@
               "Name": "NSRect"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428900-initwithframe?language=objc"
+        ]
       },
       {
         "Name": "initWithCoder:",
         "Description": "Initializes a control with data in an unarchiver.",
         "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428861-initwithcoder?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -36,13 +50,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428861-initwithcoder?language=objc"
+        ]
       },
       {
         "Name": "takeDoubleValueFrom:",
         "Description": "Sets the value of the receiver’s cell to a double-precision floating-point value obtained from the specified object.",
         "Declaration": "- (void)takeDoubleValueFrom:(id)sender;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428958-takedoublevaluefrom?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -53,13 +70,16 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428958-takedoublevaluefrom?language=objc"
+        ]
       },
       {
         "Name": "takeFloatValueFrom:",
         "Description": "Sets the value of the receiver’s cell to a single-precision floating-point value obtained from the specified object.",
         "Declaration": "- (void)takeFloatValueFrom:(id)sender;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428938-takefloatvaluefrom?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -70,13 +90,16 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428938-takefloatvaluefrom?language=objc"
+        ]
       },
       {
         "Name": "takeIntValueFrom:",
         "Description": "Sets the value of the receiver’s cell to an integer value obtained from the specified object.",
         "Declaration": "- (void)takeIntValueFrom:(id)sender;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428859-takeintvaluefrom?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -87,13 +110,16 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428859-takeintvaluefrom?language=objc"
+        ]
       },
       {
         "Name": "takeIntegerValueFrom:",
         "Description": "Sets the value of the receiver’s cell to an NSInteger value obtained from the specified object.",
         "Declaration": "- (void)takeIntegerValueFrom:(id)sender;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428875-takeintegervaluefrom?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -104,13 +130,16 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428875-takeintegervaluefrom?language=objc"
+        ]
       },
       {
         "Name": "takeObjectValueFrom:",
         "Description": "Sets the value of the receiver’s cell to the object value obtained from the specified object.",
         "Declaration": "- (void)takeObjectValueFrom:(id)sender;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428853-takeobjectvaluefrom?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -121,13 +150,16 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428853-takeobjectvaluefrom?language=objc"
+        ]
       },
       {
         "Name": "takeStringValueFrom:",
         "Description": "Sets the value of the receiver’s cell to the string value obtained from the specified object.",
         "Declaration": "- (void)takeStringValueFrom:(id)sender;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428912-takestringvaluefrom?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -138,13 +170,17 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428912-takestringvaluefrom?language=objc"
+        ]
       },
       {
         "Name": "setFloatingPointFormat:left:right:",
         "Description": "Sets the auto-ranging and floating point number format of the receiver’s cell.",
         "Declaration": "- (void)setFloatingPointFormat:(BOOL)autoRange \n                          left:(NSUInteger)leftDigits \n                         right:(NSUInteger)rightDigits;\n",
+        "Platforms": [
+          "macOS 10.0–10.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428931-setfloatingpointformat?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -167,14 +203,16 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428931-setfloatingpointformat?language=objc"
+        ]
       },
       {
         "Name": "drawWithExpansionFrame:inView:",
         "Description": "Performs custom expansion tool tip drawing.",
         "Declaration": "- (void)drawWithExpansionFrame:(NSRect)contentFrame \n                        inView:(NSView *)view;\n",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428895-drawwithexpansionframe?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -192,13 +230,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428895-drawwithexpansionframe?language=objc"
+        ]
       },
       {
         "Name": "expansionFrameWithFrame:",
         "Description": "The frame in which a tool tip can be displayed, if needed.",
         "Declaration": "- (NSRect)expansionFrameWithFrame:(NSRect)contentFrame;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428932-expansionframewithframe?language=objc",
         "Return": {
           "Name": "NSRect"
         },
@@ -209,44 +250,59 @@
               "Name": "NSRect"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428932-expansionframewithframe?language=objc"
+        ]
       },
       {
         "Name": "abortEditing",
         "Description": "Terminates the current editing operation and discards any edited text.",
         "Declaration": "- (BOOL)abortEditing;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428867-abortediting?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428867-abortediting?language=objc"
+        "Args": null
       },
       {
         "Name": "currentEditor",
         "Description": "Returns the current field editor for the control.",
         "Declaration": "- (NSText *)currentEditor;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428980-currenteditor?language=objc",
         "Return": {
           "Name": "NSText",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428980-currenteditor?language=objc"
+        "Args": null
       },
       {
         "Name": "validateEditing",
         "Description": "Validates changes to any user-typed text.",
         "Declaration": "- (void)validateEditing;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428855-validateediting?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428855-validateediting?language=objc"
+        "Args": null
       },
       {
         "Name": "editWithFrame:editor:delegate:event:",
         "Description": "Begins editing of the receiver’s text using the specified field editor.",
         "Declaration": "- (void)editWithFrame:(NSRect)rect \n               editor:(NSText *)textObj \n             delegate:(id)delegate \n                event:(NSEvent *)event;\n",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428919-editwithframe?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -277,13 +333,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428919-editwithframe?language=objc"
+        ]
       },
       {
         "Name": "endEditing:",
         "Description": "Ends the editing of text in the receiver using the specified field editor.",
         "Declaration": "- (void)endEditing:(NSText *)textObj;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428936-endediting?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -295,13 +357,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428936-endediting?language=objc"
+        ]
       },
       {
         "Name": "selectWithFrame:editor:delegate:start:length:",
         "Description": "Selects the specified text range in the receiver's field editor.",
         "Declaration": "- (void)selectWithFrame:(NSRect)rect \n                 editor:(NSText *)textObj \n               delegate:(id)delegate \n                  start:(NSInteger)selStart \n                 length:(NSInteger)selLength;\n",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428968-selectwithframe?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -337,13 +402,16 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428968-selectwithframe?language=objc"
+        ]
       },
       {
         "Name": "sizeThatFits:",
         "Description": "Asks the control to calculate and return the size that best fits the specified size.",
         "Declaration": "- (NSSize)sizeThatFits:(NSSize)size;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428902-sizethatfits?language=objc",
         "Return": {
           "Name": "NSSize"
         },
@@ -354,23 +422,29 @@
               "Name": "NSSize"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428902-sizethatfits?language=objc"
+        ]
       },
       {
         "Name": "sizeToFit",
         "Description": "Resizes the receiver’s frame so that it’s the minimum size needed to contain its cell.",
         "Declaration": "- (void)sizeToFit;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428877-sizetofit?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428877-sizetofit?language=objc"
+        "Args": null
       },
       {
         "Name": "sendAction:to:",
         "Description": "Causes the specified action to be sent to the target.",
         "Declaration": "- (BOOL)sendAction:(SEL)action \n                to:(id)target;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428851-sendaction?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -387,13 +461,19 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428851-sendaction?language=objc"
+        ]
       },
       {
         "Name": "sendActionOn:",
         "Description": "Sets the conditions on which the receiver sends action messages to its target.",
         "Declaration": "- (NSInteger)sendActionOn:(NSEventMask)mask;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428972-sendactionon?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -404,13 +484,19 @@
               "Name": "NSEventMask"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428972-sendactionon?language=objc"
+        ]
       },
       {
         "Name": "performClick:",
         "Description": "Simulates a single mouse click on the receiver.",
         "Declaration": "- (void)performClick:(id)sender;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428974-performclick?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -421,13 +507,19 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428974-performclick?language=objc"
+        ]
       },
       {
         "Name": "mouseDown:",
         "Description": "Informs the receiver that the user has pressed the left mouse button.",
         "Declaration": "- (void)mouseDown:(NSEvent *)event;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428918-mousedown?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -439,13 +531,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428918-mousedown?language=objc"
+        ]
       },
       {
         "Name": "invalidateIntrinsicContentSizeForCell:",
         "Description": "Notifies the control that the intrinsic content size for its cell is no longer valid.",
         "Declaration": "- (void)invalidateIntrinsicContentSizeForCell:(NSCell *)cell;",
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1526876-invalidateintrinsiccontentsizefo?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -457,8 +552,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1526876-invalidateintrinsiccontentsizefo?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -466,139 +560,194 @@
         "Name": "enabled",
         "Description": "A Boolean value that indicates whether the receiver reacts to mouse events.",
         "Declaration": "@property(getter=isEnabled) BOOL enabled;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428970-enabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isEnabled"
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428970-enabled?language=objc"
+        }
       },
       {
         "Name": "doubleValue",
         "Description": "The value of the receiver’s cell as a double-precision floating-point number.",
         "Declaration": "@property double doubleValue;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428942-doublevalue?language=objc",
         "Type": {
           "Name": "double"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428942-doublevalue?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "floatValue",
         "Description": "The value of the receiver’s cell as a single-precision floating-point number.",
         "Declaration": "@property float floatValue;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428889-floatvalue?language=objc",
         "Type": {
           "Name": "float"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428889-floatvalue?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "intValue",
         "Description": "The value of the receiver’s cell as an integer.",
         "Declaration": "@property int intValue;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428939-intvalue?language=objc",
         "Type": {
           "Name": "int"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428939-intvalue?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "integerValue",
         "Description": "The value of the receiver’s cell as an NSInteger value.",
         "Declaration": "@property NSInteger integerValue;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428969-integervalue?language=objc",
         "Type": {
           "Name": "NSInteger"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428969-integervalue?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "objectValue",
         "Description": "The value of the receiver’s cell as an Objective-C object.",
         "Declaration": "@property(copy) id objectValue;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428849-objectvalue?language=objc",
         "Type": {
           "Name": "id"
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428849-objectvalue?language=objc"
+        }
       },
       {
         "Name": "stringValue",
         "Description": "The value of the receiver’s cell as an NSString object.",
         "Declaration": "@property(copy) NSString *stringValue;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428950-stringvalue?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428950-stringvalue?language=objc"
+        }
       },
       {
         "Name": "attributedStringValue",
         "Description": "The value of the receiver’s cell as an attributed string.",
         "Declaration": "@property(copy) NSAttributedString *attributedStringValue;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428916-attributedstringvalue?language=objc",
         "Type": {
           "Name": "NSAttributedString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428916-attributedstringvalue?language=objc"
+        }
       },
       {
         "Name": "alignment",
         "Description": "The alignment mode of the text in the receiver’s cell.",
         "Declaration": "@property NSTextAlignment alignment;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428906-alignment?language=objc",
         "Type": {
           "Name": "NSTextAlignment"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428906-alignment?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "font",
         "Description": "The font used to draw text in the receiver’s cell.",
         "Declaration": "@property(copy) NSFont *font;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428914-font?language=objc",
         "Type": {
           "Name": "NSFont",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428914-font?language=objc"
+        }
       },
       {
         "Name": "lineBreakMode",
         "Description": "The line break mode to use for text in the control’s cell.",
         "Declaration": "@property NSLineBreakMode lineBreakMode;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428978-linebreakmode?language=objc",
         "Type": {
           "Name": "NSLineBreakMode"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428978-linebreakmode?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "usesSingleLineMode",
         "Description": "A Boolean value that indicates whether the text in the control’s cell uses single line mode.",
         "Declaration": "@property BOOL usesSingleLineMode;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428929-usessinglelinemode?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428929-usessinglelinemode?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "formatter",
         "Description": "The receiver’s formatter.",
         "Declaration": "@property(strong) __kindof NSFormatter *formatter;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428887-formatter?language=objc",
         "Type": {
           "Name": "NSFormatter",
           "IsPtr": true,
@@ -608,125 +757,162 @@
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428887-formatter?language=objc"
+        }
       },
       {
         "Name": "baseWritingDirection",
         "Description": "The initial writing direction used to determine the actual writing direction for text.",
         "Declaration": "@property NSWritingDirection baseWritingDirection;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428921-basewritingdirection?language=objc",
         "Type": {
           "Name": "NSWritingDirection"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428921-basewritingdirection?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "allowsExpansionToolTips",
         "Description": "A Boolean value that indicates whether expansion tool tips are shown when the control is hovered over.",
         "Declaration": "@property BOOL allowsExpansionToolTips;",
+        "Platforms": [
+          "macOS 10.8+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428962-allowsexpansiontooltips?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428962-allowsexpansiontooltips?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "controlSize",
         "Description": "The size of the control.",
         "Declaration": "@property NSControlSize controlSize;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428871-controlsize?language=objc",
         "Type": {
           "Name": "NSControlSize"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428871-controlsize?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "highlighted",
         "Description": "A Boolean value that indicates whether the cell is highlighted.",
         "Declaration": "@property(getter=isHighlighted) BOOL highlighted;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428927-highlighted?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isHighlighted"
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428927-highlighted?language=objc"
+        }
       },
       {
         "Name": "action",
         "Description": "The default action-message selector associated with the control.",
         "Declaration": "@property SEL action;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428956-action?language=objc",
         "Type": {
           "Name": "SEL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428956-action?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "target",
         "Description": "The target object that receives action messages from the cell.",
         "Declaration": "@property(weak) id target;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428885-target?language=objc",
         "Type": {
           "Name": "id"
         },
         "Attrs": {
           "weak": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428885-target?language=objc"
+        }
       },
       {
         "Name": "continuous",
         "Description": "A Boolean value indicating whether the receiver’s cell sends its action message continuously to its target during mouse tracking.",
         "Declaration": "@property(getter=isContinuous) BOOL continuous;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428952-continuous?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isContinuous"
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428952-continuous?language=objc"
+        }
       },
       {
         "Name": "tag",
         "Description": "The tag identifying the receiver (not the tag of the receiver’s cell).",
         "Declaration": "@property NSInteger tag;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428910-tag?language=objc",
         "Type": {
           "Name": "NSInteger"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428910-tag?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "refusesFirstResponder",
         "Description": "A Boolean value indicating whether the receiver refuses the first responder role.",
         "Declaration": "@property BOOL refusesFirstResponder;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428976-refusesfirstresponder?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428976-refusesfirstresponder?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "ignoresMultiClick",
         "Description": "A Boolean value indicating whether the receiver ignores multiple clicks made in rapid succession.",
         "Declaration": "@property BOOL ignoresMultiClick;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428863-ignoresmulticlick?language=objc",
         "Type": {
           "Name": "BOOL"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol/1428863-ignoresmulticlick?language=objc"
+        "Attrs": {}
       }
-    ],
-    "Frameworks": [
-      "AppKit"
-    ],
-    "Platforms": [
-      "macOS 10.0+"
-    ],
-    "TopicURL": "https://developer.apple.com/documentation/appkit/nscontrol?language=objc"
+    ]
   },
   "Kind": "class",
-  "PullDate": "2021-10-09T13:57:55.773782-04:00",
+  "PullDate": "2022-08-28T17:46:24.822912+08:00",
   "Version": 2
 }

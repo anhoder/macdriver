@@ -6,7 +6,7 @@ import (
 )
 
 /*
-#cgo CFLAGS: -x objective-c
+#cgo CFLAGS: -x objective-c -Wno-everything
 #cgo LDFLAGS: -lobjc -framework AppKit -framework QuartzCore -framework Foundation
 #define __OBJC2__ 1
 #include <objc/message.h>
@@ -1819,6 +1819,11 @@ void* NSURL_inst_initWithDataRepresentation_relativeToURL_(void *id, void* data,
 	return [(NSURL*)id
 		initWithDataRepresentation: data
 		relativeToURL: baseURL];
+}
+
+BOOL NSURL_inst_isEqual_(void *id, void* anObject) {
+	return [(NSURL*)id
+		isEqual: anObject];
 }
 
 BOOL NSURL_inst_isFileReferenceURL(void *id) {
@@ -6248,6 +6253,19 @@ func (x gen_NSURL) InitWithDataRepresentation_relativeToURL__asNSURL(
 		objc.RefPointer(baseURL),
 	)
 	r0 = NSURL_fromPointer(ret)
+	return
+}
+
+func (x gen_NSURL) IsEqual_(
+	anObject objc.Ref,
+) (
+	r0 bool,
+) {
+	ret := C.NSURL_inst_isEqual_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anObject),
+	)
+	r0 = convertObjCBoolToGo(ret)
 	return
 }
 

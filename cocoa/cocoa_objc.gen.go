@@ -7,13 +7,12 @@ import (
 )
 
 /*
-#cgo CFLAGS: -x objective-c
-#cgo LDFLAGS: -lobjc -framework Foundation -framework AppKit
+#cgo CFLAGS: -x objective-c -Wno-everything
+#cgo LDFLAGS: -lobjc -framework AppKit
 #define __OBJC2__ 1
 #include <objc/message.h>
 #include <stdlib.h>
 
-#include <Foundation/Foundation.h>
 #include <AppKit/AppKit.h>
 
 bool cocoa_convertObjCBool(BOOL b) {
@@ -193,6 +192,10 @@ NSPoint NSEvent_type_mouseLocation() {
 	return [NSEvent
 		mouseLocation];
 }
+BOOL NSEvent_type_swipeTrackingFromScrollEventsEnabled() {
+	return [NSEvent
+		swipeTrackingFromScrollEventsEnabled];
+}
 BOOL NSEvent_type_mouseCoalescingEnabled() {
 	return [NSEvent
 		mouseCoalescingEnabled];
@@ -200,10 +203,6 @@ BOOL NSEvent_type_mouseCoalescingEnabled() {
 void NSEvent_type_setMouseCoalescingEnabled_(BOOL value) {
 	[NSEvent
 		setMouseCoalescingEnabled: value];
-}
-BOOL NSEvent_type_swipeTrackingFromScrollEventsEnabled() {
-	return [NSEvent
-		swipeTrackingFromScrollEventsEnabled];
 }
 void* NSFont_type_alloc() {
 	return [NSFont
@@ -286,14 +285,31 @@ void* NSImage_type_alloc() {
 	return [NSImage
 		alloc];
 }
-void* NSImage_type_imageWithSystemSymbolName_accessibilityDescription_(void* symbolName, void* description) {
+void* NSImage_type_imageWithSystemSymbolName_accessibilityDescription_(void* name, void* description) {
 	return [NSImage
-		imageWithSystemSymbolName: symbolName
+		imageWithSystemSymbolName: name
 		accessibilityDescription: description];
+}
+void* NSImage_type_imageWithSystemSymbolName_variableValue_accessibilityDescription_(void* name, double value, void* description) {
+	return [NSImage
+		imageWithSystemSymbolName: name
+		variableValue: value
+		accessibilityDescription: description];
+}
+void* NSImage_type_imageWithSymbolName_variableValue_(void* name, double value) {
+	return [NSImage
+		imageWithSymbolName: name
+		variableValue: value];
 }
 BOOL NSImage_type_canInitWithPasteboard_(void* pasteboard) {
 	return [NSImage
 		canInitWithPasteboard: pasteboard];
+}
+void* NSImage_type_imageWithSymbolName_bundle_variableValue_(void* name, void* bundle, double value) {
+	return [NSImage
+		imageWithSymbolName: name
+		bundle: bundle
+		variableValue: value];
 }
 void* NSImage_type_imageTypes() {
 	return [NSImage
@@ -555,13 +571,6 @@ void* NSBundle_inst_initWithPath_(void *id, void* path) {
 		initWithPath: path];
 }
 
-void* NSBundle_inst_loadNibNamed_owner_options_(void *id, void* name, void* owner, void* options) {
-	return [(NSBundle*)id
-		loadNibNamed: name
-		owner: owner
-		options: options];
-}
-
 void* NSBundle_inst_URLForResource_withExtension_subdirectory_(void *id, void* name, void* ext, void* subpath) {
 	return [(NSBundle*)id
 		URLForResource: name
@@ -650,11 +659,6 @@ void* NSBundle_inst_pathForAuxiliaryExecutable_(void *id, void* executableName) 
 void* NSBundle_inst_objectForInfoDictionaryKey_(void *id, void* key) {
 	return [(NSBundle*)id
 		objectForInfoDictionaryKey: key];
-}
-
-double NSBundle_inst_preservationPriorityForTag_(void *id, void* tag) {
-	return [(NSBundle*)id
-		preservationPriorityForTag: tag];
 }
 
 BOOL NSBundle_inst_load(void *id) {
@@ -1722,31 +1726,6 @@ long NSEvent_inst_clickCount(void *id) {
 		clickCount];
 }
 
-long NSEvent_inst_eventNumber(void *id) {
-	return [(NSEvent*)id
-		eventNumber];
-}
-
-long NSEvent_inst_trackingNumber(void *id) {
-	return [(NSEvent*)id
-		trackingNumber];
-}
-
-void* NSEvent_inst_userData(void *id) {
-	return [(NSEvent*)id
-		userData];
-}
-
-long NSEvent_inst_data1(void *id) {
-	return [(NSEvent*)id
-		data1];
-}
-
-long NSEvent_inst_data2(void *id) {
-	return [(NSEvent*)id
-		data2];
-}
-
 double NSEvent_inst_deltaX(void *id) {
 	return [(NSEvent*)id
 		deltaX];
@@ -1760,6 +1739,31 @@ double NSEvent_inst_deltaY(void *id) {
 double NSEvent_inst_deltaZ(void *id) {
 	return [(NSEvent*)id
 		deltaZ];
+}
+
+BOOL NSEvent_inst_hasPreciseScrollingDeltas(void *id) {
+	return [(NSEvent*)id
+		hasPreciseScrollingDeltas];
+}
+
+double NSEvent_inst_scrollingDeltaX(void *id) {
+	return [(NSEvent*)id
+		scrollingDeltaX];
+}
+
+double NSEvent_inst_scrollingDeltaY(void *id) {
+	return [(NSEvent*)id
+		scrollingDeltaY];
+}
+
+BOOL NSEvent_inst_isDirectionInvertedFromDevice(void *id) {
+	return [(NSEvent*)id
+		isDirectionInvertedFromDevice];
+}
+
+double NSEvent_inst_magnification(void *id) {
+	return [(NSEvent*)id
+		magnification];
 }
 
 float NSEvent_inst_pressure(void *id) {
@@ -1857,29 +1861,29 @@ void* NSEvent_inst_vendorDefined(void *id) {
 		vendorDefined];
 }
 
-double NSEvent_inst_magnification(void *id) {
+long NSEvent_inst_eventNumber(void *id) {
 	return [(NSEvent*)id
-		magnification];
+		eventNumber];
 }
 
-BOOL NSEvent_inst_hasPreciseScrollingDeltas(void *id) {
+long NSEvent_inst_trackingNumber(void *id) {
 	return [(NSEvent*)id
-		hasPreciseScrollingDeltas];
+		trackingNumber];
 }
 
-double NSEvent_inst_scrollingDeltaX(void *id) {
+void* NSEvent_inst_userData(void *id) {
 	return [(NSEvent*)id
-		scrollingDeltaX];
+		userData];
 }
 
-double NSEvent_inst_scrollingDeltaY(void *id) {
+long NSEvent_inst_data1(void *id) {
 	return [(NSEvent*)id
-		scrollingDeltaY];
+		data1];
 }
 
-BOOL NSEvent_inst_isDirectionInvertedFromDevice(void *id) {
+long NSEvent_inst_data2(void *id) {
 	return [(NSEvent*)id
-		isDirectionInvertedFromDevice];
+		data2];
 }
 
 void NSFont_inst_set(void *id) {
@@ -1995,21 +1999,6 @@ void NSImage_inst_addRepresentations_(void *id, void* imageReps) {
 void NSImage_inst_drawInRect_(void *id, NSRect rect) {
 	[(NSImage*)id
 		drawInRect: rect];
-}
-
-void NSImage_inst_lockFocus(void *id) {
-	[(NSImage*)id
-		lockFocus];
-}
-
-void NSImage_inst_lockFocusFlipped_(void *id, BOOL flipped) {
-	[(NSImage*)id
-		lockFocusFlipped: flipped];
-}
-
-void NSImage_inst_unlockFocus(void *id) {
-	[(NSImage*)id
-		unlockFocus];
 }
 
 void NSImage_inst_recache(void *id) {
@@ -3036,6 +3025,36 @@ void* NSMenuItem_inst_userKeyEquivalent(void *id) {
 		userKeyEquivalent];
 }
 
+BOOL NSMenuItem_inst_allowsAutomaticKeyEquivalentLocalization(void *id) {
+	return [(NSMenuItem*)id
+		allowsAutomaticKeyEquivalentLocalization];
+}
+
+void NSMenuItem_inst_setAllowsAutomaticKeyEquivalentLocalization_(void *id, BOOL value) {
+	[(NSMenuItem*)id
+		setAllowsAutomaticKeyEquivalentLocalization: value];
+}
+
+BOOL NSMenuItem_inst_allowsAutomaticKeyEquivalentMirroring(void *id) {
+	return [(NSMenuItem*)id
+		allowsAutomaticKeyEquivalentMirroring];
+}
+
+void NSMenuItem_inst_setAllowsAutomaticKeyEquivalentMirroring_(void *id, BOOL value) {
+	[(NSMenuItem*)id
+		setAllowsAutomaticKeyEquivalentMirroring: value];
+}
+
+BOOL NSMenuItem_inst_allowsKeyEquivalentWhenHidden(void *id) {
+	return [(NSMenuItem*)id
+		allowsKeyEquivalentWhenHidden];
+}
+
+void NSMenuItem_inst_setAllowsKeyEquivalentWhenHidden_(void *id, BOOL value) {
+	[(NSMenuItem*)id
+		setAllowsKeyEquivalentWhenHidden: value];
+}
+
 BOOL NSMenuItem_inst_isAlternate(void *id) {
 	return [(NSMenuItem*)id
 		isAlternate];
@@ -3091,36 +3110,6 @@ BOOL NSMenuItem_inst_isHighlighted(void *id) {
 		isHighlighted];
 }
 
-BOOL NSMenuItem_inst_allowsAutomaticKeyEquivalentLocalization(void *id) {
-	return [(NSMenuItem*)id
-		allowsAutomaticKeyEquivalentLocalization];
-}
-
-void NSMenuItem_inst_setAllowsAutomaticKeyEquivalentLocalization_(void *id, BOOL value) {
-	[(NSMenuItem*)id
-		setAllowsAutomaticKeyEquivalentLocalization: value];
-}
-
-BOOL NSMenuItem_inst_allowsAutomaticKeyEquivalentMirroring(void *id) {
-	return [(NSMenuItem*)id
-		allowsAutomaticKeyEquivalentMirroring];
-}
-
-void NSMenuItem_inst_setAllowsAutomaticKeyEquivalentMirroring_(void *id, BOOL value) {
-	[(NSMenuItem*)id
-		setAllowsAutomaticKeyEquivalentMirroring: value];
-}
-
-BOOL NSMenuItem_inst_allowsKeyEquivalentWhenHidden(void *id) {
-	return [(NSMenuItem*)id
-		allowsKeyEquivalentWhenHidden];
-}
-
-void NSMenuItem_inst_setAllowsKeyEquivalentWhenHidden_(void *id, BOOL value) {
-	[(NSMenuItem*)id
-		setAllowsKeyEquivalentWhenHidden: value];
-}
-
 NSRect NSScreen_inst_convertRectFromBacking_(void *id, NSRect rect) {
 	return [(NSScreen*)id
 		convertRectFromBacking: rect];
@@ -3146,14 +3135,19 @@ void* NSScreen_inst_deviceDescription(void *id) {
 		deviceDescription];
 }
 
-NSRect NSScreen_inst_visibleFrame(void *id) {
+void* NSScreen_inst_localizedName(void *id) {
 	return [(NSScreen*)id
-		visibleFrame];
+		localizedName];
 }
 
 double NSScreen_inst_backingScaleFactor(void *id) {
 	return [(NSScreen*)id
 		backingScaleFactor];
+}
+
+NSRect NSScreen_inst_visibleFrame(void *id) {
+	return [(NSScreen*)id
+		visibleFrame];
 }
 
 double NSScreen_inst_maximumPotentialExtendedDynamicRangeColorComponentValue(void *id) {
@@ -3171,6 +3165,21 @@ double NSScreen_inst_maximumReferenceExtendedDynamicRangeColorComponentValue(voi
 		maximumReferenceExtendedDynamicRangeColorComponentValue];
 }
 
+long NSScreen_inst_maximumFramesPerSecond(void *id) {
+	return [(NSScreen*)id
+		maximumFramesPerSecond];
+}
+
+NSTimeInterval NSScreen_inst_minimumRefreshInterval(void *id) {
+	return [(NSScreen*)id
+		minimumRefreshInterval];
+}
+
+NSTimeInterval NSScreen_inst_maximumRefreshInterval(void *id) {
+	return [(NSScreen*)id
+		maximumRefreshInterval];
+}
+
 NSTimeInterval NSScreen_inst_displayUpdateGranularity(void *id) {
 	return [(NSScreen*)id
 		displayUpdateGranularity];
@@ -3181,24 +3190,14 @@ NSTimeInterval NSScreen_inst_lastDisplayUpdateTimestamp(void *id) {
 		lastDisplayUpdateTimestamp];
 }
 
-void* NSScreen_inst_localizedName(void *id) {
+NSRect NSScreen_inst_auxiliaryTopLeftArea(void *id) {
 	return [(NSScreen*)id
-		localizedName];
+		auxiliaryTopLeftArea];
 }
 
-long NSScreen_inst_maximumFramesPerSecond(void *id) {
+NSRect NSScreen_inst_auxiliaryTopRightArea(void *id) {
 	return [(NSScreen*)id
-		maximumFramesPerSecond];
-}
-
-NSTimeInterval NSScreen_inst_maximumRefreshInterval(void *id) {
-	return [(NSScreen*)id
-		maximumRefreshInterval];
-}
-
-NSTimeInterval NSScreen_inst_minimumRefreshInterval(void *id) {
-	return [(NSScreen*)id
-		minimumRefreshInterval];
+		auxiliaryTopRightArea];
 }
 
 void* NSStatusBar_inst_statusItemWithLength_(void *id, double length) {
@@ -4799,16 +4798,6 @@ BOOL NSWindow_inst_areCursorRectsEnabled(void *id) {
 		areCursorRectsEnabled];
 }
 
-BOOL NSWindow_inst_showsToolbarButton(void *id) {
-	return [(NSWindow*)id
-		showsToolbarButton];
-}
-
-void NSWindow_inst_setShowsToolbarButton_(void *id, BOOL value) {
-	[(NSWindow*)id
-		setShowsToolbarButton: value];
-}
-
 BOOL NSWindow_inst_titlebarAppearsTransparent(void *id) {
 	return [(NSWindow*)id
 		titlebarAppearsTransparent];
@@ -5544,9 +5533,19 @@ void NSTextView_inst_toggleAutomaticTextReplacement_(void *id, void* sender) {
 		toggleAutomaticTextReplacement: sender];
 }
 
+BOOL NSTextView_inst_becomeFirstResponder(void *id) {
+	return [(NSTextView*)id
+		becomeFirstResponder];
+}
+
 void NSTextView_inst_updateQuickLookPreviewPanel(void *id) {
 	[(NSTextView*)id
 		updateQuickLookPreviewPanel];
+}
+
+BOOL NSTextView_inst_resignFirstResponder(void *id) {
+	return [(NSTextView*)id
+		resignFirstResponder];
 }
 
 void NSTextView_inst_toggleQuickLookPreviewPanel_(void *id, void* sender) {
@@ -7584,6 +7583,14 @@ func NSEvent_mouseLocation() (
 	return
 }
 
+func NSEvent_swipeTrackingFromScrollEventsEnabled() (
+	r0 bool,
+) {
+	ret := C.NSEvent_type_swipeTrackingFromScrollEventsEnabled()
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func NSEvent_mouseCoalescingEnabled() (
 	r0 bool,
 ) {
@@ -7598,14 +7605,6 @@ func NSEvent_setMouseCoalescingEnabled_(
 	C.NSEvent_type_setMouseCoalescingEnabled_(
 		convertToObjCBool(value),
 	)
-	return
-}
-
-func NSEvent_swipeTrackingFromScrollEventsEnabled() (
-	r0 bool,
-) {
-	ret := C.NSEvent_type_swipeTrackingFromScrollEventsEnabled()
-	r0 = convertObjCBoolToGo(ret)
 	return
 }
 
@@ -7826,14 +7825,44 @@ func NSImage_alloc() (
 }
 
 func NSImage_imageWithSystemSymbolName_accessibilityDescription_(
-	symbolName core.NSStringRef,
+	name core.NSStringRef,
 	description core.NSStringRef,
 ) (
 	r0 NSImage,
 ) {
 	ret := C.NSImage_type_imageWithSystemSymbolName_accessibilityDescription_(
-		objc.RefPointer(symbolName),
+		objc.RefPointer(name),
 		objc.RefPointer(description),
+	)
+	r0 = NSImage_fromPointer(ret)
+	return
+}
+
+func NSImage_imageWithSystemSymbolName_variableValue_accessibilityDescription_(
+	name core.NSStringRef,
+	value float64,
+	description core.NSStringRef,
+) (
+	r0 NSImage,
+) {
+	ret := C.NSImage_type_imageWithSystemSymbolName_variableValue_accessibilityDescription_(
+		objc.RefPointer(name),
+		C.double(value),
+		objc.RefPointer(description),
+	)
+	r0 = NSImage_fromPointer(ret)
+	return
+}
+
+func NSImage_imageWithSymbolName_variableValue_(
+	name core.NSStringRef,
+	value float64,
+) (
+	r0 NSImage,
+) {
+	ret := C.NSImage_type_imageWithSymbolName_variableValue_(
+		objc.RefPointer(name),
+		C.double(value),
 	)
 	r0 = NSImage_fromPointer(ret)
 	return
@@ -7848,6 +7877,22 @@ func NSImage_canInitWithPasteboard_(
 		objc.RefPointer(pasteboard),
 	)
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func NSImage_imageWithSymbolName_bundle_variableValue_(
+	name core.NSStringRef,
+	bundle NSBundleRef,
+	value float64,
+) (
+	r0 NSImage,
+) {
+	ret := C.NSImage_type_imageWithSymbolName_bundle_variableValue_(
+		objc.RefPointer(name),
+		objc.RefPointer(bundle),
+		C.double(value),
+	)
+	r0 = NSImage_fromPointer(ret)
 	return
 }
 
@@ -8435,23 +8480,6 @@ func (x gen_NSBundle) InitWithPath__asNSBundle(
 	return
 }
 
-func (x gen_NSBundle) LoadNibNamed_owner_options_(
-	name core.NSStringRef,
-	owner objc.Ref,
-	options core.NSDictionaryRef,
-) (
-	r0 core.NSArray,
-) {
-	ret := C.NSBundle_inst_loadNibNamed_owner_options_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(name),
-		objc.RefPointer(owner),
-		objc.RefPointer(options),
-	)
-	r0 = core.NSArray_fromPointer(ret)
-	return
-}
-
 func (x gen_NSBundle) URLForResource_withExtension_subdirectory_(
 	name core.NSStringRef,
 	ext core.NSStringRef,
@@ -8671,19 +8699,6 @@ func (x gen_NSBundle) ObjectForInfoDictionaryKey_(
 		objc.RefPointer(key),
 	)
 	r0 = objc.Object_fromPointer(ret)
-	return
-}
-
-func (x gen_NSBundle) PreservationPriorityForTag_(
-	tag core.NSStringRef,
-) (
-	r0 float64,
-) {
-	ret := C.NSBundle_inst_preservationPriorityForTag_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(tag),
-	)
-	r0 = float64(ret)
 	return
 }
 
@@ -10933,56 +10948,6 @@ func (x gen_NSEvent) ClickCount() (
 	return
 }
 
-func (x gen_NSEvent) EventNumber() (
-	r0 core.NSInteger,
-) {
-	ret := C.NSEvent_inst_eventNumber(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = core.NSInteger(ret)
-	return
-}
-
-func (x gen_NSEvent) TrackingNumber() (
-	r0 core.NSInteger,
-) {
-	ret := C.NSEvent_inst_trackingNumber(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = core.NSInteger(ret)
-	return
-}
-
-func (x gen_NSEvent) UserData() (
-	r0 unsafe.Pointer,
-) {
-	ret := C.NSEvent_inst_userData(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = ret
-	return
-}
-
-func (x gen_NSEvent) Data1() (
-	r0 core.NSInteger,
-) {
-	ret := C.NSEvent_inst_data1(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = core.NSInteger(ret)
-	return
-}
-
-func (x gen_NSEvent) Data2() (
-	r0 core.NSInteger,
-) {
-	ret := C.NSEvent_inst_data2(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = core.NSInteger(ret)
-	return
-}
-
 func (x gen_NSEvent) DeltaX() (
 	r0 core.CGFloat,
 ) {
@@ -11007,6 +10972,56 @@ func (x gen_NSEvent) DeltaZ() (
 	r0 core.CGFloat,
 ) {
 	ret := C.NSEvent_inst_deltaZ(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.CGFloat(ret)
+	return
+}
+
+func (x gen_NSEvent) HasPreciseScrollingDeltas() (
+	r0 bool,
+) {
+	ret := C.NSEvent_inst_hasPreciseScrollingDeltas(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSEvent) ScrollingDeltaX() (
+	r0 core.CGFloat,
+) {
+	ret := C.NSEvent_inst_scrollingDeltaX(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.CGFloat(ret)
+	return
+}
+
+func (x gen_NSEvent) ScrollingDeltaY() (
+	r0 core.CGFloat,
+) {
+	ret := C.NSEvent_inst_scrollingDeltaY(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.CGFloat(ret)
+	return
+}
+
+func (x gen_NSEvent) IsDirectionInvertedFromDevice() (
+	r0 bool,
+) {
+	ret := C.NSEvent_inst_isDirectionInvertedFromDevice(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSEvent) Magnification() (
+	r0 core.CGFloat,
+) {
+	ret := C.NSEvent_inst_magnification(
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = core.CGFloat(ret)
@@ -11203,53 +11218,53 @@ func (x gen_NSEvent) VendorDefined() (
 	return
 }
 
-func (x gen_NSEvent) Magnification() (
-	r0 core.CGFloat,
+func (x gen_NSEvent) EventNumber() (
+	r0 core.NSInteger,
 ) {
-	ret := C.NSEvent_inst_magnification(
+	ret := C.NSEvent_inst_eventNumber(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = core.CGFloat(ret)
+	r0 = core.NSInteger(ret)
 	return
 }
 
-func (x gen_NSEvent) HasPreciseScrollingDeltas() (
-	r0 bool,
+func (x gen_NSEvent) TrackingNumber() (
+	r0 core.NSInteger,
 ) {
-	ret := C.NSEvent_inst_hasPreciseScrollingDeltas(
+	ret := C.NSEvent_inst_trackingNumber(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = convertObjCBoolToGo(ret)
+	r0 = core.NSInteger(ret)
 	return
 }
 
-func (x gen_NSEvent) ScrollingDeltaX() (
-	r0 core.CGFloat,
+func (x gen_NSEvent) UserData() (
+	r0 unsafe.Pointer,
 ) {
-	ret := C.NSEvent_inst_scrollingDeltaX(
+	ret := C.NSEvent_inst_userData(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = core.CGFloat(ret)
+	r0 = ret
 	return
 }
 
-func (x gen_NSEvent) ScrollingDeltaY() (
-	r0 core.CGFloat,
+func (x gen_NSEvent) Data1() (
+	r0 core.NSInteger,
 ) {
-	ret := C.NSEvent_inst_scrollingDeltaY(
+	ret := C.NSEvent_inst_data1(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = core.CGFloat(ret)
+	r0 = core.NSInteger(ret)
 	return
 }
 
-func (x gen_NSEvent) IsDirectionInvertedFromDevice() (
-	r0 bool,
+func (x gen_NSEvent) Data2() (
+	r0 core.NSInteger,
 ) {
-	ret := C.NSEvent_inst_isDirectionInvertedFromDevice(
+	ret := C.NSEvent_inst_data2(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = convertObjCBoolToGo(ret)
+	r0 = core.NSInteger(ret)
 	return
 }
 
@@ -11541,30 +11556,6 @@ func (x gen_NSImage) DrawInRect_(
 	C.NSImage_inst_drawInRect_(
 		unsafe.Pointer(x.Pointer()),
 		*(*C.NSRect)(unsafe.Pointer(&rect)),
-	)
-	return
-}
-
-func (x gen_NSImage) LockFocus() {
-	C.NSImage_inst_lockFocus(
-		unsafe.Pointer(x.Pointer()),
-	)
-	return
-}
-
-func (x gen_NSImage) LockFocusFlipped_(
-	flipped bool,
-) {
-	C.NSImage_inst_lockFocusFlipped_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(flipped),
-	)
-	return
-}
-
-func (x gen_NSImage) UnlockFocus() {
-	C.NSImage_inst_unlockFocus(
-		unsafe.Pointer(x.Pointer()),
 	)
 	return
 }
@@ -13834,6 +13825,66 @@ func (x gen_NSMenuItem) UserKeyEquivalent() (
 	return
 }
 
+func (x gen_NSMenuItem) AllowsAutomaticKeyEquivalentLocalization() (
+	r0 bool,
+) {
+	ret := C.NSMenuItem_inst_allowsAutomaticKeyEquivalentLocalization(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSMenuItem) SetAllowsAutomaticKeyEquivalentLocalization_(
+	value bool,
+) {
+	C.NSMenuItem_inst_setAllowsAutomaticKeyEquivalentLocalization_(
+		unsafe.Pointer(x.Pointer()),
+		convertToObjCBool(value),
+	)
+	return
+}
+
+func (x gen_NSMenuItem) AllowsAutomaticKeyEquivalentMirroring() (
+	r0 bool,
+) {
+	ret := C.NSMenuItem_inst_allowsAutomaticKeyEquivalentMirroring(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSMenuItem) SetAllowsAutomaticKeyEquivalentMirroring_(
+	value bool,
+) {
+	C.NSMenuItem_inst_setAllowsAutomaticKeyEquivalentMirroring_(
+		unsafe.Pointer(x.Pointer()),
+		convertToObjCBool(value),
+	)
+	return
+}
+
+func (x gen_NSMenuItem) AllowsKeyEquivalentWhenHidden() (
+	r0 bool,
+) {
+	ret := C.NSMenuItem_inst_allowsKeyEquivalentWhenHidden(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSMenuItem) SetAllowsKeyEquivalentWhenHidden_(
+	value bool,
+) {
+	C.NSMenuItem_inst_setAllowsKeyEquivalentWhenHidden_(
+		unsafe.Pointer(x.Pointer()),
+		convertToObjCBool(value),
+	)
+	return
+}
+
 func (x gen_NSMenuItem) IsAlternate() (
 	r0 bool,
 ) {
@@ -13944,66 +13995,6 @@ func (x gen_NSMenuItem) IsHighlighted() (
 	return
 }
 
-func (x gen_NSMenuItem) AllowsAutomaticKeyEquivalentLocalization() (
-	r0 bool,
-) {
-	ret := C.NSMenuItem_inst_allowsAutomaticKeyEquivalentLocalization(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSMenuItem) SetAllowsAutomaticKeyEquivalentLocalization_(
-	value bool,
-) {
-	C.NSMenuItem_inst_setAllowsAutomaticKeyEquivalentLocalization_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
-func (x gen_NSMenuItem) AllowsAutomaticKeyEquivalentMirroring() (
-	r0 bool,
-) {
-	ret := C.NSMenuItem_inst_allowsAutomaticKeyEquivalentMirroring(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSMenuItem) SetAllowsAutomaticKeyEquivalentMirroring_(
-	value bool,
-) {
-	C.NSMenuItem_inst_setAllowsAutomaticKeyEquivalentMirroring_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
-func (x gen_NSMenuItem) AllowsKeyEquivalentWhenHidden() (
-	r0 bool,
-) {
-	ret := C.NSMenuItem_inst_allowsKeyEquivalentWhenHidden(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSMenuItem) SetAllowsKeyEquivalentWhenHidden_(
-	value bool,
-) {
-	C.NSMenuItem_inst_setAllowsKeyEquivalentWhenHidden_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
 type NSScreenRef interface {
 	Pointer() uintptr
 	Init_asNSScreen() NSScreen
@@ -14079,13 +14070,13 @@ func (x gen_NSScreen) DeviceDescription() (
 	return
 }
 
-func (x gen_NSScreen) VisibleFrame() (
-	r0 core.NSRect,
+func (x gen_NSScreen) LocalizedName() (
+	r0 core.NSString,
 ) {
-	ret := C.NSScreen_inst_visibleFrame(
+	ret := C.NSScreen_inst_localizedName(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = *(*core.NSRect)(unsafe.Pointer(&ret))
+	r0 = core.NSString_fromPointer(ret)
 	return
 }
 
@@ -14096,6 +14087,16 @@ func (x gen_NSScreen) BackingScaleFactor() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = core.CGFloat(ret)
+	return
+}
+
+func (x gen_NSScreen) VisibleFrame() (
+	r0 core.NSRect,
+) {
+	ret := C.NSScreen_inst_visibleFrame(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = *(*core.NSRect)(unsafe.Pointer(&ret))
 	return
 }
 
@@ -14129,6 +14130,36 @@ func (x gen_NSScreen) MaximumReferenceExtendedDynamicRangeColorComponentValue() 
 	return
 }
 
+func (x gen_NSScreen) MaximumFramesPerSecond() (
+	r0 core.NSInteger,
+) {
+	ret := C.NSScreen_inst_maximumFramesPerSecond(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.NSInteger(ret)
+	return
+}
+
+func (x gen_NSScreen) MinimumRefreshInterval() (
+	r0 float64,
+) {
+	ret := C.NSScreen_inst_minimumRefreshInterval(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+func (x gen_NSScreen) MaximumRefreshInterval() (
+	r0 float64,
+) {
+	ret := C.NSScreen_inst_maximumRefreshInterval(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
 func (x gen_NSScreen) DisplayUpdateGranularity() (
 	r0 float64,
 ) {
@@ -14149,43 +14180,23 @@ func (x gen_NSScreen) LastDisplayUpdateTimestamp() (
 	return
 }
 
-func (x gen_NSScreen) LocalizedName() (
-	r0 core.NSString,
+func (x gen_NSScreen) AuxiliaryTopLeftArea() (
+	r0 core.NSRect,
 ) {
-	ret := C.NSScreen_inst_localizedName(
+	ret := C.NSScreen_inst_auxiliaryTopLeftArea(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = core.NSString_fromPointer(ret)
+	r0 = *(*core.NSRect)(unsafe.Pointer(&ret))
 	return
 }
 
-func (x gen_NSScreen) MaximumFramesPerSecond() (
-	r0 core.NSInteger,
+func (x gen_NSScreen) AuxiliaryTopRightArea() (
+	r0 core.NSRect,
 ) {
-	ret := C.NSScreen_inst_maximumFramesPerSecond(
+	ret := C.NSScreen_inst_auxiliaryTopRightArea(
 		unsafe.Pointer(x.Pointer()),
 	)
-	r0 = core.NSInteger(ret)
-	return
-}
-
-func (x gen_NSScreen) MaximumRefreshInterval() (
-	r0 float64,
-) {
-	ret := C.NSScreen_inst_maximumRefreshInterval(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
-	return
-}
-
-func (x gen_NSScreen) MinimumRefreshInterval() (
-	r0 float64,
-) {
-	ret := C.NSScreen_inst_minimumRefreshInterval(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
+	r0 = *(*core.NSRect)(unsafe.Pointer(&ret))
 	return
 }
 
@@ -17492,26 +17503,6 @@ func (x gen_NSWindow) AreCursorRectsEnabled() (
 	return
 }
 
-func (x gen_NSWindow) ShowsToolbarButton() (
-	r0 bool,
-) {
-	ret := C.NSWindow_inst_showsToolbarButton(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSWindow) SetShowsToolbarButton_(
-	value bool,
-) {
-	C.NSWindow_inst_setShowsToolbarButton_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
 func (x gen_NSWindow) TitlebarAppearsTransparent() (
 	r0 bool,
 ) {
@@ -19020,10 +19011,30 @@ func (x gen_NSTextView) ToggleAutomaticTextReplacement_(
 	return
 }
 
+func (x gen_NSTextView) BecomeFirstResponder() (
+	r0 bool,
+) {
+	ret := C.NSTextView_inst_becomeFirstResponder(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func (x gen_NSTextView) UpdateQuickLookPreviewPanel() {
 	C.NSTextView_inst_updateQuickLookPreviewPanel(
 		unsafe.Pointer(x.Pointer()),
 	)
+	return
+}
+
+func (x gen_NSTextView) ResignFirstResponder() (
+	r0 bool,
+) {
+	ret := C.NSTextView_inst_resignFirstResponder(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
 	return
 }
 

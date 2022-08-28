@@ -8,6 +8,7 @@
     ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -24,12 +25,13 @@
         ],
         "Platforms": [
           "iOS 2.0+",
+          "iPadOS 2.0+",
           "macOS 10.0+",
           "Mac Catalyst 13.0+",
           "tvOS 9.0+",
           "watchOS 2.0+"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/coregraphics/cgrect/1454354-origin?language=objc",
+        "TopicURL": "https://developer.apple.com/documentation/corefoundation/cgrect/1454354-origin?language=objc",
         "Type": {
           "Name": "CGPoint"
         }
@@ -43,12 +45,13 @@
         ],
         "Platforms": [
           "iOS 2.0+",
+          "iPadOS 2.0+",
           "macOS 10.0+",
           "Mac Catalyst 13.0+",
           "tvOS 9.0+",
           "watchOS 2.0+"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/coregraphics/cgrect/1455155-size?language=objc",
+        "TopicURL": "https://developer.apple.com/documentation/corefoundation/cgrect/1455155-size?language=objc",
         "Type": {
           "Name": "CGSize"
         }
@@ -56,6 +59,6 @@
     ]
   },
   "Kind": "struct",
-  "PullDate": "2021-08-30T10:17:24.94634-07:00",
+  "PullDate": "2022-08-28T20:19:18.58951+08:00",
   "Version": 2
 }

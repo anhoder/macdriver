@@ -3,9 +3,6 @@
     "Name": "NSViewController",
     "Description": "A controller that manages a view, typically loaded from a nib file.",
     "Declaration": "@interface NSViewController : NSResponder",
-    "Frameworks": [
-      "AppKit"
-    ],
     "Platforms": [
       "macOS 10.5+"
     ],
@@ -15,6 +12,10 @@
         "Name": "initWithNibName:bundle:",
         "Description": "Returns a view controller object initialized to the nib file in the specified bundle.",
         "Declaration": "- (instancetype)initWithNibName:(NSNibName)nibNameOrNil \n                         bundle:(NSBundle *)nibBundleOrNil;\n",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434481-initwithnibname?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -32,23 +33,28 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434481-initwithnibname?language=objc"
+        ]
       },
       {
         "Name": "loadView",
         "Description": "Instantiates a view from a nib file and sets the value of the view property.",
         "Declaration": "- (void)loadView;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434405-loadview?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434405-loadview?language=objc"
+        "Args": null
       },
       {
         "Name": "commitEditingWithDelegate:didCommitSelector:contextInfo:",
         "Description": "Attempt to commit any currently edited results of the receiver.",
         "Declaration": "- (void)commitEditingWithDelegate:(id)delegate \n                didCommitSelector:(SEL)didCommitSelector \n                      contextInfo:(void *)contextInfo;\n",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
         "Return": {
           "Name": "void"
         },
@@ -79,26 +85,41 @@
         "Name": "commitEditing",
         "Description": "Returns whether the receiver was able to commit any pending edits.",
         "Declaration": "- (BOOL)commitEditing;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434485-commitediting?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434485-commitediting?language=objc"
+        "Args": null
       },
       {
         "Name": "discardEditing",
         "Description": "Causes the receiver to discard any changes, restoring the previous values.",
         "Declaration": "- (void)discardEditing;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434487-discardediting?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434487-discardediting?language=objc"
+        "Args": null
       },
       {
         "Name": "dismissController:",
-        "Description": "",
         "Declaration": "- (IBAction)dismissController:(id)sender;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434447-dismisscontroller?language=objc",
         "Return": {
           "Name": "IBAction"
         },
@@ -109,83 +130,121 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434447-dismisscontroller?language=objc"
+        ]
       },
       {
         "Name": "viewDidLoad",
         "Description": "Called after the view controller’s view has been loaded into memory.",
         "Declaration": "- (void)viewDidLoad;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434476-viewdidload?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434476-viewdidload?language=objc"
+        "Args": null
       },
       {
         "Name": "viewWillAppear",
         "Description": "Called after the view controller’s view has been loaded into memory is about to be added to the view hierarchy in the window.",
         "Declaration": "- (void)viewWillAppear;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434415-viewwillappear?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434415-viewwillappear?language=objc"
+        "Args": null
       },
       {
         "Name": "viewDidAppear",
         "Description": "Called when the view controller’s view is fully transitioned onto the screen.",
         "Declaration": "- (void)viewDidAppear;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434455-viewdidappear?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434455-viewdidappear?language=objc"
+        "Args": null
       },
       {
         "Name": "viewWillDisappear",
         "Description": "Called when the view controller’s view is about to be removed from the view hierarchy in the window.",
         "Declaration": "- (void)viewWillDisappear;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434483-viewwilldisappear?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434483-viewwilldisappear?language=objc"
+        "Args": null
       },
       {
         "Name": "viewDidDisappear",
         "Description": "Called after the view controller’s view is removed from the view hierarchy in a window.",
         "Declaration": "- (void)viewDidDisappear;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434416-viewdiddisappear?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434416-viewdiddisappear?language=objc"
+        "Args": null
       },
       {
         "Name": "updateViewConstraints",
         "Description": "Called during Auto Layout constraint updating to enable the view controller to mediate the process.",
         "Declaration": "- (void)updateViewConstraints;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434400-updateviewconstraints?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434400-updateviewconstraints?language=objc"
+        "Args": null
       },
       {
         "Name": "viewWillLayout",
         "Description": "Called just before the layout method of the view controller's view is called.",
         "Declaration": "- (void)viewWillLayout;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434495-viewwilllayout?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434495-viewwilllayout?language=objc"
+        "Args": null
       },
       {
         "Name": "viewDidLayout",
         "Description": "Called immediately after the layout method of the view controller's view is called.",
         "Declaration": "- (void)viewDidLayout;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
         "Return": {
           "Name": "void"
         },
@@ -196,6 +255,13 @@
         "Name": "addChildViewController:",
         "Description": "A convenience method for adding a child view controller at the end of the childViewControllers array.",
         "Declaration": "- (void)addChildViewController:(NSViewController *)childViewController;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434501-addchildviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -207,13 +273,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434501-addchildviewcontroller?language=objc"
+        ]
       },
       {
         "Name": "transitionFromViewController:toViewController:options:completionHandler:",
         "Description": "Performs a transition between two sibling child view controllers of the view controller.",
         "Declaration": "- (void)transitionFromViewController:(NSViewController *)fromViewController \n                    toViewController:(NSViewController *)toViewController \n                             options:(NSViewControllerTransitionOptions)options \n                   completionHandler:(void (^)(void))completion;\n",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434407-transitionfromviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -255,13 +324,16 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434407-transitionfromviewcontroller?language=objc"
+        ]
       },
       {
         "Name": "insertChildViewController:atIndex:",
         "Description": "Inserts a specified child view controller into the childViewControllers array at a specified position.",
         "Declaration": "- (void)insertChildViewController:(NSViewController *)childViewController \n                          atIndex:(NSInteger)index;\n",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434437-insertchildviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -279,13 +351,19 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434437-insertchildviewcontroller?language=objc"
+        ]
       },
       {
         "Name": "removeChildViewControllerAtIndex:",
         "Description": "Removes a specified child controller from the view controller.",
         "Declaration": "- (void)removeChildViewControllerAtIndex:(NSInteger)index;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434404-removechildviewcontrolleratindex?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -296,23 +374,32 @@
               "Name": "NSInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434404-removechildviewcontrolleratindex?language=objc"
+        ]
       },
       {
         "Name": "removeFromParentViewController",
         "Description": "Removes the called view controller from its parent view controller.",
         "Declaration": "- (void)removeFromParentViewController;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434466-removefromparentviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434466-removefromparentviewcontroller?language=objc"
+        "Args": null
       },
       {
         "Name": "preferredContentSizeDidChangeForViewController:",
         "Description": "Called when there is a change in value of the preferredContentSize property of a child view controller or a presented view controller.",
         "Declaration": "- (void)preferredContentSizeDidChangeForViewController:(NSViewController *)viewController;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434434-preferredcontentsizedidchangefor?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -324,13 +411,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434434-preferredcontentsizedidchangefor?language=objc"
+        ]
       },
       {
         "Name": "presentViewController:animator:",
         "Description": "Presents another view controller using a specified, custom animator for presentation and dismissal.",
         "Declaration": "- (void)presentViewController:(NSViewController *)viewController \n                     animator:(id\u003cNSViewControllerPresentationAnimator\u003e)animator;\n",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434431-presentviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -353,13 +443,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434431-presentviewcontroller?language=objc"
+        ]
       },
       {
         "Name": "dismissViewController:",
         "Description": "Dismisses a presented view controller, using the same animator that presented it.",
         "Declaration": "- (void)dismissViewController:(NSViewController *)viewController;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434413-dismissviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -371,13 +464,19 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434413-dismissviewcontroller?language=objc"
+        ]
       },
       {
         "Name": "presentViewController:asPopoverRelativeToRect:ofView:preferredEdge:behavior:",
         "Description": "Presents another view controller as a popover.",
         "Declaration": "- (void)presentViewController:(NSViewController *)viewController \n      asPopoverRelativeToRect:(NSRect)positioningRect \n                       ofView:(NSView *)positioningView \n                preferredEdge:(NSRectEdge)preferredEdge \n                     behavior:(NSPopoverBehavior)behavior;\n",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434422-presentviewcontroller?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -414,13 +513,16 @@
               "Name": "NSPopoverBehavior"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434422-presentviewcontroller?language=objc"
+        ]
       },
       {
         "Name": "presentViewControllerAsModalWindow:",
         "Description": "Presents another view controller as a modal window, also known as an alert.",
         "Declaration": "- (void)presentViewControllerAsModalWindow:(NSViewController *)viewController;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434462-presentviewcontrollerasmodalwind?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -432,13 +534,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434462-presentviewcontrollerasmodalwind?language=objc"
+        ]
       },
       {
         "Name": "presentViewControllerAsSheet:",
         "Description": "Presents another view controller as a sheet.",
         "Declaration": "- (void)presentViewControllerAsSheet:(NSViewController *)viewController;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434489-presentviewcontrollerassheet?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -450,13 +555,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434489-presentviewcontrollerassheet?language=objc"
+        ]
       },
       {
         "Name": "viewWillTransitionToSize:",
         "Description": "For a view controller that is part of an app extension, called when its view is about to be resized.",
         "Declaration": "- (void)viewWillTransitionToSize:(NSSize)newSize;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434443-viewwilltransitiontosize?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -467,13 +575,18 @@
               "Name": "NSSize"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434443-viewwilltransitiontosize?language=objc"
+        ]
       },
       {
         "Name": "initWithCoder:",
-        "Description": "",
         "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434441-initwithcoder?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -485,13 +598,16 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434441-initwithcoder?language=objc"
+        ]
       },
       {
         "Name": "presentViewControllerInWidget:",
-        "Description": "",
         "Declaration": "- (void)presentViewControllerInWidget:(NSViewController *)viewController;",
+        "Platforms": [
+          "macOS 10.10–11.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1490260-presentviewcontrollerinwidget?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -503,9 +619,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1490260-presentviewcontrollerinwidget?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -513,18 +627,28 @@
         "Name": "representedObject",
         "Description": "The object whose value is presented in the receiver’s primary view.",
         "Declaration": "@property(strong) id representedObject;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434453-representedobject?language=objc",
         "Type": {
           "Name": "id"
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434453-representedobject?language=objc"
+        }
       },
       {
         "Name": "nibBundle",
         "Description": "The nib bundle to be loaded to instantiate the receiver’s primary view.",
         "Declaration": "@property(nullable, strong, readonly) NSBundle *nibBundle;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434433-nibbundle?language=objc",
         "Type": {
           "Name": "NSBundle",
           "IsPtr": true
@@ -533,13 +657,19 @@
           "nullable": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434433-nibbundle?language=objc"
+        }
       },
       {
         "Name": "nibName",
         "Description": "The name of the nib file to be loaded to instantiate the receiver’s primary view.",
         "Declaration": "@property(nullable, copy, readonly) NSNibName nibName;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434472-nibname?language=objc",
         "Type": {
           "Name": "NSNibName"
         },
@@ -547,13 +677,15 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434472-nibname?language=objc"
+        }
       },
       {
         "Name": "NSView",
         "Description": "The view controller’s primary view.",
         "Declaration": "@property(strong) IBOutlet NSView *view;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
         "Type": {
           "Name": "IBOutlet"
         },
@@ -566,19 +698,29 @@
         "Name": "title",
         "Description": "The localized title of the receiver’s primary view.",
         "Declaration": "@property(copy) NSString *title;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434426-title?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434426-title?language=objc"
+        }
       },
       {
         "Name": "storyboard",
         "Description": "The storyboard from which the view controller was loaded.",
         "Declaration": "@property(nullable, readonly, strong) NSStoryboard *storyboard;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434499-storyboard?language=objc",
         "Type": {
           "Name": "NSStoryboard",
           "IsPtr": true
@@ -587,13 +729,18 @@
           "nullable": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434499-storyboard?language=objc"
+        }
       },
       {
         "Name": "viewLoaded",
         "Description": "A Boolean value indicating whether the view controller’s view is loaded into memory.",
         "Declaration": "@property(readonly, getter=isViewLoaded) BOOL viewLoaded;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
         "Type": {
           "Name": "BOOL"
         },
@@ -607,16 +754,28 @@
         "Name": "preferredContentSize",
         "Description": "The desired size of the view controller’s view, in screen units.",
         "Declaration": "@property NSSize preferredContentSize;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434409-preferredcontentsize?language=objc",
         "Type": {
           "Name": "NSSize"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434409-preferredcontentsize?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "childViewControllers",
         "Description": "An array of view controllers that are hierarchical children of the view controller.",
         "Declaration": "@property(copy) NSArray\u003c__kindof NSViewController *\u003e *childViewControllers;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -639,19 +798,29 @@
         "Name": "parentViewController",
         "Description": "The immediate ancestor view controller of the view controller.",
         "Declaration": "@property(readonly) NSViewController *parentViewController;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434491-parentviewcontroller?language=objc",
         "Type": {
           "Name": "NSViewController",
           "IsPtr": true
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434491-parentviewcontroller?language=objc"
+        }
       },
       {
         "Name": "presentedViewControllers",
         "Description": "The view controllers, if any, that are currently presented by the view controller.",
         "Declaration": "@property(readonly) NSArray\u003c__kindof NSViewController *\u003e *presentedViewControllers;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434497-presentedviewcontrollers?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -667,13 +836,16 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434497-presentedviewcontrollers?language=objc"
+        }
       },
       {
         "Name": "presentingViewController",
         "Description": "The view controller that presented the view controller or that presented its farthest ancestor view controller.",
         "Declaration": "@property(nullable, readonly, assign) NSViewController *presentingViewController;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434439-presentingviewcontroller?language=objc",
         "Type": {
           "Name": "NSViewController",
           "IsPtr": true
@@ -682,13 +854,19 @@
           "assign": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434439-presentingviewcontroller?language=objc"
+        }
       },
       {
         "Name": "extensionContext",
         "Description": "For a view controller that is part of an app extension, the app extension context.",
         "Declaration": "@property(nullable, readonly, retain) NSExtensionContext *extensionContext;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434457-extensioncontext?language=objc",
         "Type": {
           "Name": "NSExtensionContext",
           "IsPtr": true
@@ -697,58 +875,74 @@
           "nullable": true,
           "readonly": true,
           "retain": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434457-extensioncontext?language=objc"
+        }
       },
       {
         "Name": "preferredScreenOrigin",
         "Description": "For a view controller that is part of an app extension, the preferred screen origin.",
         "Declaration": "@property NSPoint preferredScreenOrigin;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434468-preferredscreenorigin?language=objc",
         "Type": {
           "Name": "NSPoint"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434468-preferredscreenorigin?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "preferredMaximumSize",
         "Description": "For a view controller that is part of an app extension, the largest allowable size for the app extension’s primary view, in screen units.",
         "Declaration": "@property(readonly) NSSize preferredMaximumSize;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434403-preferredmaximumsize?language=objc",
         "Type": {
           "Name": "NSSize"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434403-preferredmaximumsize?language=objc"
+        }
       },
       {
         "Name": "preferredMinimumSize",
         "Description": "For a view controller that is part of an app extension, the smallest allowable size for the app extension’s primary view, in screen units.",
         "Declaration": "@property(readonly) NSSize preferredMinimumSize;",
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434418-preferredminimumsize?language=objc",
         "Type": {
           "Name": "NSSize"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434418-preferredminimumsize?language=objc"
+        }
       },
       {
         "Name": "NSView",
-        "Description": "",
         "Declaration": "@property(strong) IBOutlet NSView *sourceItemView;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434479-sourceitemview?language=objc",
         "Type": {
           "Name": "IBOutlet"
         },
         "Attrs": {
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsviewcontroller/1434479-sourceitemview?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-09-20T09:55:16.168739-07:00",
+  "PullDate": "2022-08-28T20:08:02.271478+08:00",
   "Version": 2
 }

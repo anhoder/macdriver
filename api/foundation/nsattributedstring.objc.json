@@ -8,8 +8,9 @@
     ],
     "Platforms": [
       "iOS 3.2+",
+      "iPadOS 3.2+",
       "macOS 10.0+",
-      "Mac Catalyst 13.0+",
+      "Mac Catalyst 13.1+",
       "tvOS 9.0+",
       "watchOS 2.0+"
     ],
@@ -19,6 +20,15 @@
         "Name": "initWithString:",
         "Description": "Creates an attributed string with the characters of the specified string and no attribute information.",
         "Declaration": "- (instancetype)initWithString:(NSString *)str;",
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1407481-initwithstring?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -30,13 +40,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1407481-initwithstring?language=objc"
+        ]
       },
       {
         "Name": "initWithString:attributes:",
         "Description": "Creates an attributed string with the specified string and attributes.",
         "Declaration": "- (instancetype)initWithString:(NSString *)str \n                    attributes:(NSDictionary\u003cNSAttributedStringKey, id\u003e *)attrs;\n",
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1408136-initwithstring?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -63,13 +81,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1408136-initwithstring?language=objc"
+        ]
       },
       {
         "Name": "initWithAttributedString:",
         "Description": "Creates an attributed string with the characters and attributes of the specified attributed string.",
         "Declaration": "- (instancetype)initWithAttributedString:(NSAttributedString *)attrStr;",
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1415342-initwithattributedstring?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -81,13 +107,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1415342-initwithattributedstring?language=objc"
+        ]
       },
       {
         "Name": "initWithData:options:documentAttributes:error:",
         "Description": "Creates an attributed string from the data in the specified data object.",
         "Declaration": "- (instancetype)initWithData:(NSData *)data \n                     options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n          documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict \n                       error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524613-initwithdata?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -144,13 +178,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524613-initwithdata?language=objc"
+        ]
       },
       {
         "Name": "initWithDocFormat:documentAttributes:",
         "Description": "Creates an attributed string from Microsoft Word format data in the specified data object.",
         "Declaration": "- (instancetype)initWithDocFormat:(NSData *)data \n               documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534329-initwithdocformat?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -181,13 +218,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534329-initwithdocformat?language=objc"
+        ]
       },
       {
         "Name": "initWithHTML:documentAttributes:",
         "Description": "Creates an attributed string from the HTML in the specified data object.",
         "Declaration": "- (instancetype)initWithHTML:(NSData *)data \n          documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1525953-initwithhtml?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -218,13 +258,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1525953-initwithhtml?language=objc"
+        ]
       },
       {
         "Name": "initWithHTML:baseURL:documentAttributes:",
         "Description": "Creates an attributed string from the HTML in the specified data object and base URL.",
         "Declaration": "- (instancetype)initWithHTML:(NSData *)data \n                     baseURL:(NSURL *)base \n          documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524624-initwithhtml?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -262,13 +305,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524624-initwithhtml?language=objc"
+        ]
       },
       {
         "Name": "initWithHTML:options:documentAttributes:",
         "Description": "Creates an attributed string from the HTML in the specified data object.",
         "Declaration": "- (instancetype)initWithHTML:(NSData *)data \n                     options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n          documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535412-initwithhtml?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -314,13 +360,19 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535412-initwithhtml?language=objc"
+        ]
       },
       {
         "Name": "initWithRTF:documentAttributes:",
         "Description": "Creates an attributed string by decoding the stream of RTF commands and data in the specified data object.",
         "Declaration": "- (instancetype)initWithRTF:(NSData *)data \n         documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1532912-initwithrtf?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -351,13 +403,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1532912-initwithrtf?language=objc"
+        ]
       },
       {
         "Name": "initWithRTFD:documentAttributes:",
         "Description": "Creates an attributed string by decoding the stream of RTFD commands and data in the specified data object.",
         "Declaration": "- (instancetype)initWithRTFD:(NSData *)data \n          documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530987-initwithrtfd?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -388,13 +443,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530987-initwithrtfd?language=objc"
+        ]
       },
       {
         "Name": "initWithRTFDFileWrapper:documentAttributes:",
         "Description": "Creates an attributed string from the specified file wrapper that contains an RTFD document.",
         "Declaration": "- (instancetype)initWithRTFDFileWrapper:(NSFileWrapper *)wrapper \n                     documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1533594-initwithrtfdfilewrapper?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -425,13 +483,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1533594-initwithrtfdfilewrapper?language=objc"
+        ]
       },
       {
         "Name": "initWithURL:options:documentAttributes:error:",
         "Description": "Creates an attributed string from the contents of the specified URL.",
         "Declaration": "- (instancetype)initWithURL:(NSURL *)url \n                    options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n         documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e * _Nullable *)dict \n                      error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530490-initwithurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -488,13 +554,20 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530490-initwithurl?language=objc"
+        ]
       },
       {
         "Name": "initWithFormat:options:locale:",
-        "Description": "",
         "Declaration": "- (instancetype)initWithFormat:(NSAttributedString *)format \n                       options:(NSAttributedStringFormattingOptions)options \n                        locale:(NSLocale *)locale, ...;\n",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746873-initwithformat?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -523,13 +596,20 @@
             "Name": "...",
             "Type": {}
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746873-initwithformat?language=objc"
+        ]
       },
       {
         "Name": "initWithFormat:options:locale:arguments:",
-        "Description": "",
         "Declaration": "- (instancetype)initWithFormat:(NSAttributedString *)format \n                       options:(NSAttributedStringFormattingOptions)options \n                        locale:(NSLocale *)locale \n                     arguments:(va_list)arguments;\n",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746874-initwithformat?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -560,13 +640,24 @@
               "Name": "va_list"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746874-initwithformat?language=objc"
+        ]
       },
       {
         "Name": "initWithMarkdownString:options:baseURL:error:",
         "Description": "Creates an attributed string from a Markdown-formatted string using the provided options.",
         "Declaration": "- (instancetype)initWithMarkdownString:(NSString *)markdownString \n                               options:(NSAttributedStringMarkdownParsingOptions *)options \n                               baseURL:(NSURL *)baseURL \n                                 error:(NSError * _Nullable *)error;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746876-initwithmarkdownstring?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -603,13 +694,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746876-initwithmarkdownstring?language=objc"
+        ]
       },
       {
         "Name": "initWithMarkdown:options:baseURL:error:",
         "Description": "Creates an attributed string from Markdown-formatted data using the provided options.",
         "Declaration": "- (instancetype)initWithMarkdown:(NSData *)markdown \n                         options:(NSAttributedStringMarkdownParsingOptions *)options \n                         baseURL:(NSURL *)baseURL \n                           error:(NSError * _Nullable *)error;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746875-initwithmarkdown?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -646,13 +748,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746875-initwithmarkdown?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfMarkdownFileAtURL:options:baseURL:error:",
         "Description": "Creates an attributed string from the contents of a specified URL that contains Markdown-formatted data using the provided options.",
         "Declaration": "- (instancetype)initWithContentsOfMarkdownFileAtURL:(NSURL *)markdownFile \n                                            options:(NSAttributedStringMarkdownParsingOptions *)options \n                                            baseURL:(NSURL *)baseURL \n                                              error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746872-initwithcontentsofmarkdownfileat?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -689,13 +799,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746872-initwithcontentsofmarkdownfileat?language=objc"
+        ]
       },
       {
         "Name": "attributesAtIndex:effectiveRange:",
         "Description": "Returns the attributes for the character at the specified index.",
         "Declaration": "- (NSDictionary\u003cNSAttributedStringKey, id\u003e *)attributesAtIndex:(NSUInteger)location \n                                                effectiveRange:(NSRangePointer)range;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1415682-attributesatindex?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -721,13 +842,24 @@
               "Name": "NSRangePointer"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1415682-attributesatindex?language=objc"
+        ]
       },
       {
         "Name": "attributesAtIndex:longestEffectiveRange:inRange:",
         "Description": "Returns the attributes for the character at the specified index and, by reference, the range where the attributes apply.",
         "Declaration": "- (NSDictionary\u003cNSAttributedStringKey, id\u003e *)attributesAtIndex:(NSUInteger)location \n                                         longestEffectiveRange:(NSRangePointer)range \n                                                       inRange:(NSRange)rangeLimit;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1410494-attributesatindex?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -759,13 +891,21 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1410494-attributesatindex?language=objc"
+        ]
       },
       {
         "Name": "attribute:atIndex:effectiveRange:",
         "Description": "Returns the value for an attribute with the specified name of the character at the specified index and, by reference, the range where the attribute applies.",
         "Declaration": "- (id)attribute:(NSAttributedStringKey)attrName \n        atIndex:(NSUInteger)location \n effectiveRange:(NSRangePointer)range;\n",
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1408174-attribute?language=objc",
         "Return": {
           "Name": "id"
         },
@@ -788,13 +928,24 @@
               "Name": "NSRangePointer"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1408174-attribute?language=objc"
+        ]
       },
       {
         "Name": "attribute:atIndex:longestEffectiveRange:inRange:",
         "Description": "Returns the value for the attribute with the specified name of the character at the specified index and, by reference, the range where the attribute applies.",
         "Declaration": "- (id)attribute:(NSAttributedStringKey)attrName \n        atIndex:(NSUInteger)location \nlongestEffectiveRange:(NSRangePointer)range \n        inRange:(NSRange)rangeLimit;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412701-attribute?language=objc",
         "Return": {
           "Name": "id"
         },
@@ -823,13 +974,21 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412701-attribute?language=objc"
+        ]
       },
       {
         "Name": "isEqualToAttributedString:",
         "Description": "Returns a Boolean value that indicates whether the attributed string is equal to another attributed string.",
         "Declaration": "- (BOOL)isEqualToAttributedString:(NSAttributedString *)other;",
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1414808-isequaltoattributedstring?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -841,13 +1000,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1414808-isequaltoattributedstring?language=objc"
+        ]
       },
       {
         "Name": "attributedSubstringFromRange:",
         "Description": "Returns an attributed string consisting of the characters and attributes within the specified range in the attributed string.",
         "Declaration": "- (NSAttributedString *)attributedSubstringFromRange:(NSRange)range;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1414283-attributedsubstringfromrange?language=objc",
         "Return": {
           "Name": "NSAttributedString",
           "IsPtr": true
@@ -859,13 +1029,21 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1414283-attributedsubstringfromrange?language=objc"
+        ]
       },
       {
         "Name": "enumerateAttribute:inRange:options:usingBlock:",
         "Description": "Executes the specified block for each range of a particular attribute in the attributed string.",
         "Declaration": "- (void)enumerateAttribute:(NSAttributedStringKey)attrName \n                   inRange:(NSRange)enumerationRange \n                   options:(NSAttributedStringEnumerationOptions)opts \n                usingBlock:(void (^)(id value, NSRange range, BOOL *stop))block;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412461-enumerateattribute?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -919,13 +1097,21 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412461-enumerateattribute?language=objc"
+        ]
       },
       {
         "Name": "enumerateAttributesInRange:options:usingBlock:",
         "Description": "Executes the specified block for each range of attributes in the attributed string.",
         "Declaration": "- (void)enumerateAttributesInRange:(NSRange)enumerationRange \n                           options:(NSAttributedStringEnumerationOptions)opts \n                        usingBlock:(void (^)(NSDictionary\u003cNSAttributedStringKey, id\u003e *attrs, NSRange range, BOOL *stop))block;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412070-enumerateattributesinrange?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -982,13 +1168,18 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412070-enumerateattributesinrange?language=objc"
+        ]
       },
       {
         "Name": "fontAttributesInRange:",
         "Description": "Returns the font attributes in effect for the character at the specified location.",
         "Declaration": "- (NSDictionary\u003cNSAttributedStringKey, id\u003e *)fontAttributesInRange:(NSRange)range;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -1015,6 +1206,13 @@
         "Name": "rulerAttributesInRange:",
         "Description": "Returns the ruler (paragraph) attributes in effect for the characters within the specified range.",
         "Declaration": "- (NSDictionary\u003cNSAttributedStringKey, id\u003e *)rulerAttributesInRange:(NSRange)range;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524469-rulerattributesinrange?language=objc",
         "Return": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -1034,13 +1232,16 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524469-rulerattributesinrange?language=objc"
+        ]
       },
       {
         "Name": "doubleClickAtIndex:",
         "Description": "Returns the range of characters that form a word (or other linguistic unit) surrounding the specified index, taking language characteristics into account.",
         "Declaration": "- (NSRange)doubleClickAtIndex:(NSUInteger)location;",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534748-doubleclickatindex?language=objc",
         "Return": {
           "Name": "NSRange"
         },
@@ -1051,13 +1252,16 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534748-doubleclickatindex?language=objc"
+        ]
       },
       {
         "Name": "lineBreakBeforeIndex:withinRange:",
         "Description": "Returns the appropriate line break when the character at the index doesn’t fit on the same line as the character at the beginning of the range.",
         "Declaration": "- (NSUInteger)lineBreakBeforeIndex:(NSUInteger)location \n                       withinRange:(NSRange)aRange;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1526887-linebreakbeforeindex?language=objc",
         "Return": {
           "Name": "NSUInteger"
         },
@@ -1074,13 +1278,16 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1526887-linebreakbeforeindex?language=objc"
+        ]
       },
       {
         "Name": "lineBreakByHyphenatingBeforeIndex:withinRange:",
         "Description": "Returns the index of the closest character before the specified index, and within the specified range, that can fit on a new line by hyphenating.",
         "Declaration": "- (NSUInteger)lineBreakByHyphenatingBeforeIndex:(NSUInteger)location \n                                    withinRange:(NSRange)aRange;\n",
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534114-linebreakbyhyphenatingbeforeinde?language=objc",
         "Return": {
           "Name": "NSUInteger"
         },
@@ -1097,13 +1304,19 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534114-linebreakbyhyphenatingbeforeinde?language=objc"
+        ]
       },
       {
         "Name": "nextWordFromIndex:forward:",
         "Description": "Returns the index of the first character of the word after or before the specified index.",
         "Declaration": "- (NSUInteger)nextWordFromIndex:(NSUInteger)location \n                        forward:(BOOL)isForward;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535305-nextwordfromindex?language=objc",
         "Return": {
           "Name": "NSUInteger"
         },
@@ -1120,13 +1333,16 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535305-nextwordfromindex?language=objc"
+        ]
       },
       {
         "Name": "itemNumberInTextList:atIndex:",
         "Description": "Returns the index of the item at the specified location within the list.",
         "Declaration": "- (NSInteger)itemNumberInTextList:(NSTextList *)list \n                          atIndex:(NSUInteger)location;\n",
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1527303-itemnumberintextlist?language=objc",
         "Return": {
           "Name": "NSInteger"
         },
@@ -1144,13 +1360,19 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1527303-itemnumberintextlist?language=objc"
+        ]
       },
       {
         "Name": "rangeOfTextBlock:atIndex:",
         "Description": "Returns the range of the individual text block that contains the specified location.",
         "Declaration": "- (NSRange)rangeOfTextBlock:(NSTextBlock *)block \n                    atIndex:(NSUInteger)location;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534045-rangeoftextblock?language=objc",
         "Return": {
           "Name": "NSRange"
         },
@@ -1168,13 +1390,19 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534045-rangeoftextblock?language=objc"
+        ]
       },
       {
         "Name": "rangeOfTextList:atIndex:",
         "Description": "Returns the range of the specified text list that contains the specified location.",
         "Declaration": "- (NSRange)rangeOfTextList:(NSTextList *)list \n                   atIndex:(NSUInteger)location;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1525314-rangeoftextlist?language=objc",
         "Return": {
           "Name": "NSRange"
         },
@@ -1192,13 +1420,16 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1525314-rangeoftextlist?language=objc"
+        ]
       },
       {
         "Name": "rangeOfTextTable:atIndex:",
         "Description": "Returns the range of the specified text table that contains the specified location.",
         "Declaration": "- (NSRange)rangeOfTextTable:(NSTextTable *)table \n                    atIndex:(NSUInteger)location;\n",
+        "Platforms": [
+          "macOS 10.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534365-rangeoftexttable?language=objc",
         "Return": {
           "Name": "NSRange"
         },
@@ -1216,13 +1447,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534365-rangeoftexttable?language=objc"
+        ]
       },
       {
         "Name": "dataFromRange:documentAttributes:error:",
         "Description": "Returns a data object that contains a text stream corresponding to the characters and attributes within the specified range.",
         "Declaration": "- (NSData *)dataFromRange:(NSRange)range \n       documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e *)dict \n                    error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534090-datafromrange?language=objc",
         "Return": {
           "Name": "NSData",
           "IsPtr": true
@@ -1260,13 +1499,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1534090-datafromrange?language=objc"
+        ]
       },
       {
         "Name": "fileWrapperFromRange:documentAttributes:error:",
         "Description": "Returns a file wrapper object that contains a text stream corresponding to the characters and attributes within the specified range.",
         "Declaration": "- (NSFileWrapper *)fileWrapperFromRange:(NSRange)range \n                     documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e *)dict \n                                  error:(NSError * _Nullable *)error;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530461-filewrapperfromrange?language=objc",
         "Return": {
           "Name": "NSFileWrapper",
           "IsPtr": true
@@ -1304,13 +1554,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530461-filewrapperfromrange?language=objc"
+        ]
       },
       {
         "Name": "docFormatFromRange:documentAttributes:",
         "Description": "Returns a data object that contains a Microsoft Word–format stream corresponding to the characters and attributes within the specified range.",
         "Declaration": "- (NSData *)docFormatFromRange:(NSRange)range \n            documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e *)dict;\n",
+        "Platforms": [
+          "macOS 10.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1528592-docformatfromrange?language=objc",
         "Return": {
           "Name": "NSData",
           "IsPtr": true
@@ -1337,13 +1590,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1528592-docformatfromrange?language=objc"
+        ]
       },
       {
         "Name": "RTFFromRange:documentAttributes:",
         "Description": "Returns a data object that contains an RTF stream corresponding to the characters and attributes within the specified range, omitting all attachment attributes.",
         "Declaration": "- (NSData *)RTFFromRange:(NSRange)range \n      documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e *)dict;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535158-rtffromrange?language=objc",
         "Return": {
           "Name": "NSData",
           "IsPtr": true
@@ -1370,13 +1626,13 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535158-rtffromrange?language=objc"
+        ]
       },
       {
         "Name": "RTFDFromRange:documentAttributes:",
         "Description": "Returns a data object that contains an RTFD stream corresponding to the characters and attributes within the specified range.",
         "Declaration": "- (NSData *)RTFDFromRange:(NSRange)range \n       documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e *)dict;\n",
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530578-rtfdfromrange?language=objc",
         "Return": {
           "Name": "NSData",
           "IsPtr": true
@@ -1403,13 +1659,16 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1530578-rtfdfromrange?language=objc"
+        ]
       },
       {
         "Name": "RTFDFileWrapperFromRange:documentAttributes:",
         "Description": "Returns a file wrapper object that contains an RTFD document corresponding to the characters and attributes within the specified range.",
         "Declaration": "- (NSFileWrapper *)RTFDFileWrapperFromRange:(NSRange)range \n                         documentAttributes:(NSDictionary\u003cNSAttributedStringDocumentAttributeKey, id\u003e *)dict;\n",
+        "Platforms": [
+          "macOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1527502-rtfdfilewrapperfromrange?language=objc",
         "Return": {
           "Name": "NSFileWrapper",
           "IsPtr": true
@@ -1436,24 +1695,39 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1527502-rtfdfilewrapperfromrange?language=objc"
+        ]
       },
       {
         "Name": "attributedStringByInflectingString",
-        "Description": "",
         "Declaration": "- (NSAttributedString *)attributedStringByInflectingString;",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746871-attributedstringbyinflectingstri?language=objc",
         "Return": {
           "Name": "NSAttributedString",
           "IsPtr": true
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746871-attributedstringbyinflectingstri?language=objc"
+        "Args": null
       },
       {
         "Name": "drawAtPoint:",
         "Description": "Draws the attributed string starting at the specified point in the current graphics context.",
         "Declaration": "- (void)drawAtPoint:(CGPoint)point;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1529478-drawatpoint?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -1464,13 +1738,21 @@
               "Name": "CGPoint"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1529478-drawatpoint?language=objc"
+        ]
       },
       {
         "Name": "drawInRect:",
         "Description": "Draws the attributed string inside the specified bounding rectangle in the current graphics context.",
         "Declaration": "- (void)drawInRect:(CGRect)rect;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1531631-drawinrect?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -1481,13 +1763,24 @@
               "Name": "CGRect"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1531631-drawinrect?language=objc"
+        ]
       },
       {
         "Name": "drawWithRect:options:context:",
         "Description": "Draws the attributed string in the specified bounding rectangle using the provided options.",
         "Declaration": "- (void)drawWithRect:(CGRect)rect \n             options:(NSStringDrawingOptions)options \n             context:(NSStringDrawingContext *)context;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524971-drawwithrect?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -1511,23 +1804,45 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1524971-drawwithrect?language=objc"
+        ]
       },
       {
         "Name": "size",
         "Description": "Returns the size necessary to draw the string.",
         "Declaration": "- (CGSize)size;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1528362-size?language=objc",
         "Return": {
           "Name": "CGSize"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1528362-size?language=objc"
+        "Args": null
       },
       {
         "Name": "boundingRectWithSize:options:context:",
         "Description": "Returns the bounding rectangle necessary to draw the string.",
         "Declaration": "- (CGRect)boundingRectWithSize:(CGSize)size \n                       options:(NSStringDrawingOptions)options \n                       context:(NSStringDrawingContext *)context;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1529154-boundingrectwithsize?language=objc",
         "Return": {
           "Name": "CGRect"
         },
@@ -1551,13 +1866,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1529154-boundingrectwithsize?language=objc"
+        ]
       },
       {
         "Name": "containsAttachmentsInRange:",
         "Description": "Returns a Boolean value that indicates if the attributed string contains an attachment in the specified range.",
         "Declaration": "- (BOOL)containsAttachmentsInRange:(NSRange)range;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1525086-containsattachmentsinrange?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -1568,8 +1894,7 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1525086-containsattachmentsinrange?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -1577,6 +1902,18 @@
         "Name": "string",
         "Description": "The character contents of the attributed string as a string.",
         "Declaration": "@property(readonly, copy) NSString *string;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412616-string?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -1584,20 +1921,30 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1412616-string?language=objc"
+        }
       },
       {
         "Name": "length",
         "Description": "The length of the attributed string.",
         "Declaration": "@property(readonly) NSUInteger length;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 3.2+",
+          "iPadOS 3.2+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1418432-length?language=objc",
         "Type": {
           "Name": "NSUInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1418432-length?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -1605,6 +1952,14 @@
         "Name": "attributedStringWithAttachment:",
         "Description": "Creates an attributed string with an attachment.",
         "Declaration": "+ (NSAttributedString *)attributedStringWithAttachment:(NSTextAttachment *)attachment;",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1508376-attributedstringwithattachment?language=objc",
         "Return": {
           "Name": "NSAttributedString",
           "IsPtr": true
@@ -1617,13 +1972,22 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1508376-attributedstringwithattachment?language=objc"
+        ]
       },
       {
         "Name": "loadFromHTMLWithRequest:options:completionHandler:",
         "Description": "Creates an attributed string by converting the contents of the specified HTML URL request.",
         "Declaration": "+ (void)loadFromHTMLWithRequest:(NSURLRequest *)request \n                        options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n              completionHandler:(NSAttributedStringCompletionHandler)completionHandler;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3182826-loadfromhtmlwithrequest?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -1656,13 +2020,18 @@
               "Name": "NSAttributedStringCompletionHandler"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3182826-loadfromhtmlwithrequest?language=objc"
+        ]
       },
       {
         "Name": "loadFromHTMLWithFileURL:options:completionHandler:",
         "Description": "Creates an attributed string by converting the contents of a local HTML file at the specified URL.",
         "Declaration": "+ (void)loadFromHTMLWithFileURL:(NSURL *)fileURL \n                        options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n              completionHandler:(NSAttributedStringCompletionHandler)completionHandler;\n",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+"
+        ],
         "Return": {
           "Name": "void"
         },
@@ -1702,6 +2071,13 @@
         "Name": "loadFromHTMLWithString:options:completionHandler:",
         "Description": "Creates an attributed string from the specified HTML string.",
         "Declaration": "+ (void)loadFromHTMLWithString:(NSString *)string \n                       options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n             completionHandler:(NSAttributedStringCompletionHandler)completionHandler;\n",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3182827-loadfromhtmlwithstring?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -1734,13 +2110,18 @@
               "Name": "NSAttributedStringCompletionHandler"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3182827-loadfromhtmlwithstring?language=objc"
+        ]
       },
       {
         "Name": "loadFromHTMLWithData:options:completionHandler:",
         "Description": "Creates an attributed string from the specified HTML data.",
         "Declaration": "+ (void)loadFromHTMLWithData:(NSData *)data \n                     options:(NSDictionary\u003cNSAttributedStringDocumentReadingOptionKey, id\u003e *)options \n           completionHandler:(NSAttributedStringCompletionHandler)completionHandler;\n",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+"
+        ],
         "Return": {
           "Name": "void"
         },
@@ -1778,8 +2159,16 @@
       },
       {
         "Name": "localizedAttributedStringWithFormat:",
-        "Description": "",
         "Declaration": "+ (instancetype)localizedAttributedStringWithFormat:(NSAttributedString *)format, ...;",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746877-localizedattributedstringwithfor?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -1795,13 +2184,20 @@
             "Name": "...",
             "Type": {}
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746877-localizedattributedstringwithfor?language=objc"
+        ]
       },
       {
         "Name": "localizedAttributedStringWithFormat:options:",
-        "Description": "",
         "Declaration": "+ (instancetype)localizedAttributedStringWithFormat:(NSAttributedString *)format \n                                            options:(NSAttributedStringFormattingOptions)options, ...;\n",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746878-localizedattributedstringwithfor?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -1823,8 +2219,7 @@
             "Name": "...",
             "Type": {}
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/3746878-localizedattributedstringwithfor?language=objc"
+        ]
       }
     ],
     "TypeProperties": [
@@ -1832,6 +2227,10 @@
         "Name": "textTypes",
         "Description": "An array of UTI strings that identify the file types that attributed strings support, either directly or through a user-installed filter service.",
         "Declaration": "@property(class, readonly, copy) NSArray\u003cNSString *\u003e *textTypes;",
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535409-texttypes?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -1846,13 +2245,19 @@
           "class": true,
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1535409-texttypes?language=objc"
+        }
       },
       {
         "Name": "textUnfilteredTypes",
         "Description": "An array of UTI strings that identify the file types that attributed strings support directly.",
         "Declaration": "@property(class, readonly, copy) NSArray\u003cNSString *\u003e *textUnfilteredTypes;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "macOS 10.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1528269-textunfilteredtypes?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -1867,12 +2272,11 @@
           "class": true,
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsattributedstring/1528269-textunfilteredtypes?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-09-13T11:14:40.149864-07:00",
+  "PullDate": "2022-08-28T20:24:06.511405+08:00",
   "Version": 2
 }

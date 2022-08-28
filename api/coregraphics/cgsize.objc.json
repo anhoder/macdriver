@@ -8,6 +8,7 @@
     ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -24,12 +25,13 @@
         ],
         "Platforms": [
           "iOS 2.0+",
+          "iPadOS 2.0+",
           "macOS 10.0+",
           "Mac Catalyst 13.0+",
           "tvOS 9.0+",
           "watchOS 2.0+"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/coregraphics/cgsize/1455076-height?language=objc",
+        "TopicURL": "https://developer.apple.com/documentation/corefoundation/cgsize/1455076-height?language=objc",
         "Type": {
           "Name": "CGFloat"
         }
@@ -43,12 +45,13 @@
         ],
         "Platforms": [
           "iOS 2.0+",
+          "iPadOS 2.0+",
           "macOS 10.0+",
           "Mac Catalyst 13.0+",
           "tvOS 9.0+",
           "watchOS 2.0+"
         ],
-        "TopicURL": "https://developer.apple.com/documentation/coregraphics/cgsize/1454308-width?language=objc",
+        "TopicURL": "https://developer.apple.com/documentation/corefoundation/cgsize/1454308-width?language=objc",
         "Type": {
           "Name": "CGFloat"
         }
@@ -56,6 +59,6 @@
     ]
   },
   "Kind": "struct",
-  "PullDate": "2021-08-30T10:23:49.218018-07:00",
+  "PullDate": "2022-08-28T20:21:03.243726+08:00",
   "Version": 2
 }

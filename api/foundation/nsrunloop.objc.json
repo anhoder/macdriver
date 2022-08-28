@@ -8,6 +8,7 @@
     ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -19,6 +20,18 @@
         "Name": "limitDateForMode:",
         "Description": "Performs one pass through the run loop in the specified mode and returns the date at which the next timer is scheduled to fire.",
         "Declaration": "- (NSDate *)limitDateForMode:(NSRunLoopMode)mode;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412837-limitdateformode?language=objc",
         "Return": {
           "Name": "NSDate",
           "IsPtr": true
@@ -30,23 +43,42 @@
               "Name": "NSRunLoopMode"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412837-limitdateformode?language=objc"
+        ]
       },
       {
         "Name": "getCFRunLoop",
         "Description": "Returns the receiver's underlying CFRunLoop object.",
         "Declaration": "- (CFRunLoopRef)getCFRunLoop;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1410140-getcfrunloop?language=objc",
         "Return": {
           "Name": "CFRunLoopRef"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1410140-getcfrunloop?language=objc"
+        "Args": null
       },
       {
         "Name": "addTimer:forMode:",
         "Description": "Registers a given timer with a given input mode.",
         "Declaration": "- (void)addTimer:(NSTimer *)timer \n         forMode:(NSRunLoopMode)mode;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1418468-addtimer?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -64,13 +96,24 @@
               "Name": "NSRunLoopMode"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1418468-addtimer?language=objc"
+        ]
       },
       {
         "Name": "addPort:forMode:",
         "Description": "Adds a port as an input source to the specified mode of the run loop.",
         "Declaration": "- (void)addPort:(NSPort *)aPort \n        forMode:(NSRunLoopMode)mode;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1417637-addport?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -88,13 +131,21 @@
               "Name": "NSRunLoopMode"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1417637-addport?language=objc"
+        ]
       },
       {
         "Name": "removePort:forMode:",
         "Description": "Removes a port from the specified input mode of the run loop.",
         "Declaration": "- (void)removePort:(NSPort *)aPort \n           forMode:(NSRunLoopMode)mode;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1414332-removeport?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -112,34 +163,53 @@
               "Name": "NSRunLoopMode"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1414332-removeport?language=objc"
+        ]
       },
       {
         "Name": "configureAsServer",
         "Description": "Deprecated. Does nothing.",
         "Declaration": "- (void)configureAsServer;",
+        "Platforms": [
+          "macOS 10.0–10.5"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1577695-configureasserver?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1577695-configureasserver?language=objc"
+        "Args": null
       },
       {
         "Name": "run",
         "Description": "Puts the receiver into a permanent loop, during which time it processes data from all attached input sources.",
         "Declaration": "- (void)run;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412430-run?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412430-run?language=objc"
+        "Args": null
       },
       {
         "Name": "runMode:beforeDate:",
         "Description": "Runs the loop once, blocking for input in the specified mode until a given date.",
         "Declaration": "- (BOOL)runMode:(NSRunLoopMode)mode \n     beforeDate:(NSDate *)limitDate;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1411525-runmode?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -157,13 +227,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1411525-runmode?language=objc"
+        ]
       },
       {
         "Name": "runUntilDate:",
         "Description": "Runs the loop until the specified date, during which time it processes data from all attached input sources.",
         "Declaration": "- (void)runUntilDate:(NSDate *)limitDate;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1415778-rununtildate?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -175,13 +253,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1415778-rununtildate?language=objc"
+        ]
       },
       {
         "Name": "acceptInputForMode:beforeDate:",
         "Description": "Runs the loop once or until the specified date, accepting input only for the specified mode.",
         "Declaration": "- (void)acceptInputForMode:(NSRunLoopMode)mode \n                beforeDate:(NSDate *)limitDate;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1417143-acceptinputformode?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -199,13 +288,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1417143-acceptinputformode?language=objc"
+        ]
       },
       {
         "Name": "performBlock:",
         "Description": "Schedules a block that the run loop invokes.",
         "Declaration": "- (void)performBlock:(void (^)(void))block;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/2091881-performblock?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -227,13 +327,24 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/2091881-performblock?language=objc"
+        ]
       },
       {
         "Name": "performInModes:block:",
         "Description": "Schedules a block that the run loop invokes when it’s running in any of the specified modes.",
         "Declaration": "- (void)performInModes:(NSArray\u003cNSRunLoopMode\u003e *)modes \n                 block:(void (^)(void))block;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/2091880-performinmodes?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -267,13 +378,24 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/2091880-performinmodes?language=objc"
+        ]
       },
       {
         "Name": "performSelector:target:argument:order:modes:",
         "Description": "Schedules the sending of a message on the receiver.",
         "Declaration": "- (void)performSelector:(SEL)aSelector \n                 target:(id)target \n               argument:(id)arg \n                  order:(NSUInteger)order \n                  modes:(NSArray\u003cNSRunLoopMode\u003e *)modes;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1409310-performselector?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -314,13 +436,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1409310-performselector?language=objc"
+        ]
       },
       {
         "Name": "cancelPerformSelector:target:argument:",
         "Description": "Cancels the sending of a previously scheduled message.",
         "Declaration": "- (void)cancelPerformSelector:(SEL)aSelector \n                       target:(id)target \n                     argument:(id)arg;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1418077-cancelperformselector?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -343,13 +476,24 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1418077-cancelperformselector?language=objc"
+        ]
       },
       {
         "Name": "cancelPerformSelectorsWithTarget:",
         "Description": "Cancels all outstanding ordered performs scheduled with a given target.",
         "Declaration": "- (void)cancelPerformSelectorsWithTarget:(id)target;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1414208-cancelperformselectorswithtarget?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -360,8 +504,7 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1414208-cancelperformselectorswithtarget?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -369,6 +512,18 @@
         "Name": "currentMode",
         "Description": "The receiver's current input mode.",
         "Declaration": "@property(nullable, readonly, copy) NSRunLoopMode currentMode;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412652-currentmode?language=objc",
         "Type": {
           "Name": "NSRunLoopMode"
         },
@@ -376,8 +531,7 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412652-currentmode?language=objc"
+        }
       }
     ],
     "TypeProperties": [
@@ -385,6 +539,18 @@
         "Name": "currentRunLoop",
         "Description": "Returns the run loop for the current thread.",
         "Declaration": "@property(class, readonly, strong) NSRunLoop *currentRunLoop;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412291-currentrunloop?language=objc",
         "Type": {
           "Name": "NSRunLoop",
           "IsPtr": true
@@ -393,13 +559,21 @@
           "class": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1412291-currentrunloop?language=objc"
+        }
       },
       {
         "Name": "mainRunLoop",
         "Description": "Returns the run loop of the main thread.",
         "Declaration": "@property(class, readonly, strong) NSRunLoop *mainRunLoop;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1418388-mainrunloop?language=objc",
         "Type": {
           "Name": "NSRunLoop",
           "IsPtr": true
@@ -408,12 +582,11 @@
           "class": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrunloop/1418388-mainrunloop?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-09-13T20:30:42.251787-07:00",
+  "PullDate": "2022-08-28T20:34:20.860657+08:00",
   "Version": 2
 }

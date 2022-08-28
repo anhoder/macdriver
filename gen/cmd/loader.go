@@ -60,7 +60,7 @@ func loadFileBase(filename string) schemaLoader {
 }
 
 func loadFile(filename string) schemaLoader {
-	return loadFileBase(filename).Then(filterDeprecated)
+	return loadFileBase(filename).Then(filterDeprecated).Then(filterMacOS)
 }
 
 func filterMethods(pred func(schema.Method) bool) schemaUpdater {
@@ -109,6 +109,28 @@ var filterDeprecated = filterMethods(func(m schema.Method) bool {
 	return !p.Deprecated
 }))
 
+var filterMacOS = filterMethods(func(m schema.Method) bool {
+	if m.Platforms == nil {
+		return true
+	}
+	for _, platform := range m.Platforms {
+		if strings.HasPrefix(platform, "macOS") {
+			return true
+		}
+	}
+	return false
+}).Then(filterProps(func(p schema.Property) bool {
+	if p.Platforms == nil {
+		return true
+	}
+	for _, platform := range p.Platforms {
+		if strings.HasPrefix(platform, "macOS") {
+			return true
+		}
+	}
+	return false
+}))
+
 func loadSchemas(contents []schemaLoader) ([]*schema.Schema, error) {
 	schemas := make([]*schema.Schema, len(contents))
 	for i, loader := range contents {
@@ -116,9 +138,7 @@ func loadSchemas(contents []schemaLoader) ([]*schema.Schema, error) {
 		if err != nil {
 			return nil, err
 		}
-		if input != nil {
-			schemas[i] = input
-		}
+		schemas[i] = input
 	}
 	return schemas, nil
 }

@@ -2,9 +2,6 @@
   "TypeAlias": {
     "Name": "NSSoundName",
     "Declaration": "typedef NSString *NSSoundName;",
-    "Frameworks": [
-      "AppKit"
-    ],
     "Platforms": [
       "macOS 10.13+"
     ],
@@ -15,6 +12,6 @@
     }
   },
   "Kind": "typealias",
-  "PullDate": "2022-08-28T14:57:50.70044+08:00",
+  "PullDate": "2022-08-28T19:55:42.160064+08:00",
   "Version": 2
 }

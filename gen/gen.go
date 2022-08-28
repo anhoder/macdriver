@@ -17,7 +17,9 @@ type classBuilder struct {
 
 func (cb *classBuilder) EachTypeMethod(f func(schema.Method)) {
 	f(schema.Method{
-		Name:   "alloc",
+		Identifier: schema.Identifier{
+			Name: "alloc",
+		},
 		Return: schema.DataType{Name: "instancetype"},
 	})
 	for _, m := range cb.Class.TypeMethods {
@@ -38,7 +40,9 @@ func (cb *classBuilder) EachInstanceMethod(f func(schema.Method)) {
 	}
 	if !seen["init"] {
 		f(schema.Method{
-			Name:   "init",
+			Identifier: schema.Identifier{
+				Name: "init",
+			},
 			Return: schema.DataType{Name: "instancetype"},
 		})
 	}
@@ -181,13 +185,15 @@ func propertyMethods(p schema.Property) []schema.Method {
 
 func propertyReadMethod(p schema.Property) schema.Method {
 	m := schema.Method{
-		Name:        p.Name,
-		Description: p.Description,
-		Declaration: p.Declaration,
-		Return:      p.Type,
-		Args:        nil,
-		Deprecated:  p.Deprecated,
-		TopicURL:    p.TopicURL,
+		Identifier: schema.Identifier{
+			Name:        p.Name,
+			Description: p.Description,
+			Declaration: p.Declaration,
+			Deprecated:  p.Deprecated,
+			TopicURL:    p.TopicURL,
+		},
+		Return: p.Type,
+		Args:   nil,
 	}
 	if getter, ok := p.Attrs["getter"]; ok {
 		m.Name = getter.(string)
@@ -197,15 +203,17 @@ func propertyReadMethod(p schema.Property) schema.Method {
 
 func propertyWriteMethod(p schema.Property) schema.Method {
 	return schema.Method{
-		Name:        "set" + toExportedName(p.Name) + ":", // TODO rename the function?
-		Description: p.Description,
-		Declaration: p.Declaration,
-		Return:      schema.DataType{Name: "void"},
+		Identifier: schema.Identifier{
+			Name:        "set" + toExportedName(p.Name) + ":", // TODO rename the function?
+			Description: p.Description,
+			Declaration: p.Declaration,
+			Deprecated:  p.Deprecated,
+			TopicURL:    p.TopicURL,
+		},
+		Return: schema.DataType{Name: "void"},
 		Args: []schema.Arg{
 			{Name: "value", Type: p.Type},
 		},
-		Deprecated: p.Deprecated,
-		TopicURL:   p.TopicURL,
 	}
 }
 

@@ -8,8 +8,9 @@
     ],
     "Platforms": [
       "iOS 8.0+",
+      "iPadOS 8.0+",
       "macOS 10.10+",
-      "Mac Catalyst 13.0+"
+      "Mac Catalyst 13.1+"
     ],
     "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences?language=objc",
     "InstanceProperties": [
@@ -17,106 +18,210 @@
         "Name": "minimumFontSize",
         "Description": "The minimum font size, in points.",
         "Declaration": "@property(nonatomic) CGFloat minimumFontSize;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1537155-minimumfontsize?language=objc",
         "Type": {
           "Name": "CGFloat"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1537155-minimumfontsize?language=objc"
+        }
       },
       {
         "Name": "tabFocusesLinks",
         "Description": "A Boolean value that indicates whether pressing the tab key changes the focus to links and form controls.",
         "Declaration": "@property(nonatomic) BOOL tabFocusesLinks;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.12.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/2818595-tabfocuseslinks?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/2818595-tabfocuseslinks?language=objc"
+        }
       },
       {
         "Name": "javaScriptCanOpenWindowsAutomatically",
         "Description": "A Boolean value that indicates whether JavaScript can open windows without user interaction.",
         "Declaration": "@property(nonatomic) BOOL javaScriptCanOpenWindowsAutomatically;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1536573-javascriptcanopenwindowsautomati?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1536573-javascriptcanopenwindowsautomati?language=objc"
+        }
       },
       {
         "Name": "fraudulentWebsiteWarningEnabled",
         "Description": "A Boolean value that indicates whether the web view shows warnings for suspected fraudulent content, such as malware or phishing attemps.",
         "Declaration": "@property(nonatomic, getter=isFraudulentWebsiteWarningEnabled) BOOL fraudulentWebsiteWarningEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/3335219-fraudulentwebsitewarningenabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isFraudulentWebsiteWarningEnabled",
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/3335219-fraudulentwebsitewarningenabled?language=objc"
+        }
       },
       {
         "Name": "javaEnabled",
         "Description": "A Boolean value that indicates whether Java is enabled.",
         "Declaration": "@property(nonatomic) BOOL javaEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10–10.15"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1538062-javaenabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1538062-javaenabled?language=objc"
+        }
       },
       {
         "Name": "javaScriptEnabled",
         "Description": "A Boolean value that indicates whether JavaScript is enabled.",
         "Declaration": "@property(nonatomic) BOOL javaScriptEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 8.0–14.0",
+          "iPadOS 8.0–14.0",
+          "macOS 10.10–11.0",
+          "Mac Catalyst 13.1–14.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1536203-javascriptenabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
-        },
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1536203-javascriptenabled?language=objc"
+        }
       },
       {
         "Name": "plugInsEnabled",
         "Description": "A Boolean value that indicates whether plug-ins are enabled.",
         "Declaration": "@property(nonatomic) BOOL plugInsEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "macOS 10.10–10.15"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1536894-pluginsenabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "nonatomic": true
+        }
+      },
+      {
+        "Name": "elementFullscreenEnabled",
+        "Declaration": "@property(nonatomic, getter=isElementFullscreenEnabled) BOOL elementFullscreenEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.4+",
+          "iPadOS 15.4+",
+          "macOS 12.3+",
+          "Mac Catalyst 15.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/3917769-elementfullscreenenabled?language=objc",
+        "Type": {
+          "Name": "BOOL"
         },
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/1536894-pluginsenabled?language=objc"
+        "Attrs": {
+          "getter": "isElementFullscreenEnabled",
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "siteSpecificQuirksModeEnabled",
+        "Declaration": "@property(nonatomic, getter=isSiteSpecificQuirksModeEnabled) BOOL siteSpecificQuirksModeEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 15.4+",
+          "iPadOS 15.4+",
+          "macOS 12.3+",
+          "Mac Catalyst 15.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/3916069-sitespecificquirksmodeenabled?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isSiteSpecificQuirksModeEnabled",
+          "nonatomic": true
+        }
       },
       {
         "Name": "textInteractionEnabled",
-        "Description": "",
         "Declaration": "@property(nonatomic, getter=isTextInteractionEnabled) BOOL textInteractionEnabled;",
+        "Frameworks": [
+          "WebKit"
+        ],
+        "Platforms": [
+          "iOS 14.5+",
+          "iPadOS 14.5+",
+          "macOS 11.3+",
+          "Mac Catalyst 14.5+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/3727362-textinteractionenabled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isTextInteractionEnabled",
           "nonatomic": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/webkit/wkpreferences/3727362-textinteractionenabled?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-30T14:39:36.3224-07:00",
+  "PullDate": "2022-08-28T20:43:43.55153+08:00",
   "Version": 2
 }

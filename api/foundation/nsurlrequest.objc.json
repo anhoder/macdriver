@@ -8,8 +8,9 @@
     ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.2+",
-      "Mac Catalyst 13.0+",
+      "Mac Catalyst 13.1+",
       "tvOS 9.0+",
       "watchOS 2.0+"
     ],
@@ -19,6 +20,18 @@
         "Name": "initWithURL:",
         "Description": "Creates a URL request for a specified URL.",
         "Declaration": "- (instancetype)initWithURL:(NSURL *)URL;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1410303-initwithurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -30,13 +43,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1410303-initwithurl?language=objc"
+        ]
       },
       {
         "Name": "initWithURL:cachePolicy:timeoutInterval:",
         "Description": "Creates a URL request with the specified URL, cache policy, and timeout values.",
         "Declaration": "- (instancetype)initWithURL:(NSURL *)URL \n                cachePolicy:(NSURLRequestCachePolicy)cachePolicy \n            timeoutInterval:(NSTimeInterval)timeoutInterval;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1416292-initwithurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -60,13 +81,24 @@
               "Name": "NSTimeInterval"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1416292-initwithurl?language=objc"
+        ]
       },
       {
         "Name": "valueForHTTPHeaderField:",
         "Description": "Returns the value of the specified HTTP header field.",
         "Declaration": "- (NSString *)valueForHTTPHeaderField:(NSString *)field;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1409376-valueforhttpheaderfield?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
@@ -79,8 +111,7 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1409376-valueforhttpheaderfield?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -88,18 +119,38 @@
         "Name": "cachePolicy",
         "Description": "The request’s cache policy.",
         "Declaration": "@property(readonly) NSURLRequestCachePolicy cachePolicy;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1407944-cachepolicy?language=objc",
         "Type": {
           "Name": "NSURLRequestCachePolicy"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1407944-cachepolicy?language=objc"
+        }
       },
       {
         "Name": "HTTPMethod",
         "Description": "The HTTP request method.",
         "Declaration": "@property(nullable, readonly, copy) NSString *HTTPMethod;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1413030-httpmethod?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -108,13 +159,21 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1413030-httpmethod?language=objc"
+        }
       },
       {
         "Name": "URL",
         "Description": "The URL being requested.",
         "Declaration": "@property(nullable, readonly, copy) NSURL *URL;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1408996-url?language=objc",
         "Type": {
           "Name": "NSURL",
           "IsPtr": true
@@ -123,13 +182,21 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1408996-url?language=objc"
+        }
       },
       {
         "Name": "HTTPBody",
         "Description": "The request body.",
         "Declaration": "@property(nullable, readonly, copy) NSData *HTTPBody;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1411317-httpbody?language=objc",
         "Type": {
           "Name": "NSData",
           "IsPtr": true
@@ -138,13 +205,21 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1411317-httpbody?language=objc"
+        }
       },
       {
         "Name": "HTTPBodyStream",
         "Description": "The request body as an input stream.",
         "Declaration": "@property(nullable, readonly, retain) NSInputStream *HTTPBodyStream;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1407341-httpbodystream?language=objc",
         "Type": {
           "Name": "NSInputStream",
           "IsPtr": true
@@ -153,13 +228,24 @@
           "nullable": true,
           "readonly": true,
           "retain": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1407341-httpbodystream?language=objc"
+        }
       },
       {
         "Name": "mainDocumentURL",
         "Description": "The main document URL associated with the request.",
         "Declaration": "@property(nullable, readonly, copy) NSURL *mainDocumentURL;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1414134-maindocumenturl?language=objc",
         "Type": {
           "Name": "NSURL",
           "IsPtr": true
@@ -168,13 +254,24 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1414134-maindocumenturl?language=objc"
+        }
       },
       {
         "Name": "allHTTPHeaderFields",
         "Description": "A dictionary containing all of the HTTP header fields for a request.",
         "Declaration": "@property(nullable, readonly, copy) NSDictionary\u003cNSString *,NSString *\u003e *allHTTPHeaderFields;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418477-allhttpheaderfields?language=objc",
         "Type": {
           "Name": "NSDictionary",
           "IsPtr": true,
@@ -193,116 +290,204 @@
           "copy": true,
           "nullable": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418477-allhttpheaderfields?language=objc"
+        }
       },
       {
         "Name": "timeoutInterval",
         "Description": "The request’s timeout interval, in seconds.",
         "Declaration": "@property(readonly) NSTimeInterval timeoutInterval;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418229-timeoutinterval?language=objc",
         "Type": {
           "Name": "NSTimeInterval"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418229-timeoutinterval?language=objc"
+        }
       },
       {
         "Name": "HTTPShouldHandleCookies",
         "Description": "A Boolean value that indicates whether the default cookie handling will be used for this request.",
         "Declaration": "@property(readonly) BOOL HTTPShouldHandleCookies;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418369-httpshouldhandlecookies?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418369-httpshouldhandlecookies?language=objc"
+        }
       },
       {
         "Name": "HTTPShouldUsePipelining",
         "Description": "A Boolean value that indicates whether the request should continue transmitting data before receiving a response from an earlier transmission.",
         "Declaration": "@property(readonly) BOOL HTTPShouldUsePipelining;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1409170-httpshouldusepipelining?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1409170-httpshouldusepipelining?language=objc"
+        }
       },
       {
         "Name": "allowsCellularAccess",
         "Description": "A Boolean value that indicates whether the request is allowed to use the cellular radio (if present).",
         "Declaration": "@property(readonly) BOOL allowsCellularAccess;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1412032-allowscellularaccess?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1412032-allowscellularaccess?language=objc"
+        }
       },
       {
         "Name": "allowsConstrainedNetworkAccess",
         "Description": "A Boolean value that indicates whether connections may use the network when the user has specified Low Data Mode.",
         "Declaration": "@property(readonly) BOOL allowsConstrainedNetworkAccess;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3325678-allowsconstrainednetworkaccess?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3325678-allowsconstrainednetworkaccess?language=objc"
+        }
       },
       {
         "Name": "allowsExpensiveNetworkAccess",
         "Description": "A Boolean value that indicates whether connections may use a network interface that the system considers expensive.",
         "Declaration": "@property(readonly) BOOL allowsExpensiveNetworkAccess;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3325679-allowsexpensivenetworkaccess?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3325679-allowsexpensivenetworkaccess?language=objc"
+        }
       },
       {
         "Name": "networkServiceType",
         "Description": "The network service type of the request.",
         "Declaration": "@property(readonly) NSURLRequestNetworkServiceType networkServiceType;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418333-networkservicetype?language=objc",
         "Type": {
           "Name": "NSURLRequestNetworkServiceType"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1418333-networkservicetype?language=objc"
+        }
       },
       {
         "Name": "attribution",
         "Description": "The entity that initiates the network request.",
         "Declaration": "@property(readonly) NSURLRequestAttribution attribution;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3746973-attribution?language=objc",
         "Type": {
           "Name": "NSURLRequestAttribution"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3746973-attribution?language=objc"
+        }
       },
       {
         "Name": "assumesHTTP3Capable",
-        "Description": "",
         "Declaration": "@property(readonly) BOOL assumesHTTP3Capable;",
+        "Platforms": [
+          "iOS 14.5+",
+          "iPadOS 14.5+",
+          "macOS 11.3+",
+          "Mac Catalyst 14.5+",
+          "tvOS 14.5+",
+          "watchOS 7.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3735880-assumeshttp3capable?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/3735880-assumeshttp3capable?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -310,6 +495,15 @@
         "Name": "requestWithURL:",
         "Description": "Creates and returns a URL request for a specified URL.",
         "Declaration": "+ (instancetype)requestWithURL:(NSURL *)URL;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1528603-requestwithurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -321,13 +515,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1528603-requestwithurl?language=objc"
+        ]
       },
       {
         "Name": "requestWithURL:cachePolicy:timeoutInterval:",
         "Description": "Creates and returns an initialized URL request with specified URL, cache policy, and timeout values.",
         "Declaration": "+ (instancetype)requestWithURL:(NSURL *)URL \n                   cachePolicy:(NSURLRequestCachePolicy)cachePolicy \n               timeoutInterval:(NSTimeInterval)timeoutInterval;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1528579-requestwithurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -351,8 +556,7 @@
               "Name": "NSTimeInterval"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1528579-requestwithurl?language=objc"
+        ]
       }
     ],
     "TypeProperties": [
@@ -360,18 +564,29 @@
         "Name": "supportsSecureCoding",
         "Description": "A Boolean value indicating whether the NSURLRequest implements the NSSecureCoding protocol.",
         "Declaration": "@property(class, readonly) BOOL supportsSecureCoding;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1416510-supportssecurecoding?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "class": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlrequest/1416510-supportssecurecoding?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-20T16:25:20.827466-07:00",
+  "PullDate": "2022-08-28T20:40:08.471527+08:00",
   "Version": 2
 }

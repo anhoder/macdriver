@@ -3,11 +3,9 @@
     "Name": "NSData",
     "Description": "A static byte buffer in memory.",
     "Declaration": "@interface NSData : NSObject",
-    "Frameworks": [
-      "Foundation"
-    ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -19,6 +17,15 @@
         "Name": "initWithBytes:length:",
         "Description": "Initializes a data object filled with a given number of bytes copied from a given buffer.",
         "Declaration": "- (instancetype)initWithBytes:(const void *)bytes \n                       length:(NSUInteger)length;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1412793-initwithbytes?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -39,13 +46,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1412793-initwithbytes?language=objc"
+        ]
       },
       {
         "Name": "initWithBytesNoCopy:length:",
         "Description": "Initializes a data object filled with a given number of bytes of data from a given buffer.",
         "Declaration": "- (instancetype)initWithBytesNoCopy:(void *)bytes \n                             length:(NSUInteger)length;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1409454-initwithbytesnocopy?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -63,13 +78,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1409454-initwithbytesnocopy?language=objc"
+        ]
       },
       {
         "Name": "initWithBytesNoCopy:length:deallocator:",
         "Description": "Initializes a data object filled with a given number of bytes of data from a given buffer, with a custom deallocator block.",
         "Declaration": "- (instancetype)initWithBytesNoCopy:(void *)bytes \n                             length:(NSUInteger)length \n                        deallocator:(void (^)(void *bytes, NSUInteger length))deallocator;\n",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1417337-initwithbytesnocopy?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -112,13 +135,21 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1417337-initwithbytesnocopy?language=objc"
+        ]
       },
       {
         "Name": "initWithBytesNoCopy:length:freeWhenDone:",
         "Description": "Initializes a newly allocated data object by adding the given number of bytes from the given buffer.",
         "Declaration": "- (instancetype)initWithBytesNoCopy:(void *)bytes \n                             length:(NSUInteger)length \n                       freeWhenDone:(BOOL)b;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1416020-initwithbytesnocopy?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -142,13 +173,21 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1416020-initwithbytesnocopy?language=objc"
+        ]
       },
       {
         "Name": "initWithData:",
         "Description": "Initializes a data object with the contents of another data object.",
         "Declaration": "- (instancetype)initWithData:(NSData *)data;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1417055-initwithdata?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -160,13 +199,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1417055-initwithdata?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfFile:",
         "Description": "Initializes a data object with the content of the file at a given path.",
         "Declaration": "- (instancetype)initWithContentsOfFile:(NSString *)path;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1408672-initwithcontentsoffile?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -178,13 +225,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1408672-initwithcontentsoffile?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfFile:options:error:",
         "Description": "Initializes a data object with the content of the file at a given path.",
         "Declaration": "- (instancetype)initWithContentsOfFile:(NSString *)path \n                               options:(NSDataReadingOptions)readOptionsMask \n                                 error:(NSError * _Nullable *)errorPtr;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1411145-initwithcontentsoffile?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -213,13 +271,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1411145-initwithcontentsoffile?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfURL:",
         "Description": "Initializes a data object with the data from the location specified by a given URL.",
         "Declaration": "- (instancetype)initWithContentsOfURL:(NSURL *)url;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1413892-initwithcontentsofurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -231,13 +297,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1413892-initwithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfURL:options:error:",
         "Description": "Initializes a data object with the data from the location specified by a given URL.",
         "Declaration": "- (instancetype)initWithContentsOfURL:(NSURL *)url \n                              options:(NSDataReadingOptions)readOptionsMask \n                                error:(NSError * _Nullable *)errorPtr;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1407864-initwithcontentsofurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -266,13 +340,25 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1407864-initwithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "initWithContentsOfMappedFile:",
         "Description": "Initializes a data object with the contents of the mapped file specified by a given path.",
         "Declaration": "- (id)initWithContentsOfMappedFile:(NSString *)path;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0–8.0",
+          "iPadOS 2.0–8.0",
+          "macOS 10.0–10.10",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0",
+          "watchOS 2.0–2.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1413302-initwithcontentsofmappedfile?language=objc",
         "Return": {
           "Name": "id"
         },
@@ -284,14 +370,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1413302-initwithcontentsofmappedfile?language=objc"
+        ]
       },
       {
         "Name": "writeToFile:atomically:",
         "Description": "Writes the data object's bytes to the file specified by a given path.",
         "Declaration": "- (BOOL)writeToFile:(NSString *)path \n         atomically:(BOOL)useAuxiliaryFile;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1408033-writetofile?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -309,13 +402,21 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1408033-writetofile?language=objc"
+        ]
       },
       {
         "Name": "writeToFile:options:error:",
-        "Description": "Writes the data object's bytes to the file specified by a given path.",
+        "Description": "Writes the data object’s bytes to the file specified by a given path.",
         "Declaration": "- (BOOL)writeToFile:(NSString *)path \n            options:(NSDataWritingOptions)writeOptionsMask \n              error:(NSError * _Nullable *)errorPtr;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1414800-writetofile?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -344,13 +445,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1414800-writetofile?language=objc"
+        ]
       },
       {
         "Name": "writeToURL:atomically:",
         "Description": "Writes the data object's bytes to the location specified by a given URL.",
         "Declaration": "- (BOOL)writeToURL:(NSURL *)url \n        atomically:(BOOL)atomically;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1415134-writetourl?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -368,13 +477,21 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1415134-writetourl?language=objc"
+        ]
       },
       {
         "Name": "writeToURL:options:error:",
         "Description": "Writes the data object's bytes to the location specified by a given URL.",
         "Declaration": "- (BOOL)writeToURL:(NSURL *)url \n           options:(NSDataWritingOptions)writeOptionsMask \n             error:(NSError * _Nullable *)errorPtr;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410595-writetourl?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -403,13 +520,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410595-writetourl?language=objc"
+        ]
       },
       {
         "Name": "initWithBase64EncodedData:options:",
         "Description": "Initializes a data object with the given Base64 encoded data.",
         "Declaration": "- (instancetype)initWithBase64EncodedData:(NSData *)base64Data \n                                  options:(NSDataBase64DecodingOptions)options;\n",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1417833-initwithbase64encodeddata?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -427,13 +552,25 @@
               "Name": "NSDataBase64DecodingOptions"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1417833-initwithbase64encodeddata?language=objc"
+        ]
       },
       {
         "Name": "initWithBase64Encoding:",
         "Description": "Initializes a data object initialized with the given Base64 encoded string.",
         "Declaration": "- (id)initWithBase64Encoding:(NSString *)base64String;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 4.0–7.0",
+          "iPadOS 4.0–7.0",
+          "macOS 10.6–10.9",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0",
+          "watchOS 2.0–2.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547237-initwithbase64encoding?language=objc",
         "Return": {
           "Name": "id"
         },
@@ -445,14 +582,24 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547237-initwithbase64encoding?language=objc"
+        ]
       },
       {
         "Name": "initWithBase64EncodedString:options:",
         "Description": "Initializes a data object with the given Base64 encoded string.",
         "Declaration": "- (instancetype)initWithBase64EncodedString:(NSString *)base64String \n                                    options:(NSDataBase64DecodingOptions)options;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410081-initwithbase64encodedstring?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -470,13 +617,21 @@
               "Name": "NSDataBase64DecodingOptions"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410081-initwithbase64encodedstring?language=objc"
+        ]
       },
       {
         "Name": "base64EncodedDataWithOptions:",
         "Description": "Creates a Base64, UTF-8 encoded data object from the string using the given options.",
         "Declaration": "- (NSData *)base64EncodedDataWithOptions:(NSDataBase64EncodingOptions)options;",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1412739-base64encodeddatawithoptions?language=objc",
         "Return": {
           "Name": "NSData",
           "IsPtr": true
@@ -488,13 +643,21 @@
               "Name": "NSDataBase64EncodingOptions"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1412739-base64encodeddatawithoptions?language=objc"
+        ]
       },
       {
         "Name": "base64EncodedStringWithOptions:",
         "Description": "Creates a Base64 encoded string from the string using the given options.",
         "Declaration": "- (NSString *)base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)options;",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1413546-base64encodedstringwithoptions?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
@@ -506,25 +669,44 @@
               "Name": "NSDataBase64EncodingOptions"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1413546-base64encodedstringwithoptions?language=objc"
+        ]
       },
       {
         "Name": "base64Encoding",
         "Description": "Initializes a Base64 encoded string from the string.",
         "Declaration": "- (NSString *)base64Encoding;",
+        "Platforms": [
+          "iOS 4.0–7.0",
+          "iPadOS 4.0–7.0",
+          "macOS 10.6–10.9",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0",
+          "watchOS 2.0–2.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547242-base64encoding?language=objc",
         "Return": {
           "Name": "NSString",
           "IsPtr": true
         },
-        "Args": null,
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547242-base64encoding?language=objc"
+        "Args": null
       },
       {
         "Name": "enumerateByteRangesUsingBlock:",
         "Description": "Enumerates each range of bytes in the data object using a block.",
         "Declaration": "- (void)enumerateByteRangesUsingBlock:(void (^)(const void *bytes, NSRange byteRange, BOOL *stop))block;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1408400-enumeratebyterangesusingblock?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -564,13 +746,22 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1408400-enumeratebyterangesusingblock?language=objc"
+        ]
       },
       {
         "Name": "getBytes:",
         "Description": "Copies a data object’s contents into a given buffer.",
         "Declaration": "- (void)getBytes:(void *)buffer;",
+        "Platforms": [
+          "iOS 2.0–8.0",
+          "iPadOS 2.0–8.0",
+          "macOS 10.0–10.10",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0",
+          "watchOS 2.0–2.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1416532-getbytes?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -582,14 +773,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1416532-getbytes?language=objc"
+        ]
       },
       {
         "Name": "getBytes:length:",
         "Description": "Copies a number of bytes from the start of the data object into a given buffer.",
         "Declaration": "- (void)getBytes:(void *)buffer \n          length:(NSUInteger)length;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1411450-getbytes?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -607,13 +805,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1411450-getbytes?language=objc"
+        ]
       },
       {
         "Name": "getBytes:range:",
         "Description": "Copies a range of bytes from the data object into a given buffer.",
         "Declaration": "- (void)getBytes:(void *)buffer \n           range:(NSRange)range;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1407224-getbytes?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -631,13 +837,21 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1407224-getbytes?language=objc"
+        ]
       },
       {
         "Name": "subdataWithRange:",
         "Description": "Returns a new data object containing the data object's bytes that fall within the limits specified by a given range.",
         "Declaration": "- (NSData *)subdataWithRange:(NSRange)range;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410128-subdatawithrange?language=objc",
         "Return": {
           "Name": "NSData",
           "IsPtr": true
@@ -649,13 +863,21 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410128-subdatawithrange?language=objc"
+        ]
       },
       {
         "Name": "rangeOfData:options:range:",
         "Description": "Finds and returns the range of the first occurrence of the given data, within the given range, subject to given options.",
         "Declaration": "- (NSRange)rangeOfData:(NSData *)dataToFind \n               options:(NSDataSearchOptions)mask \n                 range:(NSRange)searchRange;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410391-rangeofdata?language=objc",
         "Return": {
           "Name": "NSRange"
         },
@@ -679,13 +901,21 @@
               "Name": "NSRange"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410391-rangeofdata?language=objc"
+        ]
       },
       {
         "Name": "isEqualToData:",
         "Description": "Returns a Boolean value indicating whether this data object is the same as another.",
         "Declaration": "- (BOOL)isEqualToData:(NSData *)other;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1409330-isequaltodata?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -697,13 +927,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1409330-isequaltodata?language=objc"
+        ]
       },
       {
         "Name": "compressedDataUsingAlgorithm:error:",
         "Description": "Returns a new data object by compressing the data object’s bytes.",
         "Declaration": "- (instancetype)compressedDataUsingAlgorithm:(NSDataCompressionAlgorithm)algorithm \n                                       error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/3174960-compresseddatausingalgorithm?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -725,13 +963,21 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/3174960-compresseddatausingalgorithm?language=objc"
+        ]
       },
       {
         "Name": "decompressedDataUsingAlgorithm:error:",
         "Description": "Returns a new data object by decompressing data object’s bytes.",
         "Declaration": "- (instancetype)decompressedDataUsingAlgorithm:(NSDataCompressionAlgorithm)algorithm \n                                         error:(NSError * _Nullable *)error;\n",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/3174961-decompresseddatausingalgorithm?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -753,8 +999,7 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/3174961-decompresseddatausingalgorithm?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -762,6 +1007,15 @@
         "Name": "bytes",
         "Description": "A pointer to the data object's contents.",
         "Declaration": "@property(readonly) const void *bytes;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410616-bytes?language=objc",
         "Type": {
           "Name": "void",
           "IsPtr": true,
@@ -771,25 +1025,41 @@
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1410616-bytes?language=objc"
+        }
       },
       {
         "Name": "length",
         "Description": "The number of bytes contained by the data object.",
         "Declaration": "@property(readonly) NSUInteger length;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1416769-length?language=objc",
         "Type": {
           "Name": "NSUInteger"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1416769-length?language=objc"
+        }
       },
       {
         "Name": "description",
         "Description": "A string that contains a hexadecimal representation of the data object’s contents in a property list format.",
         "Declaration": "@property(readonly, copy) NSString *description;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1412579-description?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
@@ -797,8 +1067,7 @@
         "Attrs": {
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1412579-description?language=objc"
+        }
       }
     ],
     "TypeMethods": [
@@ -806,16 +1075,33 @@
         "Name": "data",
         "Description": "Creates an empty data object.",
         "Declaration": "+ (instancetype)data;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547234-data?language=objc",
         "Return": {
           "Name": "instancetype"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547234-data?language=objc"
+        "Args": null
       },
       {
         "Name": "dataWithBytes:length:",
         "Description": "Creates a data object containing a given number of bytes copied from a given buffer.",
         "Declaration": "+ (instancetype)dataWithBytes:(const void *)bytes \n                       length:(NSUInteger)length;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547231-datawithbytes?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -836,13 +1122,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547231-datawithbytes?language=objc"
+        ]
       },
       {
         "Name": "dataWithBytesNoCopy:length:",
         "Description": "Creates a data object that holds a given number of bytes from a given buffer.",
         "Declaration": "+ (instancetype)dataWithBytesNoCopy:(void *)bytes \n                             length:(NSUInteger)length;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547229-datawithbytesnocopy?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -860,13 +1154,21 @@
               "Name": "NSUInteger"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547229-datawithbytesnocopy?language=objc"
+        ]
       },
       {
         "Name": "dataWithBytesNoCopy:length:freeWhenDone:",
         "Description": "Creates a data object that holds a given number of bytes from a given buffer.",
         "Declaration": "+ (instancetype)dataWithBytesNoCopy:(void *)bytes \n                             length:(NSUInteger)length \n                       freeWhenDone:(BOOL)b;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547240-datawithbytesnocopy?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -890,13 +1192,21 @@
               "Name": "BOOL"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547240-datawithbytesnocopy?language=objc"
+        ]
       },
       {
         "Name": "dataWithData:",
         "Description": "Creates a data object containing the contents of another data object.",
         "Declaration": "+ (instancetype)dataWithData:(NSData *)data;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547230-datawithdata?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -908,13 +1218,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547230-datawithdata?language=objc"
+        ]
       },
       {
         "Name": "dataWithContentsOfFile:",
         "Description": "Creates a data object by reading every byte from the file at a given path.",
         "Declaration": "+ (instancetype)dataWithContentsOfFile:(NSString *)path;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547226-datawithcontentsoffile?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -926,13 +1244,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547226-datawithcontentsoffile?language=objc"
+        ]
       },
       {
         "Name": "dataWithContentsOfFile:options:error:",
         "Description": "Creates a data object by reading every byte from the file at a given path.",
         "Declaration": "+ (instancetype)dataWithContentsOfFile:(NSString *)path \n                               options:(NSDataReadingOptions)readOptionsMask \n                                 error:(NSError * _Nullable *)errorPtr;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547244-datawithcontentsoffile?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -961,13 +1287,24 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547244-datawithcontentsoffile?language=objc"
+        ]
       },
       {
         "Name": "dataWithContentsOfURL:",
         "Description": "Creates a data object containing the data from the location specified by a given URL.",
         "Declaration": "+ (instancetype)dataWithContentsOfURL:(NSURL *)url;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547245-datawithcontentsofurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -979,13 +1316,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547245-datawithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "dataWithContentsOfURL:options:error:",
         "Description": "Creates a data object containing the data from the location specified by a given URL.",
         "Declaration": "+ (instancetype)dataWithContentsOfURL:(NSURL *)url \n                              options:(NSDataReadingOptions)readOptionsMask \n                                error:(NSError * _Nullable *)errorPtr;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547238-datawithcontentsofurl?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -1014,13 +1359,25 @@
               ]
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1547238-datawithcontentsofurl?language=objc"
+        ]
       },
       {
         "Name": "dataWithContentsOfMappedFile:",
         "Description": "Creates a data object from the mapped file at a given path.",
         "Declaration": "+ (id)dataWithContentsOfMappedFile:(NSString *)path;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0–8.0",
+          "iPadOS 2.0–8.0",
+          "macOS 10.0–10.10",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0",
+          "watchOS 2.0–2.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1409012-datawithcontentsofmappedfile?language=objc",
         "Return": {
           "Name": "id"
         },
@@ -1032,13 +1389,11 @@
               "IsPtr": true
             }
           }
-        ],
-        "Deprecated": true,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdata/1409012-datawithcontentsofmappedfile?language=objc"
+        ]
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-09-13T11:15:01.958782-07:00",
+  "PullDate": "2022-08-28T20:28:50.275747+08:00",
   "Version": 2
 }

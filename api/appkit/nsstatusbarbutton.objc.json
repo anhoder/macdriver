@@ -3,27 +3,29 @@
     "Name": "NSStatusBarButton",
     "Description": "The appearance and behavior of an item in the systemwide menu bar.",
     "Declaration": "@interface NSStatusBarButton : NSButton",
-    "InstanceProperties": [
-      {
-        "Name": "appearsDisabled",
-        "Description": "",
-        "Declaration": "@property BOOL appearsDisabled;",
-        "Type": {
-          "Name": "BOOL"
-        },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/appkit/nsstatusbarbutton/1409292-appearsdisabled?language=objc"
-      }
-    ],
-    "Frameworks": [
-      "AppKit"
-    ],
     "Platforms": [
       "macOS 10.10+"
     ],
-    "TopicURL": "https://developer.apple.com/documentation/appkit/nsstatusbarbutton?language=objc"
+    "TopicURL": "https://developer.apple.com/documentation/appkit/nsstatusbarbutton?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "appearsDisabled",
+        "Declaration": "@property BOOL appearsDisabled;",
+        "Frameworks": [
+          "AppKit"
+        ],
+        "Platforms": [
+          "macOS 10.10+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/appkit/nsstatusbarbutton/1409292-appearsdisabled?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      }
+    ]
   },
   "Kind": "class",
-  "PullDate": "2021-08-16T11:08:20.689819-07:00",
+  "PullDate": "2022-08-28T19:57:49.669803+08:00",
   "Version": 2
 }

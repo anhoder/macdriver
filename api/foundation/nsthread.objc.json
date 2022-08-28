@@ -3,11 +3,9 @@
     "Name": "NSThread",
     "Description": "A thread of execution.",
     "Declaration": "@interface NSThread : NSObject",
-    "Frameworks": [
-      "Foundation"
-    ],
     "Platforms": [
       "iOS 2.0+",
+      "iPadOS 2.0+",
       "macOS 10.0+",
       "Mac Catalyst 13.0+",
       "tvOS 9.0+",
@@ -19,16 +17,33 @@
         "Name": "init",
         "Description": "Returns an initialized NSThread object.",
         "Declaration": "- (instancetype)init;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1416464-init?language=objc",
         "Return": {
           "Name": "instancetype"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1416464-init?language=objc"
+        "Args": null
       },
       {
         "Name": "initWithTarget:selector:object:",
         "Description": "Returns an NSThread object initialized with the given arguments.",
         "Declaration": "- (instancetype)initWithTarget:(id)target \n                      selector:(SEL)selector \n                        object:(id)argument;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414773-initwithtarget?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -51,43 +66,74 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414773-initwithtarget?language=objc"
+        ]
       },
       {
         "Name": "start",
         "Description": "Starts the receiver.",
         "Declaration": "- (void)start;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1418166-start?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1418166-start?language=objc"
+        "Args": null
       },
       {
         "Name": "main",
         "Description": "The main entry point routine for the thread.",
         "Declaration": "- (void)main;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1418421-main?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1418421-main?language=objc"
+        "Args": null
       },
       {
         "Name": "cancel",
         "Description": "Changes the cancelled state of the receiver to indicate that it should exit.",
         "Declaration": "- (void)cancel;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411303-cancel?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411303-cancel?language=objc"
+        "Args": null
       },
       {
         "Name": "initWithBlock:",
-        "Description": "",
         "Declaration": "- (instancetype)initWithBlock:(void (^)(void))block;",
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/2088561-initwithblock?language=objc",
         "Return": {
           "Name": "instancetype"
         },
@@ -109,8 +155,7 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/2088561-initwithblock?language=objc"
+        ]
       }
     ],
     "InstanceProperties": [
@@ -118,57 +163,104 @@
         "Name": "executing",
         "Description": "A Boolean value that indicates whether the receiver is executing.",
         "Declaration": "@property(readonly, getter=isExecuting) BOOL executing;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411240-executing?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isExecuting",
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411240-executing?language=objc"
+        }
       },
       {
         "Name": "finished",
         "Description": "A Boolean value that indicates whether the receiver has finished execution.",
         "Declaration": "@property(readonly, getter=isFinished) BOOL finished;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409297-finished?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isFinished",
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409297-finished?language=objc"
+        }
       },
       {
         "Name": "cancelled",
         "Description": "A Boolean value that indicates whether the receiver is cancelled.",
         "Declaration": "@property(readonly, getter=isCancelled) BOOL cancelled;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1417366-cancelled?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "getter": "isCancelled",
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1417366-cancelled?language=objc"
+        }
       },
       {
         "Name": "isMainThread",
         "Description": "A Boolean value that indicates whether the receiver is the main thread.",
         "Declaration": "@property(readonly) BOOL isMainThread;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1408455-ismainthread?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1408455-ismainthread?language=objc"
+        }
       },
       {
         "Name": "threadDictionary",
         "Description": "The thread object's dictionary.",
         "Declaration": "@property(readonly, retain) NSMutableDictionary *threadDictionary;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411433-threaddictionary?language=objc",
         "Type": {
           "Name": "NSMutableDictionary",
           "IsPtr": true
@@ -176,51 +268,87 @@
         "Attrs": {
           "readonly": true,
           "retain": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411433-threaddictionary?language=objc"
+        }
       },
       {
         "Name": "name",
         "Description": "The name of the receiver.",
         "Declaration": "@property(copy) NSString *name;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414122-name?language=objc",
         "Type": {
           "Name": "NSString",
           "IsPtr": true
         },
         "Attrs": {
           "copy": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414122-name?language=objc"
+        }
       },
       {
         "Name": "stackSize",
         "Description": "The stack size of the receiver, in bytes.",
         "Declaration": "@property NSUInteger stackSize;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1415190-stacksize?language=objc",
         "Type": {
           "Name": "NSUInteger"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1415190-stacksize?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "qualityOfService",
-        "Description": "",
         "Declaration": "@property NSQualityOfService qualityOfService;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409426-qualityofservice?language=objc",
         "Type": {
           "Name": "NSQualityOfService"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409426-qualityofservice?language=objc"
+        "Attrs": {}
       },
       {
         "Name": "threadPriority",
         "Description": "The receiver’s priority",
         "Declaration": "@property double threadPriority;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411927-threadpriority?language=objc",
         "Type": {
           "Name": "double"
         },
-        "Attrs": {},
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1411927-threadpriority?language=objc"
+        "Attrs": {}
       }
     ],
     "TypeMethods": [
@@ -228,6 +356,15 @@
         "Name": "detachNewThreadSelector:toTarget:withObject:",
         "Description": "Detaches a new thread and uses the specified selector as the thread entry point.",
         "Declaration": "+ (void)detachNewThreadSelector:(SEL)selector \n                       toTarget:(id)target \n                     withObject:(id)argument;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1415633-detachnewthreadselector?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -250,13 +387,21 @@
               "Name": "id"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1415633-detachnewthreadselector?language=objc"
+        ]
       },
       {
         "Name": "sleepUntilDate:",
         "Description": "Blocks the current thread until the time specified.",
         "Declaration": "+ (void)sleepUntilDate:(NSDate *)date;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1415959-sleepuntildate?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -268,13 +413,21 @@
               "IsPtr": true
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1415959-sleepuntildate?language=objc"
+        ]
       },
       {
         "Name": "sleepForTimeInterval:",
         "Description": "Sleeps the thread for a given time interval.",
         "Declaration": "+ (void)sleepForTimeInterval:(NSTimeInterval)ti;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1413673-sleepfortimeinterval?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -285,43 +438,81 @@
               "Name": "NSTimeInterval"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1413673-sleepfortimeinterval?language=objc"
+        ]
       },
       {
         "Name": "exit",
         "Description": "Terminates the current thread.",
         "Declaration": "+ (void)exit;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409404-exit?language=objc",
         "Return": {
           "Name": "void"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409404-exit?language=objc"
+        "Args": null
       },
       {
         "Name": "isMultiThreaded",
         "Description": "Returns whether the application is multithreaded.",
         "Declaration": "+ (BOOL)isMultiThreaded;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1410702-ismultithreaded?language=objc",
         "Return": {
           "Name": "BOOL"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1410702-ismultithreaded?language=objc"
+        "Args": null
       },
       {
         "Name": "threadPriority",
         "Description": "Returns the current thread’s priority.",
         "Declaration": "+ (double)threadPriority;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1417675-threadpriority?language=objc",
         "Return": {
           "Name": "double"
         },
-        "Args": null,
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1417675-threadpriority?language=objc"
+        "Args": null
       },
       {
         "Name": "setThreadPriority:",
         "Description": "Sets the current thread’s priority.",
         "Declaration": "+ (BOOL)setThreadPriority:(double)p;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1407523-setthreadpriority?language=objc",
         "Return": {
           "Name": "BOOL"
         },
@@ -332,13 +523,23 @@
               "Name": "double"
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1407523-setthreadpriority?language=objc"
+        ]
       },
       {
         "Name": "detachNewThreadWithBlock:",
-        "Description": "",
         "Declaration": "+ (void)detachNewThreadWithBlock:(void (^)(void))block;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/2088563-detachnewthreadwithblock?language=objc",
         "Return": {
           "Name": "void"
         },
@@ -360,8 +561,7 @@
               }
             }
           }
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/2088563-detachnewthreadwithblock?language=objc"
+        ]
       }
     ],
     "TypeProperties": [
@@ -369,19 +569,36 @@
         "Name": "isMainThread",
         "Description": "Returns a Boolean value that indicates whether the current thread is the main thread.",
         "Declaration": "@property(class, readonly) BOOL isMainThread;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1412704-ismainthread?language=objc",
         "Type": {
           "Name": "BOOL"
         },
         "Attrs": {
           "class": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1412704-ismainthread?language=objc"
+        }
       },
       {
         "Name": "mainThread",
         "Description": "Returns the NSThread object representing the main thread.",
         "Declaration": "@property(class, readonly, strong) NSThread *mainThread;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414782-mainthread?language=objc",
         "Type": {
           "Name": "NSThread",
           "IsPtr": true
@@ -390,13 +607,21 @@
           "class": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414782-mainthread?language=objc"
+        }
       },
       {
         "Name": "currentThread",
         "Description": "Returns the thread object representing the current thread of execution.",
         "Declaration": "@property(class, readonly, strong) NSThread *currentThread;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1410679-currentthread?language=objc",
         "Type": {
           "Name": "NSThread",
           "IsPtr": true
@@ -405,13 +630,24 @@
           "class": true,
           "readonly": true,
           "strong": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1410679-currentthread?language=objc"
+        }
       },
       {
         "Name": "callStackReturnAddresses",
         "Description": "Returns an array containing the call stack return addresses.",
         "Declaration": "@property(class, readonly, copy) NSArray\u003cNSNumber *\u003e *callStackReturnAddresses;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409565-callstackreturnaddresses?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -426,13 +662,21 @@
           "class": true,
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1409565-callstackreturnaddresses?language=objc"
+        }
       },
       {
         "Name": "callStackSymbols",
         "Description": "Returns an array containing the call stack symbols.",
         "Declaration": "@property(class, readonly, copy) NSArray\u003cNSString *\u003e *callStackSymbols;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414836-callstacksymbols?language=objc",
         "Type": {
           "Name": "NSArray",
           "IsPtr": true,
@@ -447,12 +691,11 @@
           "class": true,
           "copy": true,
           "readonly": true
-        },
-        "TopicURL": "https://developer.apple.com/documentation/foundation/nsthread/1414836-callstacksymbols?language=objc"
+        }
       }
     ]
   },
   "Kind": "class",
-  "PullDate": "2021-09-13T21:23:31.13611-07:00",
+  "PullDate": "2022-08-28T20:37:07.610103+08:00",
   "Version": 2
 }
