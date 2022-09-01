@@ -1,0 +1,242 @@
+{
+  "Class": {
+    "Name": "NSNotification",
+    "Description": "A container for information broadcast through a notification center to all registered observers.",
+    "Declaration": "@interface NSNotification : NSObject",
+    "Platforms": [
+      "iOS 2.0+",
+      "iPadOS 2.0+",
+      "macOS 10.0+",
+      "Mac Catalyst 13.0+",
+      "tvOS 9.0+",
+      "watchOS 2.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "init",
+        "Description": "Initializes an empty notification.",
+        "Declaration": "- (instancetype)init;",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1412595-init?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": null
+      },
+      {
+        "Name": "initWithCoder:",
+        "Description": "Initializes a notification with the data from an unarchiver.",
+        "Declaration": "- (instancetype)initWithCoder:(NSCoder *)coder;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1412464-initwithcoder?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "coder",
+            "Type": {
+              "Name": "NSCoder",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "initWithName:object:userInfo:",
+        "Description": "Initializes a notification with a specified name, object, and user information.",
+        "Declaration": "- (instancetype)initWithName:(NSNotificationName)name \n                      object:(id)object \n                    userInfo:(NSDictionary *)userInfo;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1415764-initwithname?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "name",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "object",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "userInfo",
+            "Type": {
+              "Name": "NSDictionary",
+              "IsPtr": true
+            }
+          }
+        ]
+      }
+    ],
+    "InstanceProperties": [
+      {
+        "Name": "name",
+        "Description": "The name of the notification.",
+        "Declaration": "@property(readonly, copy) NSNotificationName name;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1416472-name?language=objc",
+        "Type": {
+          "Name": "NSNotificationName"
+        },
+        "Attrs": {
+          "copy": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "object",
+        "Description": "The object associated with the notification.",
+        "Declaration": "@property(nullable, readonly, retain) id object;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1414469-object?language=objc",
+        "Type": {
+          "Name": "id"
+        },
+        "Attrs": {
+          "nullable": true,
+          "readonly": true,
+          "retain": true
+        }
+      },
+      {
+        "Name": "userInfo",
+        "Description": "The user information dictionary associated with the notification.",
+        "Declaration": "@property(nullable, readonly, copy) NSDictionary *userInfo;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1409222-userinfo?language=objc",
+        "Type": {
+          "Name": "NSDictionary",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true,
+          "nullable": true,
+          "readonly": true
+        }
+      }
+    ],
+    "TypeMethods": [
+      {
+        "Name": "notificationWithName:object:",
+        "Description": "Returns a new notification object with a specified name and object.",
+        "Declaration": "+ (instancetype)notificationWithName:(NSNotificationName)aName \n                              object:(id)anObject;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1417440-notificationwithname?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "aName",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "anObject",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "notificationWithName:object:userInfo:",
+        "Description": "Returns a notification object with a specified name, object, and user information.",
+        "Declaration": "+ (instancetype)notificationWithName:(NSNotificationName)aName \n                              object:(id)anObject \n                            userInfo:(NSDictionary *)aUserInfo;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotification/1574705-notificationwithname?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "aName",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "anObject",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "aUserInfo",
+            "Type": {
+              "Name": "NSDictionary",
+              "IsPtr": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-08-30T12:57:40.987926+08:00",
+  "Version": 2
+}

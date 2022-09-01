@@ -1,0 +1,434 @@
+{
+  "Class": {
+    "Name": "NSOperationQueue",
+    "Description": "A queue that regulates the execution of operations.",
+    "Declaration": "@interface NSOperationQueue : NSObject",
+    "Platforms": [
+      "iOS 2.0+",
+      "iPadOS 2.0+",
+      "macOS 10.5+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 2.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "addOperation:",
+        "Description": "Adds the specified operation to the receiver.",
+        "Declaration": "- (void)addOperation:(NSOperation *)op;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1410704-addoperation?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "op",
+            "Type": {
+              "Name": "NSOperation",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addOperations:waitUntilFinished:",
+        "Description": "Adds the specified operations to the queue.",
+        "Declaration": "- (void)addOperations:(NSArray\u003cNSOperation *\u003e *)ops \n    waitUntilFinished:(BOOL)wait;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1408358-addoperations?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "ops",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "NSOperation",
+                  "IsPtr": true
+                }
+              ]
+            }
+          },
+          {
+            "Name": "wait",
+            "Type": {
+              "Name": "BOOL"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addOperationWithBlock:",
+        "Description": "Wraps the specified block in an operation and adds it to the receiver.",
+        "Declaration": "- (void)addOperationWithBlock:(void (^)(void))block;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1412949-addoperationwithblock?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "block",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addBarrierBlock:",
+        "Description": "Invokes a block when the queue finishes all enqueued operations, and prevents subsequent operations from starting until the block has completed.",
+        "Declaration": "- (void)addBarrierBlock:(void (^)(void))barrier;",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/3172534-addbarrierblock?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "barrier",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "cancelAllOperations",
+        "Description": "Cancels all queued and executing operations.",
+        "Declaration": "- (void)cancelAllOperations;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1417849-cancelalloperations?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "waitUntilAllOperationsAreFinished",
+        "Description": "Blocks the current thread until all the receiver’s queued and executing operations finish executing.",
+        "Declaration": "- (void)waitUntilAllOperationsAreFinished;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1407971-waituntilalloperationsarefinishe?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      }
+    ],
+    "InstanceProperties": [
+      {
+        "Name": "operations",
+        "Description": "The operations currently in the queue.",
+        "Declaration": "@property(readonly, copy) NSArray\u003c__kindof NSOperation *\u003e *operations;",
+        "Platforms": [
+          "iOS 2.0–13.0",
+          "Deprecated",
+          "iPadOS 2.0–13.0",
+          "Deprecated",
+          "macOS 10.5–10.15",
+          "Deprecated",
+          "Mac Catalyst 13.1–13.0",
+          "Deprecated",
+          "tvOS 9.0–13.0",
+          "Deprecated",
+          "watchOS 2.0–6.0",
+          "Deprecated"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1415168-operations?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSOperation",
+              "IsPtr": true,
+              "Annotations": [
+                "__kindof"
+              ]
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "operationCount",
+        "Description": "The number of operations currently in the queue.",
+        "Declaration": "@property(readonly) NSUInteger operationCount;",
+        "Platforms": [
+          "iOS 4.0–13.0",
+          "Deprecated",
+          "iPadOS 4.0–13.0",
+          "Deprecated",
+          "macOS 10.6–10.15",
+          "Deprecated",
+          "Mac Catalyst 13.1–13.0",
+          "Deprecated",
+          "tvOS 9.0–13.0",
+          "Deprecated",
+          "watchOS 2.0–6.0",
+          "Deprecated"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1415115-operationcount?language=objc",
+        "Type": {
+          "Name": "NSUInteger"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "qualityOfService",
+        "Description": "The default service level to apply to operations that the queue invokes.",
+        "Declaration": "@property NSQualityOfService qualityOfService;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1417919-qualityofservice?language=objc",
+        "Type": {
+          "Name": "NSQualityOfService"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "maxConcurrentOperationCount",
+        "Description": "The maximum number of queued operations that can run at the same time.",
+        "Declaration": "@property NSInteger maxConcurrentOperationCount;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1414982-maxconcurrentoperationcount?language=objc",
+        "Type": {
+          "Name": "NSInteger"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "progress",
+        "Description": "An object that represents the total progress of the operations executing in the queue.",
+        "Declaration": "@property(readonly, strong) NSProgress *progress;",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/3172535-progress?language=objc",
+        "Type": {
+          "Name": "NSProgress",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "readonly": true,
+          "strong": true
+        }
+      },
+      {
+        "Name": "suspended",
+        "Description": "A Boolean value indicating whether the queue is actively scheduling operations for execution.",
+        "Declaration": "@property(getter=isSuspended) BOOL suspended;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1415909-suspended?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isSuspended"
+        }
+      },
+      {
+        "Name": "name",
+        "Description": "The name of the operation queue.",
+        "Declaration": "@property(copy) NSString *name;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1418063-name?language=objc",
+        "Type": {
+          "Name": "NSString",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true
+        }
+      },
+      {
+        "Name": "underlyingQueue",
+        "Description": "The dispatch queue that the operation queue uses to invoke operations.",
+        "Declaration": "@property(assign) dispatch_queue_t underlyingQueue;",
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1415344-underlyingqueue?language=objc",
+        "Type": {
+          "Name": "dispatch_queue_t"
+        },
+        "Attrs": {
+          "assign": true
+        }
+      }
+    ],
+    "TypeProperties": [
+      {
+        "Name": "mainQueue",
+        "Description": "Returns the operation queue associated with the main thread.",
+        "Declaration": "@property(class, readonly, strong) NSOperationQueue *mainQueue;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1409193-mainqueue?language=objc",
+        "Type": {
+          "Name": "NSOperationQueue",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "class": true,
+          "readonly": true,
+          "strong": true
+        }
+      },
+      {
+        "Name": "currentQueue",
+        "Description": "Returns the operation queue that launched the current operation.",
+        "Declaration": "@property(class, readonly, strong, nullable) NSOperationQueue *currentQueue;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsoperationqueue/1413097-currentqueue?language=objc",
+        "Type": {
+          "Name": "NSOperationQueue",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "class": true,
+          "nullable": true,
+          "readonly": true,
+          "strong": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-08-30T13:11:21.538902+08:00",
+  "Version": 2
+}

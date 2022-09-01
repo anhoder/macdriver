@@ -1,0 +1,311 @@
+{
+  "Class": {
+    "Name": "NSNotificationCenter",
+    "Description": "A notification dispatch mechanism that enables the broadcast of information to registered observers.",
+    "Declaration": "@interface NSNotificationCenter : NSObject",
+    "Platforms": [
+      "iOS 2.0+",
+      "iPadOS 2.0+",
+      "macOS 10.0+",
+      "Mac Catalyst 13.0+",
+      "tvOS 9.0+",
+      "watchOS 2.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "addObserverForName:object:queue:usingBlock:",
+        "Description": "Adds an entry to the notification center to receive notifications that passed to the provided block.",
+        "Declaration": "- (id\u003cNSObject\u003e)addObserverForName:(NSNotificationName)name \n                            object:(id)obj \n                             queue:(NSOperationQueue *)queue \n                        usingBlock:(void (^)(NSNotification *note))block;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1411723-addobserverforname?language=objc",
+        "Return": {
+          "Name": "id",
+          "Params": [
+            {
+              "Name": "NSObject"
+            }
+          ]
+        },
+        "Args": [
+          {
+            "Name": "name",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "obj",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "queue",
+            "Type": {
+              "Name": "NSOperationQueue",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "block",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "note",
+                    "Type": {
+                      "Name": "NSNotification",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addObserver:selector:name:object:",
+        "Description": "Adds an entry to the notification center to call the provided selector with the notification.",
+        "Declaration": "- (void)addObserver:(id)observer \n           selector:(SEL)aSelector \n               name:(NSNotificationName)aName \n             object:(id)anObject;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1415360-addobserver?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "observer",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "aSelector",
+            "Type": {
+              "Name": "SEL"
+            }
+          },
+          {
+            "Name": "aName",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "anObject",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeObserver:name:object:",
+        "Description": "Removes matching entries from the notification center's dispatch table.",
+        "Declaration": "- (void)removeObserver:(id)observer \n                  name:(NSNotificationName)aName \n                object:(id)anObject;\n",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1407263-removeobserver?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "observer",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "aName",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "anObject",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeObserver:",
+        "Description": "Removes all entries specifying an observer from the notification center's dispatch table.",
+        "Declaration": "- (void)removeObserver:(id)observer;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1413994-removeobserver?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "observer",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "postNotification:",
+        "Description": "Posts a given notification to the notification center.",
+        "Declaration": "- (void)postNotification:(NSNotification *)notification;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1410472-postnotification?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "notification",
+            "Type": {
+              "Name": "NSNotification",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "postNotificationName:object:userInfo:",
+        "Description": "Creates a notification with a given name, sender, and information and posts it to the notification center.",
+        "Declaration": "- (void)postNotificationName:(NSNotificationName)aName \n                      object:(id)anObject \n                    userInfo:(NSDictionary *)aUserInfo;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1410608-postnotificationname?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "aName",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "anObject",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "aUserInfo",
+            "Type": {
+              "Name": "NSDictionary",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "postNotificationName:object:",
+        "Description": "Creates a notification with a given name and sender and posts it to the notification center.",
+        "Declaration": "- (void)postNotificationName:(NSNotificationName)aName \n                      object:(id)anObject;\n",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1415812-postnotificationname?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "aName",
+            "Type": {
+              "Name": "NSNotificationName"
+            }
+          },
+          {
+            "Name": "anObject",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      }
+    ],
+    "TypeProperties": [
+      {
+        "Name": "defaultCenter",
+        "Description": "The app’s default notification center.",
+        "Declaration": "@property(class, readonly, strong) NSNotificationCenter *defaultCenter;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.0+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsnotificationcenter/1414169-defaultcenter?language=objc",
+        "Type": {
+          "Name": "NSNotificationCenter",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "class": true,
+          "readonly": true,
+          "strong": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-08-30T12:58:04.592267+08:00",
+  "Version": 2
+}

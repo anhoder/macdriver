@@ -310,6 +310,30 @@ BOOL NSURLRequest_type_supportsSecureCoding() {
 	return [NSURLRequest
 		supportsSecureCoding];
 }
+void* NSNotification_type_alloc() {
+	return [NSNotification
+		alloc];
+}
+void* NSOperationQueue_type_alloc() {
+	return [NSOperationQueue
+		alloc];
+}
+void* NSOperationQueue_type_mainQueue() {
+	return [NSOperationQueue
+		mainQueue];
+}
+void* NSOperationQueue_type_currentQueue() {
+	return [NSOperationQueue
+		currentQueue];
+}
+void* NSNotificationCenter_type_alloc() {
+	return [NSNotificationCenter
+		alloc];
+}
+void* NSNotificationCenter_type_defaultCenter() {
+	return [NSNotificationCenter
+		defaultCenter];
+}
 
 
 void* CALayer_inst_init(void *id) {
@@ -2077,6 +2101,115 @@ BOOL NSURLRequest_inst_assumesHTTP3Capable(void *id) {
 		assumesHTTP3Capable];
 }
 
+void* NSNotification_inst_init(void *id) {
+	return [(NSNotification*)id
+		init];
+}
+
+void* NSNotification_inst_object(void *id) {
+	return [(NSNotification*)id
+		object];
+}
+
+void* NSNotification_inst_userInfo(void *id) {
+	return [(NSNotification*)id
+		userInfo];
+}
+
+void NSOperationQueue_inst_addOperations_waitUntilFinished_(void *id, void* ops, BOOL wait) {
+	[(NSOperationQueue*)id
+		addOperations: ops
+		waitUntilFinished: wait];
+}
+
+void NSOperationQueue_inst_cancelAllOperations(void *id) {
+	[(NSOperationQueue*)id
+		cancelAllOperations];
+}
+
+void NSOperationQueue_inst_waitUntilAllOperationsAreFinished(void *id) {
+	[(NSOperationQueue*)id
+		waitUntilAllOperationsAreFinished];
+}
+
+void* NSOperationQueue_inst_init(void *id) {
+	return [(NSOperationQueue*)id
+		init];
+}
+
+long NSOperationQueue_inst_maxConcurrentOperationCount(void *id) {
+	return [(NSOperationQueue*)id
+		maxConcurrentOperationCount];
+}
+
+void NSOperationQueue_inst_setMaxConcurrentOperationCount_(void *id, long value) {
+	[(NSOperationQueue*)id
+		setMaxConcurrentOperationCount: value];
+}
+
+BOOL NSOperationQueue_inst_isSuspended(void *id) {
+	return [(NSOperationQueue*)id
+		isSuspended];
+}
+
+void NSOperationQueue_inst_setSuspended_(void *id, BOOL value) {
+	[(NSOperationQueue*)id
+		setSuspended: value];
+}
+
+void* NSOperationQueue_inst_name(void *id) {
+	return [(NSOperationQueue*)id
+		name];
+}
+
+void NSOperationQueue_inst_setName_(void *id, void* value) {
+	[(NSOperationQueue*)id
+		setName: value];
+}
+
+void NSNotificationCenter_inst_addObserver_selector_name_object_(void *id, void* observer, void* aSelector, void* aName, void* anObject) {
+	[(NSNotificationCenter*)id
+		addObserver: observer
+		selector: aSelector
+		name: aName
+		object: anObject];
+}
+
+void NSNotificationCenter_inst_removeObserver_name_object_(void *id, void* observer, void* aName, void* anObject) {
+	[(NSNotificationCenter*)id
+		removeObserver: observer
+		name: aName
+		object: anObject];
+}
+
+void NSNotificationCenter_inst_removeObserver_(void *id, void* observer) {
+	[(NSNotificationCenter*)id
+		removeObserver: observer];
+}
+
+void NSNotificationCenter_inst_postNotification_(void *id, void* notification) {
+	[(NSNotificationCenter*)id
+		postNotification: notification];
+}
+
+void NSNotificationCenter_inst_postNotificationName_object_userInfo_(void *id, void* aName, void* anObject, void* aUserInfo) {
+	[(NSNotificationCenter*)id
+		postNotificationName: aName
+		object: anObject
+		userInfo: aUserInfo];
+}
+
+void NSNotificationCenter_inst_postNotificationName_object_(void *id, void* aName, void* anObject) {
+	[(NSNotificationCenter*)id
+		postNotificationName: aName
+		object: anObject];
+}
+
+void* NSNotificationCenter_inst_init(void *id) {
+	return [(NSNotificationCenter*)id
+		init];
+}
+
 
 BOOL core_objc_bool_true = YES;
 BOOL core_objc_bool_false = NO;
@@ -2814,6 +2947,54 @@ func NSURLRequest_supportsSecureCoding() (
 ) {
 	ret := C.NSURLRequest_type_supportsSecureCoding()
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func NSNotification_alloc() (
+	r0 NSNotification,
+) {
+	ret := C.NSNotification_type_alloc()
+	r0 = NSNotification_fromPointer(ret)
+	return
+}
+
+func NSOperationQueue_alloc() (
+	r0 NSOperationQueue,
+) {
+	ret := C.NSOperationQueue_type_alloc()
+	r0 = NSOperationQueue_fromPointer(ret)
+	return
+}
+
+func NSOperationQueue_mainQueue() (
+	r0 NSOperationQueue,
+) {
+	ret := C.NSOperationQueue_type_mainQueue()
+	r0 = NSOperationQueue_fromPointer(ret)
+	return
+}
+
+func NSOperationQueue_currentQueue() (
+	r0 NSOperationQueue,
+) {
+	ret := C.NSOperationQueue_type_currentQueue()
+	r0 = NSOperationQueue_fromPointer(ret)
+	return
+}
+
+func NSNotificationCenter_alloc() (
+	r0 NSNotificationCenter,
+) {
+	ret := C.NSNotificationCenter_type_alloc()
+	r0 = NSNotificationCenter_fromPointer(ret)
+	return
+}
+
+func NSNotificationCenter_defaultCenter() (
+	r0 NSNotificationCenter,
+) {
+	ret := C.NSNotificationCenter_type_defaultCenter()
+	r0 = NSNotificationCenter_fromPointer(ret)
 	return
 }
 
@@ -6796,5 +6977,274 @@ func (x gen_NSURLRequest) AssumesHTTP3Capable() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+type NSNotificationRef interface {
+	Pointer() uintptr
+	Init_asNSNotification() NSNotification
+}
+
+type gen_NSNotification struct {
+	objc.Object
+}
+
+func NSNotification_fromPointer(ptr unsafe.Pointer) NSNotification {
+	return NSNotification{gen_NSNotification{
+		objc.Object_fromPointer(ptr),
+	}}
+}
+
+func NSNotification_fromRef(ref objc.Ref) NSNotification {
+	return NSNotification_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_NSNotification) Init_asNSNotification() (
+	r0 NSNotification,
+) {
+	ret := C.NSNotification_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSNotification_fromPointer(ret)
+	return
+}
+
+func (x gen_NSNotification) Object_() (
+	r0 objc.Object,
+) {
+	ret := C.NSNotification_inst_object(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
+func (x gen_NSNotification) UserInfo() (
+	r0 NSDictionary,
+) {
+	ret := C.NSNotification_inst_userInfo(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
+type NSOperationQueueRef interface {
+	Pointer() uintptr
+	Init_asNSOperationQueue() NSOperationQueue
+}
+
+type gen_NSOperationQueue struct {
+	objc.Object
+}
+
+func NSOperationQueue_fromPointer(ptr unsafe.Pointer) NSOperationQueue {
+	return NSOperationQueue{gen_NSOperationQueue{
+		objc.Object_fromPointer(ptr),
+	}}
+}
+
+func NSOperationQueue_fromRef(ref objc.Ref) NSOperationQueue {
+	return NSOperationQueue_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_NSOperationQueue) AddOperations_waitUntilFinished_(
+	ops NSArrayRef,
+	wait bool,
+) {
+	C.NSOperationQueue_inst_addOperations_waitUntilFinished_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(ops),
+		convertToObjCBool(wait),
+	)
+	return
+}
+
+func (x gen_NSOperationQueue) CancelAllOperations() {
+	C.NSOperationQueue_inst_cancelAllOperations(
+		unsafe.Pointer(x.Pointer()),
+	)
+	return
+}
+
+func (x gen_NSOperationQueue) WaitUntilAllOperationsAreFinished() {
+	C.NSOperationQueue_inst_waitUntilAllOperationsAreFinished(
+		unsafe.Pointer(x.Pointer()),
+	)
+	return
+}
+
+func (x gen_NSOperationQueue) Init_asNSOperationQueue() (
+	r0 NSOperationQueue,
+) {
+	ret := C.NSOperationQueue_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSOperationQueue_fromPointer(ret)
+	return
+}
+
+func (x gen_NSOperationQueue) MaxConcurrentOperationCount() (
+	r0 NSInteger,
+) {
+	ret := C.NSOperationQueue_inst_maxConcurrentOperationCount(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSInteger(ret)
+	return
+}
+
+func (x gen_NSOperationQueue) SetMaxConcurrentOperationCount_(
+	value NSInteger,
+) {
+	C.NSOperationQueue_inst_setMaxConcurrentOperationCount_(
+		unsafe.Pointer(x.Pointer()),
+		C.long(value),
+	)
+	return
+}
+
+func (x gen_NSOperationQueue) IsSuspended() (
+	r0 bool,
+) {
+	ret := C.NSOperationQueue_inst_isSuspended(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSOperationQueue) SetSuspended_(
+	value bool,
+) {
+	C.NSOperationQueue_inst_setSuspended_(
+		unsafe.Pointer(x.Pointer()),
+		convertToObjCBool(value),
+	)
+	return
+}
+
+func (x gen_NSOperationQueue) Name() (
+	r0 NSString,
+) {
+	ret := C.NSOperationQueue_inst_name(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSOperationQueue) SetName_(
+	value NSStringRef,
+) {
+	C.NSOperationQueue_inst_setName_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(value),
+	)
+	return
+}
+
+type NSNotificationCenterRef interface {
+	Pointer() uintptr
+	Init_asNSNotificationCenter() NSNotificationCenter
+}
+
+type gen_NSNotificationCenter struct {
+	objc.Object
+}
+
+func NSNotificationCenter_fromPointer(ptr unsafe.Pointer) NSNotificationCenter {
+	return NSNotificationCenter{gen_NSNotificationCenter{
+		objc.Object_fromPointer(ptr),
+	}}
+}
+
+func NSNotificationCenter_fromRef(ref objc.Ref) NSNotificationCenter {
+	return NSNotificationCenter_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_NSNotificationCenter) AddObserver_selector_name_object_(
+	observer objc.Ref,
+	aSelector objc.Selector,
+	aName NSStringRef,
+	anObject objc.Ref,
+) {
+	C.NSNotificationCenter_inst_addObserver_selector_name_object_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(observer),
+		aSelector.SelectorAddress(),
+		objc.RefPointer(aName),
+		objc.RefPointer(anObject),
+	)
+	return
+}
+
+func (x gen_NSNotificationCenter) RemoveObserver_name_object_(
+	observer objc.Ref,
+	aName NSStringRef,
+	anObject objc.Ref,
+) {
+	C.NSNotificationCenter_inst_removeObserver_name_object_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(observer),
+		objc.RefPointer(aName),
+		objc.RefPointer(anObject),
+	)
+	return
+}
+
+func (x gen_NSNotificationCenter) RemoveObserver_(
+	observer objc.Ref,
+) {
+	C.NSNotificationCenter_inst_removeObserver_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(observer),
+	)
+	return
+}
+
+func (x gen_NSNotificationCenter) PostNotification_(
+	notification NSNotificationRef,
+) {
+	C.NSNotificationCenter_inst_postNotification_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(notification),
+	)
+	return
+}
+
+func (x gen_NSNotificationCenter) PostNotificationName_object_userInfo_(
+	aName NSStringRef,
+	anObject objc.Ref,
+	aUserInfo NSDictionaryRef,
+) {
+	C.NSNotificationCenter_inst_postNotificationName_object_userInfo_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(aName),
+		objc.RefPointer(anObject),
+		objc.RefPointer(aUserInfo),
+	)
+	return
+}
+
+func (x gen_NSNotificationCenter) PostNotificationName_object_(
+	aName NSStringRef,
+	anObject objc.Ref,
+) {
+	C.NSNotificationCenter_inst_postNotificationName_object_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(aName),
+		objc.RefPointer(anObject),
+	)
+	return
+}
+
+func (x gen_NSNotificationCenter) Init_asNSNotificationCenter() (
+	r0 NSNotificationCenter,
+) {
+	ret := C.NSNotificationCenter_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSNotificationCenter_fromPointer(ret)
 	return
 }

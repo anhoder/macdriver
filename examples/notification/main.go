@@ -1,6 +1,14 @@
 package main
 
+/*
+#cgo CFLAGS: -x objective-c
+#cgo LDFLAGS: -lobjc -framework AppKit
+#include <AppKit/AppKit.h>
+*/
+import "C"
+
 import (
+	"fmt"
 	"github.com/progrium/macdriver/cocoa"
 	"github.com/progrium/macdriver/core"
 	"github.com/progrium/macdriver/objc"
@@ -19,22 +27,28 @@ type NSUserNotificationCenter struct {
 var NSUserNotificationCenter_ = objc.Get("NSUserNotificationCenter")
 
 func main() {
-	app := cocoa.NSApp_WithDidLaunch(func(_ objc.Object) {
+	handlerCls := objc.NewClass("EventHandler", "NSObject")
+	handlerCls.AddMethod("outputDeviceChanged:", func(notification objc.Object) {
+		fmt.Println(notification)
+	})
+	objc.RegisterClass(handlerCls)
+	handler := objc.Get("EventHandler").Alloc().Init()
+
+	app := cocoa.NSApp_WithDidLaunch(func(app objc.Object) {
 		notification := NSUserNotification{NSUserNotification_.Alloc().Init()}
 		notification.Set("title:", core.String("Hello, world!"))
 		notification.Set("informativeText:", core.String("More text"))
 
-		center := NSUserNotificationCenter{NSUserNotificationCenter_.Send("defaultUserNotificationCenter")}
-		center.Send("deliverNotification:", notification)
-		notification.Release()
-	})
+		sel := objc.Sel("outputDeviceChanged:")
+		fmt.Println(sel.SelectorAddress())
+		//fmt.Println(objc.Get("AVAudioSession"))
+		fmt.Println(objc.Get("AVAudioSession").Get("sharedInstance"))
 
-	nsbundle := cocoa.NSBundle_Main().Class()
+		center := core.NSNotificationCenter_defaultCenter()
+		center.AddObserver_selector_name_object_(handler, objc.Sel("outputDeviceChanged:"), core.String("AVAudioSessionRouteChangeReasonNewDeviceAvailable"), objc.Get("AVAudioSession").Get("sharedInstance"))
 
-	nsbundle.AddMethod("__bundleIdentifier", func(_ objc.Object) objc.Object {
-		return core.String("com.example.fake")
+		fmt.Println(handler)
 	})
-	nsbundle.Swizzle("bundleIdentifier", "__bundleIdentifier")
 
 	app.SetActivationPolicy(cocoa.NSApplicationActivationPolicyRegular)
 	app.ActivateIgnoringOtherApps(true)

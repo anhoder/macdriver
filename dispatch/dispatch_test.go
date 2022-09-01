@@ -32,9 +32,19 @@ func TestAsync(t *testing.T) {
 		//data, err := os.ReadFile("/Users/anhoder/Desktop/1.mp3")
 		//fmt.Println(err)
 
+		handlerCls := objc.NewClass("EventHandler", "NSObject")
+		handlerCls.AddMethod("outputDeviceChanged:", func(notification objc.Object) {
+			fmt.Println(notification)
+		})
+		objc.RegisterClass(handlerCls)
+
+		handler := objc.Get("EventHandler").Alloc().Init()
+
 		cls := objc.NewClass("SoundDelegate", "NSObject")
 		cls.AddMethod("sound:didFinishPlaying:", func(sound objc.Object, didFinishPlaying bool) {
 			fmt.Println("finish playing: ", didFinishPlaying)
+			core.NSNotificationCenter_defaultCenter().
+				AddObserver_selector_name_object_(handler, objc.Sel("outputDeviceChanged:"), core.String("test"), objc.Get("AVAudioSession").Get("sharedInstance"))
 			if didFinishPlaying {
 				ok <- true
 			}

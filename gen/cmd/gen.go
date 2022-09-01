@@ -28,6 +28,10 @@ func main() {
 			loadFile("api/foundation/nsthread.objc.json"),
 			loadFile("api/foundation/nsurl.objc.json"),
 			loadFile("api/foundation/nsurlrequest.objc.json"),
+			loadFile("api/foundation/nsnotification.objc.json"),
+			loadFile("api/foundation/nsnotificationname.objc.json"),
+			loadFile("api/foundation/nsoperationqueue.objc.json"),
+			loadFile("api/foundation/nsnotificationcenter.objc.json"),
 		}},
 
 		{"cocoa", []schemaLoader{
