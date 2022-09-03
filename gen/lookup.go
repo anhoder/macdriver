@@ -120,7 +120,7 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 			FromCGoFmt: corePkg + "NSUInteger(%s)",
 			ToCGoFmt:   "C.ulong(%s)",
 		}
-	case "NSInteger", "NSWindowTitleVisibility", "NSWindowLevel", "NSApplicationActivationPolicy", "NSControlStateValue", "NSPopoverBehavior":
+	case "NSInteger", "NSWindowTitleVisibility", "NSWindowLevel", "NSApplicationActivationPolicy", "NSControlStateValue", "NSPopoverBehavior", "AVPlayerActionAtItemEnd":
 		return typeMapping{
 			GoType:     corePkg + "NSInteger",
 			CType:      "long",
@@ -161,6 +161,27 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 			CType:      "int",
 			FromCGoFmt: "int32(%s)",
 			ToCGoFmt:   "C.int(%s)",
+		}
+	case "int32_t":
+		return typeMapping{
+			GoType:     "int32",
+			CType:      "int32_t",
+			FromCGoFmt: "int32(%s)",
+			ToCGoFmt:   "C.int32_t(%s)",
+		}
+	case "uint32_t":
+		return typeMapping{
+			GoType:     "uint32",
+			CType:      "uint32_t",
+			FromCGoFmt: "uint32(%s)",
+			ToCGoFmt:   "C.uint32_t(%s)",
+		}
+	case "int64_t":
+		return typeMapping{
+			GoType:     "int64",
+			CType:      "int64_t",
+			FromCGoFmt: "int64(%s)",
+			ToCGoFmt:   "C.int64_t(%s)",
 		}
 	case "float":
 		return typeMapping{
@@ -203,6 +224,13 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 			CType:      "NSSize",
 			FromCGoFmt: "*(*" + corePkg + "NSSize)(unsafe.Pointer(&%s))",
 			ToCGoFmt:   "*(*C.NSSize)(unsafe.Pointer(&%s))",
+		}
+	case "CMTime":
+		return typeMapping{
+			GoType:     corePkg + "CMTime",
+			CType:      "CMTime",
+			FromCGoFmt: "*(*" + corePkg + "CMTime)(unsafe.Pointer(&%s))",
+			ToCGoFmt:   "*(*C.CMTime)(unsafe.Pointer(&%s))",
 		}
 	case "id":
 		return typeMapping{

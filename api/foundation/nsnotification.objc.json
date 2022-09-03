@@ -119,7 +119,7 @@
         }
       },
       {
-        "Name": "object",
+        "Name": "object_",
         "Description": "The object associated with the notification.",
         "Declaration": "@property(nullable, readonly, retain) id object;",
         "Platforms": [

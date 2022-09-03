@@ -661,9 +661,19 @@ void* NSBundle_inst_objectForInfoDictionaryKey_(void *id, void* key) {
 		objectForInfoDictionaryKey: key];
 }
 
+BOOL NSBundle_inst_preflightAndReturnError_(void *id, void* error) {
+	return [(NSBundle*)id
+		preflightAndReturnError: error];
+}
+
 BOOL NSBundle_inst_load(void *id) {
 	return [(NSBundle*)id
 		load];
+}
+
+BOOL NSBundle_inst_loadAndReturnError_(void *id, void* error) {
+	return [(NSBundle*)id
+		loadAndReturnError: error];
 }
 
 BOOL NSBundle_inst_unload(void *id) {
@@ -8702,11 +8712,37 @@ func (x gen_NSBundle) ObjectForInfoDictionaryKey_(
 	return
 }
 
+func (x gen_NSBundle) PreflightAndReturnError_(
+	error core.NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSBundle_inst_preflightAndReturnError_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func (x gen_NSBundle) Load() (
 	r0 bool,
 ) {
 	ret := C.NSBundle_inst_load(
 		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSBundle) LoadAndReturnError_(
+	error core.NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSBundle_inst_loadAndReturnError_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(error),
 	)
 	r0 = convertObjCBoolToGo(ret)
 	return

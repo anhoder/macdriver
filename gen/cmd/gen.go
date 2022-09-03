@@ -20,10 +20,14 @@ func main() {
 			loadFile("api/foundation/nsarray.objc.json"),
 			loadFile("api/foundation/nsattributedstring.objc.json"),
 			loadFile("api/foundation/nsdata.objc.json"),
+			loadFile("api/foundation/nsdate.objc.json"),
 			loadFile("api/foundation/nsdictionary.objc.json"),
 			loadFile("api/foundation/nsnumber.objc.json"),
 			loadFile("api/foundation/nsrunloop.objc.json"),
 			loadFile("api/foundation/nsstring.objc.json"),
+			loadFile("api/foundation/nserrordomain.objc.json"),
+			loadFile("api/foundation/nserroruserinfokey.objc.json"),
+			loadFile("api/foundation/nserror.objc.json"),
 			loadFile("api/foundation/nstimeinterval.objc.json"),
 			loadFile("api/foundation/nsthread.objc.json"),
 			loadFile("api/foundation/nsurl.objc.json"),
@@ -122,6 +126,15 @@ func main() {
 				})
 				return nil
 			}),
+		}},
+
+		{"avcore", []schemaLoader{
+			loadFile("api/avfoundation/avplayeractionatitemend.objc.json"),
+			loadFile("api/avfoundation/avplayerstatus.objc.json"),
+			loadFile("api/avfoundation/avasset.objc.json"),
+			loadFile("api/avfoundation/avplayeritem.objc.json"),
+			loadFile("api/avfoundation/avplayer.objc.json"),
+			loadFile("api/avfoundation/avqueueplayer.objc.json"),
 		}},
 
 		{"webkit", []schemaLoader{

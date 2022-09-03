@@ -1,0 +1,1572 @@
+{
+  "Class": {
+    "Name": "AVAsset",
+    "Description": "An object that models timed audiovisual media.",
+    "Declaration": "@interface AVAsset : NSObject",
+    "Frameworks": [
+      "AVFoundation"
+    ],
+    "Platforms": [
+      "iOS 4.0+",
+      "iPadOS 4.0+",
+      "macOS 10.7+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 2.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "loadTrackWithTrackID:completionHandler:",
+        "Description": "Loads a track that contains the specified identifier.",
+        "Declaration": "- (void)loadTrackWithTrackID:(CMPersistentTrackID)trackID \n           completionHandler:(void (^)(AVAssetTrack *, NSError *))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746529-loadtrackwithtrackid?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "trackID",
+            "Type": {
+              "Name": "CMPersistentTrackID"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "AVAssetTrack",
+                      "IsPtr": true
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadTracksWithMediaType:completionHandler:",
+        "Description": "Loads tracks that contain media of a specified type.",
+        "Declaration": "- (void)loadTracksWithMediaType:(AVMediaType)mediaType \n              completionHandler:(void (^)(NSArray\u003cAVAssetTrack *\u003e *, NSError *))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746531-loadtrackswithmediatype?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "mediaType",
+            "Type": {
+              "Name": "AVMediaType"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "NSArray",
+                      "IsPtr": true,
+                      "Params": [
+                        {
+                          "Name": "AVAssetTrack",
+                          "IsPtr": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadTracksWithMediaCharacteristic:completionHandler:",
+        "Description": "Loads tracks that contain media of a specified characteristic.",
+        "Declaration": "- (void)loadTracksWithMediaCharacteristic:(AVMediaCharacteristic)mediaCharacteristic \n                        completionHandler:(void (^)(NSArray\u003cAVAssetTrack *\u003e *, NSError *))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746530-loadtrackswithmediacharacteristi?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "mediaCharacteristic",
+            "Type": {
+              "Name": "AVMediaCharacteristic"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "NSArray",
+                      "IsPtr": true,
+                      "Params": [
+                        {
+                          "Name": "AVAssetTrack",
+                          "IsPtr": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "findUnusedTrackIDWithCompletionHandler:",
+        "Description": "Loads an identifier that no other track in the asset uses.",
+        "Declaration": "- (void)findUnusedTrackIDWithCompletionHandler:(void (^)(CMPersistentTrackID, NSError *))completionHandler;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746590-findunusedtrackidwithcompletionh?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "CMPersistentTrackID"
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadMetadataForFormat:completionHandler:",
+        "Description": "Loads an array of metadata items that the asset contains for the specified format.",
+        "Declaration": "- (void)loadMetadataForFormat:(AVMetadataFormat)format \n            completionHandler:(void (^)(NSArray\u003cAVMetadataItem *\u003e *, NSError *))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746528-loadmetadataforformat?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "format",
+            "Type": {
+              "Name": "AVMetadataFormat"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "NSArray",
+                      "IsPtr": true,
+                      "Params": [
+                        {
+                          "Name": "AVMetadataItem",
+                          "IsPtr": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadMediaSelectionGroupForMediaCharacteristic:completionHandler:",
+        "Description": "Loads a media selection group that contains one or more options with the specified media characteristic.",
+        "Declaration": "- (void)loadMediaSelectionGroupForMediaCharacteristic:(AVMediaCharacteristic)mediaCharacteristic \n                                    completionHandler:(void (^)(AVMediaSelectionGroup *, NSError *))completionHandler;\n",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746527-loadmediaselectiongroupformediac?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "mediaCharacteristic",
+            "Type": {
+              "Name": "AVMediaCharacteristic"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "AVMediaSelectionGroup",
+                      "IsPtr": true
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadChapterMetadataGroupsWithTitleLocale:containingItemsWithCommonKeys:completionHandler:",
+        "Description": "Loads chapter metadata that contains the specified title locale and common keys.",
+        "Declaration": "- (void)loadChapterMetadataGroupsWithTitleLocale:(NSLocale *)locale \n                   containingItemsWithCommonKeys:(NSArray\u003cAVMetadataKey\u003e *)commonKeys \n                               completionHandler:(void (^)(NSArray\u003cAVTimedMetadataGroup *\u003e *, NSError *))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746526-loadchaptermetadatagroupswithtit?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "locale",
+            "Type": {
+              "Name": "NSLocale",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "commonKeys",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "AVMetadataKey"
+                }
+              ]
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "NSArray",
+                      "IsPtr": true,
+                      "Params": [
+                        {
+                          "Name": "AVTimedMetadataGroup",
+                          "IsPtr": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loadChapterMetadataGroupsBestMatchingPreferredLanguages:completionHandler:",
+        "Description": "Loads chapter metadata with a locale that best matches the list of preferred languages.",
+        "Declaration": "- (void)loadChapterMetadataGroupsBestMatchingPreferredLanguages:(NSArray\u003cNSString *\u003e *)preferredLanguages \n                                              completionHandler:(void (^)(NSArray\u003cAVTimedMetadataGroup *\u003e *, NSError *))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3746525-loadchaptermetadatagroupsbestmat?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "preferredLanguages",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "NSString",
+                  "IsPtr": true
+                }
+              ]
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "NSArray",
+                      "IsPtr": true,
+                      "Params": [
+                        {
+                          "Name": "AVTimedMetadataGroup",
+                          "IsPtr": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "cancelLoading",
+        "Description": "Cancels all pending requests to asynchronously load property values.",
+        "Declaration": "- (void)cancelLoading;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1388722-cancelloading?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "trackWithTrackID:",
+        "Description": "Returns a track that contains the specified identifier.",
+        "Declaration": "- (AVAssetTrack *)trackWithTrackID:(CMPersistentTrackID)trackID;",
+        "Platforms": [
+          "iOS 4.0–16.0",
+          "iPadOS 4.0–16.0",
+          "macOS 10.7–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390145-trackwithtrackid?language=objc",
+        "Return": {
+          "Name": "AVAssetTrack",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "trackID",
+            "Type": {
+              "Name": "CMPersistentTrackID"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "tracksWithMediaType:",
+        "Description": "Returns tracks that contain media of a specified type.",
+        "Declaration": "- (NSArray\u003cAVAssetTrack *\u003e *)tracksWithMediaType:(AVMediaType)mediaType;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0–16.0",
+          "iPadOS 4.0–16.0",
+          "macOS 10.7–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1387140-trackswithmediatype?language=objc",
+        "Return": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVAssetTrack",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Args": [
+          {
+            "Name": "mediaType",
+            "Type": {
+              "Name": "AVMediaType"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "tracksWithMediaCharacteristic:",
+        "Description": "Returns an array of asset tracks matching the specified media characteristic.",
+        "Declaration": "- (NSArray\u003cAVAssetTrack *\u003e *)tracksWithMediaCharacteristic:(AVMediaCharacteristic)mediaCharacteristic;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0–16.0",
+          "iPadOS 4.0–16.0",
+          "macOS 10.7–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389554-trackswithmediacharacteristic?language=objc",
+        "Return": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVAssetTrack",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Args": [
+          {
+            "Name": "mediaCharacteristic",
+            "Type": {
+              "Name": "AVMediaCharacteristic"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "unusedTrackID",
+        "Description": "Returns an identifier that no other tracks in the asset use.",
+        "Declaration": "- (CMPersistentTrackID)unusedTrackID;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0–16.0",
+          "iPadOS 4.0–16.0",
+          "macOS 10.7–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1385898-unusedtrackid?language=objc",
+        "Return": {
+          "Name": "CMPersistentTrackID"
+        },
+        "Args": null
+      },
+      {
+        "Name": "metadataForFormat:",
+        "Description": "Returns an array of metadata items from the container with the specified format.",
+        "Declaration": "- (NSArray\u003cAVMetadataItem *\u003e *)metadataForFormat:(AVMetadataFormat)format;",
+        "Platforms": [
+          "iOS 4.0–16.0",
+          "iPadOS 4.0–16.0",
+          "macOS 10.7–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1387759-metadataforformat?language=objc",
+        "Return": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMetadataItem",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Args": [
+          {
+            "Name": "format",
+            "Type": {
+              "Name": "AVMetadataFormat"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "mediaSelectionGroupForMediaCharacteristic:",
+        "Description": "Returns a media selection group that contains one or more options with the specified media characteristic.",
+        "Declaration": "- (AVMediaSelectionGroup *)mediaSelectionGroupForMediaCharacteristic:(AVMediaCharacteristic)mediaCharacteristic;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0–16.0",
+          "iPadOS 5.0–16.0",
+          "macOS 10.8–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1387496-mediaselectiongroupformediachara?language=objc",
+        "Return": {
+          "Name": "AVMediaSelectionGroup",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "mediaCharacteristic",
+            "Type": {
+              "Name": "AVMediaCharacteristic"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "chapterMetadataGroupsWithTitleLocale:containingItemsWithCommonKeys:",
+        "Description": "Returns an array of chapters that contain the specified title locale and common keys.",
+        "Declaration": "- (NSArray\u003cAVTimedMetadataGroup *\u003e *)chapterMetadataGroupsWithTitleLocale:(NSLocale *)locale \n                                            containingItemsWithCommonKeys:(NSArray\u003cAVMetadataKey\u003e *)commonKeys;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3–16.0",
+          "iPadOS 4.3–16.0",
+          "macOS 10.7–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1388966-chaptermetadatagroupswithtitlelo?language=objc",
+        "Return": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVTimedMetadataGroup",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Args": [
+          {
+            "Name": "locale",
+            "Type": {
+              "Name": "NSLocale",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "commonKeys",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "AVMetadataKey"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Name": "chapterMetadataGroupsBestMatchingPreferredLanguages:",
+        "Description": "Returns an array of chapters with a locale that best matches the list of preferred languages.",
+        "Declaration": "- (NSArray\u003cAVTimedMetadataGroup *\u003e *)chapterMetadataGroupsBestMatchingPreferredLanguages:(NSArray\u003cNSString *\u003e *)preferredLanguages;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0–16.0",
+          "iPadOS 6.0–16.0",
+          "macOS 10.8–13.0",
+          "Mac Catalyst 13.1–16.0",
+          "tvOS 9.0–16.0",
+          "watchOS 2.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390909-chaptermetadatagroupsbestmatchin?language=objc",
+        "Return": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVTimedMetadataGroup",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Args": [
+          {
+            "Name": "preferredLanguages",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "NSString",
+                  "IsPtr": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "InstanceProperties": [
+      {
+        "Name": "referenceRestrictions",
+        "Description": "The restrictions that an asset places on how it resolves references to external media.",
+        "Declaration": "@property(nonatomic, readonly) AVAssetReferenceRestrictions referenceRestrictions;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390489-referencerestrictions?language=objc",
+        "Type": {
+          "Name": "AVAssetReferenceRestrictions"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "duration",
+        "Description": "A time value that indicates the asset’s duration.",
+        "Declaration": "@property(nonatomic, readonly) CMTime duration;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389400-duration?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "providesPreciseDurationAndTiming",
+        "Description": "A Boolean value that indicates whether the asset provides precise duration and timing.",
+        "Declaration": "@property(nonatomic, readonly) BOOL providesPreciseDurationAndTiming;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390850-providesprecisedurationandtiming?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "minimumTimeOffsetFromLive",
+        "Description": "A time value that indicates how closely playback follows the latest live stream content.",
+        "Declaration": "@property(nonatomic, readonly) CMTime minimumTimeOffsetFromLive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/3197641-minimumtimeoffsetfromlive?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "tracks",
+        "Description": "The tracks an asset contains.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVAssetTrack *\u003e *tracks;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1387953-tracks?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVAssetTrack",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "trackGroups",
+        "Description": "The track groups an asset contains.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVAssetTrackGroup *\u003e *trackGroups;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390697-trackgroups?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVAssetTrackGroup",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "metadata",
+        "Description": "An array of metadata items for all metadata identifiers for which a value is available.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVMetadataItem *\u003e *metadata;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1386884-metadata?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMetadataItem",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "commonMetadata",
+        "Description": "The metadata items an asset contains for common metadata identifiers that provide a value.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVMetadataItem *\u003e *commonMetadata;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390498-commonmetadata?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMetadataItem",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "availableMetadataFormats",
+        "Description": "The metadata formats this asset contains.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVMetadataFormat\u003e *availableMetadataFormats;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1385823-availablemetadataformats?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMetadataFormat"
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "creationDate",
+        "Description": "A metadata item that indicates the asset’s creation date.",
+        "Declaration": "@property(nonatomic, readonly, nullable) AVMetadataItem *creationDate;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1386342-creationdate?language=objc",
+        "Type": {
+          "Name": "AVMetadataItem",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "lyrics",
+        "Description": "The lyrics of the asset in a language suitable for the current locale.",
+        "Declaration": "@property(nonatomic, readonly, nullable) NSString *lyrics;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1388104-lyrics?language=objc",
+        "Type": {
+          "Name": "NSString",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "playable",
+        "Description": "A Boolean value that indicates whether the asset has playable content.",
+        "Declaration": "@property(nonatomic, readonly, getter=isPlayable) BOOL playable;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1385974-playable?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isPlayable",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "exportable",
+        "Description": "A Boolean value that indicates whether you can export this asset using an export session.",
+        "Declaration": "@property(nonatomic, readonly, getter=isExportable) BOOL exportable;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389245-exportable?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isExportable",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "readable",
+        "Description": "A Boolean value that indicates whether you can extract the asset’s media data using an asset reader.",
+        "Declaration": "@property(nonatomic, readonly, getter=isReadable) BOOL readable;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390475-readable?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isReadable",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "composable",
+        "Description": "A Boolean value that indicates whether you can use the asset as a segment of a composition track.",
+        "Declaration": "@property(nonatomic, readonly, getter=isComposable) BOOL composable;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1386129-composable?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isComposable",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "compatibleWithAirPlayVideo",
+        "Description": "A Boolean value that indicates whether the asset is compatible with AirPlay Video.",
+        "Declaration": "@property(nonatomic, readonly, getter=isCompatibleWithAirPlayVideo) BOOL compatibleWithAirPlayVideo;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390333-compatiblewithairplayvideo?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isCompatibleWithAirPlayVideo",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "compatibleWithSavedPhotosAlbum",
+        "Description": "A Boolean value that indicates whether you can write the asset to the Saved Photos album.",
+        "Declaration": "@property(nonatomic, readonly, getter=isCompatibleWithSavedPhotosAlbum) BOOL compatibleWithSavedPhotosAlbum;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1616742-compatiblewithsavedphotosalbum?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isCompatibleWithSavedPhotosAlbum",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredRate",
+        "Description": "The asset’s rate preference for playing its media.",
+        "Declaration": "@property(nonatomic, readonly) float preferredRate;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389912-preferredrate?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredVolume",
+        "Description": "The asset’s volume preference for playing its audible media.",
+        "Declaration": "@property(nonatomic, readonly) float preferredVolume;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1390457-preferredvolume?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredTransform",
+        "Description": "The asset’s transform preference to apply to its visual content during presentation or processing.",
+        "Declaration": "@property(nonatomic, readonly) CGAffineTransform preferredTransform;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1385906-preferredtransform?language=objc",
+        "Type": {
+          "Name": "CGAffineTransform"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredMediaSelection",
+        "Description": "The default media selections for this asset’s media selection groups.",
+        "Declaration": "@property(nonatomic, readonly) AVMediaSelection *preferredMediaSelection;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1386122-preferredmediaselection?language=objc",
+        "Type": {
+          "Name": "AVMediaSelection",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredDisplayCriteria",
+        "Description": "The asset’s display mode preference for optimal playback of its content.",
+        "Declaration": "@property(nonatomic, readonly) AVDisplayCriteria *preferredDisplayCriteria;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 11.2+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/2935636-preferreddisplaycriteria?language=objc",
+        "Type": {
+          "Name": "AVDisplayCriteria",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "allMediaSelections",
+        "Description": "The array of available media selections for this asset.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVMediaSelection *\u003e *allMediaSelections;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+",
+          "watchOS 4.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/2890796-allmediaselections?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMediaSelection",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "availableMediaCharacteristicsWithMediaSelectionOptions",
+        "Description": "An array of media characteristics for which a media selection option is available.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVMediaCharacteristic\u003e *availableMediaCharacteristicsWithMediaSelectionOptions;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389433-availablemediacharacteristicswit?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMediaCharacteristic"
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "availableChapterLocales",
+        "Description": "The locales of the asset’s chapter metadata.",
+        "Declaration": "@property(readonly) NSArray\u003cNSLocale *\u003e *availableChapterLocales;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1388228-availablechapterlocales?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSLocale",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "hasProtectedContent",
+        "Description": "A Boolean value that indicates whether the asset contains protected content.",
+        "Declaration": "@property(nonatomic, readonly) BOOL hasProtectedContent;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.2+",
+          "iPadOS 4.2+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389223-hasprotectedcontent?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canContainFragments",
+        "Description": "A Boolean value that indicates whether you can extend the asset by fragments.",
+        "Declaration": "@property(nonatomic, readonly) BOOL canContainFragments;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389520-cancontainfragments?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "containsFragments",
+        "Description": "A Boolean value that indicates whether at least one movie fragment extends the asset.",
+        "Declaration": "@property(nonatomic, readonly) BOOL containsFragments;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1385589-containsfragments?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "overallDurationHint",
+        "Description": "The total duration of fragments that currently exist, or may exist in the future.",
+        "Declaration": "@property(nonatomic, readonly) CMTime overallDurationHint;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 10.2+",
+          "iPadOS 10.2+",
+          "macOS 10.12.2+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.2+",
+          "watchOS 3.2+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/2715834-overalldurationhint?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "naturalSize",
+        "Description": "The encoded or authored size of the visual portion of the asset.",
+        "Declaration": "@property(nonatomic, readonly) CGSize naturalSize;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0–5.0",
+          "iPadOS 4.0–5.0",
+          "macOS 10.7–10.8",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1508715-naturalsize?language=objc",
+        "Type": {
+          "Name": "CGSize"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ],
+    "TypeMethods": [
+      {
+        "Name": "assetWithURL:",
+        "Description": "Creates an asset that models the media at the specified URL.",
+        "Declaration": "+ (instancetype)assetWithURL:(NSURL *)URL;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avasset/1389943-assetwithurl?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "URL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T10:02:46.194917+08:00",
+  "Version": 2
+}

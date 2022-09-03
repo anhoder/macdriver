@@ -1,0 +1,81 @@
+{
+  "Enum": {
+    "Name": "AVPlayerStatus",
+    "Description": "Status values that indicate whether a player can successfully play media.",
+    "Declaration": "typedef enum AVPlayerStatus : NSInteger {\n    ...\n} AVPlayerStatus;",
+    "Frameworks": [
+      "AVFoundation"
+    ],
+    "Platforms": [
+      "iOS 4.0+",
+      "iPadOS 4.0+",
+      "macOS 10.7+",
+      "Mac Catalyst 13.0+",
+      "tvOS 9.0+",
+      "watchOS 7.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayerstatus?language=objc",
+    "Type": {
+      "Name": "NSInteger"
+    },
+    "Cases": [
+      {
+        "Name": "AVPlayerStatusUnknown",
+        "Description": "A value that indicates a player hasn’t attempted to load media for playback.",
+        "Declaration": "AVPlayerStatusUnknown = 0",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayerstatus/avplayerstatusunknown?language=objc",
+        "Type": {},
+        "Value": "0"
+      },
+      {
+        "Name": "AVPlayerStatusReadyToPlay",
+        "Description": "A value that indicates the player is ready to media.",
+        "Declaration": "AVPlayerStatusReadyToPlay = 1",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayerstatus/avplayerstatusreadytoplay?language=objc",
+        "Type": {},
+        "Value": "1"
+      },
+      {
+        "Name": "AVPlayerStatusFailed",
+        "Description": "A value that indicates the player can no longer play media due to an error.",
+        "Declaration": "AVPlayerStatusFailed = 2",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayerstatus/avplayerstatusfailed?language=objc",
+        "Type": {},
+        "Value": "2"
+      }
+    ]
+  },
+  "Kind": "enum",
+  "PullDate": "2022-09-03T09:39:24.183538+08:00",
+  "Version": 2
+}

@@ -1,0 +1,1501 @@
+{
+  "Class": {
+    "Name": "AVPlayer",
+    "Description": "An object that provides the interface to control the player’s transport behavior.",
+    "Declaration": "@interface AVPlayer : NSObject",
+    "Platforms": [
+      "iOS 4.0+",
+      "iPadOS 4.0+",
+      "macOS 10.7+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 2.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "initWithURL:",
+        "Description": "Creates a new player to play a single audiovisual resource referenced by a given URL.",
+        "Declaration": "- (instancetype)initWithURL:(NSURL *)URL;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1385706-initwithurl?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "URL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "initWithPlayerItem:",
+        "Description": "Creates a new player to play the specified player item.",
+        "Declaration": "- (instancetype)initWithPlayerItem:(AVPlayerItem *)item;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387104-initwithplayeritem?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "item",
+            "Type": {
+              "Name": "AVPlayerItem",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "replaceCurrentItemWithPlayerItem:",
+        "Description": "Replaces the current item with a new item.",
+        "Declaration": "- (void)replaceCurrentItemWithPlayerItem:(AVPlayerItem *)item;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1390806-replacecurrentitemwithplayeritem?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "item",
+            "Type": {
+              "Name": "AVPlayerItem",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "play",
+        "Description": "Begins playback of the current item.",
+        "Declaration": "- (void)play;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1386726-play?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "pause",
+        "Description": "Pauses playback of the current item.",
+        "Declaration": "- (void)pause;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387895-pause?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "currentTime",
+        "Description": "Returns the current time of the current player item.",
+        "Declaration": "- (CMTime)currentTime;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1390404-currenttime?language=objc",
+        "Return": {
+          "Name": "CMTime"
+        },
+        "Args": null
+      },
+      {
+        "Name": "addPeriodicTimeObserverForInterval:queue:usingBlock:",
+        "Description": "Requests the periodic invocation of a given block during playback to report changing time.",
+        "Declaration": "- (id)addPeriodicTimeObserverForInterval:(CMTime)interval \n                                   queue:(dispatch_queue_t)queue \n                              usingBlock:(void (^)(CMTime time))block;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1385829-addperiodictimeobserverforinterv?language=objc",
+        "Return": {
+          "Name": "id"
+        },
+        "Args": [
+          {
+            "Name": "interval",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "queue",
+            "Type": {
+              "Name": "dispatch_queue_t"
+            }
+          },
+          {
+            "Name": "block",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "time",
+                    "Type": {
+                      "Name": "CMTime"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addBoundaryTimeObserverForTimes:queue:usingBlock:",
+        "Description": "Requests the invocation of a block when specified times are traversed during normal playback.",
+        "Declaration": "- (id)addBoundaryTimeObserverForTimes:(NSArray\u003cNSValue *\u003e *)times \n                                queue:(dispatch_queue_t)queue \n                           usingBlock:(void (^)(void))block;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1388027-addboundarytimeobserverfortimes?language=objc",
+        "Return": {
+          "Name": "id"
+        },
+        "Args": [
+          {
+            "Name": "times",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "NSValue",
+                  "IsPtr": true
+                }
+              ]
+            }
+          },
+          {
+            "Name": "queue",
+            "Type": {
+              "Name": "dispatch_queue_t"
+            }
+          },
+          {
+            "Name": "block",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeTimeObserver:",
+        "Description": "Cancels a previously registered periodic or boundary time observer.",
+        "Declaration": "- (void)removeTimeObserver:(id)observer;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387552-removetimeobserver?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "observer",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToTime:",
+        "Description": "Requests that the player seek to a specified time.",
+        "Declaration": "- (void)seekToTime:(CMTime)time;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1385953-seektotime?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "time",
+            "Type": {
+              "Name": "CMTime"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToTime:completionHandler:",
+        "Description": "Requests that the player seek to a specified time, and to notify you when the seek is complete.",
+        "Declaration": "- (void)seekToTime:(CMTime)time \n completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387018-seektotime?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "time",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToTime:toleranceBefore:toleranceAfter:",
+        "Description": "Requests that the player seek to a specified time with the amount of accuracy specified by the time tolerance values.",
+        "Declaration": "- (void)seekToTime:(CMTime)time \n   toleranceBefore:(CMTime)toleranceBefore \n    toleranceAfter:(CMTime)toleranceAfter;\n",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387741-seektotime?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "time",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "toleranceBefore",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "toleranceAfter",
+            "Type": {
+              "Name": "CMTime"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToTime:toleranceBefore:toleranceAfter:completionHandler:",
+        "Description": "Requests that the player seek to a specified time with the amount of accuracy specified by the time tolerance values, and to notify you when the seek is complete.",
+        "Declaration": "- (void)seekToTime:(CMTime)time \n   toleranceBefore:(CMTime)toleranceBefore \n    toleranceAfter:(CMTime)toleranceAfter \n completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1388493-seektotime?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "time",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "toleranceBefore",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "toleranceAfter",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToDate:",
+        "Description": "Requests that the player seek to a specified date.",
+        "Declaration": "- (void)seekToDate:(NSDate *)date;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1386114-seektodate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "date",
+            "Type": {
+              "Name": "NSDate",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToDate:completionHandler:",
+        "Description": "Requests that the player seek to a specified date, and to notify you when the seek is complete.",
+        "Declaration": "- (void)seekToDate:(NSDate *)date \n completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1386108-seektodate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "date",
+            "Type": {
+              "Name": "NSDate",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "playImmediatelyAtRate:",
+        "Description": "Plays the available media data immediately, at the specified rate.",
+        "Declaration": "- (void)playImmediatelyAtRate:(float)rate;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1643480-playimmediatelyatrate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "rate",
+            "Type": {
+              "Name": "float"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "mediaSelectionCriteriaForMediaCharacteristic:",
+        "Description": "Returns the automatic selection criteria for media items with the specified media characteristic.",
+        "Declaration": "- (AVPlayerMediaSelectionCriteria *)mediaSelectionCriteriaForMediaCharacteristic:(AVMediaCharacteristic)mediaCharacteristic;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387825-mediaselectioncriteriaformediach?language=objc",
+        "Return": {
+          "Name": "AVPlayerMediaSelectionCriteria",
+          "IsPtr": true
+        },
+        "Args": [
+          {
+            "Name": "mediaCharacteristic",
+            "Type": {
+              "Name": "AVMediaCharacteristic"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "setMediaSelectionCriteria:forMediaCharacteristic:",
+        "Description": "Applies automatic selection criteria for media that has the specified media characteristic.",
+        "Declaration": "- (void)setMediaSelectionCriteria:(AVPlayerMediaSelectionCriteria *)criteria \n           forMediaCharacteristic:(AVMediaCharacteristic)mediaCharacteristic;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1390563-setmediaselectioncriteria?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "criteria",
+            "Type": {
+              "Name": "AVPlayerMediaSelectionCriteria",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "mediaCharacteristic",
+            "Type": {
+              "Name": "AVMediaCharacteristic"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "setRate:time:atHostTime:",
+        "Description": "Synchronizes the playback rate and time of the current item with an external source.",
+        "Declaration": "- (void)setRate:(float)rate \n           time:(CMTime)itemTime \n     atHostTime:(CMTime)hostClockTime;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1386591-setrate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "rate",
+            "Type": {
+              "Name": "float"
+            }
+          },
+          {
+            "Name": "itemTime",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "hostClockTime",
+            "Type": {
+              "Name": "CMTime"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "prerollAtRate:completionHandler:",
+        "Description": "Begins loading media data to prime the media pipelines for playback.",
+        "Declaration": "- (void)prerollAtRate:(float)rate \n    completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1389712-prerollatrate?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "rate",
+            "Type": {
+              "Name": "float"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "cancelPendingPrerolls",
+        "Description": "Cancels any pending preroll requests and invokes the corresponding completion handlers, if present.",
+        "Declaration": "- (void)cancelPendingPrerolls;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1388260-cancelpendingprerolls?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      }
+    ],
+    "InstanceProperties": [
+      {
+        "Name": "currentItem",
+        "Description": "The item for which the player is currently controlling playback.",
+        "Declaration": "@property(readonly) AVPlayerItem *currentItem;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387569-currentitem?language=objc",
+        "Type": {
+          "Name": "AVPlayerItem",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "status",
+        "Description": "A value that indicates the readiness of a player object for playback.",
+        "Declaration": "@property(readonly) AVPlayerStatus status;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1388096-status?language=objc",
+        "Type": {
+          "Name": "AVPlayerStatus"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "error",
+        "Description": "An error that caused a failure.",
+        "Declaration": "@property(readonly) NSError *error;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387764-error?language=objc",
+        "Type": {
+          "Name": "NSError",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "defaultRate",
+        "Description": "A default rate at which to begin playback.",
+        "Declaration": "@property(nonatomic) float defaultRate;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 16.0+",
+          "Beta",
+          "iPadOS 16.0+",
+          "Beta",
+          "macOS 13.0+",
+          "Beta",
+          "Mac Catalyst 16.0+",
+          "Beta",
+          "tvOS 16.0+",
+          "Beta",
+          "watchOS 9.0+",
+          "Beta"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/3929373-defaultrate?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "rate",
+        "Description": "The current playback rate.",
+        "Declaration": "@property float rate;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1388846-rate?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "automaticallyWaitsToMinimizeStalling",
+        "Description": "A Boolean value that indicates whether the player should automatically delay playback in order to minimize stalling.",
+        "Declaration": "@property(nonatomic) BOOL automaticallyWaitsToMinimizeStalling;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1643482-automaticallywaitstominimizestal?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "reasonForWaitingToPlay",
+        "Description": "The reason the player is currently waiting for playback to begin or resume.",
+        "Declaration": "@property(readonly) AVPlayerWaitingReason reasonForWaitingToPlay;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1643486-reasonforwaitingtoplay?language=objc",
+        "Type": {
+          "Name": "AVPlayerWaitingReason"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "timeControlStatus",
+        "Description": "A value that indicates whether playback is in progress, paused indefinitely, or waiting for network conditions to improve.",
+        "Declaration": "@property(readonly) AVPlayerTimeControlStatus timeControlStatus;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1643485-timecontrolstatus?language=objc",
+        "Type": {
+          "Name": "AVPlayerTimeControlStatus"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "actionAtItemEnd",
+        "Description": "The action to perform when the current player item has finished playing.",
+        "Declaration": "@property AVPlayerActionAtItemEnd actionAtItemEnd;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387376-actionatitemend?language=objc",
+        "Type": {
+          "Name": "AVPlayerActionAtItemEnd"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "appliesMediaSelectionCriteriaAutomatically",
+        "Description": "A Boolean value that indicates whether the receiver should apply the current selection criteria automatically to player items.",
+        "Declaration": "@property BOOL appliesMediaSelectionCriteriaAutomatically;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387178-appliesmediaselectioncriteriaaut?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "volume",
+        "Description": "The audio playback volume for the player.",
+        "Declaration": "@property float volume;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1390127-volume?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "muted",
+        "Description": "A Boolean value that indicates whether the audio output of the player is muted.",
+        "Declaration": "@property(getter=isMuted) BOOL muted;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387544-muted?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isMuted"
+        }
+      },
+      {
+        "Name": "allowedAudioSpatializationFormats",
+        "Description": "The source audio channel layouts the player item supports for spatialization.",
+        "Declaration": "@property(nonatomic, assign) AVAudioSpatializationFormats allowedAudioSpatializationFormats;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+",
+          "tvOS 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3601108-allowedaudiospatializationformat?language=objc",
+        "Type": {
+          "Name": "AVAudioSpatializationFormats"
+        },
+        "Attrs": {
+          "assign": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "audioSpatializationAllowed",
+        "Description": "A Boolean value that indicates whether the player item allows spatialized audio playback.",
+        "Declaration": "@property(nonatomic, assign, getter=isAudioSpatializationAllowed) BOOL audioSpatializationAllowed;",
+        "Platforms": [
+          "iOS 13.0–14.0",
+          "iPadOS 13.0–14.0",
+          "macOS 10.15–11.0",
+          "Mac Catalyst 13.1–14.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3237174-audiospatializationallowed?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "assign": true,
+          "getter": "isAudioSpatializationAllowed",
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "audiovisualBackgroundPlaybackPolicy",
+        "Description": "A policy that determines how playback of audiovisual media continues when the app transitions to the background.",
+        "Declaration": "@property(nonatomic) AVPlayerAudiovisualBackgroundPlaybackPolicy audiovisualBackgroundPlaybackPolicy;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/3787548-audiovisualbackgroundplaybackpol?language=objc",
+        "Type": {
+          "Name": "AVPlayerAudiovisualBackgroundPlaybackPolicy"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "allowsExternalPlayback",
+        "Description": "A Boolean value that indicates whether the player allows switching to external playback mode.",
+        "Declaration": "@property BOOL allowsExternalPlayback;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387441-allowsexternalplayback?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "externalPlaybackActive",
+        "Description": "A Boolean value that indicates whether the player is currently playing video in external playback mode.",
+        "Declaration": "@property(readonly, getter=isExternalPlaybackActive) BOOL externalPlaybackActive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1388982-externalplaybackactive?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isExternalPlaybackActive",
+          "readonly": true
+        }
+      },
+      {
+        "Name": "usesExternalPlaybackWhileExternalScreenIsActive",
+        "Description": "A Boolean value that indicates whether the player should automatically switch to external playback mode while the external screen mode is active.",
+        "Declaration": "@property BOOL usesExternalPlaybackWhileExternalScreenIsActive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1624255-usesexternalplaybackwhileexterna?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "externalPlaybackVideoGravity",
+        "Description": "The video gravity of the player for external playback mode only.",
+        "Declaration": "@property(nonatomic, copy) AVLayerVideoGravity externalPlaybackVideoGravity;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1624251-externalplaybackvideogravity?language=objc",
+        "Type": {
+          "Name": "AVLayerVideoGravity"
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "playbackCoordinator",
+        "Description": "The playback coordinator for the player.",
+        "Declaration": "@property(readonly, strong) AVPlayerPlaybackCoordinator *playbackCoordinator;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/3750305-playbackcoordinator?language=objc",
+        "Type": {
+          "Name": "AVPlayerPlaybackCoordinator",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "readonly": true,
+          "strong": true
+        }
+      },
+      {
+        "Name": "sourceClock",
+        "Description": "A clock the player uses for item time bases.",
+        "Declaration": "@property(nonatomic, retain, nullable) CMClockRef sourceClock;",
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/3746583-sourceclock?language=objc",
+        "Type": {
+          "Name": "CMClockRef"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "retain": true
+        }
+      },
+      {
+        "Name": "masterClock",
+        "Description": "The host clock for item time bases.",
+        "Declaration": "@property(nonatomic, retain, nullable) CMClockRef masterClock;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0–15.0",
+          "iPadOS 6.0–15.0",
+          "macOS 10.8–12.0",
+          "Mac Catalyst 13.1–15.0",
+          "tvOS 9.0–15.0",
+          "watchOS 2.0–8.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1387066-masterclock?language=objc",
+        "Type": {
+          "Name": "CMClockRef"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "retain": true
+        }
+      },
+      {
+        "Name": "preventsDisplaySleepDuringVideoPlayback",
+        "Description": "A Boolean value that indicates whether video playback prevents display and device sleep.",
+        "Declaration": "@property(nonatomic) BOOL preventsDisplaySleepDuringVideoPlayback;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 12.0+",
+          "iPadOS 12.0+",
+          "macOS 10.14+",
+          "Mac Catalyst 13.1+",
+          "tvOS 12.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/2990522-preventsdisplaysleepduringvideop?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "outputObscuredDueToInsufficientExternalProtection",
+        "Description": "A Boolean value that indicates whether output is being obscured because of insufficient external protection.",
+        "Declaration": "@property(readonly) BOOL outputObscuredDueToInsufficientExternalProtection;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1624254-outputobscuredduetoinsufficiente?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "audioOutputDeviceUniqueID",
+        "Description": "Specifies the unique ID of the Core Audio output device used to play audio.",
+        "Declaration": "@property(copy) NSString *audioOutputDeviceUniqueID;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.9+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1390717-audiooutputdeviceuniqueid?language=objc",
+        "Type": {
+          "Name": "NSString",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true
+        }
+      },
+      {
+        "Name": "preferredVideoDecoderGPURegistryID",
+        "Description": "The registry identifier for the GPU used for video decoding.",
+        "Declaration": "@property(nonatomic) uint64_t preferredVideoDecoderGPURegistryID;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.13+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/2942616-preferredvideodecodergpuregistry?language=objc",
+        "Type": {
+          "Name": "uint64_t"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "allowsAirPlayVideo",
+        "Description": "A Boolean value that indicates whether the player allows AirPlay video playback.",
+        "Declaration": "@property BOOL allowsAirPlayVideo;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0–6.0",
+          "iPadOS 5.0–6.0",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1624258-allowsairplayvideo?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "airPlayVideoActive",
+        "Description": "A Boolean value that indicates whether the player is playing video through AirPlay.",
+        "Declaration": "@property(readonly, getter=isAirPlayVideoActive) BOOL airPlayVideoActive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0–6.0",
+          "iPadOS 5.0–6.0",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1624259-airplayvideoactive?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isAirPlayVideoActive",
+          "readonly": true
+        }
+      },
+      {
+        "Name": "usesAirPlayVideoWhileAirPlayScreenIsActive",
+        "Description": "A Boolean value that indicates whether the player automatically switches to AirPlay Video while AirPlay Screen is active.",
+        "Declaration": "@property BOOL usesAirPlayVideoWhileAirPlayScreenIsActive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0–6.0",
+          "iPadOS 5.0–6.0",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1624256-usesairplayvideowhileairplayscre?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "closedCaptionDisplayEnabled",
+        "Description": "A Boolean value that indicates whether the player uses closed captioning.",
+        "Declaration": "@property(getter=isClosedCaptionDisplayEnabled) BOOL closedCaptionDisplayEnabled;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0–11.0",
+          "iPadOS 4.0–11.0",
+          "macOS 10.7–10.13",
+          "Mac Catalyst 13.1–13.1",
+          "tvOS 9.0–11.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1386458-closedcaptiondisplayenabled?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isClosedCaptionDisplayEnabled"
+        }
+      }
+    ],
+    "TypeMethods": [
+      {
+        "Name": "playerWithURL:",
+        "Description": "Returns a new player to play a single audiovisual resource referenced by a given URL.",
+        "Declaration": "+ (instancetype)playerWithURL:(NSURL *)URL;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1538409-playerwithurl?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "URL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "playerWithPlayerItem:",
+        "Description": "Returns a new player initialized to play the specified player item.",
+        "Declaration": "+ (instancetype)playerWithPlayerItem:(AVPlayerItem *)item;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/1538390-playerwithplayeritem?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "item",
+            "Type": {
+              "Name": "AVPlayerItem",
+              "IsPtr": true
+            }
+          }
+        ]
+      }
+    ],
+    "TypeProperties": [
+      {
+        "Name": "eligibleForHDRPlayback",
+        "Description": "A Boolean value that indicates whether the current device can present content to an HDR display.",
+        "Declaration": "@property(class, readonly) BOOL eligibleForHDRPlayback;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 13.4+",
+          "iPadOS 13.4+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.4+",
+          "tvOS 13.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/3365978-eligibleforhdrplayback?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "class": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "availableHDRModes",
+        "Description": "The HDR modes that are available for playback.",
+        "Declaration": "@property(class, readonly) AVPlayerHDRMode availableHDRModes;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 11.2+",
+          "iPadOS 11.2+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.2+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/2936889-availablehdrmodes?language=objc",
+        "Type": {
+          "Name": "AVPlayerHDRMode"
+        },
+        "Attrs": {
+          "class": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T09:47:24.488071+08:00",
+  "Version": 2
+}

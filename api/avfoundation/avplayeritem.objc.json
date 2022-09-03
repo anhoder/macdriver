@@ -1,0 +1,2282 @@
+{
+  "Class": {
+    "Name": "AVPlayerItem",
+    "Description": "An object that models the timing and presentation state of an asset during playback.",
+    "Declaration": "@interface AVPlayerItem : NSObject",
+    "Frameworks": [
+      "AVFoundation"
+    ],
+    "Platforms": [
+      "iOS 4.0+",
+      "iPadOS 4.0+",
+      "macOS 10.7+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 2.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "initWithURL:",
+        "Description": "Creates a player item with a specified URL.",
+        "Declaration": "- (instancetype)initWithURL:(NSURL *)URL;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387558-initwithurl?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "URL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "initWithAsset:",
+        "Description": "Creates a player item for a specified asset.",
+        "Declaration": "- (instancetype)initWithAsset:(AVAsset *)asset;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1390707-initwithasset?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "asset",
+            "Type": {
+              "Name": "AVAsset",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "initWithAsset:automaticallyLoadedAssetKeys:",
+        "Description": "Creates a player item with the specified asset and the asset keys to automatically load.",
+        "Declaration": "- (instancetype)initWithAsset:(AVAsset *)asset \n automaticallyLoadedAssetKeys:(NSArray\u003cNSString *\u003e *)automaticallyLoadedAssetKeys;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387529-initwithasset?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "asset",
+            "Type": {
+              "Name": "AVAsset",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "automaticallyLoadedAssetKeys",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "NSString",
+                  "IsPtr": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Name": "stepByCount:",
+        "Description": "Moves the player item’s current time forward or backward by a specified number of steps.",
+        "Declaration": "- (void)stepByCount:(NSInteger)stepCount;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387968-stepbycount?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "stepCount",
+            "Type": {
+              "Name": "NSInteger"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToTime:completionHandler:",
+        "Description": "Sets the current playback time to the specified time.",
+        "Declaration": "- (void)seekToTime:(CMTime)time \n completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387418-seektotime?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "time",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToTime:toleranceBefore:toleranceAfter:completionHandler:",
+        "Description": "Sets the current playback time within a specified time bound and invokes the specified block when the seek operation completes or is interrupted.",
+        "Declaration": "- (void)seekToTime:(CMTime)time \n   toleranceBefore:(CMTime)toleranceBefore \n    toleranceAfter:(CMTime)toleranceAfter \n completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387753-seektotime?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "time",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "toleranceBefore",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "toleranceAfter",
+            "Type": {
+              "Name": "CMTime"
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "seekToDate:completionHandler:",
+        "Description": "Sets the current playback time to the time specified by the date object.",
+        "Declaration": "- (BOOL)seekToDate:(NSDate *)date \n completionHandler:(void (^)(BOOL finished))completionHandler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389877-seektodate?language=objc",
+        "Return": {
+          "Name": "BOOL"
+        },
+        "Args": [
+          {
+            "Name": "date",
+            "Type": {
+              "Name": "NSDate",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "completionHandler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "finished",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "cancelPendingSeeks",
+        "Description": "Cancels any pending seek requests and invokes the corresponding completion handlers if present.",
+        "Declaration": "- (void)cancelPendingSeeks;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388316-cancelpendingseeks?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "selectMediaOption:inMediaSelectionGroup:",
+        "Description": "Selects a media option in a given media selection group and deselects all other options in that group.",
+        "Declaration": "- (void)selectMediaOption:(AVMediaSelectionOption *)mediaSelectionOption \n    inMediaSelectionGroup:(AVMediaSelectionGroup *)mediaSelectionGroup;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389610-selectmediaoption?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "mediaSelectionOption",
+            "Type": {
+              "Name": "AVMediaSelectionOption",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "mediaSelectionGroup",
+            "Type": {
+              "Name": "AVMediaSelectionGroup",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "selectMediaOptionAutomaticallyInMediaSelectionGroup:",
+        "Description": "Selects the media option in the specified media selection group that best matches the receiver’s automatic selection criteria.",
+        "Declaration": "- (void)selectMediaOptionAutomaticallyInMediaSelectionGroup:(AVMediaSelectionGroup *)mediaSelectionGroup;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388268-selectmediaoptionautomaticallyin?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "mediaSelectionGroup",
+            "Type": {
+              "Name": "AVMediaSelectionGroup",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "currentTime",
+        "Description": "Returns the current time of the item.",
+        "Declaration": "- (CMTime)currentTime;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387230-currenttime?language=objc",
+        "Return": {
+          "Name": "CMTime"
+        },
+        "Args": null
+      },
+      {
+        "Name": "currentDate",
+        "Description": "Returns the current time of the item as an NSDate object.",
+        "Declaration": "- (NSDate *)currentDate;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386188-currentdate?language=objc",
+        "Return": {
+          "Name": "NSDate",
+          "IsPtr": true
+        },
+        "Args": null
+      },
+      {
+        "Name": "accessLog",
+        "Description": "Returns an object that represents a snapshot of the network access log.",
+        "Declaration": "- (AVPlayerItemAccessLog *)accessLog;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388499-accesslog?language=objc",
+        "Return": {
+          "Name": "AVPlayerItemAccessLog",
+          "IsPtr": true
+        },
+        "Args": null
+      },
+      {
+        "Name": "errorLog",
+        "Description": "Returns an object that represents a snapshot of the error log.",
+        "Declaration": "- (AVPlayerItemErrorLog *)errorLog;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387573-errorlog?language=objc",
+        "Return": {
+          "Name": "AVPlayerItemErrorLog",
+          "IsPtr": true
+        },
+        "Args": null
+      },
+      {
+        "Name": "addOutput:",
+        "Description": "Adds the specified player item output object to the receiver.",
+        "Declaration": "- (void)addOutput:(AVPlayerItemOutput *)output;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389782-addoutput?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "output",
+            "Type": {
+              "Name": "AVPlayerItemOutput",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeOutput:",
+        "Description": "Removes the specified player item output object from the receiver.",
+        "Declaration": "- (void)removeOutput:(AVPlayerItemOutput *)output;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388756-removeoutput?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "output",
+            "Type": {
+              "Name": "AVPlayerItemOutput",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addMediaDataCollector:",
+        "Description": "Adds the specified media data collector to the player item’s collection of media collectors.",
+        "Declaration": "- (void)addMediaDataCollector:(AVPlayerItemMediaDataCollector *)collector;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.3+",
+          "iPadOS 9.3+",
+          "macOS 10.11.3+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.3+",
+          "watchOS 2.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1624164-addmediadatacollector?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "collector",
+            "Type": {
+              "Name": "AVPlayerItemMediaDataCollector",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeMediaDataCollector:",
+        "Description": "Removes the specified media data collector from the player item’s collection of media collectors.",
+        "Declaration": "- (void)removeMediaDataCollector:(AVPlayerItemMediaDataCollector *)collector;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.3+",
+          "iPadOS 9.3+",
+          "macOS 10.11.3+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.3+",
+          "watchOS 2.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1624163-removemediadatacollector?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "collector",
+            "Type": {
+              "Name": "AVPlayerItemMediaDataCollector",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "requestPlaybackRestrictionsAuthorization:",
+        "Description": "Determines whether this item is subject to parental restrictions, and, if so, prompts the user to enter the restrictions passcode.",
+        "Declaration": "- (void)requestPlaybackRestrictionsAuthorization:(void (^)(BOOL isAuthorized, NSError *error))completion;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3152863-requestplaybackrestrictionsautho?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "completion",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Name": "isAuthorized",
+                    "Type": {
+                      "Name": "BOOL"
+                    }
+                  },
+                  {
+                    "Name": "error",
+                    "Type": {
+                      "Name": "NSError",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "cancelPlaybackRestrictionsAuthorizationRequest",
+        "Description": "Cancels a pending authorization request and dismisses the passcode entry, if displayed.",
+        "Declaration": "- (void)cancelPlaybackRestrictionsAuthorizationRequest;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 13.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3152862-cancelplaybackrestrictionsauthor?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "requestContentAuthorizationAsynchronouslyWithTimeoutInterval:completionHandler:",
+        "Description": "Presents the user the opportunity to authorize the content for playback.",
+        "Declaration": "- (void)requestContentAuthorizationAsynchronouslyWithTimeoutInterval:(NSTimeInterval)timeoutInterval \n                                                   completionHandler:(void (^)(void))handler;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1390600-requestcontentauthorizationasync?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "timeoutInterval",
+            "Type": {
+              "Name": "NSTimeInterval"
+            }
+          },
+          {
+            "Name": "handler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "void"
+                },
+                "Args": [
+                  {
+                    "Type": {
+                      "Name": "void"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "cancelContentAuthorizationRequest",
+        "Description": "Cancels the currently outstanding content authorization request.",
+        "Declaration": "- (void)cancelContentAuthorizationRequest;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387726-cancelcontentauthorizationreques?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": null
+      },
+      {
+        "Name": "copy",
+        "Description": "Creates a copy of the object.",
+        "Declaration": "- (id)copy;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3861797-copy?language=objc",
+        "Return": {
+          "Name": "id"
+        },
+        "Args": null
+      },
+      {
+        "Name": "copyWithZone:",
+        "Description": "Creates a copy of the object with the specified zone.",
+        "Declaration": "- (id)copyWithZone:(NSZone *)zone;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3861798-copywithzone?language=objc",
+        "Return": {
+          "Name": "id"
+        },
+        "Args": [
+          {
+            "Name": "zone",
+            "Type": {
+              "Name": "NSZone",
+              "IsPtr": true
+            }
+          }
+        ]
+      }
+    ],
+    "InstanceProperties": [
+      {
+        "Name": "tracks",
+        "Description": "An array of player item track objects.",
+        "Declaration": "@property(readonly) NSArray\u003cAVPlayerItemTrack *\u003e *tracks;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386361-tracks?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVPlayerItemTrack",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "externalMetadata",
+        "Description": "An array of additional metadata for the player item to supplement or replace an asset’s embedded metadata.",
+        "Declaration": "@property(nonatomic, copy) NSArray\u003cAVMetadataItem *\u003e *externalMetadata;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 12.2+",
+          "iPadOS 12.2+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1627623-externalmetadata?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVMetadataItem",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "status",
+        "Description": "The status of the player item.",
+        "Declaration": "@property(readonly) AVPlayerItemStatus status;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389493-status?language=objc",
+        "Type": {
+          "Name": "AVPlayerItemStatus"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "error",
+        "Description": "The error that caused the player item to fail.",
+        "Declaration": "@property(readonly) NSError *error;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389185-error?language=objc",
+        "Type": {
+          "Name": "NSError",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canPlayReverse",
+        "Description": "A Boolean value that indicates whether the item can play in reverse.",
+        "Declaration": "@property(readonly) BOOL canPlayReverse;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1385591-canplayreverse?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canPlayFastForward",
+        "Description": "A Boolean value that indicates whether the item can be fast forwarded.",
+        "Declaration": "@property(readonly) BOOL canPlayFastForward;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389096-canplayfastforward?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canPlayFastReverse",
+        "Description": "A Boolean value that indicates whether the item can be quickly reversed.",
+        "Declaration": "@property(readonly) BOOL canPlayFastReverse;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1390493-canplayfastreverse?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canPlaySlowForward",
+        "Description": "A Boolean value that indicates whether the item can play slower than normal.",
+        "Declaration": "@property(readonly) BOOL canPlaySlowForward;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388078-canplayslowforward?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canPlaySlowReverse",
+        "Description": "A Boolean value that indicates whether the item can play slowly backward.",
+        "Declaration": "@property(readonly) BOOL canPlaySlowReverse;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1390598-canplayslowreverse?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "forwardPlaybackEndTime",
+        "Description": "The time at which forward playback ends.",
+        "Declaration": "@property CMTime forwardPlaybackEndTime;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1385622-forwardplaybackendtime?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "reversePlaybackEndTime",
+        "Description": "The time at which reverse playback ends.",
+        "Declaration": "@property CMTime reversePlaybackEndTime;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388438-reverseplaybackendtime?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "canStepForward",
+        "Description": "A Boolean value that indicates whether the item supports stepping forward.",
+        "Declaration": "@property(readonly) BOOL canStepForward;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389656-canstepforward?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "canStepBackward",
+        "Description": "A Boolean value that indicates whether the item supports stepping backward.",
+        "Declaration": "@property(readonly) BOOL canStepBackward;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386796-canstepbackward?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "currentMediaSelection",
+        "Description": "The current media selections for each of the receiver's media selection groups.",
+        "Declaration": "@property(readonly) AVMediaSelection *currentMediaSelection;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386519-currentmediaselection?language=objc",
+        "Type": {
+          "Name": "AVMediaSelection",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "variantPreferences",
+        "Description": "The preferences the player item uses when selecting variant playlists.",
+        "Declaration": "@property AVVariantPreferences variantPreferences;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 14.5+",
+          "iPadOS 14.5+",
+          "macOS 11.3+",
+          "Mac Catalyst 14.5+",
+          "tvOS 14.5+",
+          "watchOS 7.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3726149-variantpreferences?language=objc",
+        "Type": {
+          "Name": "AVVariantPreferences"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "startsOnFirstEligibleVariant",
+        "Description": "A Boolean value that indicates whether playback starts with the first eligible variant that appears in the stream’s main playlist.",
+        "Declaration": "@property(nonatomic) BOOL startsOnFirstEligibleVariant;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+",
+          "tvOS 14.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3579514-startsonfirsteligiblevariant?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "automaticallyHandlesInterstitialEvents",
+        "Description": "A Boolean value that indicates whether the player item automatically plays interstitial events according to server-side directives.",
+        "Declaration": "@property(nonatomic) BOOL automaticallyHandlesInterstitialEvents;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3726146-automaticallyhandlesinterstitial?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "translatesPlayerInterstitialEvents",
+        "Description": "A Boolean value that indicates whether the player translates interstitial events to interstitial time ranges.",
+        "Declaration": "@property(nonatomic) BOOL translatesPlayerInterstitialEvents;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3750338-translatesplayerinterstitialeven?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "interstitialTimeRanges",
+        "Description": "An array of time ranges that identify interstitial content.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVInterstitialTimeRange *\u003e *interstitialTimeRanges;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 16.0+",
+          "Beta",
+          "iPadOS 16.0+",
+          "Beta",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1627628-interstitialtimeranges?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVInterstitialTimeRange",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "templatePlayerItem",
+        "Description": "The template player item that initializes this instance.",
+        "Declaration": "@property(nonatomic, readonly, nullable) AVPlayerItem *templatePlayerItem;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3726147-templateplayeritem?language=objc",
+        "Type": {
+          "Name": "AVPlayerItem",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "duration",
+        "Description": "The duration of the item.",
+        "Declaration": "@property(readonly) CMTime duration;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.3+",
+          "iPadOS 4.3+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389386-duration?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "timebase",
+        "Description": "The timebase information for the item.",
+        "Declaration": "@property(nonatomic, readonly, nullable) CMTimebaseRef timebase;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1387605-timebase?language=objc",
+        "Type": {
+          "Name": "CMTimebaseRef"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "loadedTimeRanges",
+        "Description": "An array of time ranges indicating media data that is readily available.",
+        "Declaration": "@property(readonly) NSArray\u003cNSValue *\u003e *loadedTimeRanges;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389953-loadedtimeranges?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSValue",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "seekableTimeRanges",
+        "Description": "An array of time ranges within which it is possible to seek.",
+        "Declaration": "@property(readonly) NSArray\u003cNSValue *\u003e *seekableTimeRanges;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386155-seekabletimeranges?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSValue",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "playbackLikelyToKeepUp",
+        "Description": "A Boolean value that indicates whether the item will likely play through without stalling.",
+        "Declaration": "@property(readonly, getter=isPlaybackLikelyToKeepUp) BOOL playbackLikelyToKeepUp;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1390348-playbacklikelytokeepup?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isPlaybackLikelyToKeepUp",
+          "readonly": true
+        }
+      },
+      {
+        "Name": "playbackBufferFull",
+        "Description": "A Boolean value that indicates whether the internal media buffer is full and that further I/O is suspended.",
+        "Declaration": "@property(readonly, getter=isPlaybackBufferFull) BOOL playbackBufferFull;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388852-playbackbufferfull?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isPlaybackBufferFull",
+          "readonly": true
+        }
+      },
+      {
+        "Name": "playbackBufferEmpty",
+        "Description": "A Boolean value that indicates whether playback has consumed all buffered media and that playback will stall or end.",
+        "Declaration": "@property(readonly, getter=isPlaybackBufferEmpty) BOOL playbackBufferEmpty;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386960-playbackbufferempty?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isPlaybackBufferEmpty",
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredPeakBitRateForExpensiveNetworks",
+        "Description": "A limit of network bandwidth consumption by the item when connecting over expensive networks.",
+        "Declaration": "@property double preferredPeakBitRateForExpensiveNetworks;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+",
+          "watchOS 8.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3746589-preferredpeakbitrateforexpensive?language=objc",
+        "Type": {
+          "Name": "double"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "preferredMaximumResolutionForExpensiveNetworks",
+        "Description": "An upper limit on the resolution of video to download when connecting over expensive networks.",
+        "Declaration": "@property CGSize preferredMaximumResolutionForExpensiveNetworks;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 15.0+",
+          "iPadOS 15.0+",
+          "macOS 12.0+",
+          "Mac Catalyst 15.0+",
+          "tvOS 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3750308-preferredmaximumresolutionforexp?language=objc",
+        "Type": {
+          "Name": "CGSize"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "textStyleRules",
+        "Description": "An array of text style rules that specify the formatting and presentation of Web Video Text Tracks (WebVTT) subtitles.",
+        "Declaration": "@property(copy) NSArray\u003cAVTextStyleRule *\u003e *textStyleRules;",
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389681-textstylerules?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVTextStyleRule",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true
+        }
+      },
+      {
+        "Name": "automaticallyPreservesTimeOffsetFromLive",
+        "Description": "A Boolean value that indicates whether the player preserves its time offset from the live time after a buffering operation.",
+        "Declaration": "@property(nonatomic) BOOL automaticallyPreservesTimeOffsetFromLive;",
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3229855-automaticallypreservestimeoffset?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "recommendedTimeOffsetFromLive",
+        "Description": "A recommended time offset from the live time based on observed network conditions.",
+        "Declaration": "@property(readonly) CMTime recommendedTimeOffsetFromLive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3227883-recommendedtimeoffsetfromlive?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "configuredTimeOffsetFromLive",
+        "Description": "A time value that indicates the offset from the live time to start playback, or resume playback after a seek to positive infinity.",
+        "Declaration": "@property CMTime configuredTimeOffsetFromLive;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.15+",
+          "Mac Catalyst 13.1+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3227882-configuredtimeoffsetfromlive?language=objc",
+        "Type": {
+          "Name": "CMTime"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "presentationSize",
+        "Description": "The size at which the visual portion of the item is presented by the player.",
+        "Declaration": "@property(readonly) CGSize presentationSize;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388962-presentationsize?language=objc",
+        "Type": {
+          "Name": "CGSize"
+        },
+        "Attrs": {
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredMaximumResolution",
+        "Description": "The desired maximum resolution of a video that is to be downloaded.",
+        "Declaration": "@property CGSize preferredMaximumResolution;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/2867324-preferredmaximumresolution?language=objc",
+        "Type": {
+          "Name": "CGSize"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "videoApertureMode",
+        "Description": "The video aperture mode to apply during playback.",
+        "Declaration": "@property(copy) AVVideoApertureMode videoApertureMode;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/2868499-videoaperturemode?language=objc",
+        "Type": {
+          "Name": "AVVideoApertureMode"
+        },
+        "Attrs": {
+          "copy": true
+        }
+      },
+      {
+        "Name": "nowPlayingInfo",
+        "Description": "The current now playing information for the player item.",
+        "Declaration": "@property(nonatomic, copy, nullable) NSDictionary\u003cNSString *,id\u003e *nowPlayingInfo;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 16.0+",
+          "Beta",
+          "iPadOS 16.0+",
+          "Beta",
+          "macOS 13.0+",
+          "Beta",
+          "Mac Catalyst 16.0+",
+          "Beta",
+          "tvOS 16.0+",
+          "Beta",
+          "watchOS 9.0+",
+          "Beta"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3986072-nowplayinginfo?language=objc",
+        "Type": {
+          "Name": "NSDictionary",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSString",
+              "IsPtr": true
+            },
+            {
+              "Name": "id"
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true,
+          "nullable": true
+        }
+      },
+      {
+        "Name": "appliesPerFrameHDRDisplayMetadata",
+        "Description": "A Boolean value that indicates whether the player item applies per-frame HDR display metadata during playback.",
+        "Declaration": "@property(nonatomic) BOOL appliesPerFrameHDRDisplayMetadata;",
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+",
+          "tvOS 14.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3656127-appliesperframehdrdisplaymetadat?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "videoComposition",
+        "Description": "The video composition settings to be applied during playback.",
+        "Declaration": "@property(nonatomic, copy, nullable) AVVideoComposition *videoComposition;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388818-videocomposition?language=objc",
+        "Type": {
+          "Name": "AVVideoComposition",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true,
+          "nullable": true
+        }
+      },
+      {
+        "Name": "customVideoCompositor",
+        "Description": "The custom video compositor.",
+        "Declaration": "@property(nonatomic, readonly, nullable) id\u003cAVVideoCompositing\u003e customVideoCompositor;",
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1390669-customvideocompositor?language=objc",
+        "Type": {
+          "Name": "id",
+          "Params": [
+            {
+              "Name": "AVVideoCompositing"
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "seekingWaitsForVideoCompositionRendering",
+        "Description": "A Boolean value that indicates whether the item’s timing follows the displayed video frame when seeking with a video composition.",
+        "Declaration": "@property BOOL seekingWaitsForVideoCompositionRendering;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1385726-seekingwaitsforvideocompositionr?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "audioMix",
+        "Description": "The audio mix parameters to be applied during playback.",
+        "Declaration": "@property(nonatomic, copy, nullable) AVAudioMix *audioMix;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388037-audiomix?language=objc",
+        "Type": {
+          "Name": "AVAudioMix",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true,
+          "nullable": true
+        }
+      },
+      {
+        "Name": "audioTimePitchAlgorithm",
+        "Description": "The processing algorithm used to manage audio pitch for scaled audio edits.",
+        "Declaration": "@property(copy) AVAudioTimePitchAlgorithm audioTimePitchAlgorithm;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1385855-audiotimepitchalgorithm?language=objc",
+        "Type": {
+          "Name": "AVAudioTimePitchAlgorithm"
+        },
+        "Attrs": {
+          "copy": true
+        }
+      },
+      {
+        "Name": "allowedAudioSpatializationFormats",
+        "Description": "The source audio channel layouts the player item supports for spatialization.",
+        "Declaration": "@property(nonatomic, assign) AVAudioSpatializationFormats allowedAudioSpatializationFormats;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 14.0+",
+          "iPadOS 14.0+",
+          "macOS 11.0+",
+          "Mac Catalyst 14.0+",
+          "tvOS 15.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3601108-allowedaudiospatializationformat?language=objc",
+        "Type": {
+          "Name": "AVAudioSpatializationFormats"
+        },
+        "Attrs": {
+          "assign": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "audioSpatializationAllowed",
+        "Description": "A Boolean value that indicates whether the player item allows spatialized audio playback.",
+        "Declaration": "@property(nonatomic, assign, getter=isAudioSpatializationAllowed) BOOL audioSpatializationAllowed;",
+        "Platforms": [
+          "iOS 13.0–14.0",
+          "iPadOS 13.0–14.0",
+          "macOS 10.15–11.0",
+          "Mac Catalyst 13.1–14.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/3237174-audiospatializationallowed?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "assign": true,
+          "getter": "isAudioSpatializationAllowed",
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "outputs",
+        "Description": "An array of outputs associated with the player item.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVPlayerItemOutput *\u003e *outputs;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 6.0+",
+          "iPadOS 6.0+",
+          "macOS 10.8+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389090-outputs?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVPlayerItemOutput",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "mediaDataCollectors",
+        "Description": "The collection of associated media data collectors.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cAVPlayerItemMediaDataCollector *\u003e *mediaDataCollectors;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.3+",
+          "iPadOS 9.3+",
+          "macOS 10.11.3+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.3+",
+          "watchOS 2.3+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1624161-mediadatacollectors?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVPlayerItemMediaDataCollector",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preferredPeakBitRate",
+        "Description": "The desired limit, in bits per second, of network bandwidth consumption for this item.",
+        "Declaration": "@property double preferredPeakBitRate;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 8.0+",
+          "iPadOS 8.0+",
+          "macOS 10.10+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388541-preferredpeakbitrate?language=objc",
+        "Type": {
+          "Name": "double"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "preferredForwardBufferDuration",
+        "Description": "The duration the player should buffer media from the network ahead of the playhead to guard against playback disruption.",
+        "Declaration": "@property NSTimeInterval preferredForwardBufferDuration;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12+",
+          "Mac Catalyst 13.1+",
+          "tvOS 10.0+",
+          "watchOS 3.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1643630-preferredforwardbufferduration?language=objc",
+        "Type": {
+          "Name": "NSTimeInterval"
+        },
+        "Attrs": {}
+      },
+      {
+        "Name": "canUseNetworkResourcesForLiveStreamingWhilePaused",
+        "Description": "A Boolean value that indicates whether the player item can use network resources to keep the playback state up to date while paused.",
+        "Declaration": "@property(assign) BOOL canUseNetworkResourcesForLiveStreamingWhilePaused;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.11+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388752-canusenetworkresourcesforlivestr?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "assign": true
+        }
+      },
+      {
+        "Name": "navigationMarkerGroups",
+        "Description": "The time marker groups that provide ways to navigate the player item’s content.",
+        "Declaration": "@property(nonatomic, copy) NSArray\u003cAVNavigationMarkersGroup *\u003e *navigationMarkerGroups;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 9.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1627626-navigationmarkergroups?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "AVNavigationMarkersGroup",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "nextContentProposal",
+        "Description": "The item proposed to follow the current content.",
+        "Declaration": "@property(nonatomic, strong, nullable) AVContentProposal *nextContentProposal;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 10.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1650942-nextcontentproposal?language=objc",
+        "Type": {
+          "Name": "AVContentProposal",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "nullable": true,
+          "strong": true
+        }
+      },
+      {
+        "Name": "contentAuthorizedForPlayback",
+        "Description": "A Boolean value that indicates whether the content has been authorized by the user.",
+        "Declaration": "@property(nonatomic, readonly, getter=isContentAuthorizedForPlayback) BOOL contentAuthorizedForPlayback;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388458-contentauthorizedforplayback?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isContentAuthorizedForPlayback",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "authorizationRequiredForPlayback",
+        "Description": "A Boolean value that indicates whether authorization is required to play the content.",
+        "Declaration": "@property(nonatomic, readonly, getter=isAuthorizationRequiredForPlayback) BOOL authorizationRequiredForPlayback;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1386106-authorizationrequiredforplayback?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isAuthorizationRequiredForPlayback",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "applicationAuthorizedForPlayback",
+        "Description": "A Boolean value that indicates whether the application can be used to play the content.",
+        "Declaration": "@property(nonatomic, readonly, getter=isApplicationAuthorizedForPlayback) BOOL applicationAuthorizedForPlayback;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389929-applicationauthorizedforplayback?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "getter": "isApplicationAuthorizedForPlayback",
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "contentAuthorizationRequestStatus",
+        "Description": "The status of the most recent content authorization request.",
+        "Declaration": "@property(nonatomic, readonly) AVContentAuthorizationStatus contentAuthorizationRequestStatus;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "macOS 10.7+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1389746-contentauthorizationrequeststatu?language=objc",
+        "Type": {
+          "Name": "AVContentAuthorizationStatus"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "asset",
+        "Description": "The asset provided during initialization.",
+        "Declaration": "@property(nonatomic, readonly) AVAsset *asset;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388177-asset?language=objc",
+        "Type": {
+          "Name": "AVAsset",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "automaticallyLoadedAssetKeys",
+        "Description": "The array of asset keys to be automatically loaded before the player item is ready to play.",
+        "Declaration": "@property(nonatomic, readonly) NSArray\u003cNSString *\u003e *automaticallyLoadedAssetKeys;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1388633-automaticallyloadedassetkeys?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSString",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "externalSubtitleOptionLanguages",
+        "Description": "An array of BCP 47 language codes that supplements the list of subtitle options to be presented to the user.",
+        "Declaration": "@property(nonatomic, copy) NSArray\u003cNSString *\u003e *externalSubtitleOptionLanguages;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 9.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1627766-externalsubtitleoptionlanguages?language=objc",
+        "Type": {
+          "Name": "NSArray",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSString",
+              "IsPtr": true
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "selectedExternalSubtitleOptionLanguage",
+        "Description": "The BCP 47 language code of the external subtitle option language marked in the user interface.",
+        "Declaration": "@property(nonatomic, copy) NSString *selectedExternalSubtitleOptionLanguage;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "tvOS 9.0–9.0"
+        ],
+        "Deprecated": true,
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1627765-selectedexternalsubtitleoptionla?language=objc",
+        "Type": {
+          "Name": "NSString",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true
+        }
+      }
+    ],
+    "TypeMethods": [
+      {
+        "Name": "playerItemWithURL:",
+        "Description": "Returns a new player item with a specified URL.",
+        "Declaration": "+ (instancetype)playerItemWithURL:(NSURL *)URL;",
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1588089-playeritemwithurl?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "URL",
+            "Type": {
+              "Name": "NSURL",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "playerItemWithAsset:",
+        "Description": "Returns a new player item for a specified asset.",
+        "Declaration": "+ (instancetype)playerItemWithAsset:(AVAsset *)asset;",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.7+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 7.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1588087-playeritemwithasset?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "asset",
+            "Type": {
+              "Name": "AVAsset",
+              "IsPtr": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "playerItemWithAsset:automaticallyLoadedAssetKeys:",
+        "Description": "Creates a player item with the specified asset and the asset keys to automatically load.",
+        "Declaration": "+ (instancetype)playerItemWithAsset:(AVAsset *)asset \n       automaticallyLoadedAssetKeys:(NSArray\u003cNSString *\u003e *)automaticallyLoadedAssetKeys;\n",
+        "Frameworks": [
+          "AVFoundation"
+        ],
+        "Platforms": [
+          "iOS 7.0+",
+          "iPadOS 7.0+",
+          "macOS 10.9+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayeritem/1588088-playeritemwithasset?language=objc",
+        "Return": {
+          "Name": "instancetype"
+        },
+        "Args": [
+          {
+            "Name": "asset",
+            "Type": {
+              "Name": "AVAsset",
+              "IsPtr": true
+            }
+          },
+          {
+            "Name": "automaticallyLoadedAssetKeys",
+            "Type": {
+              "Name": "NSArray",
+              "IsPtr": true,
+              "Params": [
+                {
+                  "Name": "NSString",
+                  "IsPtr": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T09:32:59.307035+08:00",
+  "Version": 2
+}

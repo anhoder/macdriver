@@ -30,6 +30,10 @@ void* CALayer_type_layer() {
 	return [CALayer
 		layer];
 }
+void* CALayer_type_layerWithRemoteClientId_(uint32_t client_id) {
+	return [CALayer
+		layerWithRemoteClientId: client_id];
+}
 BOOL CALayer_type_needsDisplayForKey_(void* key) {
 	return [CALayer
 		needsDisplayForKey: key];
@@ -53,6 +57,11 @@ void* NSArray_type_array() {
 void* NSArray_type_arrayWithArray_(void* array) {
 	return [NSArray
 		arrayWithArray: array];
+}
+void* NSArray_type_arrayWithContentsOfURL_error_(void* url, void* error) {
+	return [NSArray
+		arrayWithContentsOfURL: url
+		error: error];
 }
 void* NSAttributedString_type_alloc() {
 	return [NSAttributedString
@@ -102,6 +111,26 @@ void* NSData_type_dataWithContentsOfURL_(void* url) {
 	return [NSData
 		dataWithContentsOfURL: url];
 }
+void* NSDate_type_alloc() {
+	return [NSDate
+		alloc];
+}
+void* NSDate_type_date() {
+	return [NSDate
+		date];
+}
+void* NSDate_type_distantFuture() {
+	return [NSDate
+		distantFuture];
+}
+void* NSDate_type_distantPast() {
+	return [NSDate
+		distantPast];
+}
+void* NSDate_type_now() {
+	return [NSDate
+		now];
+}
 void* NSDictionary_type_alloc() {
 	return [NSDictionary
 		alloc];
@@ -118,6 +147,11 @@ void* NSDictionary_type_dictionaryWithObjects_forKeys_(void* objects, void* keys
 void* NSDictionary_type_dictionaryWithDictionary_(void* dict) {
 	return [NSDictionary
 		dictionaryWithDictionary: dict];
+}
+void* NSDictionary_type_dictionaryWithContentsOfURL_error_(void* url, void* error) {
+	return [NSDictionary
+		dictionaryWithContentsOfURL: url
+		error: error];
 }
 void* NSDictionary_type_sharedKeySetForKeys_(void* keys) {
 	return [NSDictionary
@@ -184,6 +218,18 @@ void* NSString_type_stringWithString_(void* string) {
 	return [NSString
 		stringWithString: string];
 }
+void* NSString_type_stringWithContentsOfFile_encoding_error_(void* path, unsigned long enc, void* error) {
+	return [NSString
+		stringWithContentsOfFile: path
+		encoding: enc
+		error: error];
+}
+void* NSString_type_stringWithContentsOfURL_encoding_error_(void* url, unsigned long enc, void* error) {
+	return [NSString
+		stringWithContentsOfURL: url
+		encoding: enc
+		error: error];
+}
 void* NSString_type_localizedNameOfStringEncoding_(unsigned long encoding) {
 	return [NSString
 		localizedNameOfStringEncoding: encoding];
@@ -196,6 +242,16 @@ unsigned long NSString_type_defaultCStringEncoding() {
 	return [NSString
 		defaultCStringEncoding];
 }
+void* NSError_type_alloc() {
+	return [NSError
+		alloc];
+}
+void* NSError_type_errorWithDomain_code_userInfo_(void* domain, long code, void* dict) {
+	return [NSError
+		errorWithDomain: domain
+		code: code
+		userInfo: dict];
+}
 void* NSThread_type_alloc() {
 	return [NSThread
 		alloc];
@@ -205,6 +261,10 @@ void NSThread_type_detachNewThreadSelector_toTarget_withObject_(void* selector, 
 		detachNewThreadSelector: selector
 		toTarget: target
 		withObject: argument];
+}
+void NSThread_type_sleepUntilDate_(void* date) {
+	[NSThread
+		sleepUntilDate: date];
 }
 void NSThread_type_sleepForTimeInterval_(NSTimeInterval ti) {
 	[NSThread
@@ -292,6 +352,11 @@ void* NSURL_type_URLWithDataRepresentation_relativeToURL_(void* data, void* base
 	return [NSURL
 		URLWithDataRepresentation: data
 		relativeToURL: baseURL];
+}
+void* NSURL_type_bookmarkDataWithContentsOfURL_error_(void* bookmarkFileURL, void* error) {
+	return [NSURL
+		bookmarkDataWithContentsOfURL: bookmarkFileURL
+		error: error];
 }
 void* NSURL_type_resourceValuesForKeys_fromBookmarkData_(void* keys, void* bookmarkData) {
 	return [NSURL
@@ -961,6 +1026,18 @@ void* NSArray_inst_shuffledArray(void *id) {
 		shuffledArray];
 }
 
+void* NSArray_inst_initWithContentsOfURL_error_(void *id, void* url, void* error) {
+	return [(NSArray*)id
+		initWithContentsOfURL: url
+		error: error];
+}
+
+BOOL NSArray_inst_writeToURL_error_(void *id, void* url, void* error) {
+	return [(NSArray*)id
+		writeToURL: url
+		error: error];
+}
+
 unsigned long NSArray_inst_count(void *id) {
 	return [(NSArray*)id
 		count];
@@ -990,6 +1067,14 @@ void* NSAttributedString_inst_initWithString_attributes_(void *id, void* str, vo
 void* NSAttributedString_inst_initWithAttributedString_(void *id, void* attrStr) {
 	return [(NSAttributedString*)id
 		initWithAttributedString: attrStr];
+}
+
+void* NSAttributedString_inst_initWithData_options_documentAttributes_error_(void *id, void* data, void* options, void* dict, void* error) {
+	return [(NSAttributedString*)id
+		initWithData: data
+		options: options
+		documentAttributes: dict
+		error: error];
 }
 
 void* NSAttributedString_inst_initWithDocFormat_documentAttributes_(void *id, void* data, void* dict) {
@@ -1028,6 +1113,14 @@ void* NSAttributedString_inst_initWithRTFD_documentAttributes_(void *id, void* d
 	return [(NSAttributedString*)id
 		initWithRTFD: data
 		documentAttributes: dict];
+}
+
+void* NSAttributedString_inst_initWithURL_options_documentAttributes_error_(void *id, void* url, void* options, void* dict, void* error) {
+	return [(NSAttributedString*)id
+		initWithURL: url
+		options: options
+		documentAttributes: dict
+		error: error];
 }
 
 BOOL NSAttributedString_inst_isEqualToAttributedString_(void *id, void* other) {
@@ -1148,6 +1241,36 @@ void* NSData_inst_description(void *id) {
 		description];
 }
 
+void* NSDate_inst_init(void *id) {
+	return [(NSDate*)id
+		init];
+}
+
+BOOL NSDate_inst_isEqualToDate_(void *id, void* otherDate) {
+	return [(NSDate*)id
+		isEqualToDate: otherDate];
+}
+
+void* NSDate_inst_earlierDate_(void *id, void* anotherDate) {
+	return [(NSDate*)id
+		earlierDate: anotherDate];
+}
+
+void* NSDate_inst_laterDate_(void *id, void* anotherDate) {
+	return [(NSDate*)id
+		laterDate: anotherDate];
+}
+
+void* NSDate_inst_descriptionWithLocale_(void *id, void* locale) {
+	return [(NSDate*)id
+		descriptionWithLocale: locale];
+}
+
+void* NSDate_inst_description(void *id) {
+	return [(NSDate*)id
+		description];
+}
+
 void* NSDictionary_inst_init(void *id) {
 	return [(NSDictionary*)id
 		init];
@@ -1170,6 +1293,12 @@ void* NSDictionary_inst_initWithDictionary_copyItems_(void *id, void* otherDicti
 		copyItems: flag];
 }
 
+void* NSDictionary_inst_initWithContentsOfURL_error_(void *id, void* url, void* error) {
+	return [(NSDictionary*)id
+		initWithContentsOfURL: url
+		error: error];
+}
+
 BOOL NSDictionary_inst_isEqualToDictionary_(void *id, void* otherDictionary) {
 	return [(NSDictionary*)id
 		isEqualToDictionary: otherDictionary];
@@ -1180,9 +1309,25 @@ void* NSDictionary_inst_keysSortedByValueUsingSelector_(void *id, void* comparat
 		keysSortedByValueUsingSelector: comparator];
 }
 
+BOOL NSDictionary_inst_writeToURL_error_(void *id, void* url, void* error) {
+	return [(NSDictionary*)id
+		writeToURL: url
+		error: error];
+}
+
 void* NSDictionary_inst_fileType(void *id) {
 	return [(NSDictionary*)id
 		fileType];
+}
+
+void* NSDictionary_inst_fileCreationDate(void *id) {
+	return [(NSDictionary*)id
+		fileCreationDate];
+}
+
+void* NSDictionary_inst_fileModificationDate(void *id) {
+	return [(NSDictionary*)id
+		fileModificationDate];
 }
 
 unsigned long NSDictionary_inst_filePosixPermissions(void *id) {
@@ -1366,6 +1511,11 @@ void NSRunLoop_inst_run(void *id) {
 		run];
 }
 
+void NSRunLoop_inst_runUntilDate_(void *id, void* limitDate) {
+	[(NSRunLoop*)id
+		runUntilDate: limitDate];
+}
+
 void NSRunLoop_inst_performSelector_target_argument_order_modes_(void *id, void* aSelector, void* target, void* arg, unsigned long order, void* modes) {
 	[(NSRunLoop*)id
 		performSelector: aSelector
@@ -1421,6 +1571,20 @@ void* NSString_inst_initWithData_encoding_(void *id, void* data, unsigned long e
 	return [(NSString*)id
 		initWithData: data
 		encoding: encoding];
+}
+
+void* NSString_inst_initWithContentsOfFile_encoding_error_(void *id, void* path, unsigned long enc, void* error) {
+	return [(NSString*)id
+		initWithContentsOfFile: path
+		encoding: enc
+		error: error];
+}
+
+void* NSString_inst_initWithContentsOfURL_encoding_error_(void *id, void* url, unsigned long enc, void* error) {
+	return [(NSString*)id
+		initWithContentsOfURL: url
+		encoding: enc
+		error: error];
 }
 
 unsigned long NSString_inst_lengthOfBytesUsingEncoding_(void *id, unsigned long enc) {
@@ -1499,6 +1663,22 @@ void* NSString_inst_stringByReplacingOccurrencesOfString_withString_(void *id, v
 	return [(NSString*)id
 		stringByReplacingOccurrencesOfString: target
 		withString: replacement];
+}
+
+BOOL NSString_inst_writeToFile_atomically_encoding_error_(void *id, void* path, BOOL useAuxiliaryFile, unsigned long enc, void* error) {
+	return [(NSString*)id
+		writeToFile: path
+		atomically: useAuxiliaryFile
+		encoding: enc
+		error: error];
+}
+
+BOOL NSString_inst_writeToURL_atomically_encoding_error_(void *id, void* url, BOOL useAuxiliaryFile, unsigned long enc, void* error) {
+	return [(NSString*)id
+		writeToURL: url
+		atomically: useAuxiliaryFile
+		encoding: enc
+		error: error];
 }
 
 void* NSString_inst_propertyList(void *id) {
@@ -1721,6 +1901,68 @@ void* NSString_inst_stringByRemovingPercentEncoding(void *id) {
 		stringByRemovingPercentEncoding];
 }
 
+void* NSError_inst_initWithDomain_code_userInfo_(void *id, void* domain, long code, void* dict) {
+	return [(NSError*)id
+		initWithDomain: domain
+		code: code
+		userInfo: dict];
+}
+
+void* NSError_inst_init(void *id) {
+	return [(NSError*)id
+		init];
+}
+
+long NSError_inst_code(void *id) {
+	return [(NSError*)id
+		code];
+}
+
+void* NSError_inst_domain(void *id) {
+	return [(NSError*)id
+		domain];
+}
+
+void* NSError_inst_userInfo(void *id) {
+	return [(NSError*)id
+		userInfo];
+}
+
+void* NSError_inst_localizedDescription(void *id) {
+	return [(NSError*)id
+		localizedDescription];
+}
+
+void* NSError_inst_localizedRecoveryOptions(void *id) {
+	return [(NSError*)id
+		localizedRecoveryOptions];
+}
+
+void* NSError_inst_localizedRecoverySuggestion(void *id) {
+	return [(NSError*)id
+		localizedRecoverySuggestion];
+}
+
+void* NSError_inst_localizedFailureReason(void *id) {
+	return [(NSError*)id
+		localizedFailureReason];
+}
+
+void* NSError_inst_recoveryAttempter(void *id) {
+	return [(NSError*)id
+		recoveryAttempter];
+}
+
+void* NSError_inst_helpAnchor(void *id) {
+	return [(NSError*)id
+		helpAnchor];
+}
+
+void* NSError_inst_underlyingErrors(void *id) {
+	return [(NSError*)id
+		underlyingErrors];
+}
+
 void* NSThread_inst_init(void *id) {
 	return [(NSThread*)id
 		init];
@@ -1850,9 +2092,26 @@ BOOL NSURL_inst_isEqual_(void *id, void* anObject) {
 		isEqual: anObject];
 }
 
+BOOL NSURL_inst_checkResourceIsReachableAndReturnError_(void *id, void* error) {
+	return [(NSURL*)id
+		checkResourceIsReachableAndReturnError: error];
+}
+
 BOOL NSURL_inst_isFileReferenceURL(void *id) {
 	return [(NSURL*)id
 		isFileReferenceURL];
+}
+
+void* NSURL_inst_resourceValuesForKeys_error_(void *id, void* keys, void* error) {
+	return [(NSURL*)id
+		resourceValuesForKeys: keys
+		error: error];
+}
+
+BOOL NSURL_inst_setResourceValues_error_(void *id, void* keyedValues, void* error) {
+	return [(NSURL*)id
+		setResourceValues: keyedValues
+		error: error];
 }
 
 void NSURL_inst_removeAllCachedResourceValues(void *id) {
@@ -1889,6 +2148,17 @@ BOOL NSURL_inst_startAccessingSecurityScopedResource(void *id) {
 void NSURL_inst_stopAccessingSecurityScopedResource(void *id) {
 	[(NSURL*)id
 		stopAccessingSecurityScopedResource];
+}
+
+BOOL NSURL_inst_checkPromisedItemIsReachableAndReturnError_(void *id, void* error) {
+	return [(NSURL*)id
+		checkPromisedItemIsReachableAndReturnError: error];
+}
+
+void* NSURL_inst_promisedItemResourceValuesForKeys_error_(void *id, void* keys, void* error) {
+	return [(NSURL*)id
+		promisedItemResourceValuesForKeys: keys
+		error: error];
 }
 
 void* NSURL_inst_init(void *id) {
@@ -2106,9 +2376,9 @@ void* NSNotification_inst_init(void *id) {
 		init];
 }
 
-void* NSNotification_inst_object(void *id) {
+void* NSNotification_inst_object_(void *id) {
 	return [(NSNotification*)id
-		object];
+		object_];
 }
 
 void* NSNotification_inst_userInfo(void *id) {
@@ -2247,6 +2517,18 @@ func CALayer_layer() (
 	return
 }
 
+func CALayer_layerWithRemoteClientId_(
+	client_id uint32,
+) (
+	r0 CALayer,
+) {
+	ret := C.CALayer_type_layerWithRemoteClientId_(
+		C.uint32_t(client_id),
+	)
+	r0 = CALayer_fromPointer(ret)
+	return
+}
+
 func CALayer_needsDisplayForKey_(
 	key NSStringRef,
 ) (
@@ -2306,6 +2588,20 @@ func NSArray_arrayWithArray_(
 ) {
 	ret := C.NSArray_type_arrayWithArray_(
 		objc.RefPointer(array),
+	)
+	r0 = NSArray_fromPointer(ret)
+	return
+}
+
+func NSArray_arrayWithContentsOfURL_error_(
+	url NSURLRef,
+	error NSErrorRef,
+) (
+	r0 NSArray,
+) {
+	ret := C.NSArray_type_arrayWithContentsOfURL_error_(
+		objc.RefPointer(url),
+		objc.RefPointer(error),
 	)
 	r0 = NSArray_fromPointer(ret)
 	return
@@ -2431,6 +2727,46 @@ func NSData_dataWithContentsOfURL_(
 	return
 }
 
+func NSDate_alloc() (
+	r0 NSDate,
+) {
+	ret := C.NSDate_type_alloc()
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func NSDate_date() (
+	r0 NSDate,
+) {
+	ret := C.NSDate_type_date()
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func NSDate_distantFuture() (
+	r0 NSDate,
+) {
+	ret := C.NSDate_type_distantFuture()
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func NSDate_distantPast() (
+	r0 NSDate,
+) {
+	ret := C.NSDate_type_distantPast()
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func NSDate_now() (
+	r0 NSDate,
+) {
+	ret := C.NSDate_type_now()
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
 func NSDictionary_alloc() (
 	r0 NSDictionary,
 ) {
@@ -2468,6 +2804,20 @@ func NSDictionary_dictionaryWithDictionary_(
 ) {
 	ret := C.NSDictionary_type_dictionaryWithDictionary_(
 		objc.RefPointer(dict),
+	)
+	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
+func NSDictionary_dictionaryWithContentsOfURL_error_(
+	url NSURLRef,
+	error NSErrorRef,
+) (
+	r0 NSDictionary,
+) {
+	ret := C.NSDictionary_type_dictionaryWithContentsOfURL_error_(
+		objc.RefPointer(url),
+		objc.RefPointer(error),
 	)
 	r0 = NSDictionary_fromPointer(ret)
 	return
@@ -2643,6 +2993,38 @@ func NSString_stringWithString_(
 	return
 }
 
+func NSString_stringWithContentsOfFile_encoding_error_(
+	path NSStringRef,
+	enc NSStringEncoding,
+	error NSErrorRef,
+) (
+	r0 NSString,
+) {
+	ret := C.NSString_type_stringWithContentsOfFile_encoding_error_(
+		objc.RefPointer(path),
+		C.ulong(enc),
+		objc.RefPointer(error),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func NSString_stringWithContentsOfURL_encoding_error_(
+	url NSURLRef,
+	enc NSStringEncoding,
+	error NSErrorRef,
+) (
+	r0 NSString,
+) {
+	ret := C.NSString_type_stringWithContentsOfURL_encoding_error_(
+		objc.RefPointer(url),
+		C.ulong(enc),
+		objc.RefPointer(error),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
 func NSString_localizedNameOfStringEncoding_(
 	encoding NSStringEncoding,
 ) (
@@ -2675,6 +3057,30 @@ func NSString_defaultCStringEncoding() (
 	return
 }
 
+func NSError_alloc() (
+	r0 NSError,
+) {
+	ret := C.NSError_type_alloc()
+	r0 = NSError_fromPointer(ret)
+	return
+}
+
+func NSError_errorWithDomain_code_userInfo_(
+	domain NSStringRef,
+	code NSInteger,
+	dict NSDictionaryRef,
+) (
+	r0 NSError,
+) {
+	ret := C.NSError_type_errorWithDomain_code_userInfo_(
+		objc.RefPointer(domain),
+		C.long(code),
+		objc.RefPointer(dict),
+	)
+	r0 = NSError_fromPointer(ret)
+	return
+}
+
 func NSThread_alloc() (
 	r0 NSThread,
 ) {
@@ -2692,6 +3098,15 @@ func NSThread_detachNewThreadSelector_toTarget_withObject_(
 		selector.SelectorAddress(),
 		objc.RefPointer(target),
 		objc.RefPointer(argument),
+	)
+	return
+}
+
+func NSThread_sleepUntilDate_(
+	date NSDateRef,
+) {
+	C.NSThread_type_sleepUntilDate_(
+		objc.RefPointer(date),
 	)
 	return
 }
@@ -2905,6 +3320,20 @@ func NSURL_URLWithDataRepresentation_relativeToURL_(
 		objc.RefPointer(baseURL),
 	)
 	r0 = NSURL_fromPointer(ret)
+	return
+}
+
+func NSURL_bookmarkDataWithContentsOfURL_error_(
+	bookmarkFileURL NSURLRef,
+	error NSErrorRef,
+) (
+	r0 NSData,
+) {
+	ret := C.NSURL_type_bookmarkDataWithContentsOfURL_error_(
+		objc.RefPointer(bookmarkFileURL),
+		objc.RefPointer(error),
+	)
+	r0 = NSData_fromPointer(ret)
 	return
 }
 
@@ -4310,6 +4739,36 @@ func (x gen_NSArray) ShuffledArray() (
 	return
 }
 
+func (x gen_NSArray) InitWithContentsOfURL_error_(
+	url NSURLRef,
+	error NSErrorRef,
+) (
+	r0 NSArray,
+) {
+	ret := C.NSArray_inst_initWithContentsOfURL_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		objc.RefPointer(error),
+	)
+	r0 = NSArray_fromPointer(ret)
+	return
+}
+
+func (x gen_NSArray) WriteToURL_error_(
+	url NSURLRef,
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSArray_inst_writeToURL_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func (x gen_NSArray) Count() (
 	r0 NSUInteger,
 ) {
@@ -4395,6 +4854,25 @@ func (x gen_NSAttributedString) InitWithAttributedString__asNSAttributedString(
 	ret := C.NSAttributedString_inst_initWithAttributedString_(
 		unsafe.Pointer(x.Pointer()),
 		objc.RefPointer(attrStr),
+	)
+	r0 = NSAttributedString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSAttributedString) InitWithData_options_documentAttributes_error__asNSAttributedString(
+	data NSDataRef,
+	options NSDictionaryRef,
+	dict NSDictionaryRef,
+	error NSErrorRef,
+) (
+	r0 NSAttributedString,
+) {
+	ret := C.NSAttributedString_inst_initWithData_options_documentAttributes_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(data),
+		objc.RefPointer(options),
+		objc.RefPointer(dict),
+		objc.RefPointer(error),
 	)
 	r0 = NSAttributedString_fromPointer(ret)
 	return
@@ -4489,6 +4967,25 @@ func (x gen_NSAttributedString) InitWithRTFD_documentAttributes__asNSAttributedS
 		unsafe.Pointer(x.Pointer()),
 		objc.RefPointer(data),
 		objc.RefPointer(dict),
+	)
+	r0 = NSAttributedString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSAttributedString) InitWithURL_options_documentAttributes_error__asNSAttributedString(
+	url NSURLRef,
+	options NSDictionaryRef,
+	dict NSDictionaryRef,
+	error NSErrorRef,
+) (
+	r0 NSAttributedString,
+) {
+	ret := C.NSAttributedString_inst_initWithURL_options_documentAttributes_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		objc.RefPointer(options),
+		objc.RefPointer(dict),
+		objc.RefPointer(error),
 	)
 	r0 = NSAttributedString_fromPointer(ret)
 	return
@@ -4782,6 +5279,97 @@ func (x gen_NSData) Description() (
 	return
 }
 
+type NSDateRef interface {
+	Pointer() uintptr
+	Init_asNSDate() NSDate
+}
+
+type gen_NSDate struct {
+	objc.Object
+}
+
+func NSDate_fromPointer(ptr unsafe.Pointer) NSDate {
+	return NSDate{gen_NSDate{
+		objc.Object_fromPointer(ptr),
+	}}
+}
+
+func NSDate_fromRef(ref objc.Ref) NSDate {
+	return NSDate_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_NSDate) Init_asNSDate() (
+	r0 NSDate,
+) {
+	ret := C.NSDate_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDate) IsEqualToDate_(
+	otherDate NSDateRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSDate_inst_isEqualToDate_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(otherDate),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSDate) EarlierDate_(
+	anotherDate NSDateRef,
+) (
+	r0 NSDate,
+) {
+	ret := C.NSDate_inst_earlierDate_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anotherDate),
+	)
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDate) LaterDate_(
+	anotherDate NSDateRef,
+) (
+	r0 NSDate,
+) {
+	ret := C.NSDate_inst_laterDate_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anotherDate),
+	)
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDate) DescriptionWithLocale_(
+	locale objc.Ref,
+) (
+	r0 NSString,
+) {
+	ret := C.NSDate_inst_descriptionWithLocale_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(locale),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDate) Description() (
+	r0 NSString,
+) {
+	ret := C.NSDate_inst_description(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
 type NSDictionaryRef interface {
 	Pointer() uintptr
 	Init_asNSDictionary() NSDictionary
@@ -4854,6 +5442,21 @@ func (x gen_NSDictionary) InitWithDictionary_copyItems__asNSDictionary(
 	return
 }
 
+func (x gen_NSDictionary) InitWithContentsOfURL_error_(
+	url NSURLRef,
+	error NSErrorRef,
+) (
+	r0 NSDictionary,
+) {
+	ret := C.NSDictionary_inst_initWithContentsOfURL_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		objc.RefPointer(error),
+	)
+	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
 func (x gen_NSDictionary) IsEqualToDictionary_(
 	otherDictionary NSDictionaryRef,
 ) (
@@ -4880,6 +5483,21 @@ func (x gen_NSDictionary) KeysSortedByValueUsingSelector_(
 	return
 }
 
+func (x gen_NSDictionary) WriteToURL_error_(
+	url NSURLRef,
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSDictionary_inst_writeToURL_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func (x gen_NSDictionary) FileType() (
 	r0 NSString,
 ) {
@@ -4887,6 +5505,26 @@ func (x gen_NSDictionary) FileType() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDictionary) FileCreationDate() (
+	r0 NSDate,
+) {
+	ret := C.NSDictionary_inst_fileCreationDate(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSDate_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDictionary) FileModificationDate() (
+	r0 NSDate,
+) {
+	ret := C.NSDictionary_inst_fileModificationDate(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSDate_fromPointer(ret)
 	return
 }
 
@@ -5320,6 +5958,16 @@ func (x gen_NSRunLoop) Run() {
 	return
 }
 
+func (x gen_NSRunLoop) RunUntilDate_(
+	limitDate NSDateRef,
+) {
+	C.NSRunLoop_inst_runUntilDate_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(limitDate),
+	)
+	return
+}
+
 func (x gen_NSRunLoop) PerformSelector_target_argument_order_modes_(
 	aSelector objc.Selector,
 	target objc.Ref,
@@ -5460,6 +6108,40 @@ func (x gen_NSString) InitWithData_encoding__asNSString(
 		unsafe.Pointer(x.Pointer()),
 		objc.RefPointer(data),
 		C.ulong(encoding),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSString) InitWithContentsOfFile_encoding_error__asNSString(
+	path NSStringRef,
+	enc NSStringEncoding,
+	error NSErrorRef,
+) (
+	r0 NSString,
+) {
+	ret := C.NSString_inst_initWithContentsOfFile_encoding_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(path),
+		C.ulong(enc),
+		objc.RefPointer(error),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSString) InitWithContentsOfURL_encoding_error__asNSString(
+	url NSURLRef,
+	enc NSStringEncoding,
+	error NSErrorRef,
+) (
+	r0 NSString,
+) {
+	ret := C.NSString_inst_initWithContentsOfURL_encoding_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		C.ulong(enc),
+		objc.RefPointer(error),
 	)
 	r0 = NSString_fromPointer(ret)
 	return
@@ -5663,6 +6345,44 @@ func (x gen_NSString) StringByReplacingOccurrencesOfString_withString_(
 		objc.RefPointer(replacement),
 	)
 	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSString) WriteToFile_atomically_encoding_error_(
+	path NSStringRef,
+	useAuxiliaryFile bool,
+	enc NSStringEncoding,
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSString_inst_writeToFile_atomically_encoding_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(path),
+		convertToObjCBool(useAuxiliaryFile),
+		C.ulong(enc),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSString) WriteToURL_atomically_encoding_error_(
+	url NSURLRef,
+	useAuxiliaryFile bool,
+	enc NSStringEncoding,
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSString_inst_writeToURL_atomically_encoding_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(url),
+		convertToObjCBool(useAuxiliaryFile),
+		C.ulong(enc),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
 	return
 }
 
@@ -6133,6 +6853,152 @@ func (x gen_NSString) StringByRemovingPercentEncoding() (
 	return
 }
 
+type NSErrorRef interface {
+	Pointer() uintptr
+	Init_asNSError() NSError
+}
+
+type gen_NSError struct {
+	objc.Object
+}
+
+func NSError_fromPointer(ptr unsafe.Pointer) NSError {
+	return NSError{gen_NSError{
+		objc.Object_fromPointer(ptr),
+	}}
+}
+
+func NSError_fromRef(ref objc.Ref) NSError {
+	return NSError_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_NSError) InitWithDomain_code_userInfo__asNSError(
+	domain NSStringRef,
+	code NSInteger,
+	dict NSDictionaryRef,
+) (
+	r0 NSError,
+) {
+	ret := C.NSError_inst_initWithDomain_code_userInfo_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(domain),
+		C.long(code),
+		objc.RefPointer(dict),
+	)
+	r0 = NSError_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) Init_asNSError() (
+	r0 NSError,
+) {
+	ret := C.NSError_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSError_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) Code() (
+	r0 NSInteger,
+) {
+	ret := C.NSError_inst_code(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSInteger(ret)
+	return
+}
+
+func (x gen_NSError) Domain() (
+	r0 NSString,
+) {
+	ret := C.NSError_inst_domain(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) UserInfo() (
+	r0 NSDictionary,
+) {
+	ret := C.NSError_inst_userInfo(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) LocalizedDescription() (
+	r0 NSString,
+) {
+	ret := C.NSError_inst_localizedDescription(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) LocalizedRecoveryOptions() (
+	r0 NSArray,
+) {
+	ret := C.NSError_inst_localizedRecoveryOptions(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSArray_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) LocalizedRecoverySuggestion() (
+	r0 NSString,
+) {
+	ret := C.NSError_inst_localizedRecoverySuggestion(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) LocalizedFailureReason() (
+	r0 NSString,
+) {
+	ret := C.NSError_inst_localizedFailureReason(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) RecoveryAttempter() (
+	r0 objc.Object,
+) {
+	ret := C.NSError_inst_recoveryAttempter(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) HelpAnchor() (
+	r0 NSString,
+) {
+	ret := C.NSError_inst_helpAnchor(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSString_fromPointer(ret)
+	return
+}
+
+func (x gen_NSError) UnderlyingErrors() (
+	r0 NSArray,
+) {
+	ret := C.NSError_inst_underlyingErrors(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = NSArray_fromPointer(ret)
+	return
+}
+
 type NSThreadRef interface {
 	Pointer() uintptr
 	Init_asNSThread() NSThread
@@ -6450,11 +7316,54 @@ func (x gen_NSURL) IsEqual_(
 	return
 }
 
+func (x gen_NSURL) CheckResourceIsReachableAndReturnError_(
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSURL_inst_checkResourceIsReachableAndReturnError_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
 func (x gen_NSURL) IsFileReferenceURL() (
 	r0 bool,
 ) {
 	ret := C.NSURL_inst_isFileReferenceURL(
 		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSURL) ResourceValuesForKeys_error_(
+	keys NSArrayRef,
+	error NSErrorRef,
+) (
+	r0 NSDictionary,
+) {
+	ret := C.NSURL_inst_resourceValuesForKeys_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(keys),
+		objc.RefPointer(error),
+	)
+	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
+func (x gen_NSURL) SetResourceValues_error_(
+	keyedValues NSDictionaryRef,
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSURL_inst_setResourceValues_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(keyedValues),
+		objc.RefPointer(error),
 	)
 	r0 = convertObjCBoolToGo(ret)
 	return
@@ -6532,6 +7441,34 @@ func (x gen_NSURL) StopAccessingSecurityScopedResource() {
 	C.NSURL_inst_stopAccessingSecurityScopedResource(
 		unsafe.Pointer(x.Pointer()),
 	)
+	return
+}
+
+func (x gen_NSURL) CheckPromisedItemIsReachableAndReturnError_(
+	error NSErrorRef,
+) (
+	r0 bool,
+) {
+	ret := C.NSURL_inst_checkPromisedItemIsReachableAndReturnError_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(error),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSURL) PromisedItemResourceValuesForKeys_error_(
+	keys NSArrayRef,
+	error NSErrorRef,
+) (
+	r0 NSDictionary,
+) {
+	ret := C.NSURL_inst_promisedItemResourceValuesForKeys_error_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(keys),
+		objc.RefPointer(error),
+	)
+	r0 = NSDictionary_fromPointer(ret)
 	return
 }
 
@@ -7012,7 +7949,7 @@ func (x gen_NSNotification) Init_asNSNotification() (
 func (x gen_NSNotification) Object_() (
 	r0 objc.Object,
 ) {
-	ret := C.NSNotification_inst_object(
+	ret := C.NSNotification_inst_object_(
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = objc.Object_fromPointer(ret)

@@ -1,0 +1,303 @@
+{
+  "TypeAlias": {
+    "Name": "NSErrorUserInfoKey",
+    "Description": "These keys may exist in the user info dictionary.",
+    "Declaration": "typedef NSString *NSErrorUserInfoKey;",
+    "Frameworks": [
+      "Foundation"
+    ],
+    "Platforms": [
+      "iOS 11.0+",
+      "iPadOS 11.0+",
+      "macOS 10.13+",
+      "Mac Catalyst 13.0+",
+      "tvOS 11.0+",
+      "watchOS 4.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/foundation/nserroruserinfokey?language=objc",
+    "Type": {
+      "Name": "NSString",
+      "IsPtr": true
+    },
+    "Values": [
+      {
+        "Name": "NSURLErrorKey",
+        "Description": "The corresponding value is an NSURL object.",
+        "Declaration": "const NSErrorUserInfoKey NSURLErrorKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsurlerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSFilePathErrorKey",
+        "Description": "Contains the file path of the error.",
+        "Declaration": "const NSErrorUserInfoKey NSFilePathErrorKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsfilepatherrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSHelpAnchorErrorKey",
+        "Description": "The corresponding value is an NSString containing the localized help corresponding to the help button. See helpAnchor for more information.",
+        "Declaration": "const NSErrorUserInfoKey NSHelpAnchorErrorKey;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 4.0+",
+          "iPadOS 4.0+",
+          "macOS 10.6+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nshelpanchorerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSLocalizedDescriptionKey",
+        "Description": "The corresponding value is a localized string representation of the error that, if present, will be returned by localizedDescription.",
+        "Declaration": "const NSErrorUserInfoKey NSLocalizedDescriptionKey;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nslocalizeddescriptionkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSLocalizedFailureErrorKey",
+        "Declaration": "const NSErrorUserInfoKey NSLocalizedFailureErrorKey;",
+        "Platforms": [
+          "iOS 11.0+",
+          "iPadOS 11.0+",
+          "macOS 10.13+",
+          "Mac Catalyst 13.1+",
+          "tvOS 11.0+",
+          "watchOS 4.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nslocalizedfailureerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSLocalizedFailureReasonErrorKey",
+        "Description": "The corresponding value is a localized string representation containing the reason for the failure that, if present, will be returned by localizedFailureReason.",
+        "Declaration": "const NSErrorUserInfoKey NSLocalizedFailureReasonErrorKey;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nslocalizedfailurereasonerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSLocalizedRecoveryOptionsErrorKey",
+        "Description": "The corresponding value is an array containing the localized titles of buttons appropriate for displaying in an alert panel.",
+        "Declaration": "const NSErrorUserInfoKey NSLocalizedRecoveryOptionsErrorKey;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nslocalizedrecoveryoptionserrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSLocalizedRecoverySuggestionErrorKey",
+        "Description": "The corresponding value is a string containing the localized recovery suggestion for the error.",
+        "Declaration": "const NSErrorUserInfoKey NSLocalizedRecoverySuggestionErrorKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nslocalizedrecoverysuggestionerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSRecoveryAttempterErrorKey",
+        "Description": "The corresponding value is an object that conforms to the NSErrorRecoveryAttempting informal protocol.",
+        "Declaration": "const NSErrorUserInfoKey NSRecoveryAttempterErrorKey;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsrecoveryattemptererrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSStringEncodingErrorKey",
+        "Description": "The corresponding value is an NSNumber object containing the NSStringEncoding value.",
+        "Declaration": "const NSErrorUserInfoKey NSStringEncodingErrorKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.4+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsstringencodingerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSUnderlyingErrorKey",
+        "Description": "The corresponding value is an error that was encountered in an underlying implementation and caused the error that the receiver represents to occur.",
+        "Declaration": "const NSErrorUserInfoKey NSUnderlyingErrorKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.3+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsunderlyingerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSDebugDescriptionErrorKey",
+        "Declaration": "const NSErrorUserInfoKey NSDebugDescriptionErrorKey;",
+        "Platforms": [
+          "iOS 2.0+",
+          "iPadOS 2.0+",
+          "macOS 10.5+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsdebugdescriptionerrorkey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      },
+      {
+        "Name": "NSMultipleUnderlyingErrorsKey",
+        "Declaration": "const NSErrorUserInfoKey NSMultipleUnderlyingErrorsKey;",
+        "Frameworks": [
+          "Foundation"
+        ],
+        "Platforms": [
+          "iOS 14.5+",
+          "iPadOS 14.5+",
+          "macOS 11.3+",
+          "Mac Catalyst 14.5+",
+          "tvOS 14.5+",
+          "watchOS 7.4+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/foundation/nsmultipleunderlyingerrorskey?language=objc",
+        "Type": {
+          "Name": "NSErrorUserInfoKey",
+          "Annotations": [
+            "const"
+          ]
+        }
+      }
+    ]
+  },
+  "Kind": "typealias",
+  "PullDate": "2022-09-03T09:38:23.292096+08:00",
+  "Version": 2
+}
