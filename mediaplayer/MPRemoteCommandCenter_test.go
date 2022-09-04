@@ -57,9 +57,9 @@ func TestAsync(t *testing.T) {
 	})
 	cls.AddMethod("handlePausedCommand:", func(event objc.Object) core.NSInteger {
 		fmt.Printf("paused: %#v\n", event)
+		player.Pause()
 		playingCenter.SetPlaybackState_(MPNowPlayingPlaybackStatePaused)
 		playingCenter.SetNowPlayingInfo_(nowPlayingInfoOfPlayer(&player))
-		player.Pause()
 		return MPRemoteCommandHandlerStatusSuccess
 	})
 	objc.RegisterClass(cls)
