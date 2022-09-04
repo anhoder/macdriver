@@ -137,6 +137,19 @@ func main() {
 			loadFile("api/avfoundation/avqueueplayer.objc.json"),
 		}},
 
+		{"mediaplayer", []schemaLoader{
+			loadFile("api/mediaplayer/mpnowplayinginfocenter.objc.json"),
+			loadFile("api/mediaplayer/mpremotecommand.objc.json"),
+			loadFile("api/mediaplayer/mpchangeshufflemodecommand.objc.json"),
+			loadFile("api/mediaplayer/mpchangerepeatmodecommand.objc.json"),
+			loadFile("api/mediaplayer/mpchangeplaybackpositioncommand.objc.json"),
+			loadFile("api/mediaplayer/mpchangeplaybackratecommand.objc.json"),
+			loadFile("api/mediaplayer/mpskipintervalcommand.objc.json"),
+			loadFile("api/mediaplayer/mpfeedbackcommand.objc.json"),
+			loadFile("api/mediaplayer/mpratingcommand.objc.json"),
+			loadFile("api/mediaplayer/mpremotecommandcenter.objc.json"),
+		}},
+
 		{"webkit", []schemaLoader{
 			loadFile("api/webkit/wknavigation.objc.json"),
 			loadFile("api/webkit/wkuserscript.objc.json"),

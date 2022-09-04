@@ -1,0 +1,72 @@
+{
+  "Class": {
+    "Name": "MPRatingCommand",
+    "Description": "An object that provides a detailed rating for the item being played.",
+    "Declaration": "@interface MPRatingCommand : MPRemoteCommand",
+    "Frameworks": [
+      "Media Player"
+    ],
+    "Platforms": [
+      "iOS 7.1+",
+      "iPadOS 7.1+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpratingcommand?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "maximumRating",
+        "Description": "The maximum rating for a command.",
+        "Declaration": "@property(nonatomic, assign) float maximumRating;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpratingcommand/1622898-maximumrating?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {
+          "assign": true,
+          "nonatomic": true
+        }
+      },
+      {
+        "Name": "minimumRating",
+        "Description": "The minimum rating for a command.",
+        "Declaration": "@property(nonatomic, assign) float minimumRating;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpratingcommand/1622902-minimumrating?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {
+          "assign": true,
+          "nonatomic": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T22:34:39.190757+08:00",
+  "Version": 2
+}

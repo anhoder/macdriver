@@ -798,35 +798,6 @@
         }
       },
       {
-        "Name": "defaultRate",
-        "Description": "A default rate at which to begin playback.",
-        "Declaration": "@property(nonatomic) float defaultRate;",
-        "Frameworks": [
-          "AVFoundation"
-        ],
-        "Platforms": [
-          "iOS 16.0+",
-          "Beta",
-          "iPadOS 16.0+",
-          "Beta",
-          "macOS 13.0+",
-          "Beta",
-          "Mac Catalyst 16.0+",
-          "Beta",
-          "tvOS 16.0+",
-          "Beta",
-          "watchOS 9.0+",
-          "Beta"
-        ],
-        "TopicURL": "https://developer.apple.com/documentation/avfoundation/avplayer/3929373-defaultrate?language=objc",
-        "Type": {
-          "Name": "float"
-        },
-        "Attrs": {
-          "nonatomic": true
-        }
-      },
-      {
         "Name": "rate",
         "Description": "The current playback rate.",
         "Declaration": "@property float rate;",

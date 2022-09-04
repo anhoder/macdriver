@@ -1,0 +1,100 @@
+{
+  "Class": {
+    "Name": "MPNowPlayingInfoCenter",
+    "Description": "An object that you use to set now-playing information for media being played by your app.",
+    "Declaration": "@interface MPNowPlayingInfoCenter : NSObject",
+    "Platforms": [
+      "iOS 5.0+",
+      "iPadOS 5.0+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpnowplayinginfocenter?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "nowPlayingInfo",
+        "Description": "The current now-playing information for the default now playing info center.",
+        "Declaration": "@property(nonatomic, copy, nullable) NSDictionary\u003cNSString *,id\u003e *nowPlayingInfo;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpnowplayinginfocenter/1615903-nowplayinginfo?language=objc",
+        "Type": {
+          "Name": "NSDictionary",
+          "IsPtr": true,
+          "Params": [
+            {
+              "Name": "NSString",
+              "IsPtr": true
+            },
+            {
+              "Name": "id"
+            }
+          ]
+        },
+        "Attrs": {
+          "copy": true,
+          "nonatomic": true,
+          "nullable": true
+        }
+      },
+      {
+        "Name": "playbackState",
+        "Description": "The current playback state of the app.",
+        "Declaration": "@property(nonatomic) MPNowPlayingPlaybackState playbackState;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 13.0+",
+          "iPadOS 13.0+",
+          "macOS 10.12.2+",
+          "Mac Catalyst 13.0+",
+          "tvOS 13.0+",
+          "watchOS 6.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpnowplayinginfocenter/2588243-playbackstate?language=objc",
+        "Type": {
+          "Name": "MPNowPlayingPlaybackState"
+        },
+        "Attrs": {
+          "nonatomic": true
+        }
+      }
+    ],
+    "TypeMethods": [
+      {
+        "Name": "defaultCenter",
+        "Description": "Returns the singleton now playing info center.",
+        "Declaration": "+ (MPNowPlayingInfoCenter *)defaultCenter;",
+        "Platforms": [
+          "iOS 5.0+",
+          "iPadOS 5.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpnowplayinginfocenter/1615899-defaultcenter?language=objc",
+        "Return": {
+          "Name": "MPNowPlayingInfoCenter",
+          "IsPtr": true
+        },
+        "Args": null
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T22:06:14.289777+08:00",
+  "Version": 2
+}

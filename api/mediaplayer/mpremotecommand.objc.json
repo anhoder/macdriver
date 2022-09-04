@@ -1,0 +1,185 @@
+{
+  "Class": {
+    "Name": "MPRemoteCommand",
+    "Description": "An object that responds to remote command events.",
+    "Declaration": "@interface MPRemoteCommand : NSObject",
+    "Frameworks": [
+      "Media Player"
+    ],
+    "Platforms": [
+      "iOS 7.1+",
+      "iPadOS 7.1+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommand?language=objc",
+    "InstanceMethods": [
+      {
+        "Name": "addTargetWithHandler:",
+        "Description": "Adds a block to be called when an event is received.",
+        "Declaration": "- (id)addTargetWithHandler:(MPRemoteCommandHandlerStatus (^)(MPRemoteCommandEvent *event))handler;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommand/1622910-addtargetwithhandler?language=objc",
+        "Return": {
+          "Name": "id"
+        },
+        "Args": [
+          {
+            "Name": "handler",
+            "Type": {
+              "Block": {
+                "Return": {
+                  "Name": "MPRemoteCommandHandlerStatus"
+                },
+                "Args": [
+                  {
+                    "Name": "event",
+                    "Type": {
+                      "Name": "MPRemoteCommandEvent",
+                      "IsPtr": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Name": "addTarget:action:",
+        "Description": "Adds a target object to be called when an event is received.",
+        "Declaration": "- (void)addTarget:(id)target \n           action:(SEL)action;\n",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommand/1622895-addtarget?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "target",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "action",
+            "Type": {
+              "Name": "SEL"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeTarget:",
+        "Description": "Removes a target from the remote command object.",
+        "Declaration": "- (void)removeTarget:(id)target;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommand/1622903-removetarget?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "target",
+            "Type": {
+              "Name": "id"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "removeTarget:action:",
+        "Description": "Removes a target and action from a remote command object.",
+        "Declaration": "- (void)removeTarget:(id)target \n              action:(SEL)action;\n",
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommand/1622896-removetarget?language=objc",
+        "Return": {
+          "Name": "void"
+        },
+        "Args": [
+          {
+            "Name": "target",
+            "Type": {
+              "Name": "id"
+            }
+          },
+          {
+            "Name": "action",
+            "Type": {
+              "Name": "SEL"
+            }
+          }
+        ]
+      }
+    ],
+    "InstanceProperties": [
+      {
+        "Name": "enabled",
+        "Description": "A Boolean value that indicates whether a user can interact with the displayed element.",
+        "Declaration": "@property(nonatomic, assign, getter=isEnabled) BOOL enabled;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommand/1622908-enabled?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "assign": true,
+          "getter": "isEnabled",
+          "nonatomic": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T22:15:30.861651+08:00",
+  "Version": 2
+}

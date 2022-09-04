@@ -622,16 +622,6 @@ void* AVPlayer_inst_error(void *id) {
 		error];
 }
 
-//float AVPlayer_inst_defaultRate(void *id) {
-//	return [(AVPlayer*)id
-//		defaultRate];
-//}
-
-void AVPlayer_inst_setDefaultRate_(void *id, float value) {
-	[(AVPlayer*)id
-		setDefaultRate: value];
-}
-
 float AVPlayer_inst_rate(void *id) {
 	return [(AVPlayer*)id
 		rate];
@@ -2072,26 +2062,6 @@ func (x gen_AVPlayer) Error() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = core.NSError_fromPointer(ret)
-	return
-}
-
-//func (x gen_AVPlayer) DefaultRate() (
-//	r0 float32,
-//) {
-//	ret := C.AVPlayer_inst_defaultRate(
-//		unsafe.Pointer(x.Pointer()),
-//	)
-//	r0 = float32(ret)
-//	return
-//}
-
-func (x gen_AVPlayer) SetDefaultRate_(
-	value float32,
-) {
-	C.AVPlayer_inst_setDefaultRate_(
-		unsafe.Pointer(x.Pointer()),
-		C.float(value),
-	)
 	return
 }
 

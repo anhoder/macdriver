@@ -1,0 +1,539 @@
+{
+  "Class": {
+    "Name": "MPRemoteCommandCenter",
+    "Description": "An object that responds to remote control events sent by external accessories and system controls.",
+    "Declaration": "@interface MPRemoteCommandCenter : NSObject",
+    "Platforms": [
+      "iOS 7.1+",
+      "iPadOS 7.1+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "pauseCommand",
+        "Description": "The command object for pausing playback of the current item.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *pauseCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618979-pausecommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "playCommand",
+        "Description": "The command object for starting playback of the current item.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *playCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1619000-playcommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "stopCommand",
+        "Description": "The command object for stopping playback of the current item.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *stopCommand;",
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618984-stopcommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "togglePlayPauseCommand",
+        "Description": "The command object for toggling between playing and pausing the current item.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *togglePlayPauseCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618992-toggleplaypausecommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "nextTrackCommand",
+        "Description": "The command object for selecting the next track.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *nextTrackCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618999-nexttrackcommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "previousTrackCommand",
+        "Description": "The command object for selecting the previous track.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *previousTrackCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618978-previoustrackcommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "changeRepeatModeCommand",
+        "Description": "The command object for changing the repeat mode.",
+        "Declaration": "@property(nonatomic, readonly) MPChangeRepeatModeCommand *changeRepeatModeCommand;",
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1649694-changerepeatmodecommand?language=objc",
+        "Type": {
+          "Name": "MPChangeRepeatModeCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "changeShuffleModeCommand",
+        "Description": "The command object for changing the shuffle mode.",
+        "Declaration": "@property(nonatomic, readonly) MPChangeShuffleModeCommand *changeShuffleModeCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1649692-changeshufflemodecommand?language=objc",
+        "Type": {
+          "Name": "MPChangeShuffleModeCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "changePlaybackRateCommand",
+        "Description": "The command object for changing the playback rate of the current media item.",
+        "Declaration": "@property(nonatomic, readonly) MPChangePlaybackRateCommand *changePlaybackRateCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618991-changeplaybackratecommand?language=objc",
+        "Type": {
+          "Name": "MPChangePlaybackRateCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "seekBackwardCommand",
+        "Description": "The command object for seeking backward through a single media item.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *seekBackwardCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618982-seekbackwardcommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "seekForwardCommand",
+        "Description": "The command object for seeking forward through a single media item.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *seekForwardCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618981-seekforwardcommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "skipBackwardCommand",
+        "Description": "The command object for playing a previous point in a media item.",
+        "Declaration": "@property(nonatomic, readonly) MPSkipIntervalCommand *skipBackwardCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618996-skipbackwardcommand?language=objc",
+        "Type": {
+          "Name": "MPSkipIntervalCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "skipForwardCommand",
+        "Description": "The command object for playing a future point in a media item.",
+        "Declaration": "@property(nonatomic, readonly) MPSkipIntervalCommand *skipForwardCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618990-skipforwardcommand?language=objc",
+        "Type": {
+          "Name": "MPSkipIntervalCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "changePlaybackPositionCommand",
+        "Description": "The command object for changing the playback position in a media item.",
+        "Declaration": "@property(nonatomic, readonly) MPChangePlaybackPositionCommand *changePlaybackPositionCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 9.1+",
+          "iPadOS 9.1+",
+          "macOS 10.12.2+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618997-changeplaybackpositioncommand?language=objc",
+        "Type": {
+          "Name": "MPChangePlaybackPositionCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "ratingCommand",
+        "Description": "The command object for rating a media item.",
+        "Declaration": "@property(nonatomic, readonly) MPRatingCommand *ratingCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618986-ratingcommand?language=objc",
+        "Type": {
+          "Name": "MPRatingCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "likeCommand",
+        "Description": "The command object for indicating that a user likes what is currently playing.",
+        "Declaration": "@property(nonatomic, readonly) MPFeedbackCommand *likeCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618998-likecommand?language=objc",
+        "Type": {
+          "Name": "MPFeedbackCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "dislikeCommand",
+        "Description": "The command object for indicating that a user dislikes what is currently playing.",
+        "Declaration": "@property(nonatomic, readonly) MPFeedbackCommand *dislikeCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618995-dislikecommand?language=objc",
+        "Type": {
+          "Name": "MPFeedbackCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "bookmarkCommand",
+        "Description": "The command object for indicating that a user wants to remember a media item.",
+        "Declaration": "@property(nonatomic, readonly) MPFeedbackCommand *bookmarkCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1619002-bookmarkcommand?language=objc",
+        "Type": {
+          "Name": "MPFeedbackCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "enableLanguageOptionCommand",
+        "Description": "The command object for enabling a language option.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *enableLanguageOptionCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.12.2+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618980-enablelanguageoptioncommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "disableLanguageOptionCommand",
+        "Description": "The command object for disabling a language option",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *disableLanguageOptionCommand;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.12.2+",
+          "Mac Catalyst 13.1+",
+          "tvOS 9.0+",
+          "watchOS 2.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618988-disablelanguageoptioncommand?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ],
+    "TypeMethods": [
+      {
+        "Name": "sharedCommandCenter",
+        "Description": "Returns the shared object you use to access the system’s remote command objects.",
+        "Declaration": "+ (MPRemoteCommandCenter *)sharedCommandCenter;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter/1618994-sharedcommandcenter?language=objc",
+        "Return": {
+          "Name": "MPRemoteCommandCenter",
+          "IsPtr": true
+        },
+        "Args": null
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T22:39:28.270821+08:00",
+  "Version": 2
+}

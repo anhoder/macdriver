@@ -113,14 +113,16 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 
 	switch dt.Name {
 	// FIXME split enums into their own types
-	case "NSUInteger", "NSWindowStyleMask", "NSBackingStoreType", "NSWindowOrderingMode", "NSWindowCollectionBehavior":
+	case "NSUInteger", "NSWindowStyleMask", "NSBackingStoreType", "NSWindowOrderingMode", "NSWindowCollectionBehavior",
+		"MPNowPlayingPlaybackState":
 		return typeMapping{
 			GoType:     corePkg + "NSUInteger",
 			CType:      "unsigned long",
 			FromCGoFmt: corePkg + "NSUInteger(%s)",
 			ToCGoFmt:   "C.ulong(%s)",
 		}
-	case "NSInteger", "NSWindowTitleVisibility", "NSWindowLevel", "NSApplicationActivationPolicy", "NSControlStateValue", "NSPopoverBehavior", "AVPlayerActionAtItemEnd":
+	case "NSInteger", "NSWindowTitleVisibility", "NSWindowLevel", "NSApplicationActivationPolicy", "NSControlStateValue",
+		"NSPopoverBehavior", "AVPlayerActionAtItemEnd", "MPShuffleType", "MPRepeatType":
 		return typeMapping{
 			GoType:     corePkg + "NSInteger",
 			CType:      "long",
@@ -232,7 +234,7 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 			FromCGoFmt: "*(*" + corePkg + "CMTime)(unsafe.Pointer(&%s))",
 			ToCGoFmt:   "*(*C.CMTime)(unsafe.Pointer(&%s))",
 		}
-	case "id":
+	case "ObjectType", "id":
 		return typeMapping{
 			GoType:          "objc.Object",
 			GoSimpleRefType: "objc.Ref",

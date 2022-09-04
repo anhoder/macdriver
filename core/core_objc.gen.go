@@ -58,6 +58,10 @@ void* NSArray_type_arrayWithArray_(void* array) {
 	return [NSArray
 		arrayWithArray: array];
 }
+void* NSArray_type_arrayWithObject_(void* anObject) {
+	return [NSArray
+		arrayWithObject: anObject];
+}
 void* NSArray_type_arrayWithContentsOfURL_error_(void* url, void* error) {
 	return [NSArray
 		arrayWithContentsOfURL: url
@@ -143,6 +147,11 @@ void* NSDictionary_type_dictionaryWithObjects_forKeys_(void* objects, void* keys
 	return [NSDictionary
 		dictionaryWithObjects: objects
 		forKeys: keys];
+}
+void* NSDictionary_type_dictionaryWithObject_forKey_(void* object, void* key) {
+	return [NSDictionary
+		dictionaryWithObject: object
+		forKey: key];
 }
 void* NSDictionary_type_dictionaryWithDictionary_(void* dict) {
 	return [NSDictionary
@@ -958,6 +967,31 @@ void* NSArray_inst_initWithArray_copyItems_(void *id, void* array, BOOL flag) {
 		copyItems: flag];
 }
 
+BOOL NSArray_inst_containsObject_(void *id, void* anObject) {
+	return [(NSArray*)id
+		containsObject: anObject];
+}
+
+void* NSArray_inst_objectAtIndex_(void *id, unsigned long index) {
+	return [(NSArray*)id
+		objectAtIndex: index];
+}
+
+void* NSArray_inst_objectAtIndexedSubscript_(void *id, unsigned long idx) {
+	return [(NSArray*)id
+		objectAtIndexedSubscript: idx];
+}
+
+unsigned long NSArray_inst_indexOfObject_(void *id, void* anObject) {
+	return [(NSArray*)id
+		indexOfObject: anObject];
+}
+
+unsigned long NSArray_inst_indexOfObjectIdenticalTo_(void *id, void* anObject) {
+	return [(NSArray*)id
+		indexOfObjectIdenticalTo: anObject];
+}
+
 void NSArray_inst_makeObjectsPerformSelector_(void *id, void* aSelector) {
 	[(NSArray*)id
 		makeObjectsPerformSelector: aSelector];
@@ -969,9 +1003,19 @@ void NSArray_inst_makeObjectsPerformSelector_withObject_(void *id, void* aSelect
 		withObject: argument];
 }
 
+void* NSArray_inst_firstObjectCommonWithArray_(void *id, void* otherArray) {
+	return [(NSArray*)id
+		firstObjectCommonWithArray: otherArray];
+}
+
 BOOL NSArray_inst_isEqualToArray_(void *id, void* otherArray) {
 	return [(NSArray*)id
 		isEqualToArray: otherArray];
+}
+
+void* NSArray_inst_arrayByAddingObject_(void *id, void* anObject) {
+	return [(NSArray*)id
+		arrayByAddingObject: anObject];
 }
 
 void* NSArray_inst_arrayByAddingObjectsFromArray_(void *id, void* otherArray) {
@@ -1041,6 +1085,16 @@ BOOL NSArray_inst_writeToURL_error_(void *id, void* url, void* error) {
 unsigned long NSArray_inst_count(void *id) {
 	return [(NSArray*)id
 		count];
+}
+
+void* NSArray_inst_firstObject(void *id) {
+	return [(NSArray*)id
+		firstObject];
+}
+
+void* NSArray_inst_lastObject(void *id) {
+	return [(NSArray*)id
+		lastObject];
 }
 
 void* NSArray_inst_sortedArrayHint(void *id) {
@@ -1302,6 +1356,22 @@ void* NSDictionary_inst_initWithContentsOfURL_error_(void *id, void* url, void* 
 BOOL NSDictionary_inst_isEqualToDictionary_(void *id, void* otherDictionary) {
 	return [(NSDictionary*)id
 		isEqualToDictionary: otherDictionary];
+}
+
+void* NSDictionary_inst_allKeysForObject_(void *id, void* anObject) {
+	return [(NSDictionary*)id
+		allKeysForObject: anObject];
+}
+
+void* NSDictionary_inst_valueForKey_(void *id, void* key) {
+	return [(NSDictionary*)id
+		valueForKey: key];
+}
+
+void* NSDictionary_inst_objectsForKeys_notFoundMarker_(void *id, void* keys, void* marker) {
+	return [(NSDictionary*)id
+		objectsForKeys: keys
+		notFoundMarker: marker];
 }
 
 void* NSDictionary_inst_keysSortedByValueUsingSelector_(void *id, void* comparator) {
@@ -2593,6 +2663,18 @@ func NSArray_arrayWithArray_(
 	return
 }
 
+func NSArray_arrayWithObject_(
+	anObject objc.Ref,
+) (
+	r0 NSArray,
+) {
+	ret := C.NSArray_type_arrayWithObject_(
+		objc.RefPointer(anObject),
+	)
+	r0 = NSArray_fromPointer(ret)
+	return
+}
+
 func NSArray_arrayWithContentsOfURL_error_(
 	url NSURLRef,
 	error NSErrorRef,
@@ -2792,6 +2874,20 @@ func NSDictionary_dictionaryWithObjects_forKeys_(
 	ret := C.NSDictionary_type_dictionaryWithObjects_forKeys_(
 		objc.RefPointer(objects),
 		objc.RefPointer(keys),
+	)
+	r0 = NSDictionary_fromPointer(ret)
+	return
+}
+
+func NSDictionary_dictionaryWithObject_forKey_(
+	object objc.Ref,
+	key objc.Ref,
+) (
+	r0 NSDictionary,
+) {
+	ret := C.NSDictionary_type_dictionaryWithObject_forKey_(
+		objc.RefPointer(object),
+		objc.RefPointer(key),
 	)
 	r0 = NSDictionary_fromPointer(ret)
 	return
@@ -4576,6 +4672,71 @@ func (x gen_NSArray) InitWithArray_copyItems__asNSArray(
 	return
 }
 
+func (x gen_NSArray) ContainsObject_(
+	anObject objc.Ref,
+) (
+	r0 bool,
+) {
+	ret := C.NSArray_inst_containsObject_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anObject),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSArray) ObjectAtIndex_(
+	index NSUInteger,
+) (
+	r0 objc.Object,
+) {
+	ret := C.NSArray_inst_objectAtIndex_(
+		unsafe.Pointer(x.Pointer()),
+		C.ulong(index),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
+func (x gen_NSArray) ObjectAtIndexedSubscript_(
+	idx NSUInteger,
+) (
+	r0 objc.Object,
+) {
+	ret := C.NSArray_inst_objectAtIndexedSubscript_(
+		unsafe.Pointer(x.Pointer()),
+		C.ulong(idx),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
+func (x gen_NSArray) IndexOfObject_(
+	anObject objc.Ref,
+) (
+	r0 NSUInteger,
+) {
+	ret := C.NSArray_inst_indexOfObject_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anObject),
+	)
+	r0 = NSUInteger(ret)
+	return
+}
+
+func (x gen_NSArray) IndexOfObjectIdenticalTo_(
+	anObject objc.Ref,
+) (
+	r0 NSUInteger,
+) {
+	ret := C.NSArray_inst_indexOfObjectIdenticalTo_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anObject),
+	)
+	r0 = NSUInteger(ret)
+	return
+}
+
 func (x gen_NSArray) MakeObjectsPerformSelector_(
 	aSelector objc.Selector,
 ) {
@@ -4598,6 +4759,19 @@ func (x gen_NSArray) MakeObjectsPerformSelector_withObject_(
 	return
 }
 
+func (x gen_NSArray) FirstObjectCommonWithArray_(
+	otherArray NSArrayRef,
+) (
+	r0 objc.Object,
+) {
+	ret := C.NSArray_inst_firstObjectCommonWithArray_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(otherArray),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
 func (x gen_NSArray) IsEqualToArray_(
 	otherArray NSArrayRef,
 ) (
@@ -4608,6 +4782,19 @@ func (x gen_NSArray) IsEqualToArray_(
 		objc.RefPointer(otherArray),
 	)
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSArray) ArrayByAddingObject_(
+	anObject objc.Ref,
+) (
+	r0 NSArray,
+) {
+	ret := C.NSArray_inst_arrayByAddingObject_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anObject),
+	)
+	r0 = NSArray_fromPointer(ret)
 	return
 }
 
@@ -4776,6 +4963,26 @@ func (x gen_NSArray) Count() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = NSUInteger(ret)
+	return
+}
+
+func (x gen_NSArray) FirstObject() (
+	r0 objc.Object,
+) {
+	ret := C.NSArray_inst_firstObject(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
+func (x gen_NSArray) LastObject() (
+	r0 objc.Object,
+) {
+	ret := C.NSArray_inst_lastObject(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = objc.Object_fromPointer(ret)
 	return
 }
 
@@ -5467,6 +5674,47 @@ func (x gen_NSDictionary) IsEqualToDictionary_(
 		objc.RefPointer(otherDictionary),
 	)
 	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+func (x gen_NSDictionary) AllKeysForObject_(
+	anObject objc.Ref,
+) (
+	r0 NSArray,
+) {
+	ret := C.NSDictionary_inst_allKeysForObject_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(anObject),
+	)
+	r0 = NSArray_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDictionary) ValueForKey_(
+	key NSStringRef,
+) (
+	r0 objc.Object,
+) {
+	ret := C.NSDictionary_inst_valueForKey_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(key),
+	)
+	r0 = objc.Object_fromPointer(ret)
+	return
+}
+
+func (x gen_NSDictionary) ObjectsForKeys_notFoundMarker_(
+	keys NSArrayRef,
+	marker objc.Ref,
+) (
+	r0 NSArray,
+) {
+	ret := C.NSDictionary_inst_objectsForKeys_notFoundMarker_(
+		unsafe.Pointer(x.Pointer()),
+		objc.RefPointer(keys),
+		objc.RefPointer(marker),
+	)
+	r0 = NSArray_fromPointer(ret)
 	return
 }
 

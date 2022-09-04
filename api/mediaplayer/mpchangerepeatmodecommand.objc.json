@@ -1,0 +1,48 @@
+{
+  "Class": {
+    "Name": "MPChangeRepeatModeCommand",
+    "Description": "An object that responds to requests to change the current repeat mode used during playback.",
+    "Declaration": "@interface MPChangeRepeatModeCommand : MPRemoteCommand",
+    "Frameworks": [
+      "Media Player"
+    ],
+    "Platforms": [
+      "iOS 8.0+",
+      "iPadOS 8.0+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangerepeatmodecommand?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "currentRepeatType",
+        "Description": "The current repeat option for a media item.",
+        "Declaration": "@property(nonatomic, assign) MPRepeatType currentRepeatType;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangerepeatmodecommand/1648342-currentrepeattype?language=objc",
+        "Type": {
+          "Name": "MPRepeatType"
+        },
+        "Attrs": {
+          "assign": true,
+          "nonatomic": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-03T22:22:00.352051+08:00",
+  "Version": 2
+}
