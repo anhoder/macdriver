@@ -1,3 +1,6 @@
+//go:build darwin
+// +build darwin
+
 package gen
 
 import (
@@ -8,9 +11,12 @@ import (
 // unimplementedError represents things that the generator doesn't support (yet)
 // It's used to simplify error handling in the generator by panicking instead,
 // like:
-//   panic(unimplemented("message: %s", args...))
+//
+//	panic(unimplemented("message: %s", args...))
+//
 // Callers that want to catch and log unimplemented errors can use:
-//   defer ignoreIfUnimplemented("description of thing for the log")
+//
+//	defer ignoreIfUnimplemented("description of thing for the log")
 type unimplementedError struct {
 	err error
 }

@@ -1,3 +1,6 @@
+//go:build darwin
+// +build darwin
+
 package cocoa
 
 import "github.com/progrium/macdriver/core"

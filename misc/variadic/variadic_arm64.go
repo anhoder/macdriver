@@ -1,3 +1,6 @@
+//go:build darwin
+// +build darwin
+
 // Copyright 2022 Mikkel Krautz. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
@@ -47,9 +50,9 @@ type uint128 struct {
 }
 
 type FunctionCall struct {
-	Words     [8]uintptr
-	Simd      [8]uint128
-	addr      unsafe.Pointer
+	Words [8]uintptr
+	Simd  [8]uint128
+	addr  unsafe.Pointer
 }
 
 // NewFunctionCall creates a new FunctionCall than can be
