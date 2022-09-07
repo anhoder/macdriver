@@ -2,7 +2,6 @@ package cocoa
 
 import (
 	"github.com/progrium/macdriver/core"
-	"github.com/progrium/macdriver/objc"
 )
 
 // The supported pasteboard types.
@@ -96,11 +95,10 @@ func (pb NSPasteboard) Types() []NSPasteboardType {
 // AvailableTypeFromArray scans the specified types for a type that the receiver supports.
 // https://developer.apple.com/documentation/appkit/nspasteboard/1526078-availabletypefromarray?language=objc
 func (pb NSPasteboard) AvailableTypeFromArray(types []NSPasteboardType) NSPasteboardType {
-	strs := make([]objc.Object, len(types))
-	for i, t := range types {
-		strs[i] = core.String(string(t))
+	arr := core.NSArray_array()
+	for _, t := range types {
+		arr = arr.ArrayByAddingObject_(core.String(string(t)))
 	}
-	arr := core.NSArray_WithObjects(strs...)
 	o := pb.Send("availableTypeFromArray:", arr)
 	pbType := NSPasteboardType(o.String())
 	if pbType == "(nil)" {

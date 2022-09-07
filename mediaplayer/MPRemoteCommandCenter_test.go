@@ -66,8 +66,8 @@ func TestAsync(t *testing.T) {
 	handler := objc.Get("CommandHandler").Alloc().Init()
 
 	center := MPRemoteCommandCenter_sharedCommandCenter()
-	center.SkipBackwardCommand().SetPreferredIntervals_(core.NSArray_WithObjects(core.NSNumber_numberWithFloat_(15.0)))
-	center.SkipForwardCommand().SetPreferredIntervals_(core.NSArray_WithObjects(core.NSNumber_numberWithFloat_(15.0)))
+	center.SkipBackwardCommand().SetPreferredIntervals_(core.NSArray_arrayWithObject_(core.NSNumber_numberWithFloat_(15.0)))
+	center.SkipForwardCommand().SetPreferredIntervals_(core.NSArray_arrayWithObject_(core.NSNumber_numberWithFloat_(15.0)))
 	center.PlayCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
 	center.PauseCommand().AddTarget_action_(handler, objc.Sel("handlePausedCommand:"))
 	center.StopCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
@@ -110,9 +110,19 @@ func TestAsync(t *testing.T) {
 func nowPlayingInfoOfPlayer(player *avcore.AVPlayer) core.NSDictionary {
 	total := player.CurrentItem().Duration().Value / int64(player.CurrentItem().Duration().Timescale)
 	ur := player.CurrentTime().Value / int64(player.CurrentTime().Timescale)
-	values := core.NSArray_WithObjects(core.NSNumber_numberWithInt_(int32(total)), core.NSNumber_numberWithInt_(int32(ur)), core.NSNumber_numberWithFloat_(player.Rate()))
+
+	values := core.NSArray_array()
+	keys := core.NSArray_array()
+	values = values.ArrayByAddingObject_(core.NSNumber_numberWithInt_(int32(total)))
+	keys = keys.ArrayByAddingObject_(core.String(MPMediaItemPropertyPlaybackDuration))
+
+	values = values.ArrayByAddingObject_(core.NSNumber_numberWithInt_(int32(ur)))
+	keys = keys.ArrayByAddingObject_(core.String(MPNowPlayingInfoPropertyElapsedPlaybackTime))
+
+	values = values.ArrayByAddingObject_(core.NSNumber_numberWithFloat_(player.Rate()))
+	keys = keys.ArrayByAddingObject_(core.String(MPNowPlayingInfoPropertyPlaybackRate))
+
 	values = values.ArrayByAddingObject_(core.NSNumber_numberWithFloat_(1.0))
-	keys := core.NSArray_WithObjects(core.String(MPMediaItemPropertyPlaybackDuration), core.String(MPNowPlayingInfoPropertyElapsedPlaybackTime), core.String(MPNowPlayingInfoPropertyPlaybackRate))
 	keys = keys.ArrayByAddingObject_(core.String(MPNowPlayingInfoPropertyDefaultPlaybackRate))
 	return core.NSDictionary_dictionaryWithObjects_forKeys_(values, keys)
 }

@@ -8,7 +8,10 @@ import (
 )
 
 func TestNSArraySize(t *testing.T) {
-	arr := core.NSArray_WithObjects(core.String("a"), core.String("b"), core.String("c"))
+	arr := core.NSArray_array()
+	arr = arr.ArrayByAddingObject_(core.String("a"))
+	arr = arr.ArrayByAddingObject_(core.String("b"))
+	arr = arr.ArrayByAddingObject_(core.String("c"))
 	assert.EqualValues(t, 3, arr.Count())
 	assert.Equal(t, []string{"a", "b", "c"}, arr.Strings())
 }
