@@ -1,22 +1,26 @@
+PACKAGE_NAME          := macdriver
+GOLANG_CROSS_VERSION  ?= v1.18.2
 
-GOEXE ?= go
+SYSROOT_DIR     ?= sysroots
+SYSROOT_ARCHIVE ?= sysroots.tar.bz2
 
-help: ## show this help
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
-.PHONY: help
+.PHONY: sysroot-pack
+sysroot-pack:
+	@tar cf - $(SYSROOT_DIR) -P | pv -s $[$(du -sk $(SYSROOT_DIR) | awk '{print $1}') * 1024] | pbzip2 > $(SYSROOT_ARCHIVE)
 
-largetype: ## build and run largetype example
-	$(GOEXE) run ./examples/largetype -font="Monaco" "Hello world"
-.PHONY: largetype
+.PHONY: sysroot-unpack
+sysroot-unpack:
+	@pv $(SYSROOT_ARCHIVE) | pbzip2 -cd | tar -xf -
 
-topframe: ## build and run topframe example
-	$(GOEXE) run ./examples/_topframe
-.PHONY: topframe
-
-notification: ## build and run notification example
-	$(GOEXE) run ./examples/notification
-.PHONY: notification
-
-pomodoro: ## build and run pomodoro example
-	$(GOEXE) run ./examples/pomodoro
-.PHONY: pomodoro
+.PHONY: release-dry-run
+release-dry-run:
+	@docker run \
+		--rm \
+		--privileged \
+		-e CGO_ENABLED=1 \
+		-v /var/run/docker.sock:/var/run/docker.sock \
+		-v `pwd`:/go/src/$(PACKAGE_NAME) \
+		-v `pwd`/sysroot:/sysroot \
+		-w /go/src/$(PACKAGE_NAME) \
+		alanalbert/goreleaser-cross:${GOLANG_CROSS_VERSION} \
+		--rm-dist --skip-validate --skip-publish
