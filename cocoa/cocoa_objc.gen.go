@@ -3184,8 +3184,8 @@ long NSScreen_inst_maximumFramesPerSecond(void *id) {
 }
 
 NSTimeInterval NSScreen_inst_minimumRefreshInterval(void *i) {
-	return [(NSScreen*)i
-		minimumRefreshInterval];
+	NSScreen *screen = (NSScreen*)i;
+	return [screen minimumRefreshInterval];
 }
 
 NSTimeInterval NSScreen_inst_maximumRefreshInterval(void *id) {
