@@ -1191,11 +1191,6 @@ unsigned long NSAttributedString_inst_nextWordFromIndex_forward_(void *id, unsig
 		forward: isForward];
 }
 
-void* NSAttributedString_inst_attributedStringByInflectingString(void *id) {
-	return [(NSAttributedString*)id
-		attributedStringByInflectingString];
-}
-
 void NSAttributedString_inst_drawInRect_(void *id, NSRect rect) {
 	[(NSAttributedString*)id
 		drawInRect: rect];
@@ -5226,16 +5221,6 @@ func (x gen_NSAttributedString) NextWordFromIndex_forward_(
 		convertToObjCBool(isForward),
 	)
 	r0 = NSUInteger(ret)
-	return
-}
-
-func (x gen_NSAttributedString) AttributedStringByInflectingString() (
-	r0 NSAttributedString,
-) {
-	ret := C.NSAttributedString_inst_attributedStringByInflectingString(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = NSAttributedString_fromPointer(ret)
 	return
 }
 

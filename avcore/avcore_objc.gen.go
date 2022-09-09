@@ -241,11 +241,6 @@ void AVPlayerItem_inst_cancelContentAuthorizationRequest(void *id) {
 		cancelContentAuthorizationRequest];
 }
 
-void* AVPlayerItem_inst_copy(void *id) {
-	return [(AVPlayerItem*)id
-		copy];
-}
-
 //void* AVPlayerItem_inst_init(void *id) {
 //	return [(AVPlayerItem*)id
 //		init];
@@ -326,21 +321,6 @@ void AVPlayerItem_inst_setStartsOnFirstEligibleVariant_(void *id, BOOL value) {
 		setStartsOnFirstEligibleVariant: value];
 }
 
-BOOL AVPlayerItem_inst_automaticallyHandlesInterstitialEvents(void *id) {
-	return [(AVPlayerItem*)id
-		automaticallyHandlesInterstitialEvents];
-}
-
-void AVPlayerItem_inst_setAutomaticallyHandlesInterstitialEvents_(void *id, BOOL value) {
-	[(AVPlayerItem*)id
-		setAutomaticallyHandlesInterstitialEvents: value];
-}
-
-void* AVPlayerItem_inst_templatePlayerItem(void *id) {
-	return [(AVPlayerItem*)id
-		templatePlayerItem];
-}
-
 CMTime AVPlayerItem_inst_duration(void *id) {
 	return [(AVPlayerItem*)id
 		duration];
@@ -369,26 +349,6 @@ BOOL AVPlayerItem_inst_isPlaybackBufferFull(void *id) {
 BOOL AVPlayerItem_inst_isPlaybackBufferEmpty(void *id) {
 	return [(AVPlayerItem*)id
 		isPlaybackBufferEmpty];
-}
-
-double AVPlayerItem_inst_preferredPeakBitRateForExpensiveNetworks(void *id) {
-	return [(AVPlayerItem*)id
-		preferredPeakBitRateForExpensiveNetworks];
-}
-
-void AVPlayerItem_inst_setPreferredPeakBitRateForExpensiveNetworks_(void *id, double value) {
-	[(AVPlayerItem*)id
-		setPreferredPeakBitRateForExpensiveNetworks: value];
-}
-
-NSSize AVPlayerItem_inst_preferredMaximumResolutionForExpensiveNetworks(void *id) {
-	return [(AVPlayerItem*)id
-		preferredMaximumResolutionForExpensiveNetworks];
-}
-
-void AVPlayerItem_inst_setPreferredMaximumResolutionForExpensiveNetworks_(void *id, NSSize value) {
-	[(AVPlayerItem*)id
-		setPreferredMaximumResolutionForExpensiveNetworks: value];
 }
 
 void* AVPlayerItem_inst_textStyleRules(void *id) {
@@ -1284,16 +1244,6 @@ func (x gen_AVPlayerItem) CancelContentAuthorizationRequest() {
 	return
 }
 
-func (x gen_AVPlayerItem) Copy() (
-	r0 objc.Object,
-) {
-	ret := C.AVPlayerItem_inst_copy(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = objc.Object_fromPointer(ret)
-	return
-}
-
 func (x gen_AVPlayerItem) Init_asAVPlayerItem() (
 	r0 AVPlayerItem,
 ) {
@@ -1454,36 +1404,6 @@ func (x gen_AVPlayerItem) SetStartsOnFirstEligibleVariant_(
 	return
 }
 
-func (x gen_AVPlayerItem) AutomaticallyHandlesInterstitialEvents() (
-	r0 bool,
-) {
-	ret := C.AVPlayerItem_inst_automaticallyHandlesInterstitialEvents(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_AVPlayerItem) SetAutomaticallyHandlesInterstitialEvents_(
-	value bool,
-) {
-	C.AVPlayerItem_inst_setAutomaticallyHandlesInterstitialEvents_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
-func (x gen_AVPlayerItem) TemplatePlayerItem() (
-	r0 AVPlayerItem,
-) {
-	ret := C.AVPlayerItem_inst_templatePlayerItem(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = AVPlayerItem_fromPointer(ret)
-	return
-}
-
 func (x gen_AVPlayerItem) Duration() (
 	r0 core.CMTime,
 ) {
@@ -1541,46 +1461,6 @@ func (x gen_AVPlayerItem) IsPlaybackBufferEmpty() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_AVPlayerItem) PreferredPeakBitRateForExpensiveNetworks() (
-	r0 float64,
-) {
-	ret := C.AVPlayerItem_inst_preferredPeakBitRateForExpensiveNetworks(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
-	return
-}
-
-func (x gen_AVPlayerItem) SetPreferredPeakBitRateForExpensiveNetworks_(
-	value float64,
-) {
-	C.AVPlayerItem_inst_setPreferredPeakBitRateForExpensiveNetworks_(
-		unsafe.Pointer(x.Pointer()),
-		C.double(value),
-	)
-	return
-}
-
-func (x gen_AVPlayerItem) PreferredMaximumResolutionForExpensiveNetworks() (
-	r0 core.NSSize,
-) {
-	ret := C.AVPlayerItem_inst_preferredMaximumResolutionForExpensiveNetworks(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = *(*core.NSSize)(unsafe.Pointer(&ret))
-	return
-}
-
-func (x gen_AVPlayerItem) SetPreferredMaximumResolutionForExpensiveNetworks_(
-	value core.NSSize,
-) {
-	C.AVPlayerItem_inst_setPreferredMaximumResolutionForExpensiveNetworks_(
-		unsafe.Pointer(x.Pointer()),
-		*(*C.NSSize)(unsafe.Pointer(&value)),
-	)
 	return
 }
 

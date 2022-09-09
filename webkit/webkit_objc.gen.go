@@ -95,22 +95,10 @@ void* WKWebView_inst_loadHTMLString_baseURL_(void *id, void* string, void* baseU
 		baseURL: baseURL];
 }
 
-void* WKWebView_inst_loadFileRequest_allowingReadAccessToURL_(void *id, void* request, void* readAccessURL) {
-	return [(WKWebView*)id
-		loadFileRequest: request
-		allowingReadAccessToURL: readAccessURL];
-}
-
 void* WKWebView_inst_loadFileURL_allowingReadAccessToURL_(void *id, void* URL, void* readAccessURL) {
 	return [(WKWebView*)id
 		loadFileURL: URL
 		allowingReadAccessToURL: readAccessURL];
-}
-
-void* WKWebView_inst_loadSimulatedRequest_responseHTMLString_(void *id, void* request, void* string) {
-	return [(WKWebView*)id
-		loadSimulatedRequest: request
-		responseHTMLString: string];
 }
 
 void* WKWebView_inst_reload(void *id) {
@@ -286,16 +274,6 @@ BOOL WKWebView_inst_allowsLinkPreview(void *id) {
 void WKWebView_inst_setAllowsLinkPreview_(void *id, BOOL value) {
 	[(WKWebView*)id
 		setAllowsLinkPreview: value];
-}
-
-void* WKWebView_inst_interactionState(void *id) {
-	return [(WKWebView*)id
-		interactionState];
-}
-
-void WKWebView_inst_setInteractionState_(void *id, void* value) {
-	[(WKWebView*)id
-		setInteractionState: value];
 }
 
 void WKWebViewConfiguration_inst_setURLSchemeHandler_forURLScheme_(void *id, void* urlSchemeHandler, void* urlScheme) {
@@ -687,21 +665,6 @@ func (x gen_WKWebView) LoadHTMLString_baseURL_(
 	return
 }
 
-func (x gen_WKWebView) LoadFileRequest_allowingReadAccessToURL_(
-	request core.NSURLRequestRef,
-	readAccessURL core.NSURLRef,
-) (
-	r0 WKNavigation,
-) {
-	ret := C.WKWebView_inst_loadFileRequest_allowingReadAccessToURL_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(request),
-		objc.RefPointer(readAccessURL),
-	)
-	r0 = WKNavigation_fromPointer(ret)
-	return
-}
-
 func (x gen_WKWebView) LoadFileURL_allowingReadAccessToURL_(
 	URL core.NSURLRef,
 	readAccessURL core.NSURLRef,
@@ -712,21 +675,6 @@ func (x gen_WKWebView) LoadFileURL_allowingReadAccessToURL_(
 		unsafe.Pointer(x.Pointer()),
 		objc.RefPointer(URL),
 		objc.RefPointer(readAccessURL),
-	)
-	r0 = WKNavigation_fromPointer(ret)
-	return
-}
-
-func (x gen_WKWebView) LoadSimulatedRequest_responseHTMLString_(
-	request core.NSURLRequestRef,
-	string core.NSStringRef,
-) (
-	r0 WKNavigation,
-) {
-	ret := C.WKWebView_inst_loadSimulatedRequest_responseHTMLString_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(request),
-		objc.RefPointer(string),
 	)
 	r0 = WKNavigation_fromPointer(ret)
 	return
@@ -1075,26 +1023,6 @@ func (x gen_WKWebView) SetAllowsLinkPreview_(
 	C.WKWebView_inst_setAllowsLinkPreview_(
 		unsafe.Pointer(x.Pointer()),
 		convertToObjCBool(value),
-	)
-	return
-}
-
-func (x gen_WKWebView) InteractionState() (
-	r0 objc.Object,
-) {
-	ret := C.WKWebView_inst_interactionState(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = objc.Object_fromPointer(ret)
-	return
-}
-
-func (x gen_WKWebView) SetInteractionState_(
-	value objc.Ref,
-) {
-	C.WKWebView_inst_setInteractionState_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(value),
 	)
 	return
 }

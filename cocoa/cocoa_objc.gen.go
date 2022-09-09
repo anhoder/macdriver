@@ -514,10 +514,6 @@ void NSColor_type_setIgnoresAlpha_(BOOL value) {
 	[NSColor
 		setIgnoresAlpha: value];
 }
-void* NSColor_type_systemCyanColor() {
-	return [NSColor
-		systemCyanColor];
-}
 void* NSColor_type_systemMintColor() {
 	return [NSColor
 		systemMintColor];
@@ -682,13 +678,6 @@ BOOL NSBundle_inst_loadAndReturnError_(void *id, void* error) {
 BOOL NSBundle_inst_unload(void *id) {
 	return [(NSBundle*)id
 		unload];
-}
-
-void* NSBundle_inst_localizedAttributedStringForKey_value_table_(void *id, void* key, void* value, void* tableName) {
-	return [(NSBundle*)id
-		localizedAttributedStringForKey: key
-		value: value
-		table: tableName];
 }
 
 void* NSBundle_inst_init(void *id) {
@@ -3038,26 +3027,6 @@ void* NSMenuItem_inst_userKeyEquivalent(void *id) {
 		userKeyEquivalent];
 }
 
-BOOL NSMenuItem_inst_allowsAutomaticKeyEquivalentLocalization(void *id) {
-	return [(NSMenuItem*)id
-		allowsAutomaticKeyEquivalentLocalization];
-}
-
-void NSMenuItem_inst_setAllowsAutomaticKeyEquivalentLocalization_(void *id, BOOL value) {
-	[(NSMenuItem*)id
-		setAllowsAutomaticKeyEquivalentLocalization: value];
-}
-
-BOOL NSMenuItem_inst_allowsAutomaticKeyEquivalentMirroring(void *id) {
-	return [(NSMenuItem*)id
-		allowsAutomaticKeyEquivalentMirroring];
-}
-
-void NSMenuItem_inst_setAllowsAutomaticKeyEquivalentMirroring_(void *id, BOOL value) {
-	[(NSMenuItem*)id
-		setAllowsAutomaticKeyEquivalentMirroring: value];
-}
-
 BOOL NSMenuItem_inst_allowsKeyEquivalentWhenHidden(void *id) {
 	return [(NSMenuItem*)id
 		allowsKeyEquivalentWhenHidden];
@@ -3176,41 +3145,6 @@ double NSScreen_inst_maximumExtendedDynamicRangeColorComponentValue(void *id) {
 double NSScreen_inst_maximumReferenceExtendedDynamicRangeColorComponentValue(void *id) {
 	return [(NSScreen*)id
 		maximumReferenceExtendedDynamicRangeColorComponentValue];
-}
-
-long NSScreen_inst_maximumFramesPerSecond(void *id) {
-	return [(NSScreen*)id
-		maximumFramesPerSecond];
-}
-
-NSTimeInterval NSScreen_inst_minimumRefreshInterval(void *id) {
-	return [(NSScreen*)id
-		minimumRefreshInterval];
-}
-
-NSTimeInterval NSScreen_inst_maximumRefreshInterval(void *id) {
-	return [(NSScreen*)id
-		maximumRefreshInterval];
-}
-
-NSTimeInterval NSScreen_inst_displayUpdateGranularity(void *id) {
-	return [(NSScreen*)id
-		displayUpdateGranularity];
-}
-
-NSTimeInterval NSScreen_inst_lastDisplayUpdateTimestamp(void *id) {
-	return [(NSScreen*)id
-		lastDisplayUpdateTimestamp];
-}
-
-NSRect NSScreen_inst_auxiliaryTopLeftArea(void *id) {
-	return [(NSScreen*)id
-		auxiliaryTopLeftArea];
-}
-
-NSRect NSScreen_inst_auxiliaryTopRightArea(void *id) {
-	return [(NSScreen*)id
-		auxiliaryTopRightArea];
 }
 
 void* NSStatusBar_inst_statusItemWithLength_(void *id, double length) {
@@ -8355,14 +8289,6 @@ func NSColor_setIgnoresAlpha_(
 	return
 }
 
-func NSColor_systemCyanColor() (
-	r0 NSColor,
-) {
-	ret := C.NSColor_type_systemCyanColor()
-	r0 = NSColor_fromPointer(ret)
-	return
-}
-
 func NSColor_systemMintColor() (
 	r0 NSColor,
 ) {
@@ -8758,23 +8684,6 @@ func (x gen_NSBundle) Unload() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSBundle) LocalizedAttributedStringForKey_value_table_(
-	key core.NSStringRef,
-	value core.NSStringRef,
-	tableName core.NSStringRef,
-) (
-	r0 core.NSAttributedString,
-) {
-	ret := C.NSBundle_inst_localizedAttributedStringForKey_value_table_(
-		unsafe.Pointer(x.Pointer()),
-		objc.RefPointer(key),
-		objc.RefPointer(value),
-		objc.RefPointer(tableName),
-	)
-	r0 = core.NSAttributedString_fromPointer(ret)
 	return
 }
 
@@ -13864,46 +13773,6 @@ func (x gen_NSMenuItem) UserKeyEquivalent() (
 	return
 }
 
-func (x gen_NSMenuItem) AllowsAutomaticKeyEquivalentLocalization() (
-	r0 bool,
-) {
-	ret := C.NSMenuItem_inst_allowsAutomaticKeyEquivalentLocalization(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSMenuItem) SetAllowsAutomaticKeyEquivalentLocalization_(
-	value bool,
-) {
-	C.NSMenuItem_inst_setAllowsAutomaticKeyEquivalentLocalization_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
-func (x gen_NSMenuItem) AllowsAutomaticKeyEquivalentMirroring() (
-	r0 bool,
-) {
-	ret := C.NSMenuItem_inst_allowsAutomaticKeyEquivalentMirroring(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = convertObjCBoolToGo(ret)
-	return
-}
-
-func (x gen_NSMenuItem) SetAllowsAutomaticKeyEquivalentMirroring_(
-	value bool,
-) {
-	C.NSMenuItem_inst_setAllowsAutomaticKeyEquivalentMirroring_(
-		unsafe.Pointer(x.Pointer()),
-		convertToObjCBool(value),
-	)
-	return
-}
-
 func (x gen_NSMenuItem) AllowsKeyEquivalentWhenHidden() (
 	r0 bool,
 ) {
@@ -14166,76 +14035,6 @@ func (x gen_NSScreen) MaximumReferenceExtendedDynamicRangeColorComponentValue() 
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = core.CGFloat(ret)
-	return
-}
-
-func (x gen_NSScreen) MaximumFramesPerSecond() (
-	r0 core.NSInteger,
-) {
-	ret := C.NSScreen_inst_maximumFramesPerSecond(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = core.NSInteger(ret)
-	return
-}
-
-func (x gen_NSScreen) MinimumRefreshInterval() (
-	r0 float64,
-) {
-	ret := C.NSScreen_inst_minimumRefreshInterval(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
-	return
-}
-
-func (x gen_NSScreen) MaximumRefreshInterval() (
-	r0 float64,
-) {
-	ret := C.NSScreen_inst_maximumRefreshInterval(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
-	return
-}
-
-func (x gen_NSScreen) DisplayUpdateGranularity() (
-	r0 float64,
-) {
-	ret := C.NSScreen_inst_displayUpdateGranularity(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
-	return
-}
-
-func (x gen_NSScreen) LastDisplayUpdateTimestamp() (
-	r0 float64,
-) {
-	ret := C.NSScreen_inst_lastDisplayUpdateTimestamp(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = float64(ret)
-	return
-}
-
-func (x gen_NSScreen) AuxiliaryTopLeftArea() (
-	r0 core.NSRect,
-) {
-	ret := C.NSScreen_inst_auxiliaryTopLeftArea(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = *(*core.NSRect)(unsafe.Pointer(&ret))
-	return
-}
-
-func (x gen_NSScreen) AuxiliaryTopRightArea() (
-	r0 core.NSRect,
-) {
-	ret := C.NSScreen_inst_auxiliaryTopRightArea(
-		unsafe.Pointer(x.Pointer()),
-	)
-	r0 = *(*core.NSRect)(unsafe.Pointer(&ret))
 	return
 }
 
