@@ -117,7 +117,7 @@ var filterMacOS = filterMethods(func(m schema.Method) bool {
 		return true
 	}
 	for _, platform := range m.Platforms {
-		if strings.HasPrefix(platform, "macOS") {
+		if strings.HasPrefix(platform, "macOS") && platform != "macOS 12.0+" {
 			return true
 		}
 	}
@@ -127,7 +127,7 @@ var filterMacOS = filterMethods(func(m schema.Method) bool {
 		return true
 	}
 	for _, platform := range p.Platforms {
-		if strings.HasPrefix(platform, "macOS") {
+		if strings.HasPrefix(platform, "macOS") && platform != "macOS 12.0+" {
 			return true
 		}
 	}
