@@ -142,6 +142,15 @@ func main() {
 
 		{"mediaplayer", []schemaLoader{
 			loadFile("api/mediaplayer/mpnowplayinginfocenter.objc.json"),
+			loadFile("api/mediaplayer/mpremotecommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpchangeplaybackpositioncommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpchangelanguageoptioncommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpchangeplaybackratecommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpchangerepeatmodecommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpchangeshufflemodecommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpseekcommandevent.objc.json"),
+			loadFile("api/mediaplayer/mpskipintervalcommandevent.objc.json"),
+
 			loadFile("api/mediaplayer/mpremotecommand.objc.json"),
 			loadFile("api/mediaplayer/mpchangeshufflemodecommand.objc.json"),
 			loadFile("api/mediaplayer/mpchangerepeatmodecommand.objc.json"),

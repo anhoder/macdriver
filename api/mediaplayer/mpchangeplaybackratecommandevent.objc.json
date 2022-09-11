@@ -1,0 +1,45 @@
+{
+  "Class": {
+    "Name": "MPChangePlaybackRateCommandEvent",
+    "Description": "An event requesting a change in the playback rate.",
+    "Declaration": "@interface MPChangePlaybackRateCommandEvent : MPRemoteCommandEvent",
+    "Platforms": [
+      "iOS 7.1+",
+      "iPadOS 7.1+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackratecommandevent?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "playbackRate",
+        "Description": "The chosen playback rate for the command event.",
+        "Declaration": "@property(nonatomic, readonly) float playbackRate;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackratecommandevent/1616782-playbackrate?language=objc",
+        "Type": {
+          "Name": "float"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-11T19:30:48.302431+08:00",
+  "Version": 2
+}

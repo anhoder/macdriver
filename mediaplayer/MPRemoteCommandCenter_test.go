@@ -51,17 +51,25 @@ func TestAsync(t *testing.T) {
 		})
 
 	cls := objc.NewClass("CommandHandler", "NSObject")
-	cls.AddMethod("handlePlayCommand:", func(event objc.Object) core.NSInteger {
-		fmt.Printf("playing: %#v\n", event)
+	cls.AddMethod("handlePlayCommand:", func(self objc.Object, event objc.Object) core.NSInteger {
+		e := MPRemoteCommandEvent_fromRef(event)
+		fmt.Printf("playing: %#v\n", e.Timestamp())
 		playingCenter.SetNowPlayingInfo_(nowPlayingInfoOfPlayer(&player))
 		playingCenter.SetPlaybackState_(MPNowPlayingPlaybackStatePlaying)
 		player.Play()
 		return MPRemoteCommandHandlerStatusSuccess
 	})
-	cls.AddMethod("handlePausedCommand:", func(event objc.Object) core.NSInteger {
-		fmt.Printf("paused: %#v\n", event)
+	cls.AddMethod("handlePausedCommand:", func(self objc.Object, event objc.Object) core.NSInteger {
+		e := MPRemoteCommandEvent_fromRef(event)
+		fmt.Printf("playing: %#v\n", e.Timestamp())
 		player.Pause()
 		playingCenter.SetPlaybackState_(MPNowPlayingPlaybackStatePaused)
+		playingCenter.SetNowPlayingInfo_(nowPlayingInfoOfPlayer(&player))
+		return MPRemoteCommandHandlerStatusSuccess
+	})
+	cls.AddMethod("handleSeekCommand:", func(self objc.Object, event objc.Object) core.NSInteger {
+		e := MPChangePlaybackPositionCommandEvent_fromRef(event)
+		fmt.Printf("seek: %#v\n", e.PositionTime())
 		playingCenter.SetNowPlayingInfo_(nowPlayingInfoOfPlayer(&player))
 		return MPRemoteCommandHandlerStatusSuccess
 	})
@@ -84,7 +92,7 @@ func TestAsync(t *testing.T) {
 	center.SeekForwardCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
 	center.SkipForwardCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
 	center.SkipBackwardCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
-	center.ChangePlaybackPositionCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
+	center.ChangePlaybackPositionCommand().AddTarget_action_(handler, objc.Sel("handleSeekCommand:"))
 	center.LikeCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
 	center.DislikeCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))
 	center.BookmarkCommand().AddTarget_action_(handler, objc.Sel("handlePlayCommand:"))

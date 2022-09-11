@@ -1,0 +1,70 @@
+{
+  "Class": {
+    "Name": "MPRemoteCommandEvent",
+    "Description": "A description of a command sent by an external media player.",
+    "Declaration": "@interface MPRemoteCommandEvent : NSObject",
+    "Platforms": [
+      "iOS 7.1+",
+      "iPadOS 7.1+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandevent?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "command",
+        "Description": "The command that sent the event.",
+        "Declaration": "@property(nonatomic, readonly) MPRemoteCommand *command;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandevent/1616776-command?language=objc",
+        "Type": {
+          "Name": "MPRemoteCommand",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "timestamp",
+        "Description": "The time the event occurred.",
+        "Declaration": "@property(nonatomic, readonly) NSTimeInterval timestamp;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 7.1+",
+          "iPadOS 7.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpremotecommandevent/1616784-timestamp?language=objc",
+        "Type": {
+          "Name": "NSTimeInterval"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-11T18:31:30.119284+08:00",
+  "Version": 2
+}

@@ -1,0 +1,48 @@
+{
+  "Class": {
+    "Name": "MPChangePlaybackPositionCommandEvent",
+    "Description": "An event requesting a change in the playback position.",
+    "Declaration": "@interface MPChangePlaybackPositionCommandEvent : MPRemoteCommandEvent",
+    "Frameworks": [
+      "Media Player"
+    ],
+    "Platforms": [
+      "iOS 8.0+",
+      "iPadOS 8.0+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackpositioncommandevent?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "positionTime",
+        "Description": "The playback position used when setting the current time of the player.",
+        "Declaration": "@property(nonatomic, readonly) NSTimeInterval positionTime;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 9.1+",
+          "iPadOS 9.1+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackpositioncommandevent/1616766-positiontime?language=objc",
+        "Type": {
+          "Name": "NSTimeInterval"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-11T18:31:50.732493+08:00",
+  "Version": 2
+}

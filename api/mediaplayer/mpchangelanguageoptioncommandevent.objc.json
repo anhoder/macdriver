@@ -1,0 +1,73 @@
+{
+  "Class": {
+    "Name": "MPChangeLanguageOptionCommandEvent",
+    "Description": "An event requesting a change in the language option.",
+    "Declaration": "@interface MPChangeLanguageOptionCommandEvent : MPRemoteCommandEvent",
+    "Frameworks": [
+      "Media Player"
+    ],
+    "Platforms": [
+      "iOS 9.0+",
+      "iPadOS 9.0+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangelanguageoptioncommandevent?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "languageOption",
+        "Description": "The requested language option to change.",
+        "Declaration": "@property(nonatomic, readonly) MPNowPlayingInfoLanguageOption *languageOption;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 9.0+",
+          "iPadOS 9.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 9.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangelanguageoptioncommandevent/1616769-languageoption?language=objc",
+        "Type": {
+          "Name": "MPNowPlayingInfoLanguageOption",
+          "IsPtr": true
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "setting",
+        "Description": "The extent of the language setting change.",
+        "Declaration": "@property(nonatomic, readonly) MPChangeLanguageOptionSetting setting;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangelanguageoptioncommandevent/1649697-setting?language=objc",
+        "Type": {
+          "Name": "MPChangeLanguageOptionSetting"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-11T19:31:21.444868+08:00",
+  "Version": 2
+}

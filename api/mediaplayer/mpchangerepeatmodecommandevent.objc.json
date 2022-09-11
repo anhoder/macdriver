@@ -1,0 +1,69 @@
+{
+  "Class": {
+    "Name": "MPChangeRepeatModeCommandEvent",
+    "Description": "An event requesting a change in the repeat mode.",
+    "Declaration": "@interface MPChangeRepeatModeCommandEvent : MPRemoteCommandEvent",
+    "Platforms": [
+      "iOS 8.0+",
+      "iPadOS 8.0+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangerepeatmodecommandevent?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "repeatType",
+        "Description": "The repeat type used when fulfilling the event request.",
+        "Declaration": "@property(nonatomic, readonly) MPRepeatType repeatType;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangerepeatmodecommandevent/1649689-repeattype?language=objc",
+        "Type": {
+          "Name": "MPRepeatType"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preservesRepeatMode",
+        "Description": "A Boolean value that indicates whether the chosen repeat mode is preserved between playback sessions.",
+        "Declaration": "@property(nonatomic, readonly) BOOL preservesRepeatMode;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangerepeatmodecommandevent/2097553-preservesrepeatmode?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-11T19:31:35.989678+08:00",
+  "Version": 2
+}

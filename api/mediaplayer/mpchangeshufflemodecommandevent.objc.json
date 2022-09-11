@@ -1,0 +1,66 @@
+{
+  "Class": {
+    "Name": "MPChangeShuffleModeCommandEvent",
+    "Description": "An event requesting a change in the shuffle mode.",
+    "Declaration": "@interface MPChangeShuffleModeCommandEvent : MPRemoteCommandEvent",
+    "Platforms": [
+      "iOS 8.0+",
+      "iPadOS 8.0+",
+      "macOS 10.12.2+",
+      "Mac Catalyst 13.1+",
+      "tvOS 9.0+",
+      "watchOS 5.0+"
+    ],
+    "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommandevent?language=objc",
+    "InstanceProperties": [
+      {
+        "Name": "shuffleType",
+        "Description": "The shuffle type used when fulfilling the event request.",
+        "Declaration": "@property(nonatomic, readonly) MPShuffleType shuffleType;",
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommandevent/1649696-shuffletype?language=objc",
+        "Type": {
+          "Name": "MPShuffleType"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      },
+      {
+        "Name": "preservesShuffleMode",
+        "Description": "A Boolean value that indicates whether the shuffle mode is preserved between playback sessions.",
+        "Declaration": "@property(nonatomic, readonly) BOOL preservesShuffleMode;",
+        "Frameworks": [
+          "Media Player"
+        ],
+        "Platforms": [
+          "iOS 10.0+",
+          "iPadOS 10.0+",
+          "macOS 10.12.1+",
+          "Mac Catalyst 13.0+",
+          "tvOS 10.0+",
+          "watchOS 5.0+"
+        ],
+        "TopicURL": "https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommandevent/2097552-preservesshufflemode?language=objc",
+        "Type": {
+          "Name": "BOOL"
+        },
+        "Attrs": {
+          "nonatomic": true,
+          "readonly": true
+        }
+      }
+    ]
+  },
+  "Kind": "class",
+  "PullDate": "2022-09-11T19:31:58.72085+08:00",
+  "Version": 2
+}

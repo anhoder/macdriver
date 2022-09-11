@@ -32,6 +32,38 @@ void* MPNowPlayingInfoCenter_type_defaultCenter() {
 	return [MPNowPlayingInfoCenter
 		defaultCenter];
 }
+void* MPRemoteCommandEvent_type_alloc() {
+	return [MPRemoteCommandEvent
+		alloc];
+}
+void* MPChangePlaybackPositionCommandEvent_type_alloc() {
+	return [MPChangePlaybackPositionCommandEvent
+		alloc];
+}
+void* MPChangeLanguageOptionCommandEvent_type_alloc() {
+	return [MPChangeLanguageOptionCommandEvent
+		alloc];
+}
+void* MPChangePlaybackRateCommandEvent_type_alloc() {
+	return [MPChangePlaybackRateCommandEvent
+		alloc];
+}
+void* MPChangeRepeatModeCommandEvent_type_alloc() {
+	return [MPChangeRepeatModeCommandEvent
+		alloc];
+}
+void* MPChangeShuffleModeCommandEvent_type_alloc() {
+	return [MPChangeShuffleModeCommandEvent
+		alloc];
+}
+void* MPSeekCommandEvent_type_alloc() {
+	return [MPSeekCommandEvent
+		alloc];
+}
+void* MPSkipIntervalCommandEvent_type_alloc() {
+	return [MPSkipIntervalCommandEvent
+		alloc];
+}
 void* MPRemoteCommand_type_alloc() {
 	return [MPRemoteCommand
 		alloc];
@@ -73,6 +105,12 @@ void* MPRemoteCommandCenter_type_sharedCommandCenter() {
 		sharedCommandCenter];
 }
 
+
+//void* MPNowPlayingInfoCenter_inst_init(void *id) {
+//	return [(MPNowPlayingInfoCenter*)id
+//		init];
+//}
+
 void* MPNowPlayingInfoCenter_inst_nowPlayingInfo(void *id) {
 	return [(MPNowPlayingInfoCenter*)id
 		nowPlayingInfo];
@@ -93,6 +131,91 @@ void MPNowPlayingInfoCenter_inst_setPlaybackState_(void *id, unsigned long value
 		setPlaybackState: value];
 }
 
+void* MPRemoteCommandEvent_inst_init(void *id) {
+	return [(MPRemoteCommandEvent*)id
+		init];
+}
+
+void* MPRemoteCommandEvent_inst_command(void *id) {
+	return [(MPRemoteCommandEvent*)id
+		command];
+}
+
+NSTimeInterval MPRemoteCommandEvent_inst_timestamp(void *id) {
+	return [(MPRemoteCommandEvent*)id
+		timestamp];
+}
+
+void* MPChangePlaybackPositionCommandEvent_inst_init(void *id) {
+	return [(MPChangePlaybackPositionCommandEvent*)id
+		init];
+}
+
+NSTimeInterval MPChangePlaybackPositionCommandEvent_inst_positionTime(void *id) {
+	return [(MPChangePlaybackPositionCommandEvent*)id
+		positionTime];
+}
+
+void* MPChangeLanguageOptionCommandEvent_inst_init(void *id) {
+	return [(MPChangeLanguageOptionCommandEvent*)id
+		init];
+}
+
+void* MPChangePlaybackRateCommandEvent_inst_init(void *id) {
+	return [(MPChangePlaybackRateCommandEvent*)id
+		init];
+}
+
+float MPChangePlaybackRateCommandEvent_inst_playbackRate(void *id) {
+	return [(MPChangePlaybackRateCommandEvent*)id
+		playbackRate];
+}
+
+void* MPChangeRepeatModeCommandEvent_inst_init(void *id) {
+	return [(MPChangeRepeatModeCommandEvent*)id
+		init];
+}
+
+long MPChangeRepeatModeCommandEvent_inst_repeatType(void *id) {
+	return [(MPChangeRepeatModeCommandEvent*)id
+		repeatType];
+}
+
+BOOL MPChangeRepeatModeCommandEvent_inst_preservesRepeatMode(void *id) {
+	return [(MPChangeRepeatModeCommandEvent*)id
+		preservesRepeatMode];
+}
+
+void* MPChangeShuffleModeCommandEvent_inst_init(void *id) {
+	return [(MPChangeShuffleModeCommandEvent*)id
+		init];
+}
+
+long MPChangeShuffleModeCommandEvent_inst_shuffleType(void *id) {
+	return [(MPChangeShuffleModeCommandEvent*)id
+		shuffleType];
+}
+
+BOOL MPChangeShuffleModeCommandEvent_inst_preservesShuffleMode(void *id) {
+	return [(MPChangeShuffleModeCommandEvent*)id
+		preservesShuffleMode];
+}
+
+void* MPSeekCommandEvent_inst_init(void *id) {
+	return [(MPSeekCommandEvent*)id
+		init];
+}
+
+void* MPSkipIntervalCommandEvent_inst_init(void *id) {
+	return [(MPSkipIntervalCommandEvent*)id
+		init];
+}
+
+NSTimeInterval MPSkipIntervalCommandEvent_inst_interval(void *id) {
+	return [(MPSkipIntervalCommandEvent*)id
+		interval];
+}
+
 void MPRemoteCommand_inst_addTarget_action_(void *id, void* target, void* action) {
 	[(MPRemoteCommand*)id
 		addTarget: target
@@ -110,6 +233,11 @@ void MPRemoteCommand_inst_removeTarget_action_(void *id, void* target, void* act
 		action: action];
 }
 
+//void* MPRemoteCommand_inst_init(void *id) {
+//	return [(MPRemoteCommand*)id
+//		init];
+//}
+
 BOOL MPRemoteCommand_inst_isEnabled(void *id) {
 	return [(MPRemoteCommand*)id
 		isEnabled];
@@ -119,6 +247,11 @@ void MPRemoteCommand_inst_setEnabled_(void *id, BOOL value) {
 	[(MPRemoteCommand*)id
 		setEnabled: value];
 }
+
+//void* MPChangeShuffleModeCommand_inst_init(void *id) {
+//	return [(MPChangeShuffleModeCommand*)id
+//		init];
+//}
 
 long MPChangeShuffleModeCommand_inst_currentShuffleType(void *id) {
 	return [(MPChangeShuffleModeCommand*)id
@@ -130,6 +263,11 @@ void MPChangeShuffleModeCommand_inst_setCurrentShuffleType_(void *id, long value
 		setCurrentShuffleType: value];
 }
 
+//void* MPChangeRepeatModeCommand_inst_init(void *id) {
+//	return [(MPChangeRepeatModeCommand*)id
+//		init];
+//}
+
 long MPChangeRepeatModeCommand_inst_currentRepeatType(void *id) {
 	return [(MPChangeRepeatModeCommand*)id
 		currentRepeatType];
@@ -139,6 +277,16 @@ void MPChangeRepeatModeCommand_inst_setCurrentRepeatType_(void *id, long value) 
 	[(MPChangeRepeatModeCommand*)id
 		setCurrentRepeatType: value];
 }
+
+//void* MPChangePlaybackPositionCommand_inst_init(void *id) {
+//	return [(MPChangePlaybackPositionCommand*)id
+//		init];
+//}
+
+//void* MPChangePlaybackRateCommand_inst_init(void *id) {
+//	return [(MPChangePlaybackRateCommand*)id
+//		init];
+//}
 
 void* MPChangePlaybackRateCommand_inst_supportedPlaybackRates(void *id) {
 	return [(MPChangePlaybackRateCommand*)id
@@ -150,6 +298,11 @@ void MPChangePlaybackRateCommand_inst_setSupportedPlaybackRates_(void *id, void*
 		setSupportedPlaybackRates: value];
 }
 
+//void* MPSkipIntervalCommand_inst_init(void *id) {
+//	return [(MPSkipIntervalCommand*)id
+//		init];
+//}
+
 void* MPSkipIntervalCommand_inst_preferredIntervals(void *id) {
 	return [(MPSkipIntervalCommand*)id
 		preferredIntervals];
@@ -159,6 +312,11 @@ void MPSkipIntervalCommand_inst_setPreferredIntervals_(void *id, void* value) {
 	[(MPSkipIntervalCommand*)id
 		setPreferredIntervals: value];
 }
+
+//void* MPFeedbackCommand_inst_init(void *id) {
+//	return [(MPFeedbackCommand*)id
+//		init];
+//}
 
 BOOL MPFeedbackCommand_inst_isActive(void *id) {
 	return [(MPFeedbackCommand*)id
@@ -190,6 +348,11 @@ void MPFeedbackCommand_inst_setLocalizedShortTitle_(void *id, void* value) {
 		setLocalizedShortTitle: value];
 }
 
+//void* MPRatingCommand_inst_init(void *id) {
+//	return [(MPRatingCommand*)id
+//		init];
+//}
+
 float MPRatingCommand_inst_maximumRating(void *id) {
 	return [(MPRatingCommand*)id
 		maximumRating];
@@ -209,6 +372,11 @@ void MPRatingCommand_inst_setMinimumRating_(void *id, float value) {
 	[(MPRatingCommand*)id
 		setMinimumRating: value];
 }
+
+//void* MPRemoteCommandCenter_inst_init(void *id) {
+//	return [(MPRemoteCommandCenter*)id
+//		init];
+//}
 
 void* MPRemoteCommandCenter_inst_pauseCommand(void *id) {
 	return [(MPRemoteCommandCenter*)id
@@ -344,6 +512,70 @@ func MPNowPlayingInfoCenter_defaultCenter() (
 ) {
 	ret := C.MPNowPlayingInfoCenter_type_defaultCenter()
 	r0 = MPNowPlayingInfoCenter_fromPointer(ret)
+	return
+}
+
+func MPRemoteCommandEvent_alloc() (
+	r0 MPRemoteCommandEvent,
+) {
+	ret := C.MPRemoteCommandEvent_type_alloc()
+	r0 = MPRemoteCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPChangePlaybackPositionCommandEvent_alloc() (
+	r0 MPChangePlaybackPositionCommandEvent,
+) {
+	ret := C.MPChangePlaybackPositionCommandEvent_type_alloc()
+	r0 = MPChangePlaybackPositionCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPChangeLanguageOptionCommandEvent_alloc() (
+	r0 MPChangeLanguageOptionCommandEvent,
+) {
+	ret := C.MPChangeLanguageOptionCommandEvent_type_alloc()
+	r0 = MPChangeLanguageOptionCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPChangePlaybackRateCommandEvent_alloc() (
+	r0 MPChangePlaybackRateCommandEvent,
+) {
+	ret := C.MPChangePlaybackRateCommandEvent_type_alloc()
+	r0 = MPChangePlaybackRateCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPChangeRepeatModeCommandEvent_alloc() (
+	r0 MPChangeRepeatModeCommandEvent,
+) {
+	ret := C.MPChangeRepeatModeCommandEvent_type_alloc()
+	r0 = MPChangeRepeatModeCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPChangeShuffleModeCommandEvent_alloc() (
+	r0 MPChangeShuffleModeCommandEvent,
+) {
+	ret := C.MPChangeShuffleModeCommandEvent_type_alloc()
+	r0 = MPChangeShuffleModeCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPSeekCommandEvent_alloc() (
+	r0 MPSeekCommandEvent,
+) {
+	ret := C.MPSeekCommandEvent_type_alloc()
+	r0 = MPSeekCommandEvent_fromPointer(ret)
+	return
+}
+
+func MPSkipIntervalCommandEvent_alloc() (
+	r0 MPSkipIntervalCommandEvent,
+) {
+	ret := C.MPSkipIntervalCommandEvent_type_alloc()
+	r0 = MPSkipIntervalCommandEvent_fromPointer(ret)
 	return
 }
 
@@ -493,6 +725,328 @@ func (x gen_MPNowPlayingInfoCenter) SetPlaybackState_(
 		unsafe.Pointer(x.Pointer()),
 		C.ulong(value),
 	)
+	return
+}
+
+type MPRemoteCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPRemoteCommandEvent() MPRemoteCommandEvent
+}
+
+type gen_MPRemoteCommandEvent struct {
+	objc.Object
+}
+
+func MPRemoteCommandEvent_fromPointer(ptr unsafe.Pointer) MPRemoteCommandEvent {
+	return MPRemoteCommandEvent{gen_MPRemoteCommandEvent{
+		objc.Object_fromPointer(ptr),
+	}}
+}
+
+func MPRemoteCommandEvent_fromRef(ref objc.Ref) MPRemoteCommandEvent {
+	return MPRemoteCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPRemoteCommandEvent) Init_asMPRemoteCommandEvent() (
+	r0 MPRemoteCommandEvent,
+) {
+	ret := C.MPRemoteCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPRemoteCommandEvent_fromPointer(ret)
+	return
+}
+
+func (x gen_MPRemoteCommandEvent) Command() (
+	r0 MPRemoteCommand,
+) {
+	ret := C.MPRemoteCommandEvent_inst_command(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPRemoteCommand_fromPointer(ret)
+	return
+}
+
+func (x gen_MPRemoteCommandEvent) Timestamp() (
+	r0 float64,
+) {
+	ret := C.MPRemoteCommandEvent_inst_timestamp(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+type MPChangePlaybackPositionCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPChangePlaybackPositionCommandEvent() MPChangePlaybackPositionCommandEvent
+}
+
+type gen_MPChangePlaybackPositionCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPChangePlaybackPositionCommandEvent_fromPointer(ptr unsafe.Pointer) MPChangePlaybackPositionCommandEvent {
+	return MPChangePlaybackPositionCommandEvent{gen_MPChangePlaybackPositionCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPChangePlaybackPositionCommandEvent_fromRef(ref objc.Ref) MPChangePlaybackPositionCommandEvent {
+	return MPChangePlaybackPositionCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPChangePlaybackPositionCommandEvent) Init_asMPChangePlaybackPositionCommandEvent() (
+	r0 MPChangePlaybackPositionCommandEvent,
+) {
+	ret := C.MPChangePlaybackPositionCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPChangePlaybackPositionCommandEvent_fromPointer(ret)
+	return
+}
+
+func (x gen_MPChangePlaybackPositionCommandEvent) PositionTime() (
+	r0 float64,
+) {
+	ret := C.MPChangePlaybackPositionCommandEvent_inst_positionTime(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
+	return
+}
+
+type MPChangeLanguageOptionCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPChangeLanguageOptionCommandEvent() MPChangeLanguageOptionCommandEvent
+}
+
+type gen_MPChangeLanguageOptionCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPChangeLanguageOptionCommandEvent_fromPointer(ptr unsafe.Pointer) MPChangeLanguageOptionCommandEvent {
+	return MPChangeLanguageOptionCommandEvent{gen_MPChangeLanguageOptionCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPChangeLanguageOptionCommandEvent_fromRef(ref objc.Ref) MPChangeLanguageOptionCommandEvent {
+	return MPChangeLanguageOptionCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPChangeLanguageOptionCommandEvent) Init_asMPChangeLanguageOptionCommandEvent() (
+	r0 MPChangeLanguageOptionCommandEvent,
+) {
+	ret := C.MPChangeLanguageOptionCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPChangeLanguageOptionCommandEvent_fromPointer(ret)
+	return
+}
+
+type MPChangePlaybackRateCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPChangePlaybackRateCommandEvent() MPChangePlaybackRateCommandEvent
+}
+
+type gen_MPChangePlaybackRateCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPChangePlaybackRateCommandEvent_fromPointer(ptr unsafe.Pointer) MPChangePlaybackRateCommandEvent {
+	return MPChangePlaybackRateCommandEvent{gen_MPChangePlaybackRateCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPChangePlaybackRateCommandEvent_fromRef(ref objc.Ref) MPChangePlaybackRateCommandEvent {
+	return MPChangePlaybackRateCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPChangePlaybackRateCommandEvent) Init_asMPChangePlaybackRateCommandEvent() (
+	r0 MPChangePlaybackRateCommandEvent,
+) {
+	ret := C.MPChangePlaybackRateCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPChangePlaybackRateCommandEvent_fromPointer(ret)
+	return
+}
+
+func (x gen_MPChangePlaybackRateCommandEvent) PlaybackRate() (
+	r0 float32,
+) {
+	ret := C.MPChangePlaybackRateCommandEvent_inst_playbackRate(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float32(ret)
+	return
+}
+
+type MPChangeRepeatModeCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPChangeRepeatModeCommandEvent() MPChangeRepeatModeCommandEvent
+}
+
+type gen_MPChangeRepeatModeCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPChangeRepeatModeCommandEvent_fromPointer(ptr unsafe.Pointer) MPChangeRepeatModeCommandEvent {
+	return MPChangeRepeatModeCommandEvent{gen_MPChangeRepeatModeCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPChangeRepeatModeCommandEvent_fromRef(ref objc.Ref) MPChangeRepeatModeCommandEvent {
+	return MPChangeRepeatModeCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPChangeRepeatModeCommandEvent) Init_asMPChangeRepeatModeCommandEvent() (
+	r0 MPChangeRepeatModeCommandEvent,
+) {
+	ret := C.MPChangeRepeatModeCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPChangeRepeatModeCommandEvent_fromPointer(ret)
+	return
+}
+
+func (x gen_MPChangeRepeatModeCommandEvent) RepeatType() (
+	r0 core.NSInteger,
+) {
+	ret := C.MPChangeRepeatModeCommandEvent_inst_repeatType(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.NSInteger(ret)
+	return
+}
+
+func (x gen_MPChangeRepeatModeCommandEvent) PreservesRepeatMode() (
+	r0 bool,
+) {
+	ret := C.MPChangeRepeatModeCommandEvent_inst_preservesRepeatMode(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+type MPChangeShuffleModeCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPChangeShuffleModeCommandEvent() MPChangeShuffleModeCommandEvent
+}
+
+type gen_MPChangeShuffleModeCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPChangeShuffleModeCommandEvent_fromPointer(ptr unsafe.Pointer) MPChangeShuffleModeCommandEvent {
+	return MPChangeShuffleModeCommandEvent{gen_MPChangeShuffleModeCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPChangeShuffleModeCommandEvent_fromRef(ref objc.Ref) MPChangeShuffleModeCommandEvent {
+	return MPChangeShuffleModeCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPChangeShuffleModeCommandEvent) Init_asMPChangeShuffleModeCommandEvent() (
+	r0 MPChangeShuffleModeCommandEvent,
+) {
+	ret := C.MPChangeShuffleModeCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPChangeShuffleModeCommandEvent_fromPointer(ret)
+	return
+}
+
+func (x gen_MPChangeShuffleModeCommandEvent) ShuffleType() (
+	r0 core.NSInteger,
+) {
+	ret := C.MPChangeShuffleModeCommandEvent_inst_shuffleType(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.NSInteger(ret)
+	return
+}
+
+func (x gen_MPChangeShuffleModeCommandEvent) PreservesShuffleMode() (
+	r0 bool,
+) {
+	ret := C.MPChangeShuffleModeCommandEvent_inst_preservesShuffleMode(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = convertObjCBoolToGo(ret)
+	return
+}
+
+type MPSeekCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPSeekCommandEvent() MPSeekCommandEvent
+}
+
+type gen_MPSeekCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPSeekCommandEvent_fromPointer(ptr unsafe.Pointer) MPSeekCommandEvent {
+	return MPSeekCommandEvent{gen_MPSeekCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPSeekCommandEvent_fromRef(ref objc.Ref) MPSeekCommandEvent {
+	return MPSeekCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPSeekCommandEvent) Init_asMPSeekCommandEvent() (
+	r0 MPSeekCommandEvent,
+) {
+	ret := C.MPSeekCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPSeekCommandEvent_fromPointer(ret)
+	return
+}
+
+type MPSkipIntervalCommandEventRef interface {
+	Pointer() uintptr
+	Init_asMPSkipIntervalCommandEvent() MPSkipIntervalCommandEvent
+}
+
+type gen_MPSkipIntervalCommandEvent struct {
+	MPRemoteCommandEvent
+}
+
+func MPSkipIntervalCommandEvent_fromPointer(ptr unsafe.Pointer) MPSkipIntervalCommandEvent {
+	return MPSkipIntervalCommandEvent{gen_MPSkipIntervalCommandEvent{
+		MPRemoteCommandEvent_fromPointer(ptr),
+	}}
+}
+
+func MPSkipIntervalCommandEvent_fromRef(ref objc.Ref) MPSkipIntervalCommandEvent {
+	return MPSkipIntervalCommandEvent_fromPointer(unsafe.Pointer(ref.Pointer()))
+}
+
+func (x gen_MPSkipIntervalCommandEvent) Init_asMPSkipIntervalCommandEvent() (
+	r0 MPSkipIntervalCommandEvent,
+) {
+	ret := C.MPSkipIntervalCommandEvent_inst_init(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = MPSkipIntervalCommandEvent_fromPointer(ret)
+	return
+}
+
+func (x gen_MPSkipIntervalCommandEvent) Interval() (
+	r0 float64,
+) {
+	ret := C.MPSkipIntervalCommandEvent_inst_interval(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = float64(ret)
 	return
 }
 
