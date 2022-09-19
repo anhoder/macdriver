@@ -32,6 +32,9 @@ func TestMain(m *testing.M) {
 func TestAsync(t *testing.T) {
 	ok := make(chan bool)
 
+	obj := ArtworkFromUrl(core.NSURL_URLWithString_(core.String("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png")))
+	fmt.Println(obj)
+
 	playingCenter := MPNowPlayingInfoCenter_defaultCenter()
 	playingCenter.SetPlaybackState_(MPNowPlayingPlaybackStatePaused)
 
