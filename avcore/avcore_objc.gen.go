@@ -580,6 +580,11 @@ void* AVPlayer_inst_currentItem(void *id) {
 		currentItem];
 }
 
+long AVPlayer_inst_status(void *id) {
+	return [(AVPlayer*)id
+		status];
+}
+
 void* AVPlayer_inst_error(void *id) {
 	return [(AVPlayer*)id
 		error];
@@ -1935,6 +1940,16 @@ func (x gen_AVPlayer) CurrentItem() (
 		unsafe.Pointer(x.Pointer()),
 	)
 	r0 = AVPlayerItem_fromPointer(ret)
+	return
+}
+
+func (x gen_AVPlayer) Status() (
+	r0 core.NSInteger,
+) {
+	ret := C.AVPlayer_inst_status(
+		unsafe.Pointer(x.Pointer()),
+	)
+	r0 = core.NSInteger(ret)
 	return
 }
 

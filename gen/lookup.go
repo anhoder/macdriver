@@ -125,7 +125,7 @@ func (cb *classBuilder) mapType(dt schema.DataType) typeMapping {
 			ToCGoFmt:   "C.ulong(%s)",
 		}
 	case "NSInteger", "NSWindowTitleVisibility", "NSWindowLevel", "NSApplicationActivationPolicy", "NSControlStateValue",
-		"NSPopoverBehavior", "AVPlayerActionAtItemEnd", "MPShuffleType", "MPRepeatType":
+		"NSPopoverBehavior", "AVPlayerActionAtItemEnd", "MPShuffleType", "MPRepeatType", "AVPlayerStatus":
 		return typeMapping{
 			GoType:     corePkg + "NSInteger",
 			CType:      "long",

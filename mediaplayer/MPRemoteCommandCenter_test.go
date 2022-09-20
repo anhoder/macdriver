@@ -38,8 +38,21 @@ func TestAsync(t *testing.T) {
 	playingCenter := MPNowPlayingInfoCenter_defaultCenter()
 	playingCenter.SetPlaybackState_(MPNowPlayingPlaybackStatePaused)
 
-	item := avcore.AVPlayerItem_playerItemWithURL_(core.NSURL_fileURLWithPath_isDirectory_(core.String("/Users/anhoder/Desktop/1.mp3"), false))
-	player := avcore.AVPlayer_playerWithPlayerItem_(item)
+	item := avcore.AVPlayerItem_playerItemWithURL_(core.NSURL_fileURLWithPath_isDirectory_(core.String("/Users/anhoder/Desktop/a.flac"), false))
+	//player := avcore.AVPlayer_playerWithPlayerItem_(item)
+	player := avcore.AVPlayer_alloc().Init_asAVPlayer()
+	player.ReplaceCurrentItemWithPlayerItem_(item)
+
+	handlerCls := objc.NewClass("EventHandler", "NSObject")
+	handlerCls.AddMethod("outputDeviceChanged:", func(self objc.Object, notification objc.Object) {
+		fmt.Println(self, notification)
+	})
+	objc.RegisterClass(handlerCls)
+
+	h := objc.Get("EventHandler").Alloc().Init()
+
+	core.NSNotificationCenter_defaultCenter().
+		AddObserver_selector_name_object_(h, objc.Sel("outputDeviceChanged:"), core.String("AVPlayerItemDidPlayToEndTimeNotification"), player.CurrentItem())
 
 	fmt.Println(core.NSKeyValueObservingOptionNew | core.NSKeyValueObservingOptionOld)
 	core.AddObserver_forKeyPath_options_context(
@@ -110,12 +123,14 @@ func TestAsync(t *testing.T) {
 		for {
 			<-ticker
 			cur := player.CurrentTime()
+			fmt.Println(cur)
 			total := player.CurrentItem().Duration()
 			fmt.Println(cur.Value/int64(cur.Timescale), total.Value/int64(total.Timescale))
 			if cur.Value/int64(cur.Timescale) >= total.Value/int64(total.Timescale) {
 				break
 			}
 		}
+		time.Sleep(time.Second)
 		ok <- true
 	}()
 	<-ok
