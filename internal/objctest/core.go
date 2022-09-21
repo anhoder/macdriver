@@ -6,7 +6,7 @@ package objctest
 import "unsafe"
 
 /*
-#cgo CFLAGS: -x objective-c
+#cgo CFLAGS: -x objective-c -Wno-everything
 #cgo LDFLAGS: -framework Foundation
 
 #import <Foundation/Foundation.h>

@@ -16,7 +16,7 @@ import (
 )
 
 /*
-#cgo CFLAGS: -x objective-c -DGL_SILENCE_DEPRECATION
+#cgo CFLAGS: -x objective-c -DGL_SILENCE_DEPRECATION -Wno-everything
 #cgo LDFLAGS: -framework OpenGL -framework AppKit
 #import "MyOpenGLView.h"
 */

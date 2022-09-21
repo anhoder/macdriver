@@ -4,7 +4,7 @@
 package dispatch
 
 /*
-#cgo CFLAGS: -x objective-c
+#cgo CFLAGS: -x objective-c -Wno-everything
 #cgo LDFLAGS: -lobjc -framework Foundation -framework CoreFoundation -framework WebKit
 #include <Foundation/Foundation.h>
 #include <dispatch/dispatch.h>
