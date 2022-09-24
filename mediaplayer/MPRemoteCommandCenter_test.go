@@ -38,7 +38,7 @@ func TestAsync(t *testing.T) {
 	playingCenter := MPNowPlayingInfoCenter_defaultCenter()
 	playingCenter.SetPlaybackState_(MPNowPlayingPlaybackStatePaused)
 
-	item := avcore.AVPlayerItem_playerItemWithURL_(core.NSURL_fileURLWithPath_isDirectory_(core.String("/Users/anhoder/Desktop/a.flac"), false))
+	item := avcore.AVPlayerItem_playerItemWithURL_(core.NSURL_fileURLWithPath_isDirectory_(core.String("/Users/anhoder/Desktop/1.mp3"), false))
 	//player := avcore.AVPlayer_playerWithPlayerItem_(item)
 	player := avcore.AVPlayer_alloc().Init_asAVPlayer()
 	player.ReplaceCurrentItemWithPlayerItem_(item)
@@ -89,8 +89,21 @@ func TestAsync(t *testing.T) {
 		playingCenter.SetNowPlayingInfo_(nowPlayingInfoOfPlayer(&player))
 		return MPRemoteCommandHandlerStatusSuccess
 	})
+	cls.AddMethod("handleSleepOrPowerOff:", func(self objc.Object, ns objc.Object) {
+		fmt.Println("sleep or power off")
+		fmt.Println(self, ns)
+	})
+	cls.AddMethod("handleWake:", func(self objc.Object, ns objc.Object) {
+		fmt.Println("wake")
+		fmt.Println(self, ns)
+	})
 	objc.RegisterClass(cls)
 	handler := objc.Get("CommandHandler").Alloc().Init()
+
+	workspace := cocoa.NSWorkspace_sharedWorkspace()
+	workspace.NotificationCenter().AddObserver_selector_name_object_(handler, objc.Sel("handleSleepOrPowerOff:"), core.String("NSWorkspaceWillSleepNotification"), nil)
+	workspace.NotificationCenter().AddObserver_selector_name_object_(handler, objc.Sel("handleSleepOrPowerOff:"), core.String("NSWorkspaceWillPowerOffNotification"), nil)
+	workspace.NotificationCenter().AddObserver_selector_name_object_(handler, objc.Sel("handleWake:"), core.String("NSWorkspaceDidWakeNotification"), nil)
 
 	center := MPRemoteCommandCenter_sharedCommandCenter()
 	center.SkipBackwardCommand().SetPreferredIntervals_(core.NSArray_arrayWithObject_(core.NSNumber_numberWithFloat_(15.0)))
