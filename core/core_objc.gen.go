@@ -2444,22 +2444,36 @@ void* NSNotification_inst_init(void *id) {
 		init];
 }
 
+BOOL core_objc_bool_true = YES;
+BOOL core_objc_bool_false = NO;
 void* NSNotification_inst_object_(void *id) {
 	return [(NSNotification*)id
 		object_];
 }
 
+*/
+import "C"
 void* NSNotification_inst_userInfo(void *id) {
 	return [(NSNotification*)id
 		userInfo];
 }
 
+func convertObjCBoolToGo(b C.BOOL) bool {
+	// NOTE: the prefix here is used to namespace these since the linker will
+	// otherwise report a "duplicate symbol" because the C functions have the
+	// same name.
+	return bool(C.core_convertObjCBool(b))
 void NSOperationQueue_inst_addOperations_waitUntilFinished_(void *id, void* ops, BOOL wait) {
 	[(NSOperationQueue*)id
 		addOperations: ops
 		waitUntilFinished: wait];
 }
 
+func convertToObjCBool(b bool) C.BOOL {
+	if b {
+		return C.core_objc_bool_true
+	}
+	return C.core_objc_bool_false
 void NSOperationQueue_inst_cancelAllOperations(void *id) {
 	[(NSOperationQueue*)id
 		cancelAllOperations];
