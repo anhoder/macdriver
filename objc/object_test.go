@@ -44,7 +44,7 @@ func TestGoObjectCallObjC(t *testing.T) {
 	c.AddMethod("sum", (*SomeGoObject).Sum)
 	RegisterClass(c)
 
-	sgo := GetClass("SomeGoObject").Send("alloc").Send("init")
+	sgo := Get("SomeGoObject").Send("alloc").Send("init")
 	if sgo.Send("goSum").Int() != sgo.Send("sum").Int() {
 		t.Errorf("calculated sums do not match")
 	}
@@ -64,7 +64,7 @@ func TestObjectClass(t *testing.T) {
 	}
 
 	if !cls.Class().Equals(cls) {
-		// the metaclass is returned by calling object_getClass() on the class
+		// the metaclass is returned by calling object_Get() on the class
 		// object, not by sending -[x class]
 		t.Errorf("sending -[x class] to a class object should return itself")
 	}
