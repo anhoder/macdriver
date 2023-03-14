@@ -14,6 +14,7 @@ import "C"
 import (
 	"math"
 	"reflect"
+	"strings"
 	"unsafe"
 )
 
